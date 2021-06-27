@@ -1,2 +1,2 @@
 # TW-tips
-Tips &amp; tricks for Tiddlywiki - https://telumire.github.io/TW-tips/
+Tips for Tiddlywiki - https://telumire.github.io/TW-tips/
