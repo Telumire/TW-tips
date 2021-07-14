@@ -141,11 +141,39 @@ Error message and password prompt
 
 <p>This <a class="tc-tiddlylink-external" href="https://tiddlywiki.com" rel="noopener noreferrer" target="_blank">TiddlyWiki</a> contains the following tiddlers:</p><p><ul>
 
+<li>(edit-inline)</li>
+
+<li>(edit)</li>
+
+<li>(tagging)</li>
+
+<li>(task-list-doing-tag)</li>
+
+<li>(task-list-done-tag)</li>
+
+<li>(task-list-todo-doing-done)</li>
+
+<li>(task-list-todo-tag)</li>
+
+<li>(task-list)</li>
+
+<li>(task)</li>
+
+<li>↕</li>
+
+<li>$:/build</li>
+
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home</li>
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/more-page-actions</li>
 
 <li>$:/config/RelinkOnRename</li>
+
+<li>$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/close-others</li>
+
+<li>$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/delete</li>
+
+<li>$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/fold-bar</li>
 
 <li>$:/core</li>
 
@@ -159,11 +187,23 @@ Error message and password prompt
 
 <li>$:/GitHub/Username</li>
 
+<li>$:/images/task-doing</li>
+
+<li>$:/images/task-done</li>
+
+<li>$:/images/task-todo</li>
+
+<li>$:/images/task-unset</li>
+
 <li>$:/Import</li>
 
 <li>$:/isEncrypted</li>
 
 <li>$:/language</li>
+
+<li>$:/language/Buttons/tasker/Caption</li>
+
+<li>$:/language/Buttons/tasker/Hint</li>
 
 <li>$:/palette</li>
 
@@ -181,6 +221,8 @@ Error message and password prompt
 
 <li>$:/state/tab--1963855381</li>
 
+<li>$:/state/tab--2112689675</li>
+
 <li>$:/state/tab-1749438307</li>
 
 <li>$:/state/tab-2065006209</li>
@@ -195,23 +237,57 @@ Error message and password prompt
 
 <li>$:/StoryList</li>
 
+<li>$:/tags/Stylesheet</li>
+
 <li>$:/tags/ViewTemplate</li>
+
+<li>$:/tags/ViewToolbar</li>
+
+<li>$:/theme</li>
 
 <li>$:/themes/tiddlywiki/snowwhite</li>
 
 <li>$:/themes/tiddlywiki/vanilla</li>
 
+<li>$:/themes/tiddlywiki/vanilla/options/sidebarlayout</li>
+
+<li>$:/themes/tiddlywiki/vanilla/options/stickytitles</li>
+
+<li>Add a button to set a task status to a tiddler</li>
+
+<li>Collapse/expand section within a tiddler</li>
+
 <li>Conditional display based on language setting</li>
 
-<li>Display an edit button to a transcluded tiddler</li>
+<li>Content of foldable section</li>
 
-<li>Display tiddlers tagged</li>
+<li>Custom new-here button</li>
+
+<li>Display a description on any tiddler</li>
+
+<li>Display the field source</li>
+
+<li>Display tiddlers tagging</li>
+
+<li>Drag and drop list of tiddlers</li>
 
 <li>Draggable list from filter</li>
 
-<li>edit</li>
+<li>Edit button for transcluded content</li>
 
-<li>Ex:Edit transcluded</li>
+<li>Ex:collapse/expand section within a tiddler</li>
+
+<li>Ex:Display the field source - tiddler with multiple sources</li>
+
+<li>Ex:Display the field source - tiddler with one source</li>
+
+<li>Ex:Edit button for transcluded content</li>
+
+<li>ex:task</li>
+
+<li>External_Link_Icon</li>
+
+<li>href-filter</li>
 
 <li>Index</li>
 
@@ -221,23 +297,61 @@ Error message and password prompt
 
 <li>item-C</li>
 
-<li>Simple math in tiddlywiki</li>
+<li>itemTemplateSidebarOrder</li>
 
-<li>Style ViewSourceTemplate</li>
+<li>New Tiddler</li>
 
-<li>Style/edit-transcluded</li>
+<li>New Tiddler 1</li>
+
+<li>New Tiddler 2</li>
+
+<li>openTiddlers</li>
+
+<li>Style count-tc-menu-list-items</li>
+
+<li>Style external link icon</li>
+
+<li>Style links</li>
+
+<li>Style tags</li>
+
+<li>Style tasker</li>
+
+<li>Style/DisplaySource</li>
 
 <li>Style/hide-until-hover</li>
 
-<li>tagged</li>
+<li>Style/transclude-edit</li>
 
-<li>Template/Display tiddlers tagged with title</li>
+<li>Tag_Icon</li>
+
+<li>Tasker button at the left of the title</li>
+
+<li>Télumire</li>
+
+<li>Template/Description</li>
+
+<li>Template/DisplaySource</li>
+
+<li>Template/tagging</li>
+
+<li>Template/tagging/after</li>
+
+<li>Template/tagging/before</li>
+
+<li>Test</li>
+
+<li>This is a task</li>
+
+<li>This is another task</li>
 
 <li>Tiddler</li>
 
 <li>tip</li>
 
-<li>ViewSourceTemplate</li>
+<li>Todos</li>
+
+<li>ui/Buttons/tasker</li>
 
 </ul>
 </p>
@@ -253,6 +367,88 @@ Error message and password prompt
 <!--~~ Ordinary tiddlers ~~-->
 
 <div id="storeArea" style="display:none;">
+<div created="20210702134909188" creator="user" description="Transclure avec ce tiddler pour afficher un bouton d'édition : `{{NomduTiddler||(edit-inline)}}` en mode inline" modified="20210713161653379" modifier="Télumire" tags="TW5 [[Edit button for transcluded content]]" title="(edit-inline)">
+<pre>&lt;span class=&quot;transclude-edit&quot;&gt;&lt;$transclude tiddler={{!!title}} mode=&quot;inline&quot;/&gt;&lt;span class=&quot;hide-until-hover transclude-edit-button&quot;&gt; {{||$:/core/ui/Buttons/edit}} &lt;/span&gt;&lt;/span&gt;</pre>
+</div>
+<div created="20210612222422816" creator="user" modified="20210713161653379" modifier="Télumire" tags="[[TW Tones]] TW5 [[Edit button for transcluded content]]" title="(edit)">
+<pre>&lt;p class=&quot;transclude-edit&quot;&gt;
+&lt;$transclude tiddler={{!!title}} mode=&quot;block&quot;/&gt;
+&lt;span class=&quot;hide-until-hover transclude-edit-button&quot;&gt; {{||$:/core/ui/Buttons/edit}}&lt;/span&gt;
+&lt;/p&gt;</pre>
+</div>
+<div caption="Snippet/Display tiddlers tagged with title" created="20210627170052616" creator="Télumire" description="This tiddler is used by the  ~ViewTemplates to display a list of all tiddler tagged with the current title. If there is a caption, the content is displayed as the text of the link, otherwise the title of the tiddler is displayed. If there is a description, the description is displayed at the right of the link. Use it like so : `{{tiddlerTitle||(tagging)}}`" modified="20210714155747606" modifier="Télumire" tags="[[Display tiddlers tagging]] $:/tags/TextEditor/Snippet" title="(tagging)">
+<pre>&lt;ul&gt;
+&lt;$list filter=&quot;[all[current]tagging[]sort[title]]&quot;&gt;
+&lt;li&gt;
+&lt;$link to=&lt;&lt;currentTiddler&gt;&gt;&gt;&lt;$view field=&quot;caption&quot;&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$view&gt;&lt;/$link&gt;&lt;$list filter=&quot;[all[current]has[description]]&quot;&gt; - &lt;span style=&quot;font-style:italic;&quot;&gt;{{!!description}}&lt;/span&gt;&lt;/$list&gt;
+&lt;/li&gt;
+&lt;/$list&gt;
+&lt;/ul&gt;</pre>
+</div>
+<div created="20210707171304857" creator="user" modified="20210707172135638" modifier="user" tags="ui/Buttons/tasker TW5" title="(task-list-doing-tag)">
+<pre>&lt;ul&gt;
+&lt;$list filter=&quot;[tag{!!title}task[doing]!sort[modified]]&quot;&gt;
+{{||(task)}}&lt;br&gt;
+&lt;/$list&gt;
+&lt;/ul&gt;</pre>
+</div>
+<div created="20210707171322540" creator="user" modified="20210707171339004" modifier="user" tags="ui/Buttons/tasker TW5" title="(task-list-done-tag)">
+<pre>&lt;ul&gt;
+&lt;$list filter=&quot;[tag{!!title}task[done]!sort[modified]]&quot;&gt;
+{{||(task)}}&lt;br&gt;
+&lt;/$list&gt;
+&lt;/ul&gt;</pre>
+</div>
+<div created="20210714155924324" creator="Télumire" modified="20210714160147692" modifier="Télumire" tags="[[Add a button to set a task status to a tiddler]]" title="(task-list-todo-doing-done)">
+<pre>;&lt;&lt;openTiddlers &quot;tag&lt;currentTiddler&gt;task[doing]sort[title]&quot; &quot;$(currentTiddler)$ - doing&quot;&gt;&gt; (&lt;$count filter=&quot;[tag&lt;currentTiddler&gt;task[doing]sort[title]]&quot;/&gt;/&lt;$count filter=&quot;[tag&lt;currentTiddler&gt;sort[title]]&quot;/&gt;)
+
+{{||(task-list-doing-tag)}}
+
+;&lt;&lt;openTiddlers &quot;tag&lt;currentTiddler&gt;task[todo]sort[title]&quot; &quot;$(currentTiddler)$ - todo&quot;&gt;&gt; (&lt;$count filter=&quot;[tag&lt;currentTiddler&gt;task[todo]sort[title]]&quot;/&gt;/&lt;$count filter=&quot;[tag&lt;currentTiddler&gt;sort[title]]&quot;/&gt;)
+
+{{||(task-list-todo-tag)}}
+
+;&lt;&lt;openTiddlers &quot;[tag&lt;currentTiddler&gt;] -[task[todo]] -[task[doing]] +[sort[title]&quot; &quot;$(currentTiddler)$ - done and unset&quot;&gt;&gt; (&lt;$count filter=&quot;[tag&lt;currentTiddler&gt;] -[task[todo]] -[task[doing]] +[sort[title]]&quot;/&gt;/&lt;$count filter=&quot;[tag&lt;currentTiddler&gt;sort[title]]&quot;/&gt;)
+&lt;ul&gt;
+&lt;$list filter=&quot;[tag&lt;currentTiddler&gt;!sort[modified]] -[task[todo]]  -[task[doing]]&quot;&gt;
+{{||(task)}}&lt;br&gt;
+&lt;/$list&gt;
+&lt;/ul&gt;</pre>
+</div>
+<div created="20210707171140966" creator="user" modified="20210707171300772" modifier="user" tags="ui/Buttons/tasker TW5" title="(task-list-todo-tag)">
+<pre>&lt;ul&gt;
+&lt;$list filter=&quot;[tag{!!title}task[todo]!sort[modified]]&quot;&gt;
+{{||(task)}}&lt;br&gt;
+&lt;/$list&gt;
+&lt;/ul&gt;</pre>
+</div>
+<div created="20210707133605847" creator="user" modified="20210707135107776" modifier="user" tags="ui/Buttons/tasker TW5" title="(task-list)">
+<pre>&lt;ul&gt;
+&lt;$list filter=&quot;[task{!!title}!sort[modified]]&quot;&gt;
+{{||(task)}}&lt;br&gt;
+&lt;/$list&gt;
+&lt;/ul&gt;</pre>
+</div>
+<div created="20210707130327890" creator="user" description="Ce tiddler permet d'afficher un lien vers une tâche ainsi que l'indicateur de tâche pour changer son statut sans devoir l'ouvrir. &lt;br&gt; Si le champ `task-description` est remplis, son contenu sera affiché. Si un `caption` existe et qu'il n'y a pas de `task-description`, `caption` est affiché. Si pas, le titre du tiddler est affiché." modified="20210707163021496" modifier="user" tags="TW5 ui/Buttons/tasker" title="(task)">
+<pre>&lt;style&gt;
+.tc-tiddler-controls.inline-task button svg {
+width:1em;
+height:auto;
+}
+&lt;/style&gt;
+
+&lt;span class=&quot;tc-tiddler-controls inline-task&quot; style=&quot;float:none;&quot;&gt;{{!!title||ui/Buttons/tasker}}&lt;/span&gt;&lt;$link to={{!!title}}&gt;&lt;$view field=&quot;task-description&quot;&gt;&lt;$view field=&quot;caption&quot;&gt;{{!!title}}&lt;/$view&gt;&lt;/$view&gt;&lt;/$link&gt;</pre>
+</div>
+<div created="20210625132006844" creator="user" modified="20210714041807935" modifier="Télumire" tags="$:/tags/SideBar SideBarOrder [[Style count-tc-menu-list-items]]" title="↕">
+<pre>;Modify order by drag&amp;drop :
+&lt;span class=&quot;count-tc-menu-list-items&quot;&gt;
+&lt;&lt;list-tagged-draggable tag:&quot;$:/tags/SideBar&quot; itemTemplate:&quot;itemTemplateSidebarOrder&quot;&gt;&gt;
+&lt;/span&gt;</pre>
+</div>
+<div commit="b95f6ca084ecc4b63a352a31da9c376551a58e91" title="$:/build">
+<pre>Built from branch 'tiddlywiki-com' at commit b95f6ca084ecc4b63a352a31da9c376551a58e91 of https://github.com/Jermolene/TiddlyWiki5 at 2021-07-04 10:58:55 UTC
+</pre>
+</div>
 <div created="20210627165244004" creator="Télumire" modified="20210627165244004" modifier="Télumire" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home">
 <pre>show</pre>
 </div>
@@ -261,6 +457,15 @@ Error message and password prompt
 </div>
 <div created="20210627165739186" creator="Télumire" modified="20210627165739186" modifier="Télumire" title="$:/config/RelinkOnRename">
 <pre>yes</pre>
+</div>
+<div created="20210714125309556" creator="Télumire" modified="20210714125309556" modifier="Télumire" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/close-others">
+<pre>show</pre>
+</div>
+<div created="20210714125319658" creator="Télumire" modified="20210714125319658" modifier="Télumire" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/delete">
+<pre>show</pre>
+</div>
+<div created="20210713194300082" creator="Télumire" modified="20210713194300082" modifier="Télumire" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/fold-bar">
+<pre>show</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" name="Core" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.23">
 <pre>{
@@ -10138,19 +10343,134 @@ Error message and password prompt
 <div created="20210627193359845" creator="Télumire" modified="20210627193407497" modifier="Télumire" title="$:/GitHub/Repo">
 <pre>Telumire/TW-tips</pre>
 </div>
-<div created="20210627193317220" creator="Télumire" modified="20210713153227263" modifier="Télumire" title="$:/GitHub/Username">
+<div created="20210627193317220" creator="Télumire" modified="20210714160343954" modifier="Télumire" title="$:/GitHub/Username">
 <pre>Telumire</pre>
+</div>
+<div created="20210706193912669" creator="user" modified="20210714035311410" modifier="user" tags="$:/tags/Image ui/Buttons/tasker" title="$:/images/task-doing" type="text/vnd.tiddlywiki">
+<pre>&lt;svg 
+fill=&quot;currentColor&quot;
+viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;tc-image-button&quot; width=&quot;22pt&quot; height=&quot;22pt&quot;&gt;
+ &lt;g transform=&quot;translate(-214.71 -394.71)&quot;&gt;
+  &lt;path d=&quot;m216.09 394.71c-0.75932 8e-5 -1.3748 0.61561-1.3749 1.3749v19.249c8e-5 0.75932 0.61561 1.3748 1.3749 1.3749h19.249c0.75933-7e-5 1.3749-0.6156 1.375-1.3749v-19.249c-8e-5 -0.75933-0.61562-1.3749-1.375-1.3749z&quot; fill-rule=&quot;evenodd&quot; style=&quot;paint-order:fill markers stroke&quot;/&gt;
+ &lt;/g&gt;
+&lt;/svg&gt;
+</pre>
+</div>
+<div created="20210706193857181" creator="user" modified="20210714035301850" modifier="user" tags="$:/tags/Image ui/Buttons/tasker" title="$:/images/task-done" type="text/vnd.tiddlywiki">
+<pre>&lt;svg 
+fill=&quot;currentColor&quot;
+viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;tc-image-button&quot; width=&quot;22pt&quot; height=&quot;22pt&quot;&gt;
+ &lt;g transform=&quot;translate(-214.71 -394.71)&quot;&gt;
+  &lt;path d=&quot;m232.06 401.08c-0.53697-0.53697-1.4076-0.53697-1.9445 0l-6.3699 6.305-2.4356-2.6735c-0.53697-0.53697-1.4076-0.53697-1.9445 0s-0.53697 1.4076 0 1.9445l3.3098 3.6391c0.52613 0.57866 1.4283 0.60262 1.9844 0.0527l7.4121-7.3354c0.52527-0.52495 0.52527-1.3956-0.0117-1.9325zm-15.846-6.3687h19c0.83103 0 1.5001 0.66903 1.5001 1.5001v19c0 0.83103-0.66903 1.5001-1.5001 1.5001h-19c-0.83103 0-1.5001-0.66903-1.5001-1.5001v-19c0-0.83104 0.66903-1.5001 1.5001-1.5001z&quot; fill-rule=&quot;evenodd&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-miterlimit=&quot;2&quot; stroke-width=&quot;3.0197&quot; style=&quot;paint-order:fill markers stroke&quot;/&gt;
+ &lt;/g&gt;
+&lt;/svg&gt;
+</pre>
+</div>
+<div created="20210706220242459" creator="user" modified="20210706220438077" modifier="user" tags="$:/tags/Image ui/Buttons/tasker" title="$:/images/task-todo" type="text/vnd.tiddlywiki">
+<pre>&lt;svg viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;tc-image-button&quot; width=&quot;22pt&quot; height=&quot;22pt&quot;&gt;
+ &lt;path d=&quot;m13.75 11a2.75 2.75 0 0 1-2.75 2.75 2.75 2.75 0 0 1-2.75-2.75 2.75 2.75 0 0 1 2.75-2.75 2.75 2.75 0 0 1 2.75 2.75zm-10.3-8.2498h15.1c0.38781 0 0.70002 0.31221 0.70002 0.70002v15.1c0 0.38781-0.31221 0.70002-0.70002 0.70002h-15.1c-0.38782 0-0.70003-0.31221-0.70003-0.70002v-15.1c0-0.38781 0.31221-0.70002 0.70003-0.70002zm-2.0746-2.7496a1.3751 1.3751 0 0 0-1.3749 1.3749v19.249a1.3751 1.3751 0 0 0 1.3749 1.3749h19.249a1.3751 1.3751 0 0 0 1.375-1.3749v-19.249a1.3751 1.3751 0 0 0-1.375-1.3749z&quot;/&gt;
+&lt;/svg&gt;</pre>
+</div>
+<div created="20210706193929869" creator="user" modified="20210706220500454" modifier="user" tags="$:/tags/Image ui/Buttons/tasker" title="$:/images/task-unset" type="text/vnd.tiddlywiki">
+<pre>&lt;svg 
+viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;tc-image-button&quot; width=&quot;22pt&quot; height=&quot;22pt&quot;&gt;
+ &lt;g transform=&quot;translate(-214.71 -394.71)&quot;&gt;
+  &lt;path d=&quot;m218.16 397.46h15.1c0.38781 0 0.70002 0.31221 0.70002 0.70002v15.1c0 0.38781-0.31221 0.70002-0.70002 0.70002h-15.1c-0.38782 0-0.70003-0.31221-0.70003-0.70002v-15.1c0-0.38781 0.31221-0.70002 0.70003-0.70002zm-2.0746-2.7496a1.3751 1.3751 0 0 0-1.3749 1.3749v19.249a1.3751 1.3751 0 0 0 1.3749 1.3749h19.249a1.3751 1.3751 0 0 0 1.375-1.3749v-19.249a1.3751 1.3751 0 0 0-1.375-1.3749z&quot;/&gt;
+ &lt;/g&gt;
+&lt;/svg&gt;</pre>
 </div>
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[Style ViewSourceTemplate]]</pre>
+# [[(edit-inline)]]
+# [[(edit)]]
+# [[(tagging)]]
+# [[(task-list-doing-tag)]]
+# [[(task-list-done-tag)]]
+# [[(task-list-todo-tag)]]
+# [[(task-list)]]
+# [[(task)]]
+# [[↕]]
+# [[$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home]]
+# [[$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/more-page-actions]]
+# [[$:/config/RelinkOnRename]]
+# [[$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/fold-bar]]
+# [[$:/DefaultTiddlers]]
+# [[$:/GitHub/Filename]]
+# [[$:/GitHub/Path]]
+# [[$:/GitHub/Repo]]
+# [[$:/GitHub/Username]]
+# [[$:/images/task-doing]]
+# [[$:/images/task-done]]
+# [[$:/images/task-todo]]
+# [[$:/images/task-unset]]
+# [[$:/isEncrypted]]
+# [[$:/language]]
+# [[$:/language/Buttons/tasker/Caption]]
+# [[$:/language/Buttons/tasker/Hint]]
+# [[$:/palette]]
+# [[$:/plugins/flibbles/relink]]
+# [[$:/SiteSubtitle]]
+# [[$:/SiteTitle]]
+# [[$:/status/RequireReloadDueToPluginChange]]
+# [[$:/status/UserName]]
+# [[$:/tags/Stylesheet]]
+# [[$:/tags/ViewTemplate]]
+# [[$:/theme]]
+# [[$:/themes/tiddlywiki/centralised/styles.tid]]
+# [[$:/themes/tiddlywiki/vanilla]]
+# [[Conditional display based on language setting]]
+# [[Display a description on any tiddler]]
+# [[Display the field source]]
+# [[Display tiddlers tagging]]
+# [[Drag and drop list of tiddlers]]
+# [[Draggable list from filter]]
+# [[Edit button for transcluded content]]
+# [[Ex:Edit button for transcluded content]]
+# [[External_Link_Icon]]
+# [[href-filter]]
+# [[Index]]
+# [[item-A]]
+# [[item-B]]
+# [[item-C]]
+# [[itemTemplateSidebarOrder]]
+# [[New Tiddler]]
+# [[New Tiddler 1]]
+# [[New Tiddler 2]]
+# [[openTiddlers]]
+# [[Style count-tc-menu-list-items]]
+# [[Style external link icon]]
+# [[Style links]]
+# [[Style tags]]
+# [[Style tasker]]
+# [[Style/DisplaySource]]
+# [[Style/hide-until-hover]]
+# [[Style/transclude-edit]]
+# [[Tag_Icon]]
+# [[Tasker button at the left of the title]]
+# [[Télumire]]
+# [[Template/Description]]
+# [[Template/DisplaySource]]
+# [[Template/tagging]]
+# [[Template/tagging/after]]
+# [[Template/tagging/before]]
+# [[Test]]
+# [[Tiddler]]
+# [[tip]]
+# [[Todos]]
+# [[ui/Buttons/tasker]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
-<div created="20210713151714139" creator="Télumire" modified="20210713152908180" modifier="Télumire" tags="[[conditional language]]" title="$:/language">
+<div created="20210713151714139" creator="Télumire" modified="20210714125423185" modifier="Télumire" tags="[[conditional language]]" title="$:/language">
 <pre>fr-FR</pre>
+</div>
+<div created="20210706180301988" creator="user" modified="20210706201217902" modifier="user" tags="ui/Buttons/tasker" title="$:/language/Buttons/tasker/Caption">
+<pre>tasker</pre>
+</div>
+<div created="20210706180357755" creator="user" modified="20210714125635411" modifier="Télumire" tags="ui/Buttons/tasker" title="$:/language/Buttons/tasker/Hint">
+<pre>Click to set task status (todo, doing, done)</pre>
 </div>
 <div created="20210710033342816" creator="Télumire" modified="20210710033342816" modifier="Télumire" title="$:/palette">
 <pre>$:/palettes/Twilight</pre>
@@ -11011,41 +11331,53 @@ Error message and password prompt
 <div created="20210627161629943" creator="Télumire" modified="20210627193346818" modifier="Télumire" title="$:/SiteTitle">
 <pre>TW-tips</pre>
 </div>
-<div created="20210713151951741" creator="Télumire" modified="20210713151951741" modifier="Télumire" title="$:/state/advancedsearch/currentTab">
-<pre>$:/core/ui/AdvancedSearch/Filter</pre>
+<div created="20210714131710187" creator="Télumire" modified="20210714131759650" modifier="Télumire" title="$:/state/advancedsearch/currentTab">
+<pre>$:/core/ui/AdvancedSearch/Shadows</pre>
 </div>
-<div created="20210627164931232" creator="Télumire" modified="20210713152849905" modifier="Télumire" title="$:/state/sidebar">
+<div created="20210714123144577" creator="Télumire" modified="20210714123356103" modifier="Télumire" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
-<div created="20210713151951741" creator="Télumire" modified="20210713151951741" modifier="Télumire" title="$:/state/tab--1498284803">
-<pre>$:/core/ui/AdvancedSearch/Filter</pre>
+<div created="20210714131710187" creator="Télumire" modified="20210714131759650" modifier="Télumire" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/Shadows</pre>
 </div>
-<div created="20210627165231392" creator="Télumire" modified="20210710033340071" modifier="Télumire" title="$:/state/tab--1963855381">
+<div created="20210714123207883" creator="Télumire" modified="20210714131718252" modifier="Télumire" title="$:/state/tab--1963855381">
 <pre>$:/core/ui/ControlPanel/Palette</pre>
 </div>
-<div created="20210627165226756" creator="Télumire" modified="20210713153007284" modifier="Télumire" title="$:/state/tab-1749438307">
+<div created="20210714131721087" creator="Télumire" modified="20210714131722156" modifier="Télumire" title="$:/state/tab--2112689675">
+<pre>$:/core/ui/ControlPanel/Basics</pre>
+</div>
+<div created="20210714123159097" creator="Télumire" modified="20210714160337552" modifier="Télumire" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Saving</pre>
 </div>
-<div created="20210627193315990" creator="Télumire" modified="20210627193315990" modifier="Télumire" title="$:/state/tab-2065006209">
+<div created="20210714160340634" creator="Télumire" modified="20210714160340634" modifier="Télumire" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
 </div>
-<div created="20210627170032137" creator="Télumire" modified="20210712231222280" modifier="Télumire" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Recent</pre>
+<div created="20210714123306926" creator="Télumire" modified="20210714152701753" modifier="Télumire" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Open</pre>
 </div>
-<div created="20210627165241979" creator="Télumire" modified="20210627165242956" modifier="Télumire" title="$:/state/tabs/controlpanel/toolbars-1345989671">
-<pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
+<div created="20210714125257722" creator="Télumire" modified="20210714125307812" modifier="Télumire" title="$:/state/tabs/controlpanel/toolbars-1345989671">
+<pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210627165215089" creator="T" modified="20210627165216467" modifier="Télumir" title="$:/status/UserName">
+<div created="20210627165215089" creator="T" modified="20210714040303017" modifier="Télumir" title="$:/status/UserName">
 <pre>Télumire</pre>
 </div>
-<div created="20210713153219125" creator="Télumire" list="$:/ControlPanel Index [[Conditional display based on language setting]]" modified="20210713153223075" modifier="Télumire" title="$:/StoryList">
+<div created="20210714160333996" creator="Télumire" list="$:/ControlPanel Index" modified="20210714160333996" modifier="Télumire" title="$:/StoryList">
 <pre></pre>
 </div>
-<div created="20210627165654635" creator="Télumire" list="$:/core/ui/ViewTemplate/title $:/core/ui/ViewTemplate/unfold $:/core/ui/ViewTemplate/subtitle $:/core/ui/ViewTemplate/tags $:/core/ui/ViewTemplate/classic $:/core/ui/ViewTemplate/body" modified="20210627170733035" modifier="Télumire" tags="tagged" title="$:/tags/ViewTemplate">
+<div created="20210714122834007" creator="Télumire" modified="20210714122834007" modifier="Télumire" tagging="after" title="$:/tags/Stylesheet">
 <pre></pre>
+</div>
+<div created="20210627165654635" creator="Télumire" list="$:/core/ui/ViewTemplate/title $:/core/ui/ViewTemplate/unfold $:/core/ui/ViewTemplate/subtitle $:/core/ui/ViewTemplate/tags $:/core/ui/ViewTemplate/classic $:/core/ui/ViewTemplate/body" modified="20210713161827885" modifier="Télumire" tags="(tagging)" title="$:/tags/ViewTemplate">
+<pre></pre>
+</div>
+<div created="20210714125324377" creator="Télumire" list="$:/core/ui/Buttons/delete $:/core/ui/Buttons/more-tiddler-actions $:/core/ui/Buttons/info $:/core/ui/Buttons/new-here $:/core/ui/Buttons/new-journal-here $:/core/ui/Buttons/clone $:/core/ui/Buttons/export-tiddler $:/core/ui/Buttons/permalink $:/core/ui/Buttons/permaview $:/core/ui/Buttons/open-window $:/core/ui/Buttons/fold-others $:/core/ui/Buttons/fold $:/core/ui/Buttons/edit $:/core/ui/Buttons/close-others $:/core/ui/Buttons/close ui/Buttons/tasker $:/core/ui/Buttons/fold-bar" modified="20210714125353355" modifier="Télumire" title="$:/tags/ViewToolbar">
+<pre></pre>
+</div>
+<div created="20210713161037137" creator="Télumire" modified="20210714123203564" modifier="Télumire" title="$:/theme">
+<pre>$:/themes/tiddlywiki/snowwhite</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
 <pre>{
@@ -11156,7 +11488,30 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20210713151608436" creator="Télumire" en-gb="Sentence in english" fr-fr="Phrase en français" modified="20210713152905072" modifier="Télumire" source="https://groups.google.com/g/tiddlywiki/c/aEJrcD8gWlE/m/_ck4wfltBwAJ" tags="[[conditional language]] tip" title="Conditional display based on language setting">
+<div created="20210714123212656" creator="Télumire" modified="20210714123212656" modifier="Télumire" title="$:/themes/tiddlywiki/vanilla/options/sidebarlayout">
+<pre>fluid-fixed</pre>
+</div>
+<div created="20210714123221445" creator="Télumire" modified="20210714123221445" modifier="Télumire" title="$:/themes/tiddlywiki/vanilla/options/stickytitles">
+<pre>yes</pre>
+</div>
+<div created="20210714125730195" creator="Télumire" modified="20210714125800194" modifier="Télumire" tagging-tiddler="ui/Buttons/tasker" tags="tip" title="Add a button to set a task status to a tiddler">
+<pre></pre>
+</div>
+<div created="20210714141145974" creator="Télumire" description="Todo : prevent the section to reveal itself when clicking outside the tiddler" modified="20210714154732670" modifier="Télumire" source="https://groups.google.com/g/tiddlywiki/c/F9ACy0bQc9w/m/WCA8afsXAwAJ" tagging="after" tags="$:/tags/Macro tip wip" task="todo" title="Collapse/expand section within a tiddler">
+<pre>\define fold(heading, text, type:&quot;match&quot;)
+&lt;$button class=&quot;tc-btn-invisible&quot; popupTitle=&lt;&lt;qualify &quot;$:/state/section$heading$&quot;&gt;&gt;&gt;
+
+$heading$ {{$:/core/images/fold-button}}
+
+&lt;/$button&gt;
+&lt;$reveal tag=&quot;div&quot; type=$type$ stateTitle=&lt;&lt;qualify &quot;$:/state/section$heading$&quot;&gt;&gt; text=&quot;&quot; retain=&quot;yes&quot; animate=&quot;yes&quot;&gt;
+
+$text$
+
+&lt;/$reveal&gt;
+\end</pre>
+</div>
+<div created="20210713151608436" creator="Télumire" en-gb="Sentence in english" fr-fr="Phrase en français" modified="20210713194419737" modifier="Télumire" source="https://groups.google.com/g/tiddlywiki/c/aEJrcD8gWlE/m/_ck4wfltBwAJ" tagging="after" tagging-tiddler="conditional language" tags="[[conditional language]] tip" title="Conditional display based on language setting">
 <pre>&lt;$select tiddler=&quot;$:/language&quot;&gt;
  &lt;option value=&quot;fr-FR&quot;&gt;fr-FR&lt;/option&gt;
  &lt;option value=&quot;en-GB&quot;&gt;en-GB&lt;/option&gt;
@@ -11166,29 +11521,85 @@ Error message and password prompt
  &lt;$text text={{{ [[$:/language]get[text]regexp[fr-FR]then&lt;currentTiddler&gt;get[fr-fr]] [[$:/language]get[text]regexp[en-GB]then&lt;currentTiddler&gt;get[en-gb]] }}} /&gt;
 </pre>
 </div>
-<div created="20210627171144810" creator="Télumire" modified="20210627171240417" modifier="Télumire" tags="tip tagged" title="Display an edit button to a transcluded tiddler">
+<div caption="I'm the header of this section" created="20210714141602288" creator="Télumire" modified="20210714154732710" modifier="Télumire" tags="[[Collapse/expand section within a tiddler]]" title="Content of foldable section">
+<pre>Fold me once, fold me twice !</pre>
+</div>
+<div created="20210714131544380" creator="Télumire" modified="20210714131605493" modifier="Télumire" tags="" title="Custom new-here button">
 <pre></pre>
 </div>
-<div created="20210627165919497" creator="Télumire" modified="20210627172225934" modifier="Télumire" tags="tagged tip" title="Display tiddlers tagged">
-<pre>Display a list of all tiddler tagged with the current title. Can also be used with any title inside a transclusion, cf. [[Index|Index]].</pre>
+<div created="20210713190742365" creator="Télumire" modified="20210713191733275" modifier="Télumire" tagging="after" tags="tip" title="Display a description on any tiddler">
+<pre>This is useful when we want to display a text without putting it into the tiddler body (macro, template ..)</pre>
+</div>
+<div created="20210713191959366" creator="Télumire" modified="20210713192104831" modifier="Télumire" tagging="after" tags="tip" title="Display the field source">
+<pre>These tiddlers display the url you put in the field &quot;source&quot; of your tiddler. If you write more than one source, source become plural and each link become part of a list.</pre>
+</div>
+<div created="20210627165919497" creator="Télumire" modified="20210713195427420" modifier="Télumire" tagging="after" tags="tip" title="Display tiddlers tagging">
+<pre>Display a list of all tiddler tagged with the current title. 
+
+&lt;&lt;&lt;
+
+;How to use
+
+* Inside a tiddler, within a transclusion  `{{tip||(tagging)}}`
+* Tag any tiddler with `tagging-after` or `tagging-before`
+* Set the field `tagging` of any tiddler to  `after` or `before`
+* (optional) Set the field `tagging-tiddler` to a tiddler title to change the tag the list use
+
+`before` make the list appear before the tiddler body, `after` make the list appear after the tiddler body.
+&lt;&lt;&lt;
+</pre>
+</div>
+<div created="20210713203932306" creator="Télumire" modified="20210714131224553" modifier="Télumire" tagging="after" tags="tip" title="Drag and drop list of tiddlers">
+<pre>The custom macro [[openTiddlers]] create a link with two features : navigate to the selected tiddlers if clicked, import the selected tiddlers into another wiki if drag&amp;dropped.</pre>
 </div>
 <div created="20210712230458589" creator="Télumire" modified="20210712234012384" modifier="Télumire" tags="" title="Draggable list from filter">
 <pre>&lt;$macrocall $name=&quot;list-links-draggable&quot; tiddler=&lt;&lt;currentTiddler&gt;&gt; /&gt;</pre>
 </div>
-<div caption="Snippet/edit" created="20210612222422816" creator="user" modified="20210627172614126" modifier="Télumire" tags="[[Display an edit button to a transcluded tiddler]] $:/tags/TextEditor/Snippet" title="edit">
-<pre>&lt;p class=&quot;edit-transcluded&quot;&gt;
-&lt;$transclude tiddler={{!!title}} mode=&quot;block&quot;/&gt;
-&lt;span class=&quot;hide-until-hover edit-transcluded-button&quot;&gt; {{||$:/core/ui/Buttons/edit}}&lt;/span&gt;
-&lt;/p&gt;</pre>
+<div created="20210713160931301" creator="Télumire" modified="20210713193145639" modifier="Télumire" tagging="after" tags="tip" title="Edit button for transcluded content">
+<pre>With the following tiddlers, you can transclude a tiddler with an edit button, thus speeding up your workflow.</pre>
 </div>
-<div created="20210627171541896" creator="Télumire" modified="20210627171924695" modifier="Télumire" tags="[[Display an edit button to a transcluded tiddler]]" title="Ex:Edit transcluded">
-<pre>Hover the following text to display the transcluded tiddler edit button :
-{{Tiddler||edit}}</pre>
-</div>
-<div created="20210627165147396" creator="Télumire" modified="20210713153212870" modifier="Télumire" tags="" title="Index">
-<pre>Welcome to https://telumire.github.io/TW-tips/ ! I hope this wiki will be useful to you. Here are tips from the ~TiddlyWiki community :
+<div created="20210714144244338" creator="Télumire" modified="20210714154732710" modifier="Télumire" tags="[[Collapse/expand section within a tiddler]]" title="Ex:collapse/expand section within a tiddler">
+<pre>&gt; Note : both toggle at the same time because they share the same state
 
-{{tip||tagged}}</pre>
+__nomatch :__
+
+&lt;&lt;fold &quot;;{{Content of foldable section!!title}}&quot;  &quot;{{Content of foldable section}}&quot; nomatch&gt;&gt;
+
+__match :__
+
+&lt;&lt;fold &quot;;{{Content of foldable section!!title}}&quot;  &quot;{{Content of foldable section}}&quot; match&gt;&gt;</pre>
+</div>
+<div created="20210714130510934" creator="Télumire" modified="20210714130755049" modifier="Télumire" source="https://tiddlywiki.com/ https://groups.google.com/g/tiddlywiki https://www.reddit.com/r/TiddlyWiki5/ https://discord.gg/wncV2z5 " tags="[[Display the field source]]" title="Ex:Display the field source - tiddler with multiple sources">
+<pre>Here's a tiddler with some sources.</pre>
+</div>
+<div created="20210714130759650" creator="Télumire" modified="20210714130812702" modifier="Télumire" source="https://tiddlywiki.com/" tags="[[Display the field source]]" title="Ex:Display the field source - tiddler with one source">
+<pre>Here's a tiddler with one source.</pre>
+</div>
+<div created="20210713192854069" creator="Télumire" modified="20210713193327717" modifier="Télumire" tags="[[Edit button for transcluded content]]" title="Ex:Edit button for transcluded content">
+<pre>; Block
+{{Edit button for transcluded content||(edit)}}
+
+;Inline
+You can put this one inside of a →{{Edit button for transcluded content||(edit-inline)}}←sentence.</pre>
+</div>
+<div created="20210714160244835" creator="Télumire" modified="20210714160253383" modifier="Télumire" title="ex:task">
+<pre>{{||(task-list-todo-doing-done)}}</pre>
+</div>
+<div created="20210302174452210" creator="user" modified="20210714035549205" modifier="Télumire" tags="icon SVG [[Link styling]] [[Style external link icon]]" title="External_Link_Icon" type="image/svg+xml">
+<pre>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 20 17.142857&quot; height=&quot;10px&quot; class=&quot;tc-image-button&quot; fill=&quot;#b0b0db&quot; &gt;
+
+  &lt;path d=&quot;M15.714286 10.357143v3.571428q0 1.328125-.9375 2.265625-.948661.948661-2.276786.948661H3.214286q-1.328125 0-2.265625-.948661Q0 15.256696 0 13.928571V4.64286q0-1.32813.948661-2.27679.9375-.9375 2.265625-.9375h7.857143q.15625 0 .256696.10045.100446.10044.100446.25669V2.5q0 .15625-.100446.2567-.100446.10044-.256696.10044H3.214286q-.736607 0-1.261161.52456-.524554.52455-.524554 1.26116v9.285711q0 .736608.524554 1.261161.524554.524554 1.261161.524554H12.5q.736607 0 1.261161-.524554.524553-.524553.524553-1.261161v-3.571428q0-.15625.100447-.256697Q14.486607 10 14.642857 10h.714286q.15625 0 .256696.100446.100447.100447.100447.256697zM20 .71429v5.71428q0 .29018-.212054.50223-.212053.21206-.502232.21206-.290178 0-.502232-.21206l-1.964286-1.96428-7.276785 7.276784q-.111607.111607-.256697.111607-.145089 0-.256696-.111607l-1.272322-1.272322q-.111607-.111607-.111607-.256696 0-.14509.111607-.256697L15.033482 3.1808l-1.964286-1.96428q-.212053-.21206-.212053-.50223 0-.29018.212053-.50224Q13.28125 0 13.571429 0h5.714285q.290179 0 .502232.21205Q20 .42411 20 .71429z&quot;/&gt;
+&lt;/svg&gt;
+</pre>
+</div>
+<div created="20210313134122939" creator="user" description="Macro pour afficher les résultat du filtre dans un nouvel onglet:  &lt;$macrocall $name=&quot;copy-code&quot; title=&quot;&quot; language=&quot;&quot; display-language=&quot;hidden&quot; code=&quot;&quot;&quot;&lt;&lt;href-filter &quot;filtre&quot; &quot;texte&quot;&gt;&gt;&quot;&quot;&quot;/&gt;" modified="20210703201226350" modifier="user" tags="TW5 $:/tags/Macro" title="href-filter">
+<pre>\define href-filter(filter, text=&quot;open all&quot;) &lt;a href=&quot;#:[$filter$]&quot; target=&quot;_blank&quot;&gt;$text$&lt;/a&gt;</pre>
+</div>
+<div created="20210627165147396" creator="Télumire" modified="20210714155855635" modifier="Télumire" tagging="after" tagging-tiddler="tip" tags="" title="Index">
+<pre>Welcome to https://telumire.github.io/TW-tips/ !
+
+Here are some useful tips &amp; tricks to add to your wiki.
+&lt;hr&gt;</pre>
 </div>
 <div created="20210712231133815" creator="Télumire" modified="20210712231156921" modifier="Télumire" tags="draggable-list-item" title="item-A">
 <pre></pre>
@@ -11199,10 +11610,135 @@ Error message and password prompt
 <div created="20210712231207429" creator="Télumire" modified="20210712231211347" modifier="Télumire" tags="draggable-list-item" title="item-C">
 <pre></pre>
 </div>
-<div created="20210627165746905" creator="Télumire" modified="20210627172641494" modifier="Télumire" tags="tip" title="Simple math in tiddlywiki">
+<div created="20210625132423804" creator="user" modified="20210625132710063" modifier="user" tags="SideBarOrder" title="itemTemplateSidebarOrder">
+<pre>&lt;span class=&quot;itemTemplateSidebarOrder&quot;&gt;
+&lt;$link to=&lt;&lt;currentTiddler&gt;&gt;&gt; &lt;$transclude field=&quot;caption&quot;&gt; &lt;$view field=&quot;title&quot;/&gt; &lt;/$transclude&gt;&lt;/$link&gt;
+&lt;/span&gt;</pre>
+</div>
+<div created="20210713203036890" creator="Télumire" modified="20210713203038610" modifier="Télumire" tags="Test" title="New Tiddler">
 <pre></pre>
 </div>
-<div created="20210709115039116" creator="user" modified="20210711010542871" modifier="user" tags="ViewSourceTemplate $:/tags/Stylesheet" title="Style ViewSourceTemplate" type="text/css">
+<div created="20210713203041177" creator="Télumire" modified="20210713203042480" modifier="Télumire" tags="Test" title="New Tiddler 1">
+<pre></pre>
+</div>
+<div created="20210713203045397" creator="Télumire" modified="20210713203046846" modifier="Télumire" tags="Test" title="New Tiddler 2">
+<pre></pre>
+</div>
+<div created="20210707161555685" creator="user" modified="20210713204940965" modifier="Télumire" tags="$:/tags/Macro TW5 [[Drag and drop list of tiddlers]]" title="openTiddlers">
+<pre>\define openTiddlers(filter:&quot;&quot; text:&quot;open all&quot;)
+&lt;$button class=&quot;tc-btn-invisible tc-tiddlylink&quot; tooltip=&quot;Go to tiddlers&quot; dragFilter=&quot;[$filter$]&quot;&gt;
+&lt;$list filter=&quot;&quot;&quot;[$filter$]&quot;&quot;&quot;&gt;&lt;$action-navigate $to={{!!title}}/&gt;&lt;/$list&gt;
+$text$
+&lt;/$button&gt;
+\end</pre>
+</div>
+<div created="20210625133738529" creator="user" description="Display numbers for a list of tiddler generated by the macro list-tagged-draggable inside a span with the class &quot;count-tc-menu-list-items&quot;" modified="20210714041916303" modifier="Télumire" tags="$:/tags/Stylesheet SideBarOrder" title="Style count-tc-menu-list-items" type="text/css">
+<pre>.count-tc-menu-list-items {
+counter-reset: item;
+}
+
+.count-tc-menu-list-items .tc-menu-list-item .tc-droppable div:before {
+counter-increment: item;
+content: counter(item) &quot;: &quot;; 
+}</pre>
+</div>
+<div created="20210613102831878" creator="user" modified="20210714035543019" modifier="Télumire" tags="$:/tags/Stylesheet [[Link styling]]" title="Style external link icon">
+<pre>&lt;pre&gt;
+
+/*Default icon for external links*/
+.tc-tiddler-body a.tc-tiddlylink-external:before, a[target=_blank]:before{
+  content:&quot;&quot;;
+  height:1.3ch;
+  width:1.5ch;
+  margin-right:0.2em;
+  display:inline-block;
+  background: center / contain no-repeat url(&lt;&lt;datauri &quot;External_Link_Icon&quot;&gt;&gt;);
+}
+
+/*Icon for specific domains*/
+a.tc-tiddlylink-external[href*=&quot;angular.io&quot;]:before {background-image: url(&lt;&lt;datauri &quot;Icon/Angular.ico&quot;&gt;&gt;);}
+a.tc-tiddlylink-external[href*=&quot;wikipedia&quot;]:before {background-image: url(&lt;&lt;datauri &quot;Icon/Wikipedia.png&quot;&gt;&gt;);}
+
+&lt;/pre&gt;</pre>
+</div>
+<div created="20210703204013011" creator="user" modified="20210703204047733" modifier="user" tags="TW5 [[Link styling]] $:/tags/Stylesheet" title="Style links">
+<pre>&lt;pre&gt;
+
+/*****Links*****/
+
+.uni-alias, .uni-link, a, .nicelist ul li span {
+    color: &lt;&lt;color tiddler-link-foreground&gt;&gt;;
+}
+
+.uni-alias {
+	cursor:alias;
+}
+
+/*Style missing links*/
+a.tc-tiddlylink-missing:not(.tc-edit-type-dropdown .tc-tiddlylink-missing, .tc-tiddler-system  .tc-tiddlylink-missing) {
+    text-decoration: line-through;
+    text-decoration-style: strikethrough;
+}</pre>
+</div>
+<div created="20210703203821719" creator="user" modified="20210703203852546" modifier="user" tags="$:/tags/Stylesheet TW5" title="Style tags">
+<pre>&lt;pre&gt;
+/* icon next to tag name */
+
+div.tc-tags-wrapper span.tc-tag-list-item span.tc-tag-label:before {
+  content: url(&lt;&lt;datauri &quot;Tag_Icon&quot;&gt;&gt;);
+  float:left;
+  font-size:1.5em;
+	display: inline-block;
+  margin-right: .5ch;
+  width: 16px;
+}
+
+div.tc-tags-wrapper span.tc-tag-list-item span.tc-tag-label{
+color:&lt;&lt;color tag-background&gt;&gt;!important;
+font-weight:bold;
+padding:5px;
+background:unset!important;
+}
+
+div.tc-tags-wrapper span.tc-tag-list-item {
+margin-right:3px;
+}
+
+button.tc-tag-label, span.tc-tag-label{
+padding:5px!important;
+}</pre>
+</div>
+<div created="20210706143025570" creator="user" modified="20210707132841768" modifier="user" tags="$:/tags/Stylesheet ui/Buttons/tasker" title="Style tasker" type="text/css">
+<pre>.tasker[data-task=&quot;todo&quot;] * {
+  --colorRgb: 255, 0, 0;
+  color:  rgb(var(--colorRgb));
+  fill: rgb(var(--colorRgb));
+}
+
+.tasker[data-task=&quot;doing&quot;] * {
+  --colorRgb: 232, 170, 12;
+  color:  rgb(var(--colorRgb));
+  fill: rgb(var(--colorRgb));
+}
+
+.tasker[data-task=&quot;done&quot;] * {
+  --colorRgb: 37, 255, 6;
+  color:  rgb(var(--colorRgb));
+  fill: rgb(var(--colorRgb));
+}
+
+/*prevent text selection from task button*/
+.tasker {
+	user-select: none;
+}
+
+/*hide button*/
+
+.tasker &gt; button {
+	display:contents;
+}</pre>
+</div>
+<div created="20210709115039116" creator="user" modified="20210713191952458" modifier="Télumire" tags="$:/tags/Stylesheet [[Display the field source]]" title="Style/DisplaySource" type="text/css">
 <pre>.view-source .solo~*{
 	display:inline-flex;
 	padding:0;
@@ -11213,42 +11749,90 @@ Error message and password prompt
 	content:&quot;:&quot;;
 }</pre>
 </div>
-<div created="20210613001525686" creator="user" modified="20210627172600099" modifier="Télumire" tags="$:/tags/Stylesheet [[Display an edit button to a transcluded tiddler]]" title="Style/edit-transcluded" type="text/css">
-<pre>p.edit-transcluded{
+<div created="20210612153656341" creator="user" modified="20210713161653379" modifier="Télumire" tags="$:/tags/Stylesheet [[Edit button for transcluded content]]" title="Style/hide-until-hover" type="text/css">
+<pre>@media (hover: hover) {
+	.hide-until-hover{
+	opacity:0;
+	transition: opacity 150ms ease-in-out;
+	}
+
+	p:hover&gt;.hide-until-hover{
+	opacity:1;
+	}
+}</pre>
+</div>
+<div created="20210613001525686" creator="user" modified="20210713193917616" modifier="Télumire" tags="$:/tags/Stylesheet [[Edit button for transcluded content]]" title="Style/transclude-edit" type="text/css">
+<pre>/*Block*/
+p.transclude-edit{
 	position:relative;
 }
 
-p.edit-transcluded&gt;.edit-transcluded-button{
-	position:absolute;
-	top:0;
-	right:0;
-}</pre>
-</div>
-<div created="20210612153656341" creator="user" modified="20210627172553988" modifier="Télumire" tags="$:/tags/Stylesheet [[Display an edit button to a transcluded tiddler]]" title="Style/hide-until-hover" type="text/css">
-<pre>.hide-until-hover{
-opacity:0;
-transition: opacity 150ms ease-in-out;
+p.transclude-edit&gt;.transclude-edit-button{
+	position: absolute;
+	top: 0;
+	left: 100%;
+	height: 100%;
+	width: 40px;
+	text-align:center;
+	background: rgb(43, 43, 43);
 }
 
-p:hover&gt;.hide-until-hover{
-opacity:1;
+p.transclude-edit&gt;.transclude-edit-button button{
+	width:100%;
+	height:100%;
+}
+
+
+/*Inline*/
+span.transclude-edit:hover {
+background: rgb(43, 43, 43);
+}
+
+span.transclude-edit .transclude-edit-button{
+	display:none;
+}
+
+span.transclude-edit:hover .transclude-edit-button{
+	display:initial;
+	opacity:1;
 }</pre>
 </div>
-<div caption="Snippet/Display tiddlers tagged with title" created="20210627170052616" creator="Télumire" modified="20210627172355921" modifier="Télumire" tags="[[Display tiddlers tagged]] $:/tags/TextEditor/Snippet" title="tagged">
-<pre>&lt;&lt;list-links &quot;[all[current]tagging[]sort[title]]&quot;&gt;&gt;</pre>
+<div created="20210526223756479" creator="user" modified="20210714035443201" modifier="Télumire" tags="icon SVG [[Style tags]]" title="Tag_Icon" type="image/svg+xml">
+<pre>&lt;svg version=&quot;1.1&quot; viewBox=&quot;0 0 28.945 29.051&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; height=&quot;1em&quot; fill=&quot;#ffc966&quot;&gt;
+ &lt;path d=&quot;m3.8202 10.771 9.167e-4 0.94074c6.875e-4 0.87612 0.50188 2.0848 1.1195 2.7024l14.174 14.174c0.61807 0.61807 1.6198 0.61647 2.2388-0.0023l7.126-7.1265a1.582 1.582 0 0 0 0.0023-2.239l-14.174-14.173c-0.61807-0.61807-1.8279-1.1183-2.7033-1.1186l-6.205-0.0016a1.5817 1.5817 0 0 0-1.5836 1.5836l0.00183 2.2825 0.065772 0.00756c0.8548 0.094189 1.9454-0.010084 3.0629-0.26423a2.2234 2.2234 0 0 1 2.553-0.83922l0.06669-0.029792 0.02933 0.065314a2.2229 2.2229 0 0 1 0.75626 0.4973c0.86993 0.86993 0.87108 2.2791 0.0027 3.1474-0.82914 0.82914-2.151 0.86558-3.026 0.11046-1.2295 0.25713-2.4462 0.36576-3.5084 0.28348z&quot;/&gt;
+ &lt;path d=&quot;m10.574 8.9086 0.0053 0.011688c-2.2205 0.99826-4.9464 1.5581-6.9659 1.3356-2.7471-0.30296-4.1911-2.0582-3.3956-4.8889 0.71478-2.5442 2.7173-4.5185 4.951-5.1632 2.4475-0.70653 4.5259 0.45101 4.5259 3.0308h-1.9761c0-1.1135-0.70539-1.5063-2.0018-1.1321-1.5836 0.45719-3.069 1.9211-3.5966 3.799-0.43886 1.5625 0.095564 2.2122 1.7096 2.3902 1.6331 0.1799 4.0176-0.30984 5.9394-1.1736l0.0062 0.01375 0.0083-0.0039c0.40334-0.17371 1.436 1.5008 0.80759 1.7738a0.64168 0.64168 0 0 1-0.01719 0.00688z&quot;/&gt;
+&lt;/svg&gt;</pre>
 </div>
-<div created="20210627165421558" creator="Télumire" modified="20210627170911221" modifier="Télumire" tags="$:/tags/ViewTemplate [[Display tiddlers tagged]]" title="Template/Display tiddlers tagged with title">
-<pre>&lt;$list filter=&quot;[all[current]tag[tagged]]&quot;&gt;
-{{||tagged}}
+<div caption="Alternative : display tasker at the left of the title" created="20210707153929980" creator="user" icon="ui/Buttons/tasker" modified="20210707160006285" modifier="user" tags="TW5 ui/Buttons/tasker $:/tags/Stylesheet" task="done" title="Tasker button at the left of the title" type="text/css" voir="$:/core/ui/ViewTemplate/title">
+<pre>a.tc-tiddlylink:hover {
+text-decoration:unset; /*prevent underline when button is hovered*/
+}
+
+a.tc-tiddlylink .tc-title:hover {
+	text-decoration:underline; /*restore underline when title is hovered*/
+}
+
+.tc-tiddler-title-icon label{
+	display:inline-grid;
+	place-content:center;
+}</pre>
+</div>
+<div created="20210714035609328" creator="Télumire" modified="20210714040216451" modifier="Télumire" tags="author" title="Télumire">
+<pre>&lt;&lt;list-links &quot;[creator&lt;currentTiddler&gt;sort[title]]&quot;&gt;&gt;
+
+
+
+</pre>
+</div>
+<div created="20210630152942552" creator="user" description="This template show the content of the tiddler field `description`" list-before="$:/core/ui/ViewTemplate/body" modified="20210713202741200" modifier="Télumire" tags="$:/tags/ViewTemplate [[Display a description on any tiddler]]" title="Template/Description">
+<pre>\whitespace trim
+&lt;$list filter=&quot;[all[current]has[description]]&quot;&gt;
+&lt;$reveal tag=&quot;div&quot; type=&quot;nomatch&quot; stateTitle=&lt;&lt;folded-state&gt;&gt; text=&quot;hide&quot; retain=&quot;yes&quot; animate=&quot;yes&quot;&gt;
+&lt;blockquote&gt;{{!!description}}&lt;/blockquote&gt;
+&lt;/$reveal&gt;
 &lt;/$list&gt;</pre>
 </div>
-<div created="20210627171653571" creator="Télumire" modified="20210627171708760" modifier="Télumire" tags="" title="Tiddler">
-<pre>Here's a normal tiddler.</pre>
-</div>
-<div created="20210627170006507" creator="Télumire" modified="20210627170820582" modifier="Télumire" tags="tagged" title="tip">
-<pre></pre>
-</div>
-<div created="20210525115153189" creator="user" modified="20210711005813165" modifier="user" source="https://www.angular.io https://www.wikipedia.fr https://www.tiddlywiki.com" tags="$:/tags/ViewTemplate TW5 source tiddler-footer" title="ViewSourceTemplate" type="" voir="[[List content of a field]]">
+<div created="20210525115153189" creator="user" modified="20210713202759835" modifier="Télumire" source="https://www.tiddlywiki.com" tags="$:/tags/ViewTemplate [[Display the field source]]" title="Template/DisplaySource" type="">
 <pre>&lt;$list filter=&quot;[all[current]has[source]]&quot;&gt;
 &lt;$reveal tag=&quot;div&quot; type=&quot;nomatch&quot; stateTitle=&lt;&lt;folded-state&gt;&gt; text=&quot;hide&quot; retain=&quot;yes&quot; animate=&quot;yes&quot;&gt;
             &lt;div class=&quot;view-source&quot;&gt;
@@ -11266,6 +11850,86 @@ opacity:1;
             &lt;/div&gt;
 	&lt;/$reveal&gt;
 &lt;/$list&gt;</pre>
+</div>
+<div created="20210713194532173" creator="Télumire" description="This tiddler is used by the ~ViewTemplates [[Template/tagging/before]] and [[Template/tagging/after]]" list-before="$:/core/ui/ViewTemplate/body" modified="20210714130045296" modifier="Télumire" tags="[[Display tiddlers tagging]]" title="Template/tagging">
+<pre>&lt;$reveal tag=&quot;div&quot; type=&quot;nomatch&quot; stateTitle=&lt;&lt;folded-state&gt;&gt; text=&quot;hide&quot; retain=&quot;yes&quot; animate=&quot;yes&quot;&gt;
+
+&lt;$list filter=&quot;[all[current]!tagging-open[false]]&quot;&gt;
+
+&lt;$list filter=&quot;[all[current]has:field[tagging-tiddler]]&quot;&gt;
+&lt;$set name=&quot;tag&quot; value={{!!tagging-tiddler}}&gt;
+&lt;&lt;openTiddlers &quot;tag[$(tag)$]&quot; &quot;open all in the current tab&quot;&gt;&gt; - &lt;&lt;href-filter &quot;tag[$(tag)$]&quot; &quot;another tab&quot;&gt;&gt;
+&lt;/$set&gt;
+&lt;/$list&gt;
+
+&lt;$list filter=&quot;[all[current]!has:field[tagging-tiddler]]&quot;&gt;
+&lt;$set name=&quot;tag&quot; value={{!!title}}&gt;
+&lt;&lt;openTiddlers &quot;tag[$(tag)$]&quot; &quot;open all in the current tab&quot;&gt;&gt; - &lt;&lt;href-filter &quot;tag[$(tag)$]&quot; &quot;another tab&quot;&gt;&gt;
+&lt;/$set&gt;
+&lt;/$list&gt;
+
+&lt;/$list&gt;
+
+&lt;$list filter=&quot;[all[current]has:field[tagging-tiddler]]&quot;&gt;
+&lt;&lt;list-links &quot;[!&lt;currentTiddler&gt;tag{!!tagging-tiddler}sort[title]]&quot;&gt;&gt;
+&lt;/$list&gt;
+
+&lt;$list filter=&quot;[all[current]!has[tagging-tiddler]]&quot;&gt;
+{{||(tagging)}}
+&lt;/$list&gt;
+&lt;/$reveal&gt;</pre>
+</div>
+<div created="20210713163051744" creator="Télumire" list-after="$:/core/ui/ViewTemplate/body" modified="20210713202706171" modifier="Télumire" tags="[[Display tiddlers tagging]] $:/tags/ViewTemplate" title="Template/tagging/after">
+<pre>\whitespace trim
+&lt;$list filter=&quot;[all[current]field:tagging[after]]:or[all[current]tag[tagging-after]]:or[all[current]has[tagging-tiddler]]&quot;&gt;
+{{||Template/tagging}}
+&lt;/$list&gt;</pre>
+</div>
+<div created="20210713163447323" creator="Télumire" list-before="$:/core/ui/ViewTemplate/body" modified="20210713202700645" modifier="Télumire" tags="[[Display tiddlers tagging]] $:/tags/ViewTemplate" title="Template/tagging/before">
+<pre>\whitespace trim
+&lt;$list filter=&quot;[all[current]field:tagging[before]]:or[all[current]tag[tagging-before]]&quot;&gt;
+{{||Template/tagging}}
+&lt;/$list&gt;</pre>
+</div>
+<div created="20210713202236063" creator="Télumire" list="[[New Tiddler 2]] [[New Tiddler]] [[New Tiddler 1]]" modified="20210713203210830" modifier="Télumire" tags="" title="Test">
+<pre>{{||$:/core/ui/TagTemplate}}
+&lt;$macrocall $name=&quot;list-tagged-draggable&quot; tag=&lt;&lt;currentTiddler&gt;&gt;/&gt;</pre>
+</div>
+<div created="20210714160159159" creator="Télumire" modified="20210714160322915" modifier="Télumire" tags="[[Add a button to set a task status to a tiddler]] ex:task" task="todo" title="This is a task">
+<pre></pre>
+</div>
+<div created="20210714160230815" creator="Télumire" modified="20210714160324849" modifier="Télumire" tags="[[Add a button to set a task status to a tiddler]] ex:task" title="This is another task">
+<pre></pre>
+</div>
+<div created="20210627171653571" creator="Télumire" modified="20210627171708760" modifier="Télumire" tags="" title="Tiddler">
+<pre>Here's a normal tiddler.</pre>
+</div>
+<div created="20210627170006507" creator="Télumire" modified="20210713190419322" modifier="Télumire" tagging="after" tags="" title="tip">
+<pre></pre>
+</div>
+<div created="20210714041352986" creator="Télumire" modified="20210714041704734" modifier="Télumire" tags="" title="Todos">
+<pre>{{todo||(task-list)}}</pre>
+</div>
+<div caption="{{$:/images/task-unset}} {{$:/language/Buttons/tasker/Caption}}" created="20210706131422635" creator="user" description="{{$:/language/Buttons/tasker/Hint}}" modified="20210714155845833" modifier="Télumire" tags="$:/tags/Macro $:/tags/ViewToolbar ui/Buttons/tasker" title="ui/Buttons/tasker">
+<pre>\define tasker-toggle() &lt;$action-listops $field=&quot;task&quot; $subfilter=&quot;+[toggle[todo],[doing],[done]]&quot;/&gt;
+\define tasker-unset()  &lt;$action-listops $message=&quot;tm-remove-field&quot; $param=&quot;task&quot;/&gt;
+
+&lt;!-- TODO : lorsqu'une tâche est créée, mettre à jour le champ list du tiddler correspondant pour pouvoir ordonner les tâches dans une liste --&gt;
+
+&lt;label class=&quot;tasker&quot; data-task={{!!task}}&gt;
+&lt;$list filter=&quot;[all[current]!task[done]]&quot;&gt;
+		&lt;$button actions=&lt;&lt;tasker-toggle&gt;&gt; class=&quot;tc-btn-invisible&quot; tooltip={{$:/language/Buttons/tasker/Hint}} aria-label={{$:/language/Buttons/tasker/Caption}} &gt;
+			&lt;$list filter=&quot;[all[current]!has:field[task]]&quot;&gt;{{$:/images/task-unset}}&lt;/$list&gt;
+			&lt;$list filter=&quot;[all[current]task[todo]]&quot;&gt;{{$:/images/task-todo}}&lt;/$list&gt;
+			&lt;$list filter=&quot;[all[current]task[doing]]&quot;&gt;{{$:/images/task-doing}}&lt;/$list&gt;
+		&lt;/$button&gt;
+&lt;/$list&gt;
+&lt;$list filter=&quot;[all[current]task[done]]&quot;&gt;
+   &lt;$fieldmangler&gt;
+      &lt;$button message=&quot;tm-remove-field&quot; param=&quot;task&quot; class=&quot;tc-btn-invisible&quot; tooltip={{$:/language/Buttons/tasker/Hint}} aria-label={{$:/language/Buttons/tasker/Caption}} &gt;{{$:/images/task-done}}&lt;/$button&gt;
+   &lt;/$fieldmangler&gt;
+&lt;/$list&gt;
+&lt;/label&gt;</pre>
 </div>
 
 
