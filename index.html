@@ -145,6 +145,10 @@ Error message and password prompt
 
 <li>(edit)</li>
 
+<li>(gallery-painting)</li>
+
+<li>(language-selection)</li>
+
 <li>(tagging)</li>
 
 <li>(task-list-doing-tag)</li>
@@ -194,8 +198,6 @@ Error message and password prompt
 <li>$:/images/task-todo</li>
 
 <li>$:/images/task-unset</li>
-
-<li>$:/Import</li>
 
 <li>$:/isEncrypted</li>
 
@@ -271,11 +273,11 @@ Error message and password prompt
 
 <li>Drag and drop list of tiddlers</li>
 
-<li>Draggable list from filter</li>
-
 <li>Edit button for transcluded content</li>
 
 <li>Ex:collapse/expand section within a tiddler</li>
+
+<li>Ex:Conditional display based on language setting - poc</li>
 
 <li>Ex:Display the field source - tiddler with multiple sources</li>
 
@@ -286,6 +288,10 @@ Error message and password prompt
 <li>ex:task</li>
 
 <li>External_Link_Icon</li>
+
+<li>gallery</li>
+
+<li>gallery-painting</li>
 
 <li>href-filter</li>
 
@@ -299,6 +305,8 @@ Error message and password prompt
 
 <li>itemTemplateSidebarOrder</li>
 
+<li>macro/quote</li>
+
 <li>New Tiddler</li>
 
 <li>New Tiddler 1</li>
@@ -307,9 +315,15 @@ Error message and password prompt
 
 <li>openTiddlers</li>
 
+<li>painting#1</li>
+
+<li>painting#2</li>
+
 <li>Style count-tc-menu-list-items</li>
 
 <li>Style external link icon</li>
+
+<li>Style gallery</li>
 
 <li>Style links</li>
 
@@ -333,11 +347,15 @@ Error message and password prompt
 
 <li>Template/DisplaySource</li>
 
+<li>template/gallery-painting</li>
+
 <li>Template/tagging</li>
 
 <li>Template/tagging/after</li>
 
 <li>Template/tagging/before</li>
+
+<li>Template/tagging/itemTemplate</li>
 
 <li>Test</li>
 
@@ -375,6 +393,29 @@ Error message and password prompt
 &lt;$transclude tiddler={{!!title}} mode=&quot;block&quot;/&gt;
 &lt;span class=&quot;hide-until-hover transclude-edit-button&quot;&gt; {{||$:/core/ui/Buttons/edit}}&lt;/span&gt;
 &lt;/p&gt;</pre>
+</div>
+<div created="20210715005448399" creator="Télumire" modified="20210715014141734" modifier="Télumire" tags="gallery-painting" title="(gallery-painting)">
+<pre>&lt;div class=&quot;gallery-item&quot;&gt;
+&lt;$link class=&quot;link-painting&quot;&gt;
+&lt;$image
+source={{!!img-source}}
+width={{!!img-width}}
+height={{!!img-height}}
+tooltip={{!!img-tooltip}}
+alt={{!!img-alt}}
+class={{!!img-class}}
+/&gt;
+&lt;/$link&gt;
+
+&lt;blockquote class=&quot;tc-quote image-align-center&quot; style={{!!quote-style}}&gt;&lt;$text text={{{ [[$:/language]get[text]regexp[fr-FR]then&lt;currentTiddler&gt;get[fr-fr]] [[$:/language]get[text]regexp[en-GB]then&lt;currentTiddler&gt;get[en-gb]] }}} /&gt;&lt;/blockquote&gt;
+
+&lt;/div&gt;</pre>
+</div>
+<div created="20210715005952572" creator="Télumire" modified="20210715015529884" modifier="Télumire" tags="gallery-painting" title="(language-selection)">
+<pre>&lt;$select tiddler=&quot;$:/language&quot;&gt;
+ &lt;option value=&quot;fr-FR&quot;&gt;fr-FR&lt;/option&gt;
+ &lt;option value=&quot;en-GB&quot;&gt;en-GB&lt;/option&gt;
+&lt;/$select&gt;</pre>
 </div>
 <div caption="Snippet/Display tiddlers tagged with title" created="20210627170052616" creator="Télumire" description="This tiddler is used by the  ~ViewTemplates to display a list of all tiddler tagged with the current title. If there is a caption, the content is displayed as the text of the link, otherwise the title of the tiddler is displayed. If there is a description, the description is displayed at the right of the link. Use it like so : `{{tiddlerTitle||(tagging)}}`" modified="20210714155747606" modifier="Télumire" tags="[[Display tiddlers tagging]] $:/tags/TextEditor/Snippet" title="(tagging)">
 <pre>&lt;ul&gt;
@@ -429,7 +470,7 @@ Error message and password prompt
 &lt;/$list&gt;
 &lt;/ul&gt;</pre>
 </div>
-<div created="20210707130327890" creator="user" description="Ce tiddler permet d'afficher un lien vers une tâche ainsi que l'indicateur de tâche pour changer son statut sans devoir l'ouvrir. &lt;br&gt; Si le champ `task-description` est remplis, son contenu sera affiché. Si un `caption` existe et qu'il n'y a pas de `task-description`, `caption` est affiché. Si pas, le titre du tiddler est affiché." modified="20210707163021496" modifier="user" tags="TW5 ui/Buttons/tasker" title="(task)">
+<div created="20210707130327890" creator="user" description="This tiddler allows you to display a link to a task and the task indicator to change its status without having to open it. &lt;br&gt; If the `task-description` field is filled in, its contents will be displayed. If a `caption` exists and there is no `task-description`, `caption` is displayed. If not, the tiddler title is displayed." modified="20210715021621660" modifier="Télumire" tags="TW5 ui/Buttons/tasker" title="(task)">
 <pre>&lt;style&gt;
 .tc-tiddler-controls.inline-task button svg {
 width:1em;
@@ -455,8 +496,8 @@ height:auto;
 <div created="20210627165251193" creator="Télumire" modified="20210627165251193" modifier="Télumire" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/more-page-actions">
 <pre>show</pre>
 </div>
-<div created="20210627165739186" creator="Télumire" modified="20210627165739186" modifier="Télumire" title="$:/config/RelinkOnRename">
-<pre>yes</pre>
+<div created="20210627165739186" creator="Télumire" modified="20210715010302313" modifier="Télumire" title="$:/config/RelinkOnRename">
+<pre>no</pre>
 </div>
 <div created="20210714125309556" creator="Télumire" modified="20210714125309556" modifier="Télumire" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/close-others">
 <pre>show</pre>
@@ -10343,7 +10384,7 @@ height:auto;
 <div created="20210627193359845" creator="Télumire" modified="20210627193407497" modifier="Télumire" title="$:/GitHub/Repo">
 <pre>Telumire/TW-tips</pre>
 </div>
-<div created="20210627193317220" creator="Télumire" modified="20210714160343954" modifier="Télumire" title="$:/GitHub/Username">
+<div created="20210627193317220" creator="Télumire" modified="20210715022003460" modifier="Télumire" title="$:/GitHub/Username">
 <pre>Telumire</pre>
 </div>
 <div created="20210706193912669" creator="user" modified="20210714035311410" modifier="user" tags="$:/tags/Image ui/Buttons/tasker" title="$:/images/task-doing" type="text/vnd.tiddlywiki">
@@ -10379,92 +10420,11 @@ viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class
  &lt;/g&gt;
 &lt;/svg&gt;</pre>
 </div>
-<div status="complete" title="$:/Import">
-<pre>The following tiddlers were imported:
-
-# [[(edit-inline)]]
-# [[(edit)]]
-# [[(tagging)]]
-# [[(task-list-doing-tag)]]
-# [[(task-list-done-tag)]]
-# [[(task-list-todo-tag)]]
-# [[(task-list)]]
-# [[(task)]]
-# [[↕]]
-# [[$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home]]
-# [[$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/more-page-actions]]
-# [[$:/config/RelinkOnRename]]
-# [[$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/fold-bar]]
-# [[$:/DefaultTiddlers]]
-# [[$:/GitHub/Filename]]
-# [[$:/GitHub/Path]]
-# [[$:/GitHub/Repo]]
-# [[$:/GitHub/Username]]
-# [[$:/images/task-doing]]
-# [[$:/images/task-done]]
-# [[$:/images/task-todo]]
-# [[$:/images/task-unset]]
-# [[$:/isEncrypted]]
-# [[$:/language]]
-# [[$:/language/Buttons/tasker/Caption]]
-# [[$:/language/Buttons/tasker/Hint]]
-# [[$:/palette]]
-# [[$:/plugins/flibbles/relink]]
-# [[$:/SiteSubtitle]]
-# [[$:/SiteTitle]]
-# [[$:/status/RequireReloadDueToPluginChange]]
-# [[$:/status/UserName]]
-# [[$:/tags/Stylesheet]]
-# [[$:/tags/ViewTemplate]]
-# [[$:/theme]]
-# [[$:/themes/tiddlywiki/centralised/styles.tid]]
-# [[$:/themes/tiddlywiki/vanilla]]
-# [[Conditional display based on language setting]]
-# [[Display a description on any tiddler]]
-# [[Display the field source]]
-# [[Display tiddlers tagging]]
-# [[Drag and drop list of tiddlers]]
-# [[Draggable list from filter]]
-# [[Edit button for transcluded content]]
-# [[Ex:Edit button for transcluded content]]
-# [[External_Link_Icon]]
-# [[href-filter]]
-# [[Index]]
-# [[item-A]]
-# [[item-B]]
-# [[item-C]]
-# [[itemTemplateSidebarOrder]]
-# [[New Tiddler]]
-# [[New Tiddler 1]]
-# [[New Tiddler 2]]
-# [[openTiddlers]]
-# [[Style count-tc-menu-list-items]]
-# [[Style external link icon]]
-# [[Style links]]
-# [[Style tags]]
-# [[Style tasker]]
-# [[Style/DisplaySource]]
-# [[Style/hide-until-hover]]
-# [[Style/transclude-edit]]
-# [[Tag_Icon]]
-# [[Tasker button at the left of the title]]
-# [[Télumire]]
-# [[Template/Description]]
-# [[Template/DisplaySource]]
-# [[Template/tagging]]
-# [[Template/tagging/after]]
-# [[Template/tagging/before]]
-# [[Test]]
-# [[Tiddler]]
-# [[tip]]
-# [[Todos]]
-# [[ui/Buttons/tasker]]</pre>
-</div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
-<div created="20210713151714139" creator="Télumire" modified="20210714125423185" modifier="Télumire" tags="[[conditional language]]" title="$:/language">
-<pre>fr-FR</pre>
+<div created="20210713151714139" creator="Télumire" modified="20210715015449597" modifier="Télumire" tags="gallery-painting" title="$:/language">
+<pre>en-GB</pre>
 </div>
 <div created="20210706180301988" creator="user" modified="20210706201217902" modifier="user" tags="ui/Buttons/tasker" title="$:/language/Buttons/tasker/Caption">
 <pre>tasker</pre>
@@ -11331,14 +11291,14 @@ viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class
 <div created="20210627161629943" creator="Télumire" modified="20210627193346818" modifier="Télumire" title="$:/SiteTitle">
 <pre>TW-tips</pre>
 </div>
-<div created="20210714131710187" creator="Télumire" modified="20210714131759650" modifier="Télumire" title="$:/state/advancedsearch/currentTab">
-<pre>$:/core/ui/AdvancedSearch/Shadows</pre>
+<div created="20210714131710187" creator="Télumire" modified="20210715011422557" modifier="Télumire" title="$:/state/advancedsearch/currentTab">
+<pre>$:/core/ui/AdvancedSearch/Filter</pre>
 </div>
-<div created="20210714123144577" creator="Télumire" modified="20210714123356103" modifier="Télumire" title="$:/state/sidebar">
+<div created="20210714123144577" creator="Télumire" modified="20210715014801192" modifier="Télumire" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
-<div created="20210714131710187" creator="Télumire" modified="20210714131759650" modifier="Télumire" title="$:/state/tab--1498284803">
-<pre>$:/core/ui/AdvancedSearch/Shadows</pre>
+<div created="20210714131710187" creator="Télumire" modified="20210715011422557" modifier="Télumire" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/Filter</pre>
 </div>
 <div created="20210714123207883" creator="Télumire" modified="20210714131718252" modifier="Télumire" title="$:/state/tab--1963855381">
 <pre>$:/core/ui/ControlPanel/Palette</pre>
@@ -11346,13 +11306,13 @@ viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class
 <div created="20210714131721087" creator="Télumire" modified="20210714131722156" modifier="Télumire" title="$:/state/tab--2112689675">
 <pre>$:/core/ui/ControlPanel/Basics</pre>
 </div>
-<div created="20210714123159097" creator="Télumire" modified="20210714160337552" modifier="Télumire" title="$:/state/tab-1749438307">
+<div created="20210714123159097" creator="Télumire" modified="20210715021957246" modifier="Télumire" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Saving</pre>
 </div>
-<div created="20210714160340634" creator="Télumire" modified="20210714160340634" modifier="Télumire" title="$:/state/tab-2065006209">
+<div created="20210715022000228" creator="Télumire" modified="20210715022000228" modifier="Télumire" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
 </div>
-<div created="20210714123306926" creator="Télumire" modified="20210714152701753" modifier="Télumire" title="$:/state/tab/sidebar--595412856">
+<div created="20210714123306926" creator="Télumire" modified="20210715021940933" modifier="Télumire" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Open</pre>
 </div>
 <div created="20210714125257722" creator="Télumire" modified="20210714125307812" modifier="Télumire" title="$:/state/tabs/controlpanel/toolbars-1345989671">
@@ -11364,7 +11324,7 @@ viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class
 <div created="20210627165215089" creator="T" modified="20210714040303017" modifier="Télumir" title="$:/status/UserName">
 <pre>Télumire</pre>
 </div>
-<div created="20210714160333996" creator="Télumire" list="$:/ControlPanel Index" modified="20210714160333996" modifier="Télumire" title="$:/StoryList">
+<div created="20210715021951687" creator="Télumire" list="$:/ControlPanel Index [[Conditional display based on language setting]]" modified="20210715021954210" modifier="Télumire" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210714122834007" creator="Télumire" modified="20210714122834007" modifier="Télumire" tagging="after" title="$:/tags/Stylesheet">
@@ -11511,15 +11471,8 @@ $text$
 &lt;/$reveal&gt;
 \end</pre>
 </div>
-<div created="20210713151608436" creator="Télumire" en-gb="Sentence in english" fr-fr="Phrase en français" modified="20210713194419737" modifier="Télumire" source="https://groups.google.com/g/tiddlywiki/c/aEJrcD8gWlE/m/_ck4wfltBwAJ" tagging="after" tagging-tiddler="conditional language" tags="[[conditional language]] tip" title="Conditional display based on language setting">
-<pre>&lt;$select tiddler=&quot;$:/language&quot;&gt;
- &lt;option value=&quot;fr-FR&quot;&gt;fr-FR&lt;/option&gt;
- &lt;option value=&quot;en-GB&quot;&gt;en-GB&lt;/option&gt;
-&lt;/$select&gt;
-
-
- &lt;$text text={{{ [[$:/language]get[text]regexp[fr-FR]then&lt;currentTiddler&gt;get[fr-fr]] [[$:/language]get[text]regexp[en-GB]then&lt;currentTiddler&gt;get[en-gb]] }}} /&gt;
-</pre>
+<div created="20210713151608436" creator="Télumire" modified="20210715015511952" modifier="Télumire" source="https://groups.google.com/g/tiddlywiki/c/aEJrcD8gWlE/m/_ck4wfltBwAJ" tagging="after" tags="[[conditional language]] tip" title="Conditional display based on language setting">
+<pre></pre>
 </div>
 <div caption="I'm the header of this section" created="20210714141602288" creator="Télumire" modified="20210714154732710" modifier="Télumire" tags="[[Collapse/expand section within a tiddler]]" title="Content of foldable section">
 <pre>Fold me once, fold me twice !</pre>
@@ -11533,8 +11486,8 @@ $text$
 <div created="20210713191959366" creator="Télumire" modified="20210713192104831" modifier="Télumire" tagging="after" tags="tip" title="Display the field source">
 <pre>These tiddlers display the url you put in the field &quot;source&quot; of your tiddler. If you write more than one source, source become plural and each link become part of a list.</pre>
 </div>
-<div created="20210627165919497" creator="Télumire" modified="20210713195427420" modifier="Télumire" tagging="after" tags="tip" title="Display tiddlers tagging">
-<pre>Display a list of all tiddler tagged with the current title. 
+<div created="20210627165919497" creator="Télumire" modified="20210715021737916" modifier="Télumire" tagging="after" tags="tip" title="Display tiddlers tagging">
+<pre>Display a list of all tiddler tagged with the current title. The links are draggable.
 
 &lt;&lt;&lt;
 
@@ -11552,9 +11505,6 @@ $text$
 <div created="20210713203932306" creator="Télumire" modified="20210714131224553" modifier="Télumire" tagging="after" tags="tip" title="Drag and drop list of tiddlers">
 <pre>The custom macro [[openTiddlers]] create a link with two features : navigate to the selected tiddlers if clicked, import the selected tiddlers into another wiki if drag&amp;dropped.</pre>
 </div>
-<div created="20210712230458589" creator="Télumire" modified="20210712234012384" modifier="Télumire" tags="" title="Draggable list from filter">
-<pre>&lt;$macrocall $name=&quot;list-links-draggable&quot; tiddler=&lt;&lt;currentTiddler&gt;&gt; /&gt;</pre>
-</div>
 <div created="20210713160931301" creator="Télumire" modified="20210713193145639" modifier="Télumire" tagging="after" tags="tip" title="Edit button for transcluded content">
 <pre>With the following tiddlers, you can transclude a tiddler with an edit button, thus speeding up your workflow.</pre>
 </div>
@@ -11568,6 +11518,11 @@ __nomatch :__
 __match :__
 
 &lt;&lt;fold &quot;;{{Content of foldable section!!title}}&quot;  &quot;{{Content of foldable section}}&quot; match&gt;&gt;</pre>
+</div>
+<div created="20210715015138129" creator="Télumire" en-gb="Sentence in english" fr-fr="Phrase en français" modified="20210715015300245" modifier="Télumire" tags="[[Conditional display based on language setting]]" title="Ex:Conditional display based on language setting - poc">
+<pre>{{(language-selection)}}
+
+ &lt;$text text={{{ [[$:/language]get[text]regexp[fr-FR]then&lt;currentTiddler&gt;get[fr-fr]] [[$:/language]get[text]regexp[en-GB]then&lt;currentTiddler&gt;get[en-gb]] }}} /&gt;</pre>
 </div>
 <div created="20210714130510934" creator="Télumire" modified="20210714130755049" modifier="Télumire" source="https://tiddlywiki.com/ https://groups.google.com/g/tiddlywiki https://www.reddit.com/r/TiddlyWiki5/ https://discord.gg/wncV2z5 " tags="[[Display the field source]]" title="Ex:Display the field source - tiddler with multiple sources">
 <pre>Here's a tiddler with some sources.</pre>
@@ -11592,10 +11547,22 @@ You can put this one inside of a →{{Edit button for transcluded content||(edit
 &lt;/svg&gt;
 </pre>
 </div>
+<div created="20210715014918373" creator="Télumire" description="This tiddler shows a gallery of paintings with a conditional description" modified="20210715015701532" modifier="Télumire" tags="gallery-painting" title="gallery">
+<pre>{{(language-selection)}}
+
+&lt;span class=&quot;gallery&quot;&gt;
+&lt;$list filter=&quot;[tag[gallery-painting]field:template[painting]]&quot;&gt;
+&lt;$transclude tiddler=&quot;(gallery-painting)&quot;/&gt;
+&lt;/$list&gt;
+&lt;/span&gt;</pre>
+</div>
+<div caption="Ex:Gallery of paintings with description in several languages" created="20210715005443930" creator="Télumire" list="gallery [[Style gallery]] (language-selection) (gallery-painting) template/gallery-painting $:/language painting#1 painting#2" modified="20210715021920507" modifier="Télumire" tagging="after" tags="[[Conditional display based on language setting]]" title="gallery-painting">
+<pre></pre>
+</div>
 <div created="20210313134122939" creator="user" description="Macro pour afficher les résultat du filtre dans un nouvel onglet:  &lt;$macrocall $name=&quot;copy-code&quot; title=&quot;&quot; language=&quot;&quot; display-language=&quot;hidden&quot; code=&quot;&quot;&quot;&lt;&lt;href-filter &quot;filtre&quot; &quot;texte&quot;&gt;&gt;&quot;&quot;&quot;/&gt;" modified="20210703201226350" modifier="user" tags="TW5 $:/tags/Macro" title="href-filter">
 <pre>\define href-filter(filter, text=&quot;open all&quot;) &lt;a href=&quot;#:[$filter$]&quot; target=&quot;_blank&quot;&gt;$text$&lt;/a&gt;</pre>
 </div>
-<div created="20210627165147396" creator="Télumire" modified="20210714155855635" modifier="Télumire" tagging="after" tagging-tiddler="tip" tags="" title="Index">
+<div created="20210627165147396" creator="Télumire" modified="20210715021118909" modifier="Télumire" tagging="after" tagging-tiddler="tip" tags="" title="Index">
 <pre>Welcome to https://telumire.github.io/TW-tips/ !
 
 Here are some useful tips &amp; tricks to add to your wiki.
@@ -11615,6 +11582,9 @@ Here are some useful tips &amp; tricks to add to your wiki.
 &lt;$link to=&lt;&lt;currentTiddler&gt;&gt;&gt; &lt;$transclude field=&quot;caption&quot;&gt; &lt;$view field=&quot;title&quot;/&gt; &lt;/$transclude&gt;&lt;/$link&gt;
 &lt;/span&gt;</pre>
 </div>
+<div created="20210715003633924" creator="Télumire" modified="20210715003706501" modifier="Télumire" tags="[[Conditionnal gallery]]" title="macro/quote">
+<pre></pre>
+</div>
 <div created="20210713203036890" creator="Télumire" modified="20210713203038610" modifier="Télumire" tags="Test" title="New Tiddler">
 <pre></pre>
 </div>
@@ -11631,6 +11601,12 @@ Here are some useful tips &amp; tricks to add to your wiki.
 $text$
 &lt;/$button&gt;
 \end</pre>
+</div>
+<div created="20210715001138051" creator="Télumire" en-gb="The Starry Night (in Dutch De sterrennacht) is a painting by the Dutch post-impressionist painter Vincent van Gogh. The painting represents what Van Gogh could see and extrapolate from the room he occupied in the asylum of the Saint-Paul-de-Mausole monastery in Saint-Rémy-de-Provence in May 1889. Often presented as his great work, the painting has been reproduced many times. It has been in the Museum of Modern Art (MoMA) in New York since 1941." fr-fr="La Nuit étoilée (en néerlandais De sterrennacht) est une peinture de l'artiste peintre postimpressionniste néerlandais Vincent van Gogh. Le tableau représente ce que Van Gogh pouvait voir et extrapoler de la chambre qu'il occupait dans l'asile du monastère Saint-Paul-de-Mausole à Saint-Rémy-de-Provence en mai 1889. Souvent présenté comme son grand œuvre, le tableau a été reproduit à de très nombreuses reprises. Il est maintenant conservé dans le Museum of Modern Art (MoMA) à New York depuis 1941. " img-alt="Starry Night" img-class="" img-height="" img-source="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/606px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg" img-tooltip="" img-width="50%" modified="20210715010545273" modifier="Télumire" tags="gallery-painting" template="painting" title="painting#1">
+<pre></pre>
+</div>
+<div created="20210715011627831" creator="Télumire" en-gb="&quot;Self-Portrait, Yawning&quot; by Joseph Ducreux" fr-fr="&quot;Autoportrait, bâillant&quot; par Joseph Ducreux" img-alt="Yawning" img-class="" img-height="" img-source="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Joseph_Ducreux_%28French%29_-_Self-Portrait%2C_Yawning_-_Google_Art_Project.jpg/461px-Joseph_Ducreux_%28French%29_-_Self-Portrait%2C_Yawning_-_Google_Art_Project.jpg" img-tooltip="" img-width="" modified="20210715012015269" modifier="Télumire" tags="gallery-painting" template="painting" title="painting#2">
+<pre></pre>
 </div>
 <div created="20210625133738529" creator="user" description="Display numbers for a list of tiddler generated by the macro list-tagged-draggable inside a span with the class &quot;count-tc-menu-list-items&quot;" modified="20210714041916303" modifier="Télumire" tags="$:/tags/Stylesheet SideBarOrder" title="Style count-tc-menu-list-items" type="text/css">
 <pre>.count-tc-menu-list-items {
@@ -11660,6 +11636,29 @@ a.tc-tiddlylink-external[href*=&quot;angular.io&quot;]:before {background-image:
 a.tc-tiddlylink-external[href*=&quot;wikipedia&quot;]:before {background-image: url(&lt;&lt;datauri &quot;Icon/Wikipedia.png&quot;&gt;&gt;);}
 
 &lt;/pre&gt;</pre>
+</div>
+<div created="20210710231208229" creator="user" description="alternatives layout : https://medium.com/@andybarefoot/a-masonry-style-layout-using-css-grid-8c663d355ebb" modified="20210715014600983" modifier="Télumire" tags="$:/tags/Stylesheet gallery-painting" title="Style gallery" type="text/css">
+<pre>.link-painting:not(.gallery .link-painting) {
+pointer-events:none;
+}
+
+.gallery-item{
+padding:10px;
+}
+
+.gallery-item img {
+width:100%;
+}
+
+.gallery-item blockquote {
+
+}
+
+.gallery {
+display:grid;
+width:100%;
+grid-template-columns: repeat(3, 1fr);
+}</pre>
 </div>
 <div created="20210703204013011" creator="user" modified="20210703204047733" modifier="user" tags="TW5 [[Link styling]] $:/tags/Stylesheet" title="Style links">
 <pre>&lt;pre&gt;
@@ -11851,7 +11850,12 @@ a.tc-tiddlylink .tc-title:hover {
 	&lt;/$reveal&gt;
 &lt;/$list&gt;</pre>
 </div>
-<div created="20210713194532173" creator="Télumire" description="This tiddler is used by the ~ViewTemplates [[Template/tagging/before]] and [[Template/tagging/after]]" list-before="$:/core/ui/ViewTemplate/body" modified="20210714130045296" modifier="Télumire" tags="[[Display tiddlers tagging]]" title="Template/tagging">
+<div created="20210715010418984" creator="Télumire" modified="20210715013926351" modifier="Télumire" tags="$:/tags/ViewTemplate gallery-painting" title="template/gallery-painting">
+<pre>&lt;$list filter=&quot;[all[current]template[painting]]&quot;&gt;
+{{||(gallery-painting)}}
+&lt;/$list&gt;</pre>
+</div>
+<div created="20210713194532173" creator="Télumire" description="This tiddler is used by the ~ViewTemplates [[Template/tagging/before]] and [[Template/tagging/after]]" list-before="$:/core/ui/ViewTemplate/body" modified="20210715021245830" modifier="Télumire" tags="[[Display tiddlers tagging]]" title="Template/tagging">
 <pre>&lt;$reveal tag=&quot;div&quot; type=&quot;nomatch&quot; stateTitle=&lt;&lt;folded-state&gt;&gt; text=&quot;hide&quot; retain=&quot;yes&quot; animate=&quot;yes&quot;&gt;
 
 &lt;$list filter=&quot;[all[current]!tagging-open[false]]&quot;&gt;
@@ -11871,11 +11875,17 @@ a.tc-tiddlylink .tc-title:hover {
 &lt;/$list&gt;
 
 &lt;$list filter=&quot;[all[current]has:field[tagging-tiddler]]&quot;&gt;
-&lt;&lt;list-links &quot;[!&lt;currentTiddler&gt;tag{!!tagging-tiddler}sort[title]]&quot;&gt;&gt;
+&lt;ul&gt;
+&lt;$macrocall $name=&quot;list-tagged-draggable&quot; tag={{!!tagging-tiddler}} itemTemplate=&quot;Template/tagging/itemTemplate&quot;/&gt;
+&lt;/ul&gt;
 &lt;/$list&gt;
 
 &lt;$list filter=&quot;[all[current]!has[tagging-tiddler]]&quot;&gt;
-{{||(tagging)}}
+
+&lt;ul&gt;
+&lt;$macrocall $name=&quot;list-tagged-draggable&quot; tag={{!!title}} itemTemplate=&quot;Template/tagging/itemTemplate&quot;/&gt;
+&lt;/ul&gt;
+
 &lt;/$list&gt;
 &lt;/$reveal&gt;</pre>
 </div>
@@ -11891,6 +11901,9 @@ a.tc-tiddlylink .tc-title:hover {
 {{||Template/tagging}}
 &lt;/$list&gt;</pre>
 </div>
+<div created="20210715020836713" creator="Télumire" modified="20210715021509622" modifier="Télumire" tags="Template/tagging [[Display tiddlers tagging]]" title="Template/tagging/itemTemplate">
+<pre>&lt;li&gt;&lt;$link to=&lt;&lt;currentTiddler&gt;&gt;&gt;&lt;$view field=&quot;caption&quot;&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$view&gt;&lt;/$link&gt;&lt;$list filter=&quot;[all[current]has[description]]&quot;&gt; - &lt;span style=&quot;font-style:italic;&quot;&gt;{{!!description}}&lt;/span&gt;&lt;/$list&gt;&lt;/li&gt;</pre>
+</div>
 <div created="20210713202236063" creator="Télumire" list="[[New Tiddler 2]] [[New Tiddler]] [[New Tiddler 1]]" modified="20210713203210830" modifier="Télumire" tags="" title="Test">
 <pre>{{||$:/core/ui/TagTemplate}}
 &lt;$macrocall $name=&quot;list-tagged-draggable&quot; tag=&lt;&lt;currentTiddler&gt;&gt;/&gt;</pre>
@@ -11904,7 +11917,7 @@ a.tc-tiddlylink .tc-title:hover {
 <div created="20210627171653571" creator="Télumire" modified="20210627171708760" modifier="Télumire" tags="" title="Tiddler">
 <pre>Here's a normal tiddler.</pre>
 </div>
-<div created="20210627170006507" creator="Télumire" modified="20210713190419322" modifier="Télumire" tagging="after" tags="" title="tip">
+<div created="20210627170006507" creator="Télumire" list="[[Conditional display based on language setting]] [[Add a button to set a task status to a tiddler]] [[Collapse/expand section within a tiddler]] [[Display a description on any tiddler]] [[Display the field source]] [[Display tiddlers tagging]] [[Drag and drop list of tiddlers]] [[Edit button for transcluded content]]" modified="20210715021710951" modifier="Télumire" tagging="after" tags="" title="tip">
 <pre></pre>
 </div>
 <div created="20210714041352986" creator="Télumire" modified="20210714041704734" modifier="Télumire" tags="" title="Todos">
