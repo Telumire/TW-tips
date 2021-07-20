@@ -383,6 +383,8 @@ Error message and password prompt
 
 <li>This is another task</li>
 
+<li>this tiddler is in the list but does not have a field task</li>
+
 <li>Tiddler</li>
 
 <li>tip</li>
@@ -10404,7 +10406,7 @@ height:auto;
 <div created="20210627193359845" creator="Télumire" modified="20210627193407497" modifier="Télumire" title="$:/GitHub/Repo">
 <pre>Telumire/TW-tips</pre>
 </div>
-<div created="20210627193317220" creator="Télumire" modified="20210720151919534" modifier="Télumire" title="$:/GitHub/Username">
+<div created="20210627193317220" creator="Télumire" modified="20210720153717827" modifier="Télumire" title="$:/GitHub/Username">
 <pre>Telumire</pre>
 </div>
 <div created="20210706193912669" creator="user" modified="20210714035311410" modifier="user" tags="$:/tags/Image ui/Buttons/tasker" title="$:/images/task-doing" type="text/vnd.tiddlywiki">
@@ -11366,7 +11368,7 @@ viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class
 <div created="20210627165215089" creator="T" modified="20210714040303017" modifier="Télumir" title="$:/status/UserName">
 <pre>Télumire</pre>
 </div>
-<div created="20210720115224185" creator="Télumire" list="$:/ControlPanel [[Task managing with the macro list-has-field-draggable]]" modified="20210720151916434" modifier="Télumire" title="$:/StoryList">
+<div created="20210720115224185" creator="Télumire" list="$:/ControlPanel [[Task managing with the macro list-has-field-draggable]]" modified="20210720153713177" modifier="Télumire" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210714122834007" creator="Télumire" modified="20210714122834007" modifier="Télumire" tagging="after" title="$:/tags/Stylesheet">
@@ -11499,7 +11501,7 @@ viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class
 <div created="20210714125730195" creator="Télumire" modified="20210714125800194" modifier="Télumire" tagging-tiddler="ui/Buttons/tasker" tags="tip" title="Add a button to set a task status to a tiddler">
 <pre></pre>
 </div>
-<div created="20210714141145974" creator="Télumire" description="Todo : prevent the section to reveal itself when clicking outside the tiddler" modified="20210720151605047" modifier="Télumire" source="https://groups.google.com/g/tiddlywiki/c/F9ACy0bQc9w/m/WCA8afsXAwAJ" tagging="after" tags="$:/tags/Macro tip wip" task="doing" title="Collapse/expand section within a tiddler">
+<div created="20210714141145974" creator="Télumire" description="Todo : prevent the section to reveal itself when clicking outside the tiddler" modified="20210720152827384" modifier="Télumire" source="https://groups.google.com/g/tiddlywiki/c/F9ACy0bQc9w/m/WCA8afsXAwAJ" tagging="after" tags="$:/tags/Macro tip wip" task="todo" title="Collapse/expand section within a tiddler">
 <pre>\define fold(heading, text, type:&quot;match&quot;)
 &lt;$button class=&quot;tc-btn-invisible&quot; popupTitle=&lt;&lt;qualify &quot;$:/state/section$heading$&quot;&gt;&gt;&gt;
 
@@ -11918,14 +11920,18 @@ span.transclude-edit:hover .transclude-edit-button{
  &lt;path d=&quot;m10.574 8.9086 0.0053 0.011688c-2.2205 0.99826-4.9464 1.5581-6.9659 1.3356-2.7471-0.30296-4.1911-2.0582-3.3956-4.8889 0.71478-2.5442 2.7173-4.5185 4.951-5.1632 2.4475-0.70653 4.5259 0.45101 4.5259 3.0308h-1.9761c0-1.1135-0.70539-1.5063-2.0018-1.1321-1.5836 0.45719-3.069 1.9211-3.5966 3.799-0.43886 1.5625 0.095564 2.2122 1.7096 2.3902 1.6331 0.1799 4.0176-0.30984 5.9394-1.1736l0.0062 0.01375 0.0083-0.0039c0.40334-0.17371 1.436 1.5008 0.80759 1.7738a0.64168 0.64168 0 0 1-0.01719 0.00688z&quot;/&gt;
 &lt;/svg&gt;</pre>
 </div>
-<div created="20210720003527736" creator="Télumire" list="[[Collapse/expand section within a tiddler]] [[This is a task]] [[Tasker button at the left of the title]]" modified="20210720151901868" modifier="Télumire" tags="" title="task">
+<div created="20210720003527736" creator="Télumire" list="[[Collapse/expand section within a tiddler]] [[Tasker button at the left of the title]] [[This is a task]]" modified="20210720152827383" modifier="Télumire" tags="" title="task">
 <pre></pre>
 </div>
-<div created="20210719172430608" creator="Télumire" modified="20210720151754122" modifier="Télumire" tags="[[macro list-has-field-draggable]]" title="Task managing with the macro list-has-field-draggable">
-<pre>; Here's all the tiddlers in the field &quot;list&quot; of the tiddler task :
-
-
+<div created="20210719172430608" creator="Télumire" modified="20210720152804834" modifier="Télumire" tags="[[macro list-has-field-draggable]]" title="Task managing with the macro list-has-field-draggable">
+<pre>; Here's all the tiddlers in the field &quot;list&quot; of the tiddler [[task]]:
 {{{ [list[task]] }}}
+
+* If a tiddler with a field task is not in the list, then it is displayed AFTER the tasks listed
+* If a tiddler is in the list but does not have the field task, then it is discarded
+* Once a tiddler is dropped on the draggable list, the list field is cleared of all the tiddlers without task field
+
+&lt;hr&gt;
 
 &lt;!-- 
 
@@ -12068,6 +12074,9 @@ a.tc-tiddlylink .tc-title:hover {
 <pre></pre>
 </div>
 <div created="20210714160230815" creator="Télumire" modified="20210714160324849" modifier="Télumire" tags="[[Add a button to set a task status to a tiddler]] ex:task" title="This is another task">
+<pre></pre>
+</div>
+<div created="20210720152440600" creator="Télumire" modified="20210720152455964" modifier="Télumire" tags="" title="this tiddler is in the list but does not have a field task">
 <pre></pre>
 </div>
 <div created="20210627171653571" creator="Télumire" modified="20210627171708760" modifier="Télumire" tags="" title="Tiddler">
