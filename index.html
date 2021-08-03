@@ -149,6 +149,8 @@ Error message and password prompt
 
 <li>(language-selection)</li>
 
+<li>(reading-time)</li>
+
 <li>(tagging)</li>
 
 <li>(task-list-doing-tag)</li>
@@ -213,6 +215,8 @@ Error message and password prompt
 
 <li>$:/language/Buttons/tasker/Hint</li>
 
+<li>$:/mytag</li>
+
 <li>$:/palette</li>
 
 <li>$:/plugins/flibbles/relink</li>
@@ -222,6 +226,14 @@ Error message and password prompt
 <li>$:/SiteTitle</li>
 
 <li>$:/state/advancedsearch/currentTab</li>
+
+<li>$:/state/commander/log-tiddler</li>
+
+<li>$:/state/commander/reveal/$:/plugins/kookma/commander/log/ui-607722857</li>
+
+<li>$:/state/commander/snr/select-tiddler</li>
+
+<li>$:/state/compInspect/temp/commander/selectState-tiddler</li>
 
 <li>$:/state/folded/$:/ControlPanel</li>
 
@@ -235,6 +247,8 @@ Error message and password prompt
 
 <li>$:/state/sidebar</li>
 
+<li>$:/state/tab--103319216</li>
+
 <li>$:/state/tab--1498284803</li>
 
 <li>$:/state/tab--1963855381</li>
@@ -246,6 +260,8 @@ Error message and password prompt
 <li>$:/state/tab-1749438307</li>
 
 <li>$:/state/tab-2065006209</li>
+
+<li>$:/state/tab-607722857</li>
 
 <li>$:/state/tab/sidebar--595412856</li>
 
@@ -277,6 +293,8 @@ Error message and password prompt
 
 <li>Add a favicon to your wiki</li>
 
+<li>Bulk tagging</li>
+
 <li>Button to create a new tiddler with an unused title without template</li>
 
 <li>Collapse/expand section within a tiddler</li>
@@ -285,9 +303,13 @@ Error message and password prompt
 
 <li>Content of foldable section</li>
 
+<li>count me in !</li>
+
 <li>Custom new-here button</li>
 
 <li>Display a description on any tiddler</li>
+
+<li>Display an estimated reading time on each tiddler</li>
 
 <li>Display the field source</li>
 
@@ -319,6 +341,8 @@ Error message and password prompt
 
 <li>gallery-painting</li>
 
+<li>Good naming conventions</li>
+
 <li>href-filter</li>
 
 <li>Index</li>
@@ -343,6 +367,12 @@ Error message and password prompt
 
 <li>Kanban/todo</li>
 
+<li>lorem</li>
+
+<li>lorem10</li>
+
+<li>lorem100</li>
+
 <li>macro/list-has-field-draggable</li>
 
 <li>macro/quote</li>
@@ -356,6 +386,14 @@ Error message and password prompt
 <li>painting#1</li>
 
 <li>painting#2</li>
+
+<li>Reading-time/style</li>
+
+<li>Reading-time/subtitle/style</li>
+
+<li>Reading-time/subtitle/template</li>
+
+<li>Reading-time/wpm</li>
 
 <li>something</li>
 
@@ -376,6 +414,8 @@ Error message and password prompt
 <li>Style/hide-until-hover</li>
 
 <li>Style/transclude-edit</li>
+
+<li>System image gallery</li>
 
 <li>Tag_Icon</li>
 
@@ -416,6 +456,8 @@ Error message and password prompt
 <li>Todos</li>
 
 <li>ui/Buttons/tasker</li>
+
+<li>Word counter</li>
 
 </ul>
 </p>
@@ -462,6 +504,43 @@ class={{!!img-class}}
  &lt;option value=&quot;fr-FR&quot;&gt;fr-FR&lt;/option&gt;
  &lt;option value=&quot;en-GB&quot;&gt;en-GB&lt;/option&gt;
 &lt;/$select&gt;</pre>
+</div>
+<div created="20210803154021260" modified="20210803203214609" modifier="Télumire" tags="[[Display an estimated reading time on each tiddler]]" task="done" title="(reading-time)">
+<pre>\whitespace trim
+\define wordsCount() $(nbWords)$ words
+
+&lt;$set name=&quot;nbWords&quot; filter=&quot;[&lt;currentTiddler&gt;get[text]splitregexp[(\b)]!is[blank]count[]divide[2]round[]]&quot;&gt;
+&lt;$set name=&quot;time&quot; filter=&quot;[&lt;nbWords&gt;divide{Reading-time/wpm!!text}]&quot;&gt;
+&lt;$set name=&quot;timeH&quot; filter=&quot;[&lt;time&gt;divide[60]trunc[]]&quot;&gt;
+&lt;$set name=&quot;timeM&quot; filter=&quot;[&lt;time&gt;divide[60]remainder[1]multiply[60]trunc[]]&quot;&gt;
+&lt;$set name=&quot;timeS&quot; filter=&quot;[&lt;time&gt;divide[60]remainder[1]multiply[60]remainder[1]multiply[60]trunc[]]&quot;&gt;
+
+&lt;span title=&lt;&lt;wordsCount&gt;&gt; class=&quot;reading-time&quot; &gt;
+{{$:/core/images/timestamp-on}}
+
+&lt;$list filter=&quot;[&lt;time&gt;compare:number:lteq[1]]&quot;&gt;
+1&amp;nbsp;minute
+&lt;/$list&gt;
+
+&lt;$list filter=&quot;[&lt;time&gt;compare:number:gt[1]compare:number:lt[60]]&quot;&gt;
+&lt;&lt;timeM&gt;&gt;&amp;nbsp;minutes
+&lt;/$list&gt;
+
+&lt;$list filter=&quot;[&lt;time&gt;compare:number:eq[60]]&quot;&gt;
+1&amp;nbsp;hour
+&lt;/$list&gt;
+
+&lt;$list filter=&quot;[&lt;time&gt;compare:number:gt[60]]&quot;&gt;
+&lt;&lt;timeH&gt;&gt;&amp;nbsp;hours
+&lt;/$list&gt;
+
+&lt;/span&gt;
+
+&lt;/$set&gt;
+&lt;/$set&gt;
+&lt;/$set&gt;
+&lt;/$set&gt;
+&lt;/$set&gt;</pre>
 </div>
 <div caption="Snippet/Display tiddlers tagged with title" created="20210627170052616" creator="Télumire" description="This tiddler is used by the  ~ViewTemplates to display a list of all tiddler tagged with the current title. If there is a caption, the content is displayed as the text of the link, otherwise the title of the tiddler is displayed. If there is a description, the description is displayed at the right of the link. Use it like so : `{{tiddlerTitle||(tagging)}}`" modified="20210714155747606" modifier="Télumire" tags="[[Display tiddlers tagging]] $:/tags/TextEditor/Snippet" title="(tagging)">
 <pre>&lt;ul&gt;
@@ -10441,7 +10520,7 @@ height:auto;
 <div created="20210627193359845" creator="Télumire" modified="20210627193407497" modifier="Télumire" title="$:/GitHub/Repo">
 <pre>Telumire/TW-tips</pre>
 </div>
-<div created="20210627193317220" creator="Télumire" modified="20210723142323111" modifier="Télumire" title="$:/GitHub/Username">
+<div created="20210627193317220" creator="Télumire" modified="20210803204453491" modifier="Télumire" title="$:/GitHub/Username">
 <pre>Telumire</pre>
 </div>
 <div created="20210706193912669" creator="user" modified="20210714035311410" modifier="user" tags="$:/tags/Image ui/Buttons/tasker" title="$:/images/task-doing" type="text/vnd.tiddlywiki">
@@ -10477,10 +10556,10 @@ viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class
  &lt;/g&gt;
 &lt;/svg&gt;</pre>
 </div>
-<div modified="20210721130427880" modifier="Télumire" status="complete" title="$:/Import">
+<div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[$:/favicon.ico]]</pre>
+# [[$:/plugins/kookma/commander]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -10493,6 +10572,9 @@ viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class
 </div>
 <div created="20210706180357755" creator="user" modified="20210714125635411" modifier="Télumire" tags="ui/Buttons/tasker" title="$:/language/Buttons/tasker/Hint">
 <pre>Click to set task status (todo, doing, done)</pre>
+</div>
+<div created="20210727154833140" creator="Télumire" modified="20210727154837181" modifier="Télumire" title="$:/mytag">
+<pre>add me</pre>
 </div>
 <div created="20210710033342816" creator="Télumire" modified="20210710033342816" modifier="Télumire" title="$:/palette">
 <pre>$:/palettes/Twilight</pre>
@@ -11353,8 +11435,20 @@ viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class
 <div created="20210627161629943" creator="Télumire" modified="20210627193346818" modifier="Télumire" title="$:/SiteTitle">
 <pre>TW-tips</pre>
 </div>
-<div created="20210714131710187" creator="Télumire" modified="20210721131825676" modifier="Télumire" title="$:/state/advancedsearch/currentTab">
-<pre>$:/core/ui/AdvancedSearch/Filter</pre>
+<div created="20210714131710187" creator="Télumire" modified="20210727142346862" modifier="Télumire" title="$:/state/advancedsearch/currentTab">
+<pre>$:/core/ui/AdvancedSearch/Standard</pre>
+</div>
+<div created="20210803203323946" creator="Télumire" modified="20210803203323946" modifier="Télumire" title="$:/state/commander/log-tiddler">
+<pre>$:/temp/commander/logs/tid-1</pre>
+</div>
+<div created="20210803203459637" creator="Télumire" modified="20210803203459637" modifier="Télumire" title="$:/state/commander/reveal/$:/plugins/kookma/commander/log/ui-607722857">
+<pre>open</pre>
+</div>
+<div created="20210803203415548" creator="Télumire" modified="20210803203457254" modifier="Télumire" title="$:/state/commander/snr/select-tiddler">
+<pre></pre>
+</div>
+<div created="20210803203415548" creator="Télumire" modified="20210803203457254" modifier="Télumire" title="$:/state/compInspect/temp/commander/selectState-tiddler">
+<pre></pre>
 </div>
 <div created="20210721155441254" creator="Télumire" modified="20210721155459367" modifier="Télumire" title="$:/state/folded/$:/ControlPanel">
 <pre>show</pre>
@@ -11368,14 +11462,17 @@ viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class
 <div created="20210720124941947" creator="Télumire" modified="20210720125538878" modifier="Télumire" title="$:/state/folded/Task managing with the macro list-has-field-draggable">
 <pre>show</pre>
 </div>
-<div created="20210720145300038" creator="Télumire" modified="20210720150627801" modifier="Télumire" title="$:/state/showeditpreview">
-<pre>no</pre>
+<div created="20210720145300038" creator="Télumire" modified="20210802231255064" modifier="Télumire" title="$:/state/showeditpreview">
+<pre>yes</pre>
 </div>
 <div created="20210714123144577" creator="Télumire" modified="20210720225519361" modifier="Télumire" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
-<div created="20210714131710187" creator="Télumire" modified="20210721131825677" modifier="Télumire" title="$:/state/tab--1498284803">
-<pre>$:/core/ui/AdvancedSearch/Filter</pre>
+<div created="20210803203320853" creator="Télumire" modified="20210803203320853" modifier="Télumire" title="$:/state/tab--103319216">
+<pre>$:/plugins/kookma/commander/field/uicomp/remove-fields</pre>
+</div>
+<div created="20210714131710187" creator="Télumire" modified="20210727142346863" modifier="Télumire" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/Standard</pre>
 </div>
 <div created="20210714123207883" creator="Télumire" modified="20210714131718252" modifier="Télumire" title="$:/state/tab--1963855381">
 <pre>$:/core/ui/ControlPanel/Palette</pre>
@@ -11386,13 +11483,16 @@ viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class
 <div created="20210721155543030" creator="Télumire" modified="20210721155543030" modifier="Télumire" title="$:/state/tab-1464356360">
 <pre>$:/core/ui/TiddlerInfo/Advanced</pre>
 </div>
-<div created="20210714123159097" creator="Télumire" modified="20210723142320448" modifier="Télumire" title="$:/state/tab-1749438307">
+<div created="20210714123159097" creator="Télumire" modified="20210803204449665" modifier="Télumire" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Saving</pre>
 </div>
 <div created="20210716151227668" creator="Télumire" modified="20210716151227668" modifier="Télumire" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
 </div>
-<div created="20210714123306926" creator="Télumire" modified="20210723142153282" modifier="Télumire" title="$:/state/tab/sidebar--595412856">
+<div created="20210803203319241" creator="Télumire" modified="20210803203319241" modifier="Télumire" title="$:/state/tab-607722857">
+<pre>$:/plugins/kookma/commander/field/ui</pre>
+</div>
+<div created="20210714123306926" creator="Télumire" modified="20210803202408936" modifier="Télumire" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Open</pre>
 </div>
 <div created="20210714125257722" creator="Télumire" modified="20210714125307812" modifier="Télumire" title="$:/state/tabs/controlpanel/toolbars-1345989671">
@@ -11404,7 +11504,7 @@ viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class
 <div created="20210627165215089" creator="T" modified="20210714040303017" modifier="Télumir" title="$:/status/UserName">
 <pre>Télumire</pre>
 </div>
-<div created="20210723142313878" creator="Télumire" list="$:/ControlPanel Index" modified="20210723142313878" modifier="Télumire" title="$:/StoryList">
+<div created="20210803203633229" creator="Télumire" list="$:/ControlPanel Index [[Word counter]]" modified="20210803204447225" modifier="Télumire" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210714122834007" creator="Télumire" modified="20210714122834007" modifier="Télumire" tagging="after" title="$:/tags/Stylesheet">
@@ -11540,6 +11640,23 @@ viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class
 <div created="20210721130543421" creator="Télumire" modified="20210721130554918" modifier="Télumire" tagging="after" tags="tip" title="Add a favicon to your wiki">
 <pre></pre>
 </div>
+<div created="20210727154734763" creator="Télumire" modified="20210727154911677" modifier="Télumire" tags="tip" title="Bulk tagging">
+<pre>\define myTagSetter()
+&lt;$list filter=&quot;[tag[target]!prefix[$:/]]&quot;&gt;
+&lt;$fieldmangler&gt;
+&lt;$action-sendmessage $message=&quot;tm-add-tag&quot; $param={{$:/mytag}} /&gt;
+&lt;/$fieldmangler&gt;
+&lt;/$list&gt;
+\end
+
+Your tag: &lt;$edit-text tiddler=&quot;$:/mytag&quot; tag=&quot;input&quot; size=10/&gt;&lt;br/&gt;
+
+&lt;$button actions=&lt;&lt;myTagSetter&gt;&gt;&gt;
+Set tag {{$:/mytag}}!
+&lt;/$button&gt;
+
+This button add a tag to all (be careful !) tiddler tagged with target</pre>
+</div>
 <div created="20210723132206799" creator="Télumire" modified="20210723142109698" modifier="Télumire" tags="tip" title="Button to create a new tiddler with an unused title without template">
 <pre>;With action-sendmessage
 
@@ -11600,11 +11717,17 @@ $text$
 <div caption="I'm the header of this section" created="20210714141602288" creator="Télumire" modified="20210714154732710" modifier="Télumire" tags="[[Collapse/expand section within a tiddler]]" title="Content of foldable section">
 <pre>Fold me once, fold me twice !</pre>
 </div>
+<div created="20210802230025436" creator="Télumire" modified="20210802230037609" modifier="Télumire" title="count me in !">
+<pre>one two three four five</pre>
+</div>
 <div created="20210714131544380" creator="Télumire" modified="20210714131605493" modifier="Télumire" tags="" title="Custom new-here button">
 <pre></pre>
 </div>
 <div created="20210713190742365" creator="Télumire" modified="20210713191733275" modifier="Télumire" tagging="after" tags="tip" title="Display a description on any tiddler">
 <pre>This is useful when we want to display a text without putting it into the tiddler body (macro, template ..)</pre>
+</div>
+<div created="20210803201829564" creator="Télumire" modified="20210803201922168" modifier="Télumire" tagging="after" tags="tip" title="Display an estimated reading time on each tiddler">
+<pre></pre>
 </div>
 <div created="20210713191959366" creator="Télumire" modified="20210713192104831" modifier="Télumire" tagging="after" tags="tip" title="Display the field source">
 <pre>These tiddlers display the url you put in the field &quot;source&quot; of your tiddler. If you write more than one source, source become plural and each link become part of a list.</pre>
@@ -11690,7 +11813,10 @@ You can put this one inside of a →{{Edit button for transcluded content||(edit
 <div caption="Ex:Gallery of paintings with description in several languages" created="20210715005443930" creator="Télumire" list="gallery [[Style gallery]] (language-selection) (gallery-painting) template/gallery-painting $:/language painting#1 painting#2" modified="20210715021920507" modifier="Télumire" tagging="after" tags="[[Conditional display based on language setting]]" title="gallery-painting">
 <pre></pre>
 </div>
-<div created="20210313134122939" creator="user" description="Macro pour afficher les résultat du filtre dans un nouvel onglet:  &lt;$macrocall $name=&quot;copy-code&quot; title=&quot;&quot; language=&quot;&quot; display-language=&quot;hidden&quot; code=&quot;&quot;&quot;&lt;&lt;href-filter &quot;filtre&quot; &quot;texte&quot;&gt;&gt;&quot;&quot;&quot;/&gt;" modified="20210703201226350" modifier="user" tags="TW5 $:/tags/Macro" title="href-filter">
+<div created="20210727233653770" creator="Télumire" modified="20210727233704274" modifier="Télumire" tags="tip" title="Good naming conventions">
+<pre>https://tiddlywiki.com/#Naming%20of%20System%20Tiddlers</pre>
+</div>
+<div created="20210313134122939" creator="user" description="Macro pour afficher les résultat du filtre dans un nouvel onglet:  &lt;$macrocall $name=&quot;copy-code&quot; title=&quot;&quot; language=&quot;&quot; display-language=&quot;hidden&quot; code=&quot;&quot;&quot;&lt;&lt;href-filter &quot;filtre&quot; &quot;texte&quot;&gt;&gt;&quot;&quot;&quot;/&gt;" modified="20210727142859100" modifier="Télumire" tags="TW5 $:/tags/Macro [[Display tiddlers tagging]]" title="href-filter">
 <pre>\define href-filter(filter, text=&quot;open all&quot;) &lt;a href=&quot;#:[$filter$]&quot; target=&quot;_blank&quot;&gt;$text$&lt;/a&gt;</pre>
 </div>
 <div created="20210627165147396" creator="Télumire" modified="20210715021118909" modifier="Télumire" tagging="after" tagging-tiddler="tip" tags="" title="Index">
@@ -11713,7 +11839,7 @@ Here are some useful tips &amp; tricks to add to your wiki.
 &lt;$link to=&lt;&lt;currentTiddler&gt;&gt;&gt; &lt;$transclude field=&quot;caption&quot;&gt; &lt;$view field=&quot;title&quot;/&gt; &lt;/$transclude&gt;&lt;/$link&gt;
 &lt;/span&gt;</pre>
 </div>
-<div created="20201112223028343" creator="user" modified="20210723142234143" modifier="Télumire" tags="[[Draggable list based on fields rather than tags]]" task="done" title="Kanban">
+<div created="20201112223028343" creator="user" modified="20210727143850984" modifier="Télumire" tagging="after" tags="[[Draggable list based on fields rather than tags]]" task="done" title="Kanban">
 <pre>&lt;div class=&quot;kanban&quot;&gt;
 &lt;p class=&quot;todo&quot;&gt;
 &lt;strong&gt;{{To do||Kanban/new-task}}&lt;/strong&gt;&lt;br&gt;
@@ -11773,6 +11899,15 @@ display: inline-block;
 </div>
 <div created="20210720164218548" creator="Télumire" modified="20210721130932342" modifier="Télumire" tags="Kanban [[Draggable list based on fields rather than tags]]" title="Kanban/todo">
 <pre>&lt;&lt;list-has-field-draggable field:&quot;task&quot; value:&quot;todo&quot; itemTemplate:&quot;(task)&quot;&gt;&gt;</pre>
+</div>
+<div created="20210803202942082" creator="Télumire" modified="20210803203001136" modifier="Télumire" tags="[[lorem ipsum]]" title="lorem">
+<pre>lorem</pre>
+</div>
+<div created="20210803203004905" creator="Télumire" modified="20210803203101675" modifier="Télumire" tags="[[lorem ipsum]]" title="lorem10">
+<pre>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, ullam.</pre>
+</div>
+<div created="20210803203108796" creator="Télumire" modified="20210803203129563" modifier="Télumire" tags="[[lorem ipsum]]" title="lorem100">
+<pre>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, tempore, exercitationem accusamus dolorum veritatis ullam dolorem aspernatur praesentium odio suscipit unde delectus cumque expedita minus culpa. Libero enim aliquam obcaecati quasi? Esse amet aut dolor, fugit molestiae deleniti minus facere dolore et libero, possimus commodi, est quam labore quia numquam reprehenderit doloremque illo laborum exercitationem tempora harum. Ullam ad ex commodi, autem omnis necessitatibus ducimus quo adipisci officia obcaecati libero consectetur nihil eius nesciunt. Necessitatibus sequi facere quo aspernatur, ducimus optio dicta laboriosam eius a blanditiis quis ab, dolorem voluptatum quae. Odit molestias eveniet, corporis aut illo recusandae accusantium exercitationem.</pre>
 </div>
 <div created="20210719170732291" creator="Télumire" modified="20210721130932342" modifier="Télumire" source="https://tiddlywiki.com/#%24%3A%2Fcore%2Fmacros%2Flist" tags="$:/tags/Macro [[Draggable list based on fields rather than tags]]" title="macro/list-has-field-draggable">
 <pre>\define list-has-field-draggable-drop-actions(field,value)
@@ -11858,7 +11993,7 @@ display: inline-block;
 <div created="20210713203045397" creator="Télumire" modified="20210713203046846" modifier="Télumire" tags="Test" title="New Tiddler 2">
 <pre></pre>
 </div>
-<div created="20210707161555685" creator="user" modified="20210721133118194" modifier="Télumire" tags="$:/tags/Macro TW5 [[Drag and drop list of tiddlers]]" title="openTiddlers">
+<div created="20210707161555685" creator="user" modified="20210727142853926" modifier="Télumire" tags="$:/tags/Macro TW5 [[Drag and drop list of tiddlers]] [[Display tiddlers tagging]]" title="openTiddlers">
 <pre>\define openTiddlers(filter:&quot;&quot; text:&quot;open all&quot;)
 &lt;$button class=&quot;tc-btn-invisible tc-tiddlylink&quot; tooltip=&quot;Go to tiddlers&quot; dragFilter=&quot;$filter$&quot;&gt;
 &lt;$list filter=&quot;&quot;&quot;$filter$&quot;&quot;&quot;&gt;&lt;$action-navigate $to={{!!title}}/&gt;&lt;/$list&gt;
@@ -11871,6 +12006,46 @@ $text$
 </div>
 <div created="20210715011627831" creator="Télumire" en-gb="&quot;Self-Portrait, Yawning&quot; by Joseph Ducreux" fr-fr="&quot;Autoportrait, bâillant&quot; par Joseph Ducreux" img-alt="Yawning" img-class="" img-height="" img-source="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Joseph_Ducreux_%28French%29_-_Self-Portrait%2C_Yawning_-_Google_Art_Project.jpg/461px-Joseph_Ducreux_%28French%29_-_Self-Portrait%2C_Yawning_-_Google_Art_Project.jpg" img-tooltip="" img-width="" modified="20210715012015269" modifier="Télumire" tags="gallery-painting" template="painting" title="painting#2">
 <pre></pre>
+</div>
+<div created="20210803191345611" modified="20210803202007623" modifier="Télumire" tags="$:/tags/Stylesheet (reading-time) [[Display an estimated reading time on each tiddler]]" title="Reading-time/style">
+<pre>&lt;pre&gt;
+.reading-time{
+
+}
+
+.reading-time .tc-image-timestamp-on{
+height:1em;
+width:auto;
+margin-right:.5ch;
+fill:&lt;&lt;color tiddler-subtitle-foreground&gt;&gt;;
+}
+
+&lt;/pre&gt;</pre>
+</div>
+<div created="20210802171357078" modified="20210803202104445" modifier="Télumire" tags="$:/tags/Stylesheet [[Display an estimated reading time on each tiddler]]" task="todo" title="Reading-time/subtitle/style" type="text/css">
+<pre>.tc-subtitle:not(.custom) {display:none;}
+
+.tc-subtitle.custom .item&gt;p{
+display:inline;
+margin:0;
+padding:0;
+}
+
+.tc-subtitle.custom .item:nth-child(n+2):before{
+content:&quot;-&quot;;
+margin-left:1ch;
+margin-right:1ch;
+}</pre>
+</div>
+<div created="20210802170615024" description="Custom subtitle template" list-before="$:/core/ui/ViewTemplate/subtitle" modified="20210803202407744" modifier="Télumire" tags="$:/tags/ViewTemplate [[Display an estimated reading time on each tiddler]]" task="done" title="Reading-time/subtitle/template">
+<pre>\whitespace trim
+&lt;$reveal type=&quot;nomatch&quot; stateTitle=&lt;&lt;folded-state&gt;&gt; text=&quot;hide&quot; tag=&quot;div&quot; retain=&quot;yes&quot; animate=&quot;yes&quot; class=&quot;tc-subtitle custom&quot;&gt;
+&lt;span class=&quot;item&quot;&gt;&lt;$view field=&quot;modified&quot; format=&quot;date&quot; template=&quot;DD MMM YYYY&quot;/&gt;&lt;/span&gt;
+&lt;span class=&quot;item&quot;&gt;&lt;$transclude tiddler=&quot;(reading-time)&quot; /&gt;&lt;/span&gt;
+&lt;/$reveal&gt;</pre>
+</div>
+<div created="20210803153449372" description="Reading speed used for the calculation (word per minutes)" modified="20210803202254562" modifier="Télumire" source="[[https://iovs.arvojournals.org/article.aspx?articleid=2166061 (Table 2)]]" tags="[[Display an estimated reading time on each tiddler]]" title="Reading-time/wpm">
+<pre>228</pre>
 </div>
 <div created="20210720155725916" creator="Télumire" list="[[New Tiddler 4]]" modified="20210720155725916" modifier="Télumire" title="something">
 <pre></pre>
@@ -12062,6 +12237,27 @@ span.transclude-edit:hover .transclude-edit-button{
 	display:initial;
 	opacity:1;
 }</pre>
+</div>
+<div created="20140809113603449" creator="user" modified="20210730134418126" modifier="Télumire" tags="tip" title="System image gallery" type="text/vnd.tiddlywiki">
+<pre>Grid of all system images (ie, tiddlers tagged [[$:/tags/Image]]).
+
+&lt;style&gt;
+.my-gallery svg {
+width: 6em;
+height: 6em;
+margin: 1em;
+}
+&lt;/style&gt;
+&lt;div class=&quot;my-gallery&quot;&gt;
+&lt;$list filter=&quot;[all[tiddlers+shadows]tag[$:/tags/Image]]&quot;&gt;
+&lt;span title=&lt;&lt;currentTiddler&gt;&gt;&gt;
+&lt;$link to=&lt;&lt;currentTiddler&gt;&gt;&gt;
+&lt;$transclude/&gt;
+&lt;/$link&gt;
+&lt;/span&gt;
+&lt;/$list&gt;
+&lt;/div&gt;
+</pre>
 </div>
 <div created="20210526223756479" creator="user" modified="20210714035443201" modifier="Télumire" tags="icon SVG [[Style tags]]" title="Tag_Icon" type="image/svg+xml">
 <pre>&lt;svg version=&quot;1.1&quot; viewBox=&quot;0 0 28.945 29.051&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; height=&quot;1em&quot; fill=&quot;#ffc966&quot;&gt;
@@ -12263,6 +12459,15 @@ a.tc-tiddlylink .tc-title:hover {
    &lt;/$fieldmangler&gt;
 &lt;/$list&gt;
 &lt;/label&gt;</pre>
+</div>
+<div created="20210802225754242" creator="Télumire" modified="20210803204438183" modifier="Télumire" tags="tip" title="Word counter">
+<pre>&lt;$set name=&quot;nbWords&quot; filter=&quot;[[count me in !]get[text]splitregexp[(\b)]!is[blank]count[]divide[2]round[]]&quot;&gt;
+
+The tiddler &quot;[[count me in !]]&quot; contains &lt;$text text=&lt;&lt;nbWords&gt;&gt;/&gt; words .
+
+&lt;/$set&gt;
+
+See also [[Display an estimated reading time on each tiddler]]</pre>
 </div>
 
 
