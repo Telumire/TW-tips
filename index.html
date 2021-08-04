@@ -507,11 +507,13 @@ class={{!!img-class}}
  &lt;option value=&quot;en-GB&quot;&gt;en-GB&lt;/option&gt;
 &lt;/$select&gt;</pre>
 </div>
-<div created="20210803154021260" modified="20210803203214609" modifier="Télumire" tags="[[Display an estimated reading time on each tiddler]]" task="done" title="(reading-time)">
+<div created="20210803154021260" creator="Télumire" modified="20210804160328825" modifier="Télumire" tags="[[Display an estimated reading time on each tiddler]]" task="done" title="(reading-time)">
 <pre>\whitespace trim
 \define wordsCount() $(nbWords)$ words
+&lt;$list filter=&quot;[&lt;currentTiddler&gt;![(reading-time)]]&quot;&gt;
 
-&lt;$set name=&quot;nbWords&quot; filter=&quot;[&lt;currentTiddler&gt;get[text]splitregexp[(\b)]!is[blank]count[]divide[2]round[]]&quot;&gt;
+&lt;$wikify name=&quot;text&quot; text={{!!text}}&gt;
+&lt;$set name=&quot;nbWords&quot; filter=&quot;[&lt;text&gt;splitregexp[(\b)]!is[blank]count[]divide[2]round[]]&quot;&gt;
 &lt;$set name=&quot;time&quot; filter=&quot;[&lt;nbWords&gt;divide{Reading-time/wpm!!text}]&quot;&gt;
 &lt;$set name=&quot;timeH&quot; filter=&quot;[&lt;time&gt;divide[60]trunc[]]&quot;&gt;
 &lt;$set name=&quot;timeM&quot; filter=&quot;[&lt;time&gt;divide[60]remainder[1]multiply[60]trunc[]]&quot;&gt;
@@ -542,7 +544,10 @@ class={{!!img-class}}
 &lt;/$set&gt;
 &lt;/$set&gt;
 &lt;/$set&gt;
-&lt;/$set&gt;</pre>
+&lt;/$set&gt;
+&lt;/$wikify&gt;
+
+&lt;/$list&gt;</pre>
 </div>
 <div caption="Snippet/Display tiddlers tagged with title" created="20210627170052616" creator="Télumire" description="This tiddler is used by the  ~ViewTemplates to display a list of all tiddler tagged with the current title. If there is a caption, the content is displayed as the text of the link, otherwise the title of the tiddler is displayed. If there is a description, the description is displayed at the right of the link. Use it like so : `{{tiddlerTitle||(tagging)}}`" modified="20210714155747606" modifier="Télumire" tags="[[Display tiddlers tagging]] $:/tags/TextEditor/Snippet" title="(tagging)">
 <pre>&lt;ul&gt;
@@ -11464,8 +11469,8 @@ viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class
 <div created="20210720124941947" creator="Télumire" modified="20210720125538878" modifier="Télumire" title="$:/state/folded/Task managing with the macro list-has-field-draggable">
 <pre>show</pre>
 </div>
-<div created="20210720145300038" creator="Télumire" modified="20210802231255064" modifier="Télumire" title="$:/state/showeditpreview">
-<pre>yes</pre>
+<div created="20210720145300038" creator="Télumire" modified="20210804160321793" modifier="Télumire" title="$:/state/showeditpreview">
+<pre>no</pre>
 </div>
 <div created="20210714123144577" creator="Télumire" modified="20210720225519361" modifier="Télumire" title="$:/state/sidebar">
 <pre>yes</pre>
@@ -11506,7 +11511,7 @@ viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class
 <div created="20210627165215089" creator="T" modified="20210714040303017" modifier="Télumir" title="$:/status/UserName">
 <pre>Télumire</pre>
 </div>
-<div created="20210804150623136" creator="Télumire" list="[[New Tiddler]] lorem100 Index" modified="20210804150623136" modifier="Télumire" title="$:/StoryList">
+<div created="20210804160308147" creator="Télumire" list="[[Display an estimated reading time on each tiddler]] (reading-time)" modified="20210804160315572" modifier="Télumire" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210714122834007" creator="Télumire" modified="20210714122834007" modifier="Télumire" tagging="after" title="$:/tags/Stylesheet">
