@@ -507,12 +507,11 @@ class={{!!img-class}}
  &lt;option value=&quot;en-GB&quot;&gt;en-GB&lt;/option&gt;
 &lt;/$select&gt;</pre>
 </div>
-<div created="20210803154021260" creator="Télumire" modified="20210804160328825" modifier="Télumire" tags="[[Display an estimated reading time on each tiddler]]" task="done" title="(reading-time)">
+<div created="20210803154021260" creator="Télumire" modified="20210804160850580" modifier="Télumire" tags="[[Display an estimated reading time on each tiddler]]" task="done" title="(reading-time)">
 <pre>\whitespace trim
 \define wordsCount() $(nbWords)$ words
 &lt;$list filter=&quot;[&lt;currentTiddler&gt;![(reading-time)]]&quot;&gt;
-
-&lt;$wikify name=&quot;text&quot; text={{!!text}}&gt;
+&lt;$wikify name=&quot;text&quot; text={{!!text}} output=&quot;text&quot;&gt;
 &lt;$set name=&quot;nbWords&quot; filter=&quot;[&lt;text&gt;splitregexp[(\b)]!is[blank]count[]divide[2]round[]]&quot;&gt;
 &lt;$set name=&quot;time&quot; filter=&quot;[&lt;nbWords&gt;divide{Reading-time/wpm!!text}]&quot;&gt;
 &lt;$set name=&quot;timeH&quot; filter=&quot;[&lt;time&gt;divide[60]trunc[]]&quot;&gt;
@@ -10527,7 +10526,7 @@ height:auto;
 <div created="20210627193359845" creator="Télumire" modified="20210627193407497" modifier="Télumire" title="$:/GitHub/Repo">
 <pre>Telumire/TW-tips</pre>
 </div>
-<div created="20210627193317220" creator="Télumire" modified="20210803204453491" modifier="Télumire" title="$:/GitHub/Username">
+<div created="20210627193317220" creator="Télumire" modified="20210804160914617" modifier="Télumire" title="$:/GitHub/Username">
 <pre>Telumire</pre>
 </div>
 <div created="20210706193912669" creator="user" modified="20210714035311410" modifier="user" tags="$:/tags/Image ui/Buttons/tasker" title="$:/images/task-doing" type="text/vnd.tiddlywiki">
@@ -11511,7 +11510,7 @@ viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class
 <div created="20210627165215089" creator="T" modified="20210714040303017" modifier="Télumir" title="$:/status/UserName">
 <pre>Télumire</pre>
 </div>
-<div created="20210804160308147" creator="Télumire" list="[[Display an estimated reading time on each tiddler]] (reading-time)" modified="20210804160315572" modifier="Télumire" title="$:/StoryList">
+<div created="20210804160909527" creator="Télumire" list="$:/ControlPanel Index" modified="20210804160909527" modifier="Télumire" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210714122834007" creator="Télumire" modified="20210714122834007" modifier="Télumire" tagging="after" title="$:/tags/Stylesheet">
