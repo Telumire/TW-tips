@@ -10530,7 +10530,7 @@ height:auto;
 <div created="20210627193359845" creator="Télumire" modified="20210627193407497" modifier="Télumire" title="$:/GitHub/Repo">
 <pre>Telumire/TW-tips</pre>
 </div>
-<div created="20210627193317220" creator="Télumire" modified="20210805132544387" modifier="Télumire" title="$:/GitHub/Username">
+<div created="20210627193317220" creator="Télumire" modified="20210805132714321" modifier="Télumire" title="$:/GitHub/Username">
 <pre>Telumire</pre>
 </div>
 <div created="20210706193912669" creator="user" modified="20210714035311410" modifier="user" tags="$:/tags/Image ui/Buttons/tasker" title="$:/images/task-doing" type="text/vnd.tiddlywiki">
@@ -11823,7 +11823,7 @@ You can put this one inside of a →{{Edit button for transcluded content||(edit
 <div caption="Ex:Gallery of paintings with description in several languages" created="20210715005443930" creator="Télumire" list="gallery [[Style gallery]] (language-selection) (gallery-painting) template/gallery-painting $:/language painting#1 painting#2" modified="20210715021920507" modifier="Télumire" tagging="after" tags="[[Conditional display based on language setting]]" title="gallery-painting">
 <pre></pre>
 </div>
-<div created="20210805131146320" creator="Télumire" modified="20210805132540157" modifier="Télumire" tagging="after" tags="" title="github save button">
+<div created="20210805131146320" creator="Télumire" modified="20210805132709192" modifier="Télumire" tagging="after" tags="" title="github save button">
 <pre>&lt;$button&gt;
 &lt;$action-sendmessage $message=&quot;tm-save-wiki&quot; $param=&quot;$:/core/save/all&quot; /&gt;
 save all
@@ -11837,10 +11837,12 @@ save some (see filter)
 Filter : [[publishFilter]]
 
 
-button to set github username :
+button to set github username, trigger a save then remove username:
 
 &lt;$button&gt; set username
 &lt;$action-setfield $tiddler=&quot;$:/GitHub/Username&quot; text=&quot;Telumire&quot;/&gt;
+&lt;$action-sendmessage $message=&quot;tm-save-wiki&quot; $param=&quot;$:/core/save/all&quot; publishFilter={{publishFilter}} /&gt;
+&lt;$action-setfield $tiddler=&quot;$:/GitHub/Username&quot; text=&quot;&quot;/&gt;
 &lt;/$button&gt;
 
 
