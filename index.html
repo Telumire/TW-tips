@@ -10532,7 +10532,7 @@ height:auto;
 <div created="20210627193359845" creator="Télumire" modified="20210627193407497" modifier="Télumire" title="$:/GitHub/Repo">
 <pre>Telumire/TW-tips</pre>
 </div>
-<div created="20210627193317220" creator="Télumire" modified="20210805134816665" modifier="Télumire" title="$:/GitHub/Username">
+<div created="20210627193317220" creator="Télumire" modified="20210805135501884" modifier="Télumire" title="$:/GitHub/Username">
 <pre>Telumire</pre>
 </div>
 <div created="20210706193912669" creator="user" modified="20210714035311410" modifier="user" tags="$:/tags/Image ui/Buttons/tasker" title="$:/images/task-doing" type="text/vnd.tiddlywiki">
@@ -11516,7 +11516,7 @@ viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class
 <div created="20210627165215089" creator="T" modified="20210714040303017" modifier="Télumir" title="$:/status/UserName">
 <pre>Télumire</pre>
 </div>
-<div list="[[github save button/private/state]] [[github save button/private/username]] [[github save button]]" title="$:/StoryList">
+<div list="[[does this tiddler still exist after save to github]] [[github save button]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210714122834007" creator="Télumire" modified="20210714122834007" modifier="Télumire" tagging="after" title="$:/tags/Stylesheet">
@@ -11825,13 +11825,14 @@ You can put this one inside of a →{{Edit button for transcluded content||(edit
 <div caption="Ex:Gallery of paintings with description in several languages" created="20210715005443930" creator="Télumire" list="gallery [[Style gallery]] (language-selection) (gallery-painting) template/gallery-painting $:/language painting#1 painting#2" modified="20210715021920507" modifier="Télumire" tagging="after" tags="[[Conditional display based on language setting]]" title="gallery-painting">
 <pre></pre>
 </div>
-<div created="20210805131146320" creator="Télumire" modified="20210805134804288" modifier="Télumire" tagging="after" tags="tip" title="github save button">
+<div created="20210805131146320" creator="Télumire" modified="20210805135425276" modifier="Télumire" tagging="after" tags="tip" title="github save button">
 <pre>&lt;$button&gt; save to GitHub excluding tiddler tagged with private
 &lt;$action-listops $tiddler=&quot;github save button/private/username&quot; $tags=&quot;[[private]] [[github save button]]&quot;/&gt;
 &lt;$action-listops $tiddler=&quot;github save button/private/state&quot; $tags=&quot;[[private]] [[github save button]]&quot;/&gt;
 &lt;$action-setfield $tiddler=&quot;$:/GitHub/Username&quot; text={{github save button/private/username}}/&gt;
 &lt;$action-sendmessage $message=&quot;tm-save-wiki&quot; $param=&quot;$:/core/save/all&quot; publishFilter={{publishFilter}} /&gt;
 &lt;$action-setfield $tiddler=&quot;$:/GitHub/Username&quot; text=&quot;&quot;/&gt;
+&lt;$action-sendmessage $message=&quot;tm-save-wiki&quot; $param=&quot;$:/core/save/all&quot;/&gt;
 &lt;/$button&gt;
 
 Filter : [[publishFilter]]
