@@ -341,8 +341,6 @@ Error message and password prompt
 
 <li>gallery-painting</li>
 
-<li>github save button</li>
-
 <li>Good naming conventions</li>
 
 <li>href-filter</li>
@@ -10532,7 +10530,7 @@ height:auto;
 <div created="20210627193359845" creator="Télumire" modified="20210627193407497" modifier="Télumire" title="$:/GitHub/Repo">
 <pre>Telumire/TW-tips</pre>
 </div>
-<div created="20210627193317220" creator="Télumire" modified="20210805133433965" modifier="Télumire" title="$:/GitHub/Username">
+<div created="20210627193317220" creator="Télumire" modified="20210805133538026" modifier="Télumire" title="$:/GitHub/Username">
 <pre>Telumire</pre>
 </div>
 <div created="20210706193912669" creator="user" modified="20210714035311410" modifier="user" tags="$:/tags/Image ui/Buttons/tasker" title="$:/images/task-doing" type="text/vnd.tiddlywiki">
@@ -11504,8 +11502,8 @@ viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class
 <div created="20210803203319241" creator="Télumire" modified="20210803203319241" modifier="Télumire" title="$:/state/tab-607722857">
 <pre>$:/plugins/kookma/commander/field/ui</pre>
 </div>
-<div created="20210714123306926" creator="Télumire" modified="20210803202408936" modifier="Télumire" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Open</pre>
+<div created="20210714123306926" creator="Télumire" modified="20210805133448831" modifier="Télumire" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div created="20210714125257722" creator="Télumire" modified="20210714125307812" modifier="Télumire" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
@@ -11516,7 +11514,7 @@ viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class
 <div created="20210627165215089" creator="T" modified="20210714040303017" modifier="Télumir" title="$:/status/UserName">
 <pre>Télumire</pre>
 </div>
-<div list="[[does this tiddler get saved locally ?]] [[github save button]]" title="$:/StoryList">
+<div created="20210805133449932" creator="Télumire" list="[[github save button]]" modified="20210805133449932" modifier="Télumire" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210714122834007" creator="Télumire" modified="20210714122834007" modifier="Télumire" tagging="after" title="$:/tags/Stylesheet">
@@ -11824,25 +11822,6 @@ You can put this one inside of a →{{Edit button for transcluded content||(edit
 </div>
 <div caption="Ex:Gallery of paintings with description in several languages" created="20210715005443930" creator="Télumire" list="gallery [[Style gallery]] (language-selection) (gallery-painting) template/gallery-painting $:/language painting#1 painting#2" modified="20210715021920507" modifier="Télumire" tagging="after" tags="[[Conditional display based on language setting]]" title="gallery-painting">
 <pre></pre>
-</div>
-<div created="20210805131146320" creator="Télumire" modified="20210805133211677" modifier="Télumire" tagging="after" tags="" title="github save button">
-<pre>&lt;$button&gt;
-&lt;$action-sendmessage $message=&quot;tm-save-wiki&quot; $param=&quot;$:/core/save/all&quot; /&gt;
-save all
-&lt;/$button&gt;
-
-
-button to set github username, trigger a save then remove username:
-
-&lt;$button&gt; save to GitHub excluding private tiddler
-&lt;$action-setfield $tiddler=&quot;$:/GitHub/Username&quot; text=&quot;Telumire&quot;/&gt;
-&lt;$action-sendmessage $message=&quot;tm-save-wiki&quot; $param=&quot;$:/core/save/all&quot; publishFilter={{publishFilter}} /&gt;
-&lt;$action-setfield $tiddler=&quot;$:/GitHub/Username&quot; text=&quot;&quot;/&gt;
-&lt;/$button&gt;
-
-Filter : [[publishFilter]]
-
-see https://tiddlywiki.com/#WidgetMessage%3A%20tm-save-wiki, https://bimlas.gitlab.io/demo/tw5/preferred-saver.html#%24%3A%2Fbimlas%2Fpreferred-saver.js, https://gitter.im/TiddlyWiki/public?at=5d85497604053c5b3d92b4bd, https://tiddlywiki.com/static/SavingMechanism.html, https://tiddlywiki.com/#SavingMechanism</pre>
 </div>
 <div created="20210727233653770" creator="Télumire" modified="20210727233704274" modifier="Télumire" tags="tip" title="Good naming conventions">
 <pre>https://tiddlywiki.com/#Naming%20of%20System%20Tiddlers</pre>
