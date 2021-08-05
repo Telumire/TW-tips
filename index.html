@@ -10510,8 +10510,10 @@ height:auto;
     }
 }</pre>
 </div>
-<div created="20210627165159036" modified="20210627165159036" title="$:/DefaultTiddlers">
-<pre>Index</pre>
+<div created="20210627165159036" creator="Télumire" modified="20210805133237804" modifier="Télumire" title="$:/DefaultTiddlers">
+<pre>Index
+
+[[github save button]]</pre>
 </div>
 <div created="20210714193618796" creator="Télumire" modified="20210721130536468" modifier="Télumire" tags="[[Add a favicon to your wiki]]" title="$:/favicon.ico" type="image/svg+xml">
 <pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
@@ -10530,7 +10532,7 @@ height:auto;
 <div created="20210627193359845" creator="Télumire" modified="20210627193407497" modifier="Télumire" title="$:/GitHub/Repo">
 <pre>Telumire/TW-tips</pre>
 </div>
-<div created="20210627193317220" creator="Télumire" modified="20210805132930393" modifier="Télumire" title="$:/GitHub/Username">
+<div created="20210627193317220" creator="Télumire" modified="20210805133433965" modifier="Télumire" title="$:/GitHub/Username">
 <pre>Telumire</pre>
 </div>
 <div created="20210706193912669" creator="user" modified="20210714035311410" modifier="user" tags="$:/tags/Image ui/Buttons/tasker" title="$:/images/task-doing" type="text/vnd.tiddlywiki">
@@ -11493,8 +11495,8 @@ viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class
 <div created="20210721155543030" creator="Télumire" modified="20210721155543030" modifier="Télumire" title="$:/state/tab-1464356360">
 <pre>$:/core/ui/TiddlerInfo/Advanced</pre>
 </div>
-<div created="20210714123159097" creator="Télumire" modified="20210803204449665" modifier="Télumire" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Saving</pre>
+<div created="20210714123159097" creator="Télumire" modified="20210805133227865" modifier="Télumire" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
 <div created="20210716151227668" creator="Télumire" modified="20210716151227668" modifier="Télumire" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
@@ -11514,7 +11516,7 @@ viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class
 <div created="20210627165215089" creator="T" modified="20210714040303017" modifier="Télumir" title="$:/status/UserName">
 <pre>Télumire</pre>
 </div>
-<div created="20210805132754126" creator="Télumire" list="Index [[Test savegithub]] [[github save button]]" modified="20210805132830655" modifier="Télumire" title="$:/StoryList">
+<div list="[[does this tiddler get saved locally ?]] [[github save button]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210714122834007" creator="Télumire" modified="20210714122834007" modifier="Télumire" tagging="after" title="$:/tags/Stylesheet">
@@ -11823,29 +11825,22 @@ You can put this one inside of a →{{Edit button for transcluded content||(edit
 <div caption="Ex:Gallery of paintings with description in several languages" created="20210715005443930" creator="Télumire" list="gallery [[Style gallery]] (language-selection) (gallery-painting) template/gallery-painting $:/language painting#1 painting#2" modified="20210715021920507" modifier="Télumire" tagging="after" tags="[[Conditional display based on language setting]]" title="gallery-painting">
 <pre></pre>
 </div>
-<div created="20210805131146320" creator="Télumire" modified="20210805132709192" modifier="Télumire" tagging="after" tags="" title="github save button">
+<div created="20210805131146320" creator="Télumire" modified="20210805133211677" modifier="Télumire" tagging="after" tags="" title="github save button">
 <pre>&lt;$button&gt;
 &lt;$action-sendmessage $message=&quot;tm-save-wiki&quot; $param=&quot;$:/core/save/all&quot; /&gt;
 save all
 &lt;/$button&gt;
 
-&lt;$button&gt;
-&lt;$action-sendmessage $message=&quot;tm-save-wiki&quot; $param=&quot;$:/core/save/all&quot; publishFilter={{publishFilter}} /&gt;
-save some (see filter)
-&lt;/$button&gt;
-
-Filter : [[publishFilter]]
-
 
 button to set github username, trigger a save then remove username:
 
-&lt;$button&gt; set username
+&lt;$button&gt; save to GitHub excluding private tiddler
 &lt;$action-setfield $tiddler=&quot;$:/GitHub/Username&quot; text=&quot;Telumire&quot;/&gt;
 &lt;$action-sendmessage $message=&quot;tm-save-wiki&quot; $param=&quot;$:/core/save/all&quot; publishFilter={{publishFilter}} /&gt;
 &lt;$action-setfield $tiddler=&quot;$:/GitHub/Username&quot; text=&quot;&quot;/&gt;
 &lt;/$button&gt;
 
-
+Filter : [[publishFilter]]
 
 see https://tiddlywiki.com/#WidgetMessage%3A%20tm-save-wiki, https://bimlas.gitlab.io/demo/tw5/preferred-saver.html#%24%3A%2Fbimlas%2Fpreferred-saver.js, https://gitter.im/TiddlyWiki/public?at=5d85497604053c5b3d92b4bd, https://tiddlywiki.com/static/SavingMechanism.html, https://tiddlywiki.com/#SavingMechanism</pre>
 </div>
