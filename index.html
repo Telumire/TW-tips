@@ -661,7 +661,7 @@ height:auto;
 <pre>Built from branch 'tiddlywiki-com' at commit b95f6ca084ecc4b63a352a31da9c376551a58e91 of https://github.com/Jermolene/TiddlyWiki5 at 2021-07-04 10:58:55 UTC
 </pre>
 </div>
-<div created="20210810234449332" creator="Télumire" modified="20210810234606757" modifier="Télumire" title="$:/config/AutoSave">
+<div created="20210810234449332" creator="Télumire" modified="20210810235522955" modifier="Télumire" title="$:/config/AutoSave">
 <pre>no</pre>
 </div>
 <div caption="Kookma Plugin Library" created="20200306121057751" modified="20210810162703139" modifier="Télumire" tags="$:/tags/PluginLibrary" title="$:/config/KookmaPluginLibrary" type="text/vnd.tiddlywiki" url="https://kookma.github.io/TW-PluginLibrary/library/index.html">
@@ -12416,8 +12416,9 @@ viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class
 <div created="20210806021302793" creator="Télumire" modified="20210810212715425" modifier="Télumire" tags="$:/SaveToGitHub" title="$:/SaveToGitHub/Hint" type="text/plain">
 <pre>save to GitHub</pre>
 </div>
-<div created="20210806130312321" creator="Télumire" modified="20210810214816302" modifier="Télumire" tags="$:/SaveToGitHub" title="$:/SaveToGitHub/PublishFilter">
-<pre>-[tag[private]] -$:/HistoryList -[search:title[$:/state/folded]] -[search:title[$:/GitHub]] -[search:title[$:/SaveToGitHub/private]]</pre>
+<div created="20210806130312321" creator="Télumire" modified="20210810235146042" modifier="Télumire" tags="$:/SaveToGitHub" title="$:/SaveToGitHub/PublishFilter">
+<pre>-[tag[private]] -$:/HistoryList -[search:title[$:/state/folded]] -[search:title[$:/GitHub]] -[search:title[$:/SaveToGitHub/private]]
+</pre>
 </div>
 <div caption="Github" created="20210805131146320" creator="Télumire" modified="20210810225016119" modifier="Télumire" tags="$:/SaveToGitHub $:/tags/SideBar" title="$:/SaveToGitHub/Settings">
 <pre>\define lingo-base() $:/language/ControlPanel/Saving/GitService/
@@ -12438,7 +12439,7 @@ viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class
 &lt;$edit-text tiddler=&quot;$:/SaveToGitHub/PublishFilter&quot; default=&quot;&quot; tag=&quot;textarea&quot; class=&quot;tc-edit-texteditor&quot;/&gt;
 </pre>
 </div>
-<div created="20210810223410206" modified="20210810233545403" tags="$:/tags/Stylesheet $:/SaveToGitHub" title="$:/SaveToGitHub/Settings/Style">
+<div created="20210810223410206" modified="20210810235417588" tags="$:/tags/Stylesheet $:/SaveToGitHub" title="$:/SaveToGitHub/Settings/Style">
 <pre>&lt;pre&gt;
 
 .tc-story-river table.GitHub-Table-Settings caption {
@@ -12562,8 +12563,8 @@ width:100%;
 <div created="20210803203319241" creator="Télumire" modified="20210810162703140" modifier="Télumire" title="$:/state/tab-607722857">
 <pre>$:/plugins/kookma/commander/field/ui</pre>
 </div>
-<div created="20210714123306926" creator="Télumire" modified="20210810234441918" modifier="Télumire" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Open</pre>
+<div created="20210714123306926" creator="Télumire" modified="20210810235503851" modifier="Télumire" title="$:/state/tab/sidebar--595412856">
+<pre>$:/SaveToGitHub/Settings</pre>
 </div>
 <div created="20210714125257722" creator="Télumire" modified="20210810162703141" modifier="Télumire" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
@@ -12574,7 +12575,7 @@ width:100%;
 <div created="20210627165215089" creator="T" modified="20210810162703141" modifier="Télumire" title="$:/status/UserName">
 <pre>Télumire</pre>
 </div>
-<div created="20210810234553347" creator="Télumire" list="Index [[Saving to github button]] $:/SaveToGitHub/private/state" modified="20210810234556181" modifier="Télumire" title="$:/StoryList">
+<div created="20210810235510020" creator="Télumire" list="Index" modified="20210810235510020" modifier="Télumire" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210714122834007" creator="Télumire" modified="20210810162703141" modifier="Télumire" tagging="after" title="$:/tags/Stylesheet">
@@ -13149,12 +13150,11 @@ margin-right:1ch;
 <div created="20210803153449372" description="Reading speed used for the calculation (word per minutes)" modified="20210810162703145" modifier="Télumire" source="[[https://iovs.arvojournals.org/article.aspx?articleid=2166061 (Table 2)]]" tags="[[Display an estimated reading time on each tiddler]]" title="Reading-time/wpm">
 <pre>228</pre>
 </div>
-<div created="20210810213528516" creator="Télumire" modified="20210810234418857" modifier="Télumire" tags="$:/SaveToGitHub tip" title="Saving to github button">
-<pre>&lt;&lt;&lt;
-This button disables the autosave, set the ~GitHub username, trigger a filtered save, then unset the github username and finally re-enable the autosave. 
+<div created="20210810213528516" modified="20210810235103233" tags="$:/SaveToGitHub" title="Saving to github button">
+<pre>This button {{$:/SaveToGitHub/Button}} disables the autosave, set the ~GitHub username, trigger a filtered save, then unset the github username and finally re-enable the autosave. 
 
 A better way to do it would be to be able to manually choose the saver used, but it is not possible at the moment without custom ~JavaScript code (see [[bimlas' demo|https://bimlas.gitlab.io/demo/tw5/preferred-saver.html]]). 
-&lt;&lt;&lt;
+
 
 {{$:/SaveToGitHub/Settings}}
 
