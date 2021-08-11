@@ -175,9 +175,13 @@ Error message and password prompt
 
 <li>$:/config/KookmaPluginLibrary</li>
 
+<li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/control-panel</li>
+
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home</li>
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/more-page-actions</li>
+
+<li>$:/config/PageControlButtons/Visibility/$:/plugins/kookma/commander/buttons/pagecontrol</li>
 
 <li>$:/config/RelinkOnRename</li>
 
@@ -217,9 +221,17 @@ Error message and password prompt
 
 <li>$:/palette</li>
 
+<li>$:/palettes/Blanca</li>
+
+<li>$:/palettes/GruvboxDark</li>
+
+<li>$:/palettes/Twilight</li>
+
 <li>$:/plugins/flibbles/relink</li>
 
 <li>$:/plugins/kookma/commander</li>
+
+<li>$:/plugins/kookma/commander/buttons/pagecontrol</li>
 
 <li>$:/plugins/MaxGyver83/tw5-keyboard-navigation</li>
 
@@ -289,6 +301,8 @@ Error message and password prompt
 
 <li>$:/StoryList</li>
 
+<li>$:/tags/PageControls</li>
+
 <li>$:/tags/Stylesheet</li>
 
 <li>$:/tags/ViewTemplate</li>
@@ -312,6 +326,8 @@ Error message and password prompt
 <li>Bulk tagging</li>
 
 <li>Button to create a new tiddler with an unused title without template</li>
+
+<li>Buttons/SwitchPalette</li>
 
 <li>code count regex</li>
 
@@ -364,6 +380,8 @@ Error message and password prompt
 <li>Good naming conventions</li>
 
 <li>href-filter</li>
+
+<li>images/color-switch</li>
 
 <li>Index</li>
 
@@ -661,7 +679,7 @@ height:auto;
 <pre>Built from branch 'tiddlywiki-com' at commit b95f6ca084ecc4b63a352a31da9c376551a58e91 of https://github.com/Jermolene/TiddlyWiki5 at 2021-07-04 10:58:55 UTC
 </pre>
 </div>
-<div created="20210810234449332" creator="Télumire" modified="20210810235522955" modifier="Télumire" title="$:/config/AutoSave">
+<div created="20210810234449332" creator="Télumire" modified="20210811015820012" modifier="Télumire" title="$:/config/AutoSave">
 <pre>no</pre>
 </div>
 <div caption="Kookma Plugin Library" created="20200306121057751" modified="20210810162703139" modifier="Télumire" tags="$:/tags/PluginLibrary" title="$:/config/KookmaPluginLibrary" type="text/vnd.tiddlywiki" url="https://kookma.github.io/TW-PluginLibrary/library/index.html">
@@ -669,11 +687,17 @@ height:auto;
 
 To use in other wikis, drag and drop this link to those wikis: [[Kookma Plugin Library|$:/config/KookmaPluginLibrary]]</pre>
 </div>
+<div created="20210811015708309" creator="Télumire" modified="20210811015708309" modifier="Télumire" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/control-panel">
+<pre>hide</pre>
+</div>
 <div created="20210627165244004" creator="Télumire" modified="20210810162703139" modifier="Télumire" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home">
 <pre>show</pre>
 </div>
 <div created="20210627165251193" creator="Télumire" modified="20210810162703139" modifier="Télumire" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/more-page-actions">
 <pre>show</pre>
+</div>
+<div created="20210811015709144" creator="Télumire" modified="20210811015709144" modifier="Télumire" title="$:/config/PageControlButtons/Visibility/$:/plugins/kookma/commander/buttons/pagecontrol">
+<pre>hide</pre>
 </div>
 <div created="20210627165739186" creator="Télumire" modified="20210810162703139" modifier="Télumire" title="$:/config/RelinkOnRename">
 <pre>yes</pre>
@@ -10598,16 +10622,10 @@ viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class
  &lt;/g&gt;
 &lt;/svg&gt;</pre>
 </div>
-<div status="complete" title="$:/Import">
+<div modified="20210811015014193" modifier="Télumire" status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[$:/SaveToGitHub/Button]]
-# [[$:/SaveToGitHub/Caption]]
-# [[$:/SaveToGitHub/Hint]]
-# [[$:/SaveToGitHub/PublishFilter]]
-# [[$:/SaveToGitHub/Settings]]
-# [[$:/SaveToGitHub/Settings/Style]]
-# [[Saving to github button]]</pre>
+# [[images/color-switch]]</pre>
 </div>
 <div modified="20210810162703139" modifier="Télumire" title="$:/isEncrypted">
 <pre>no</pre>
@@ -10624,8 +10642,366 @@ viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class
 <div created="20210727154833140" creator="Télumire" modified="20210810162703139" modifier="Télumire" title="$:/mytag">
 <pre>add me</pre>
 </div>
-<div created="20210710033342816" creator="Télumire" modified="20210810162703140" modifier="Télumire" title="$:/palette">
+<div created="20210710033342816" creator="Télumire" modified="20210811015635135" modifier="Télumire" title="$:/palette">
 <pre>$:/palettes/Twilight</pre>
+</div>
+<div created="20210811015629387" creator="Télumire" description="A clean white palette to let you focus" modified="20210811015631118" modifier="Télumire" name="Blanca" tags="$:/tags/Palette $:/tags/SwitchPalette" title="$:/palettes/Blanca" type="application/x-tiddler-dictionary">
+<pre>alert-background: #ffe476
+alert-border: #b99e2f
+alert-highlight: #881122
+alert-muted-foreground: #b99e2f
+background: #ffffff
+blockquote-bar: &lt;&lt;colour muted-foreground&gt;&gt;
+button-background:
+button-foreground:
+button-border:
+code-background: #f7f7f9
+code-border: #e1e1e8
+code-foreground: #dd1144
+dirty-indicator: #ff0000
+download-background: #66cccc
+download-foreground: &lt;&lt;colour background&gt;&gt;
+dragger-background: &lt;&lt;colour foreground&gt;&gt;
+dragger-foreground: &lt;&lt;colour background&gt;&gt;
+dropdown-background: &lt;&lt;colour background&gt;&gt;
+dropdown-border: &lt;&lt;colour muted-foreground&gt;&gt;
+dropdown-tab-background-selected: #fff
+dropdown-tab-background: #ececec
+dropzone-background: rgba(0,200,0,0.7)
+external-link-background-hover: inherit
+external-link-background-visited: inherit
+external-link-background: inherit
+external-link-foreground-hover: inherit
+external-link-foreground-visited: #0000aa
+external-link-foreground: #0000ee
+foreground: #333333
+message-background: #ecf2ff
+message-border: #cfd6e6
+message-foreground: #547599
+modal-backdrop: &lt;&lt;colour foreground&gt;&gt;
+modal-background: &lt;&lt;colour background&gt;&gt;
+modal-border: #999999
+modal-footer-background: #f5f5f5
+modal-footer-border: #dddddd
+modal-header-border: #eeeeee
+muted-foreground: #999999
+notification-background: #ffffdd
+notification-border: #999999
+page-background: #ffffff
+pre-background: #f5f5f5
+pre-border: #cccccc
+primary: #7897f3
+select-tag-background:
+select-tag-foreground:
+sidebar-button-foreground: &lt;&lt;colour foreground&gt;&gt;
+sidebar-controls-foreground-hover: #000000
+sidebar-controls-foreground: #ccc
+sidebar-foreground-shadow: rgba(255,255,255, 0.8)
+sidebar-foreground: #acacac
+sidebar-muted-foreground-hover: #444444
+sidebar-muted-foreground: #c0c0c0
+sidebar-tab-background-selected: #ffffff
+sidebar-tab-background: &lt;&lt;colour tab-background&gt;&gt;
+sidebar-tab-border-selected: &lt;&lt;colour tab-border-selected&gt;&gt;
+sidebar-tab-border: &lt;&lt;colour tab-border&gt;&gt;
+sidebar-tab-divider: &lt;&lt;colour tab-divider&gt;&gt;
+sidebar-tab-foreground-selected: 
+sidebar-tab-foreground: &lt;&lt;colour tab-foreground&gt;&gt;
+sidebar-tiddler-link-foreground-hover: #444444
+sidebar-tiddler-link-foreground: #7897f3
+site-title-foreground: &lt;&lt;colour tiddler-title-foreground&gt;&gt;
+static-alert-foreground: #aaaaaa
+tab-background-selected: #ffffff
+tab-background: #eeeeee
+tab-border-selected: #cccccc
+tab-border: #cccccc
+tab-divider: #d8d8d8
+tab-foreground-selected: &lt;&lt;colour tab-foreground&gt;&gt;
+tab-foreground: #666666
+table-border: #dddddd
+table-footer-background: #a8a8a8
+table-header-background: #f0f0f0
+tag-background: #ffeedd
+tag-foreground: #000
+tiddler-background: &lt;&lt;colour background&gt;&gt;
+tiddler-border: #eee
+tiddler-controls-foreground-hover: #888888
+tiddler-controls-foreground-selected: #444444
+tiddler-controls-foreground: #cccccc
+tiddler-editor-background: #f8f8f8
+tiddler-editor-border-image: #ffffff
+tiddler-editor-border: #cccccc
+tiddler-editor-fields-even: #e0e8e0
+tiddler-editor-fields-odd: #f0f4f0
+tiddler-info-background: #f8f8f8
+tiddler-info-border: #dddddd
+tiddler-info-tab-background: #f8f8f8
+tiddler-link-background: &lt;&lt;colour background&gt;&gt;
+tiddler-link-foreground: &lt;&lt;colour primary&gt;&gt;
+tiddler-subtitle-foreground: #c0c0c0
+tiddler-title-foreground: #ff9900
+toolbar-new-button:
+toolbar-options-button:
+toolbar-save-button:
+toolbar-info-button:
+toolbar-edit-button:
+toolbar-close-button:
+toolbar-delete-button:
+toolbar-cancel-button:
+toolbar-done-button:
+untagged-background: #999999
+very-muted-foreground: #888888
+</pre>
+</div>
+<div created="20210811015545583" creator="Télumire" description="Retro groove color scheme" license="https://github.com/morhetz/gruvbox" modified="20210811015547102" modifier="Télumire" name="Gruvbox Dark" tags="$:/tags/Palette $:/tags/SwitchPalette" title="$:/palettes/GruvboxDark" type="application/x-tiddler-dictionary">
+<pre>alert-background: #cc241d
+alert-border: #cc241d
+alert-highlight: #d79921
+alert-muted-foreground: #504945
+background: #3c3836
+blockquote-bar: &lt;&lt;colour muted-foreground&gt;&gt;
+button-foreground: &lt;&lt;colour page-background&gt;&gt;
+code-background: #504945
+code-border: #504945
+code-foreground: #fb4934
+diff-delete-background: #fb4934
+diff-delete-foreground: &lt;&lt;colour foreground&gt;&gt;
+diff-equal-background: 
+diff-equal-foreground: &lt;&lt;colour foreground&gt;&gt;
+diff-insert-background: #b8bb26
+diff-insert-foreground: &lt;&lt;colour foreground&gt;&gt;
+diff-invisible-background: 
+diff-invisible-foreground: &lt;&lt;colour muted-foreground&gt;&gt;
+dirty-indicator: #fb4934
+download-background: #b8bb26
+download-foreground: &lt;&lt;colour background&gt;&gt;
+dragger-background: &lt;&lt;colour foreground&gt;&gt;
+dragger-foreground: &lt;&lt;colour background&gt;&gt;
+dropdown-background: #665c54
+dropdown-border: &lt;&lt;colour background&gt;&gt;
+dropdown-tab-background-selected: #ebdbb2
+dropdown-tab-background: #665c54
+dropzone-background: #98971a
+external-link-background-hover: inherit
+external-link-background-visited: inherit
+external-link-background: inherit
+external-link-foreground-hover: inherit
+external-link-foreground-visited: #d3869b
+external-link-foreground: #8ec07c
+foreground: #fbf1c7
+menubar-background: #504945
+menubar-foreground: &lt;&lt;colour foreground&gt;&gt;
+message-background: #83a598
+message-border: #83a598
+message-foreground: #3c3836
+modal-backdrop: &lt;&lt;colour foreground&gt;&gt;
+modal-background: &lt;&lt;colour background&gt;&gt;
+modal-border: #504945
+modal-footer-background: #3c3836
+modal-footer-border: #3c3836
+modal-header-border: #3c3836
+muted-foreground: #d5c4a1
+notification-background: &lt;&lt;colour primary&gt;&gt;
+notification-border: &lt;&lt;colour primary&gt;&gt;
+page-background: #282828
+pre-background: #504945
+pre-border: #504945
+primary: #d79921
+select-tag-background: #665c54
+select-tag-foreground: &lt;&lt;colour foreground&gt;&gt;
+selection-background: #458588
+selection-foreground: &lt;&lt;colour foreground&gt;&gt;
+sidebar-button-foreground: &lt;&lt;colour page-background&gt;&gt;
+sidebar-controls-foreground-hover: #7c6f64
+sidebar-controls-foreground: #504945
+sidebar-foreground-shadow: transparent
+sidebar-foreground: #fbf1c7
+sidebar-muted-foreground-hover: #7c6f64
+sidebar-muted-foreground: #504945
+sidebar-tab-background-selected: #bdae93
+sidebar-tab-background: #3c3836
+sidebar-tab-border-selected: &lt;&lt;colour tab-border-selected&gt;&gt;
+sidebar-tab-border: #bdae93
+sidebar-tab-divider: &lt;&lt;colour page-background&gt;&gt;
+sidebar-tab-foreground-selected: #282828
+sidebar-tab-foreground: &lt;&lt;colour tab-foreground&gt;&gt;
+sidebar-tiddler-link-foreground-hover: #458588
+sidebar-tiddler-link-foreground: #98971a
+site-title-foreground: &lt;&lt;colour tiddler-title-foreground&gt;&gt;
+static-alert-foreground: #B48EAD
+tab-background-selected: #ebdbb2
+tab-background: #665c54
+tab-border-selected: #665c54
+tab-border: #665c54
+tab-divider: #bdae93
+tab-foreground-selected: #282828
+tab-foreground: #ebdbb2
+table-border: #7c6f64
+table-footer-background: #665c54
+table-header-background: #504945
+tag-background: #d3869b
+tag-foreground: #282828
+tiddler-background: &lt;&lt;colour background&gt;&gt;
+tiddler-border: &lt;&lt;colour background&gt;&gt;
+tiddler-controls-foreground-hover: #7c6f64
+tiddler-controls-foreground-selected: &lt;&lt;colour primary&gt;&gt;
+tiddler-controls-foreground: #665c54
+tiddler-editor-background: #32302f
+tiddler-editor-border-image: #282828
+tiddler-editor-border: #282828
+tiddler-editor-fields-even: #504945
+tiddler-editor-fields-odd: #7c6f64
+tiddler-info-background: #32302f
+tiddler-info-border: #ebdbb2
+tiddler-info-tab-background: #ebdbb2
+tiddler-link-background: &lt;&lt;colour background&gt;&gt;
+tiddler-link-foreground: &lt;&lt;colour primary&gt;&gt;
+tiddler-subtitle-foreground: #7c6f64
+tiddler-title-foreground: #a89984
+toolbar-new-button: 
+toolbar-options-button: 
+toolbar-save-button: 
+toolbar-info-button: 
+toolbar-edit-button: 
+toolbar-close-button: 
+toolbar-delete-button: 
+toolbar-cancel-button: 
+toolbar-done-button: 
+untagged-background: #504945
+very-muted-foreground: #bdae93
+wikilist-background: &lt;&lt;colour page-background&gt;&gt;
+wikilist-button-background: #acacac
+wikilist-button-foreground: &lt;&lt;colour button-foreground&gt;&gt;
+wikilist-item: &lt;&lt;colour background&gt;&gt;
+wikilist-toolbar-background: &lt;&lt;colour background&gt;&gt;
+wikilist-toolbar-foreground: &lt;&lt;colour foreground&gt;&gt;
+wikilist-title: &lt;&lt;colour foreground&gt;&gt;
+wikilist-title-svg: &lt;&lt;colour wikilist-title&gt;&gt;
+wikilist-url: &lt;&lt;colour muted-foreground&gt;&gt;
+wikilist-button-open-hover: &lt;&lt;colour primary&gt;&gt;
+wikilist-button-open: &lt;&lt;colour dropzone-background&gt;&gt;
+wikilist-button-remove: &lt;&lt;colour dirty-indicator&gt;&gt;
+wikilist-button-remove-hover: &lt;&lt;colour alert-background&gt;&gt;
+wikilist-droplink-dragover: &lt;&lt;colour dropzone-background&gt;&gt;
+wikilist-button-reveal: &lt;&lt;colour sidebar-tiddler-link-foreground-hover&gt;&gt;
+wikilist-button-reveal-hover: &lt;&lt;colour message-background&gt;&gt;
+</pre>
+</div>
+<div author="Thomas Elmiger" created="20210811015429505" creator="Télumire" description="Delightful, soft darkness." modified="20210811015431056" modifier="Télumire" name="Twilight" tags="$:/tags/Palette $:/tags/SwitchPalette" title="$:/palettes/Twilight" type="application/x-tiddler-dictionary">
+<pre>alert-background: rgb(255, 255, 102)
+alert-border: rgb(232, 232, 125)
+alert-highlight: rgb(255, 51, 51)
+alert-muted-foreground: rgb(224, 82, 82)
+background: rgb(38, 38, 38)
+blockquote-bar: rgba(240, 196, 117, 0.7)
+button-background: rgb(63, 63, 63)
+button-border: rgb(127, 127, 127)
+button-foreground: rgb(179, 179, 179)
+code-background: rgba(0,0,0,0.03)
+code-border: rgba(0,0,0,0.08)
+code-foreground: rgb(255, 94, 94)
+diff-delete-background: #ffc9c9
+diff-delete-foreground: &lt;&lt;colour foreground&gt;&gt;
+diff-equal-background: 
+diff-equal-foreground: &lt;&lt;colour foreground&gt;&gt;
+diff-insert-background: #aaefad
+diff-insert-foreground: &lt;&lt;colour foreground&gt;&gt;
+diff-invisible-background: 
+diff-invisible-foreground: &lt;&lt;colour muted-foreground&gt;&gt;
+dirty-indicator: rgb(255, 94, 94)
+download-background: #19a974
+download-foreground: rgb(38, 38, 38)
+dragger-background: rgb(179, 179, 179)
+dragger-foreground: rgb(38, 38, 38)
+dropdown-background: rgb(38, 38, 38)
+dropdown-border: rgb(255, 255, 255)
+dropdown-tab-background: rgba(0,0,0,.1)
+dropdown-tab-background-selected: rgba(255,255,255,1)
+dropzone-background: #9eebcf
+external-link-background: inherit
+external-link-background-hover: inherit
+external-link-background-visited: inherit
+external-link-foreground: rgb(179, 179, 255)
+external-link-foreground-hover: inherit
+external-link-foreground-visited: rgb(153, 153, 255)
+foreground: rgb(179, 179, 179)
+message-background: &lt;&lt;colour tag-foreground&gt;&gt;
+message-border: #96ccff
+message-foreground: &lt;&lt;colour tag-background&gt;&gt;
+modal-backdrop: rgb(179, 179, 179)
+modal-background: rgb(38, 38, 38)
+modal-border: rgba(0,0,0,.5)
+modal-footer-background: #f4f4f4
+modal-footer-border: rgba(0,0,0,.1)
+modal-header-border: rgba(0,0,0,.2)
+muted-foreground: rgb(255, 255, 255)
+notification-background: &lt;&lt;colour tag-foreground&gt;&gt;
+notification-border: &lt;&lt;colour tag-background&gt;&gt;
+page-background: rgb(26, 26, 26)
+pre-background: rgb(25, 25, 25)
+pre-border: rgba(0,0,0,.2)
+primary: rgb(255, 201, 102)
+select-tag-background: 
+select-tag-foreground: 
+sidebar-button-foreground: rgb(179, 179, 179)
+sidebar-controls-foreground: rgb(153, 153, 153)
+sidebar-controls-foreground-hover: &lt;&lt;colour tiddler-controls-foreground-hover&gt;&gt;
+sidebar-foreground: rgb(141, 141, 141)
+sidebar-foreground-shadow: transparent
+sidebar-muted-foreground: rgba(0, 0, 0, 0.5)
+sidebar-muted-foreground-hover: rgb(141, 141, 141)
+sidebar-tab-background: rgba(141, 141, 141, 0.2)
+sidebar-tab-background-selected: rgb(26, 26, 26)
+sidebar-tab-border: rgb(127, 127, 127)
+sidebar-tab-border-selected: rgb(127, 127, 127)
+sidebar-tab-divider: rgb(127, 127, 127)
+sidebar-tab-foreground: rgb(179, 179, 179)
+sidebar-tab-foreground-selected: rgb(179, 179, 179)
+sidebar-tiddler-link-foreground: rgb(179, 179, 179)
+sidebar-tiddler-link-foreground-hover: rgb(115, 115, 115)
+site-title-foreground: rgb(255, 201, 102)
+static-alert-foreground: rgba(0,0,0,.3)
+tab-background: rgba(0,0,0,0.125)
+tab-background-selected: rgb(38, 38, 38)
+tab-border: rgb(255, 201, 102)
+tab-border-selected: rgb(255, 201, 102)
+tab-divider: rgb(255, 201, 102)
+tab-foreground: rgb(179, 179, 179)
+tab-foreground-selected: rgb(179, 179, 179)
+table-border: rgba(255,255,255,.3)
+table-footer-background: rgba(0,0,0,.4)
+table-header-background: rgba(0,0,0,.1)
+tag-background: rgb(255, 201, 102)
+tag-foreground: rgb(25, 25, 25)
+tiddler-background: rgb(38, 38, 38)
+tiddler-border: rgba(240, 196, 117, 0.7)
+tiddler-controls-foreground: rgb(128, 128, 128)
+tiddler-controls-foreground-hover: rgba(255, 255, 255, 0.8)
+tiddler-controls-foreground-selected: rgba(255, 255, 255, 0.9)
+tiddler-editor-background: rgb(33, 33, 33)
+tiddler-editor-border: rgb(63, 63, 63)
+tiddler-editor-border-image: rgb(25, 25, 25)
+tiddler-editor-fields-even: rgb(33, 33, 33)
+tiddler-editor-fields-odd: rgb(28, 28, 28)
+tiddler-info-background: rgb(43, 43, 43)
+tiddler-info-border: rgb(25, 25, 25)
+tiddler-info-tab-background: rgb(43, 43, 43)
+tiddler-link-background: rgb(38, 38, 38)
+tiddler-link-foreground: rgb(204, 204, 255)
+tiddler-subtitle-foreground: rgb(255, 255, 255)
+tiddler-title-foreground: rgb(255, 192, 76)
+toolbar-cancel-button: 
+toolbar-close-button: 
+toolbar-delete-button: 
+toolbar-done-button: 
+toolbar-edit-button: 
+toolbar-info-button: 
+toolbar-new-button: 
+toolbar-options-button: 
+toolbar-save-button: 
+untagged-background: rgb(255, 255, 255)
+very-muted-foreground: rgba(240, 196, 117, 0.7)
+</pre>
 </div>
 <div author="Flibbles" core-version="&gt;=5.1.22" created="20210324034859173" demo="http://flibbles.github.io/tw5-relink/" dependents="" description="Flexibility when relinking renamed tiddlers" list="readme configuration license" modified="20210810162644830" modifier="Télumire" name="Relink" plugin-type="plugin" source="https://github.com/flibbles/tw5-relink" title="$:/plugins/flibbles/relink" type="application/json" version="2.0.0">
 <pre>{
@@ -12384,6 +12760,24 @@ viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class
     }
 }</pre>
 </div>
+<div caption="{{$:/plugins/kookma/commander/images/file-alt}} {{$:/language/Buttons/Commander/Caption}}" created="20190724145015836" creator="Télumire" description="Open tiddler commander" modified="20210811015722014" modifier="Télumire" tags="$:/tags/PageControls" title="$:/plugins/kookma/commander/buttons/pagecontrol" type="text/vnd.tiddlywiki">
+<pre>\whitespace trim
+\define commander-button(class)
+&lt;$button to=&quot;$:/Commander&quot; tooltip={{$:/language/Buttons/Commander/Hint}} aria-label={{$:/language/Buttons/Commander/Caption}} class=&quot;&quot;&quot;$(tv-config-toolbar-class)$ $class$&quot;&quot;&quot;&gt;
+&lt;$list filter=&quot;[&lt;tv-config-toolbar-icons&gt;match[yes]]&quot;&gt;
+{{$:/plugins/kookma/commander/images/commander.svg}}
+&lt;/$list&gt;
+&lt;$list filter=&quot;[&lt;tv-config-toolbar-text&gt;match[yes]]&quot;&gt;
+&lt;span class=&quot;tc-btn-text&quot;&gt;&lt;$text text={{$:/language/Buttons/Commander/Caption}}/&gt;&lt;/span&gt;
+&lt;/$list&gt;
+&lt;/$button&gt;
+\end
+
+&lt;$list filter=&quot;[list[$:/StoryList]] +[field:title[$:/Commander]]&quot; emptyMessage=&lt;&lt;commander-button&gt;&gt;&gt;
+&lt;&lt;commander-button &quot;tc-selected&quot;&gt;&gt;
+&lt;/$list&gt;
+</pre>
+</div>
 <div author="Max Schillinger" core-version="&gt;=5.1.21" dependents="" description="Keyboard navigation: jump to next/previous tiddler, edit or close tiddler, and more" list="readme config" modified="20210810162644831" modifier="Télumire" plugin-type="plugin" source="https://github.com/MaxGyver83/tw5-keyboard-navigation" title="$:/plugins/MaxGyver83/tw5-keyboard-navigation" type="application/json" version="0.7.0">
 <pre>{&quot;tiddlers&quot;:{&quot;$:/config/Cycle&quot;:{&quot;title&quot;:&quot;$:/config/Cycle&quot;,&quot;created&quot;:&quot;20200922145100000&quot;,&quot;modified&quot;:&quot;20200922145100000&quot;,&quot;tags&quot;:&quot;&quot;,&quot;text&quot;:&quot;0\n&quot;},&quot;$:/config/IgnoreKeyboardLayout&quot;:{&quot;title&quot;:&quot;$:/config/IgnoreKeyboardLayout&quot;,&quot;created&quot;:&quot;20200512220816000&quot;,&quot;modified&quot;:&quot;20200512220816000&quot;,&quot;tags&quot;:&quot;&quot;,&quot;text&quot;:&quot;0\n&quot;},&quot;$:/plugins/MaxGyver83/tw5-keyboard-navigation/config&quot;:{&quot;title&quot;:&quot;$:/plugins/MaxGyver83/tw5-keyboard-navigation/config&quot;,&quot;created&quot;:&quot;20200511221340000&quot;,&quot;modified&quot;:&quot;20200922145300000&quot;,&quot;tags&quot;:&quot;&quot;,&quot;text&quot;:&quot;&lt;$checkbox tiddler=\&quot;$:/config/IgnoreKeyboardLayout\&quot; field=\&quot;text\&quot; checked=\&quot;1\&quot; unchecked=\&quot;0\&quot; default=\&quot;0\&quot;&gt; Ignore keyboard layout (act as if it's QWERTY)&lt;/$checkbox&gt;&lt;br&gt;\n&lt;$checkbox tiddler=\&quot;$:/config/Cycle\&quot; field=\&quot;text\&quot; checked=\&quot;1\&quot; unchecked=\&quot;0\&quot; default=\&quot;0\&quot;&gt; Jump to first tiddler after end of list&lt;/$checkbox&gt;\n&quot;},&quot;keyboard-navigation.css&quot;:{&quot;title&quot;:&quot;keyboard-navigation.css&quot;,&quot;created&quot;:&quot;20190621094602422&quot;,&quot;modified&quot;:&quot;20191101072404775&quot;,&quot;tags&quot;:&quot;$:/tags/Stylesheet&quot;,&quot;type&quot;:&quot;text/vnd.tiddlywiki&quot;,&quot;text&quot;:&quot;div.tc-tiddler-frame.activeTiddler {\n  border-left: 3px solid #557AFF;\n}\n\n&quot;},&quot;keyboard-navigation.js&quot;:{&quot;title&quot;:&quot;keyboard-navigation.js&quot;,&quot;created&quot;:&quot;20191026223026465&quot;,&quot;modified&quot;:&quot;20210806201700000&quot;,&quot;module-type&quot;:&quot;startup&quot;,&quot;tags&quot;:&quot;&quot;,&quot;type&quot;:&quot;application/javascript&quot;,&quot;text&quot;:&quot;(function () {\n\n/*jslint node: false, browser: true */\n/*global $tw: false */\n\&quot;use strict\&quot;;\n\nexports.name = \&quot;tw5-keyboard-navigation\&quot;; exports.after = [\&quot;rootwidget\&quot;];\n\nexports.startup = function () {\n\n// Keybinds section\nconst navigate_up_key = 'k'\nconst navigate_down_key = 'j'\nconst bindings = {\n\t'more-tiddler-actions': 'm',\n\tinfo: null,\n\t'new-here': null,\n\t'new-journal-here': null,\n\tclone: null,\n\t'export-tiddler': null,\n\tedit: 'e',\n\tdelete: null,\n\tpermalink: null,\n\tpermaview: null,\n\t'open-window': null,\n\t'close-others': null,\n\tclose: 'c',\n\t'fold-others': null,\n\tfold: null\n}\n// if you're using an alternative keyboard layout,\n// provide a list of key codes which should be ignored\nconst alternativeLayoutIgnoreKeys = [\&quot;ArrowUp\&quot;]\n// if you just want to add/change keybindings, you don't need to look further\n\n// tiddler buttons have classnames in the form `BTN_CLASSNAME_PREFIX`{button name}\nconst BTN_CLASSNAME_PREFIX = 'tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2F'\n// all transitions with `navigate_up_key` and `navigate_down_key` are instant\nconst INSTANT_NAVIGATION = false;\n// if navigated before x milliseconds, transition is instant\nconst INSTANT_NAVIGATION_BEFORE = 800;\n\nconst MARK_CURRENT_TIDDLER = true;\n// tiddler's top position should be +/- LIMIT pixels in order to be considered the topmost\nconst LIMIT = 50;\n\nvar ignoreKeyboardLayout = false;\nvar cycle = false;\nvar tiddlers;\nvar tiddler_index = -1;\nvar tiddler_title = \&quot;\&quot;;\nvar timestamp_last_navigation = 0;\n\n// unselect search box on startup\nvar activeElement = document.activeElement;\nactiveElement.blur();\n\n// mark first tiddler on startup\ntiddlers = document.getElementsByClassName(\&quot;tc-tiddler-frame\&quot;);\nif (tiddlers.length &gt; 0) {\n\ttiddler_index = 0;\n\tif (MARK_CURRENT_TIDDLER) {\n\t\ttiddlers[tiddler_index].classList.add(\&quot;activeTiddler\&quot;);\n\t}\n}\n\n\n// refresh active tiddler marker after page refresh (p.e. after closing or editing a tiddler)\n$tw.hooks.addHook(\&quot;th-page-refreshed\&quot;, function() {\n\ttiddlers = document.getElementsByClassName(\&quot;tc-tiddler-frame\&quot;);\n\n\tif (!MARK_CURRENT_TIDDLER) return;\n\tif (tiddler_index &lt; 0 &amp;&amp; tiddlers.length) tiddler_index = 0;\n\n\t// if tiddler_index &gt; last_visible_index, select the last visible tiddler\n\tvar last_visible_index = tiddlers.length - 1;\n\twhile (last_visible_index &gt;= 0 &amp;&amp; tiddlers[last_visible_index].style.opacity === \&quot;0\&quot;) {\n\t\tlast_visible_index--;  // might be -1\n\t}\n\tif (tiddler_index &gt; last_visible_index) {\n\t\ttiddler_index = last_visible_index;\n\t}\n\tif (tiddler_index &lt; 0) return;\n\n\t// if the current tiddler is invisible, find the next visible one\n\tvar i = tiddler_index;\n\twhile (i &lt; tiddlers.length &amp;&amp; tiddlers[i].style.opacity === \&quot;0\&quot;) {\n\t\ti++;\n\t}\n\t// if no visible tiddler was found, search upwards\n\tif (i == tiddlers.length) {\n\t\ti = tiddler_index;\n\t\twhile (i &gt;= 0 &amp;&amp; tiddlers[i].style.opacity === \&quot;0\&quot;) {\n\t\t\ti--;\n\t\t}\n\t}\n\ttiddler_index = i;\n\tupdateActiveTiddlerClass();\n});\n\n\n// get name of new/edited tiddler after saving\n$tw.hooks.addHook(\&quot;th-saving-tiddler\&quot;, function(tiddler) {\n\ttiddler_title = tiddler.getFieldString(\&quot;title\&quot;);\n\treturn tiddler;\n});\n\n\n// mark new tiddler after navigating to it\n$tw.hooks.addHook(\&quot;th-navigating\&quot;, function(event) {\n\ttiddler_title = event.navigateTo;\n\ttiddlers = document.getElementsByClassName(\&quot;tc-tiddler-frame\&quot;);\n\tfor (var i=0; i&lt;tiddlers.length; i++) {\n\t\tif (tiddlers[i].getAttribute(\&quot;data-tiddler-title\&quot;) == tiddler_title) {\n\t\t\tif (MARK_CURRENT_TIDDLER) {\n\t\t\t\tif (tiddlers[tiddler_index] !== undefined)\n\t\t\t\t\ttiddlers[tiddler_index].classList.remove(\&quot;activeTiddler\&quot;);\n\t\t\t\ttiddlers[i].classList.add(\&quot;activeTiddler\&quot;);\n\t\t\t}\n\t\t\ttiddler_index = i;\n\t\t\tbreak;\n\t\t}\n\t}\n\treturn event;\n});\n\n\nfunction updateActiveTiddlerClass() {\n\tfor (var i=0; i&lt;tiddlers.length; i++) {\n\t\tif (i != tiddler_index) {\n\t\t\ttiddlers[i].classList.remove(\&quot;activeTiddler\&quot;);\n\t\t}\n\t}\n\ttiddlers[tiddler_index].classList.add(\&quot;activeTiddler\&quot;);\n}\n\nfunction getActiveTiddlersTitle() {\n\ttiddler_title = (tiddler_index &lt; 0) ? \&quot;\&quot; : tiddlers[tiddler_index].getAttribute(\&quot;data-tiddler-title\&quot;);\n}\n\n\nfunction isInViewport(el) {\n\tvar rect = el.getBoundingClientRect();\n\treturn (\n\t\trect.bottom &gt; 0 &amp;&amp;\n\t\trect.top &lt; (window.innerHeight || document.documentElement.clientHeight)\n\t);\n}\n\n\nfunction isElementCloseToTop(el) {\n\tvar rect = el.getBoundingClientRect();\n\treturn (rect.top &gt;= -LIMIT &amp;&amp; rect.top &lt;= LIMIT);\n}\n\n\nfunction findTopmostTiddler(tiddlers) {\n\tvar i = 0;\n\twhile (i &lt; tiddlers.length &amp;&amp; tiddlers[i].getBoundingClientRect().top &lt;= -LIMIT) {\n\t\ti++;\n\t}\n\treturn i;\n}\n\n\nfunction switchTiddler(scrollTo) {\n\tif (scrollTo) {\n\t\tif (INSTANT_NAVIGATION ||\n\t\t\t\tDate.now() - timestamp_last_navigation &lt; INSTANT_NAVIGATION_BEFORE) {\n\t\t\t// if user navigates quickly or wants to navigate instantly,\n\t\t\t// jump instantly to next or previous tiddler\n\t\t\ttiddlers[tiddler_index].scrollIntoView();\n\t\t} else {\n\t\t\t// scroll smoothly to next or previous tiddler\n\t\t\ttiddlers[tiddler_index].scrollIntoView(\n\t\t\t\t{behavior: \&quot;smooth\&quot;, block: \&quot;start\&quot;, inline: \&quot;nearest\&quot;});\n\t\t}\n\t}\n\ttimestamp_last_navigation = Date.now();\n\tif (MARK_CURRENT_TIDDLER) {\n\t\tupdateActiveTiddlerClass();\n\t}\n\tgetActiveTiddlersTitle();\n}\n\ndocument.onclick = function(e) {\n\tvar elem = e.target;\n\n\twhile (elem &amp;&amp; !elem.classList.contains(\&quot;tc-tiddler-frame\&quot;)) {\n\t\telem = elem.parentElement;\n\t}\n\tif (!elem) return;\n\tconst titleOfClickedTiddler = elem.getAttribute(\&quot;data-tiddler-title\&quot;);\n\ttiddlers = document.getElementsByClassName(\&quot;tc-tiddler-frame\&quot;);\n\tfor (var i=0; i&lt;tiddlers.length; i++) {\n\t\tif (tiddlers[i].getAttribute(\&quot;data-tiddler-title\&quot;) == titleOfClickedTiddler) {\n\t\t\ttiddler_index = i;\n\t\t\tswitchTiddler(false);\n\t\t\treturn;\n\t\t}\n\t}\n}\n\n\ndocument.onkeydown = function(e) {\n\tif (e.ctrlKey || e.altKey || e.metaKey || e.shiftKey) return;\n\n\tvar activeElement = document.activeElement;\n\tif (activeElement &amp;&amp; activeElement.tagName.toLowerCase() == \&quot;textarea\&quot;) return;\n\tif (activeElement &amp;&amp; activeElement.tagName.toLowerCase() == \&quot;input\&quot;\n\t\t\t&amp;&amp; activeElement.type == \&quot;search\&quot;\n\t\t\t&amp;&amp; activeElement.classList.contains(\&quot;tc-popup-handle\&quot;)) {\n\t\tif (e.key == \&quot;Tab\&quot; || e.key == \&quot;Enter\&quot;) {\n\t\t\t// if in search box and there are matches, jump to (and open) first match\n\t\t\tvar searchItems = document.querySelector(\&quot;div.tc-search-results div.tc-menu-list-item\&quot;)\n\t\t\tif (searchItems) {\n\t\t\t\tsearchItems.children[0].focus();\n\t\t\t\tif (e.key == \&quot;Enter\&quot;) {\n\t\t\t\t\t// when Enter was pressed, also open the first match\n\t\t\t\t\tsearchItems.children[0].click();\n\t\t\t\t}\n\t\t\t\te.preventDefault();\n\t\t\t}\n\t\t}\n\t}\n}\n\ndocument.onkeyup = function(e) {\n\tif (e.ctrlKey || e.altKey || e.metaKey || e.shiftKey) return;\n\n\tvar activeElement = document.activeElement;\n\tif (activeElement &amp;&amp; activeElement.tagName.toLowerCase() == \&quot;textarea\&quot;) return;\n\tif (activeElement &amp;&amp; activeElement.tagName.toLowerCase() == \&quot;input\&quot;) {\n\t\tif (e.code == \&quot;Escape\&quot;) {\n\t\t\t// check if search drop down menu is open\n\t\t\tvar dropdown = document.querySelector(\&quot;div.tc-search-drop-down\&quot;);\n\t\t\tif (dropdown) {\n\t\t\t\t// if (dropdown[0].classList.contains\n\t\t\t\tvar elem = dropdown.parentNode.parentNode;\n\t\t\t\telem.querySelector(\&quot;svg.tc-image-close-button\&quot;);\n\t\t\t\tif (elem &amp;&amp; elem.parentNode) {\n\t\t\t\t\telem.parentNode.click();\n\t\t\t\t}\n\t\t\t}\n\t\t\t// unfocus search box\n\t\t\tactiveElement.blur();\n\t\t\t//window.focus();\n\t\t}\n\t\treturn;\n\t}\n\tif (e.code == \&quot;Escape\&quot;) {\n\t\t// menu = document.getElementsByClassName(\&quot;tc-drop-down\&quot;);\n\t\tvar menu = document.querySelector(\&quot;div.tc-drop-down\&quot;);\n\t\tif (menu) {\n\t\t\tmenu.parentElement.previousSibling.click();\n\t\t}\n\t}\n\n\n\ttiddlers = document.getElementsByClassName(\&quot;tc-tiddler-frame\&quot;);\n\tif (tiddlers.length == 0) return;\n\n\tvar tiddlerIgnoreKeyboardLayout = $tw.wiki.getTiddler(\&quot;$:/config/IgnoreKeyboardLayout\&quot;);\n\tignoreKeyboardLayout = (tiddlerIgnoreKeyboardLayout.fields.text.trim() == \&quot;1\&quot;);\n\n\tvar tiddlerCycle = $tw.wiki.getTiddler(\&quot;$:/config/Cycle\&quot;);\n\tcycle = (tiddlerCycle.fields.text.trim() == \&quot;1\&quot;);\n\n\tvar down_key_released = ignoreKeyboardLayout ? (e.code == \&quot;Key\&quot; + navigate_down_key.toUpperCase())\n\t                                             : (e.key == navigate_down_key);\n\tvar up_key_released = ignoreKeyboardLayout ? (e.code == \&quot;Key\&quot; + navigate_up_key.toUpperCase())\n\t                                           : (e.key == navigate_up_key);\n\tvar other_bind_used = Object.keys(bindings).find(k =&gt; {\n\t\tif (!bindings[k]) return false;\n\t\tif (ignoreKeyboardLayout)\n\t\t\treturn e.code == (\&quot;Key\&quot; + bindings[k].toUpperCase()) &amp;&amp;\n\t\t\t       !alternativeLayoutIgnoreKeys.find(ak =&gt; ak == e.key);\n\t\treturn e.key == bindings[k];\n\t})\n\n\tif (tiddler_title) {\n\t\tif (tiddler_index &lt; 0 || tiddler_index &gt;= tiddlers.length ||\n\t\t        tiddlers[tiddler_index].getAttribute(\&quot;data-tiddler-title\&quot;) != tiddler_title) {\n\t\t\ttiddler_index = -1;\n\t\t\t// find correct index (after editing or creating a new tiddler)\n\t\t\tfor (var i=0; i&lt;tiddlers.length; i++) {\n\t\t\t\tif (tiddlers[i].getAttribute(\&quot;data-tiddler-title\&quot;) == tiddler_title) {\n\t\t\t\t\ttiddler_index = i;\n\t\t\t\t\tbreak;\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n\n\tif (down_key_released || up_key_released || other_bind_used) {\n\t\tif (tiddler_index &lt; 0 || (!isInViewport(tiddlers[tiddler_index]) &amp;&amp;\n\t\t                          !isElementCloseToTop(tiddlers[tiddler_index]))) {\n\t\t\ttiddler_index = findTopmostTiddler(tiddlers);\n\t\t\tif (down_key_released) tiddler_index -= 1;\n\t\t}\n\t\tif (down_key_released || up_key_released) {\n\t\t\tif (down_key_released) {\n\t\t\t\t// go down\n\t\t\t\ttiddler_index += 1;\n\t\t\t\tif (tiddler_index &gt;= tiddlers.length)\n\t\t\t\t\ttiddler_index = cycle ? 0 : tiddlers.length - 1;\n\t\t\t} else if (up_key_released) {\n\t\t\t\t// go up\n\t\t\t\ttiddler_index -= 1;\n\t\t\t\tif (tiddler_index &lt; 0)\n\t\t\t\t\ttiddler_index = cycle ? tiddlers.length - 1 : 0;\n\t\t\t}\n\t\t\tswitchTiddler(true);\n\t\t} else {\n\t\t\tif (tiddlers[tiddler_index] === undefined) return;\n\t\t\tif (!isInViewport(tiddlers[tiddler_index])) return;\n\t\t\tvar button = tiddlers[tiddler_index].\n\t\t\t\t\t\t\tgetElementsByClassName(BTN_CLASSNAME_PREFIX+other_bind_used)[0];\n\t\t\tif (!button) return;\n\t\t\tbutton.click();\n\t\t\tif (other_bind_used == 'close' || other_bind_used == 'delete') {\n\t\t\t\ttiddlers[tiddler_index].classList.remove(\&quot;activeTiddler\&quot;);\n\t\t\t\tif (tiddlers.length == 1) {\n\t\t\t\t\ttiddler_index = -1;\n\t\t\t\t} else { // tiddlers.length &gt;= 2\n\t\t\t\t\tif (tiddler_index &gt;= tiddlers.length - 1) { // last tiddler selected\n\t\t\t\t\t\ttiddler_index = tiddlers.length - 2; // select second to last tiddler\n\t\t\t\t\t\tif (MARK_CURRENT_TIDDLER)\n\t\t\t\t\t\t\ttiddlers[tiddler_index].classList.add(\&quot;activeTiddler\&quot;);\n\t\t\t\t\t} else {\n\t\t\t\t\t\tif (MARK_CURRENT_TIDDLER)\n\t\t\t\t\t\t\t// use tiddler_index + 1 because the `tiddlers` array wasn't yet updated\n\t\t\t\t\t\t\ttiddlers[tiddler_index+1].classList.add(\&quot;activeTiddler\&quot;);\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t\tgetActiveTiddlersTitle();\n\t\t}\n\t}\n};\n\n}\n\n})();\n&quot;},&quot;$:/plugins/MaxGyver83/tw5-keyboard-navigation/readme&quot;:{&quot;title&quot;:&quot;$:/plugins/MaxGyver83/tw5-keyboard-navigation/readme&quot;,&quot;created&quot;:&quot;20191103104315571&quot;,&quot;modified&quot;:&quot;20210806213200000&quot;,&quot;tags&quot;:&quot;&quot;,&quot;text&quot;:&quot;This plugin enables some global shortcuts for comfortable navigation without a mouse.\n\n!! How to use\nPress &lt;kbd&gt;Esc&lt;/kbd&gt; to unfocus the sidebar search field.\nThen you can jump to the next or previous open tiddler in the story river by pressing &lt;kbd&gt;j&lt;/kbd&gt; or &lt;kbd&gt;k&lt;/kbd&gt;, respectively (inspired by [[vim|https://www.vim.org/]]).\nPress &lt;kbd&gt;e&lt;/kbd&gt; if you want to edit the current tiddler. Press &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Return&lt;/kbd&gt; when you're done (as usual).\n&lt;kbd&gt;c&lt;/kbd&gt; is for closing a tiddler. &lt;kbd&gt;m&lt;/kbd&gt; opens the \&quot;more tiddler actions\&quot; menu.\n\nWhen you search your TiddlyWiki (&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Shift&lt;/kbd&gt;+&lt;kbd&gt;f&lt;/kbd&gt; by default), just press &lt;kbd&gt;Return&lt;/kbd&gt; to open or &lt;kbd&gt;Tab&lt;/kbd&gt; to focus the first match (without this plugin you have to press &lt;kbd&gt;Tab&lt;/kbd&gt; four times).\n\n&lt;kbd&gt;Esc&lt;/kbd&gt; also closes the search result popup window or \&quot;more tiddler actions\&quot; menu.\n\n!! Source code\nThere is a public [[github repository|https://github.com/MaxGyver83/tw5-keyboard-navigation]] for `tw5-keyboard-navigation`.\n\n!! Author\n[[Max Schillinger|https://www.maximilian-schillinger.de]]\n\n!! Contributers\n[[Soren Bjornstad|https://github.com/sobjornstad]]\n[[Tadeáš Paule|https://github.com/tadeaspaule]]\n&quot;}}}</pre>
 </div>
@@ -12509,8 +12903,8 @@ width:100%;
 <div created="20210810162433224" creator="Télumire" modified="20210810162703140" modifier="Télumire" title="$:/state/addplugins/tab-1342078386">
 <pre>$:/config/KookmaPluginLibrary</pre>
 </div>
-<div created="20210714131710187" creator="Télumire" modified="20210810234026370" modifier="Télumire" title="$:/state/advancedsearch/currentTab">
-<pre>$:/core/ui/AdvancedSearch/Filter</pre>
+<div created="20210714131710187" creator="Télumire" modified="20210811015447816" modifier="Télumire" title="$:/state/advancedsearch/currentTab">
+<pre>$:/core/ui/AdvancedSearch/System</pre>
 </div>
 <div created="20210803203323946" creator="Télumire" modified="20210810162703140" modifier="Télumire" title="$:/state/commander/log-tiddler">
 <pre>$:/temp/commander/logs/tid-1</pre>
@@ -12542,11 +12936,11 @@ width:100%;
 <div created="20210803203320853" creator="Télumire" modified="20210810162703140" modifier="Télumire" title="$:/state/tab--103319216">
 <pre>$:/plugins/kookma/commander/field/uicomp/remove-fields</pre>
 </div>
-<div created="20210714131710187" creator="Télumire" modified="20210810234026370" modifier="Télumire" title="$:/state/tab--1498284803">
-<pre>$:/core/ui/AdvancedSearch/Filter</pre>
+<div created="20210714131710187" creator="Télumire" modified="20210811015447816" modifier="Télumire" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/System</pre>
 </div>
-<div created="20210714123207883" creator="Télumire" modified="20210810162703140" modifier="Télumire" title="$:/state/tab--1963855381">
-<pre>$:/core/ui/ControlPanel/Palette</pre>
+<div created="20210714123207883" creator="Télumire" modified="20210811015655306" modifier="Télumire" title="$:/state/tab--1963855381">
+<pre>$:/core/ui/ControlPanel/Toolbars</pre>
 </div>
 <div created="20210714131721087" creator="Télumire" modified="20210810162703140" modifier="Télumire" title="$:/state/tab--2112689675">
 <pre>$:/core/ui/ControlPanel/Basics</pre>
@@ -12554,8 +12948,8 @@ width:100%;
 <div created="20210721155543030" creator="Télumire" modified="20210810162703140" modifier="Télumire" title="$:/state/tab-1464356360">
 <pre>$:/core/ui/TiddlerInfo/Advanced</pre>
 </div>
-<div created="20210714123159097" creator="Télumire" modified="20210810234438981" modifier="Télumire" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Saving</pre>
+<div created="20210714123159097" creator="Télumire" modified="20210811015649770" modifier="Télumire" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Appearance</pre>
 </div>
 <div created="20210716151227668" creator="Télumire" modified="20210810162703140" modifier="Télumire" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
@@ -12563,11 +12957,11 @@ width:100%;
 <div created="20210803203319241" creator="Télumire" modified="20210810162703140" modifier="Télumire" title="$:/state/tab-607722857">
 <pre>$:/plugins/kookma/commander/field/ui</pre>
 </div>
-<div created="20210714123306926" creator="Télumire" modified="20210810235503851" modifier="Télumire" title="$:/state/tab/sidebar--595412856">
-<pre>$:/SaveToGitHub/Settings</pre>
+<div created="20210714123306926" creator="Télumire" modified="20210811014910115" modifier="Télumire" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Open</pre>
 </div>
-<div created="20210714125257722" creator="Télumire" modified="20210810162703141" modifier="Télumire" title="$:/state/tabs/controlpanel/toolbars-1345989671">
-<pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
+<div created="20210714125257722" creator="Télumire" modified="20210811015659657" modifier="Télumire" title="$:/state/tabs/controlpanel/toolbars-1345989671">
+<pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
@@ -12575,7 +12969,10 @@ width:100%;
 <div created="20210627165215089" creator="T" modified="20210810162703141" modifier="Télumire" title="$:/status/UserName">
 <pre>Télumire</pre>
 </div>
-<div created="20210810235510020" creator="Télumire" list="Index" modified="20210810235510020" modifier="Télumire" title="$:/StoryList">
+<div list="Index" title="$:/StoryList">
+<pre></pre>
+</div>
+<div created="20210811015722015" creator="Télumire" list="$:/core/ui/Buttons/home $:/core/ui/Buttons/close-all $:/core/ui/Buttons/fold-all $:/core/ui/Buttons/unfold-all $:/core/ui/Buttons/permaview $:/core/ui/Buttons/new-tiddler $:/core/ui/Buttons/new-journal $:/core/ui/Buttons/new-image $:/core/ui/Buttons/import $:/core/ui/Buttons/export-page $:/core/ui/Buttons/control-panel $:/core/ui/Buttons/advanced-search $:/plugins/kookma/commander/buttons/pagecontrol $:/core/ui/Buttons/manager $:/core/ui/Buttons/tag-manager $:/core/ui/Buttons/language $:/core/ui/Buttons/palette $:/core/ui/Buttons/theme $:/core/ui/Buttons/storyview $:/core/ui/Buttons/encryption $:/core/ui/Buttons/timestamp $:/core/ui/Buttons/full-screen $:/core/ui/Buttons/print $:/core/ui/Buttons/refresh $:/core/ui/Buttons/save-wiki $:/SaveToGitHub/Button $:/core/ui/Buttons/more-page-actions Buttons/SwitchPalette" modified="20210811015732714" modifier="Télumire" title="$:/tags/PageControls">
 <pre></pre>
 </div>
 <div created="20210714122834007" creator="Télumire" modified="20210810162703141" modifier="Télumire" tagging="after" title="$:/tags/Stylesheet">
@@ -12768,6 +13165,40 @@ This button add a tag to all (be careful !) tiddler tagged with target</pre>
 &lt;$action-navigate $to={{$:/temp/new-task!!tiddler-name}} /&gt;
 &lt;/$button&gt;</pre>
 </div>
+<div created="20201210171047824" creator="Télumire" description="Toggle between grey/beige colour palette" modified="20210811015335215" modifier="Télumire" tags="$:/tags/PageControls" title="Buttons/SwitchPalette" type="text/vnd.tiddlywiki">
+<pre>&lt;span class=&quot;desktop-only&quot;&gt;
+  &lt;$vars
+    palettes=&quot;[all[tiddlers+shadows]tag[$:/tags/SwitchPalette]]&quot;
+    popupTiddler=&lt;&lt;qualify &quot;$:/state/palette-dropdown&quot;&gt;&gt;
+  &gt;
+    &lt;$button
+      popup=&lt;&lt;popupTiddler&gt;&gt;
+      tooltip=&quot;Switch colours&quot;
+      aria-label=&quot;Switch colours&quot;
+      class=&lt;&lt;tv-config-toolbar-class&gt;&gt;
+    &gt;
+      &lt;$list filter=&quot;[&lt;tv-config-toolbar-icons&gt;match[yes]]&quot;&gt;
+	{{images/color-switch}}
+      &lt;/$list&gt;
+
+      &lt;$list filter=&quot;[&lt;tv-config-toolbar-text&gt;match[yes]]&quot;&gt;
+	&lt;span class=&quot;tc-btn-text&quot;&gt;Switch colours&lt;/span&gt;
+      &lt;/$list&gt;
+
+      &lt;$reveal state=&lt;&lt;popupTiddler&gt;&gt; type=&quot;popup&quot; position=&quot;belowleft&quot; class=&quot;tc-drop-down&quot;&gt;
+	&lt;$list filter=&lt;&lt;palettes&gt;&gt;&gt;
+	  &lt;$button class=&quot;tc-btn-invisible&quot;&gt;
+	    {{!!name}}
+	    &lt;$action-setfield $tiddler=&quot;$:/palette&quot; text={{!!title}}/&gt;
+	  &lt;/$button&gt;
+	&lt;/$list&gt;
+      &lt;/$reveal&gt;
+
+    &lt;/$button&gt;
+  &lt;/$vars&gt;
+&lt;/span&gt;
+</pre>
+</div>
 <div created="20210807165404843" creator="Télumire" modified="20210810162703141" modifier="Télumire" title="code count regex">
 <pre>\whitespace trim
 \define wordsCount() $(nbWords)$ words
@@ -12910,6 +13341,12 @@ You can put this one inside of a →{{Edit button for transcluded content||(edit
 </div>
 <div created="20210313134122939" creator="user" description="Macro pour afficher les résultat du filtre dans un nouvel onglet:  &lt;$macrocall $name=&quot;copy-code&quot; title=&quot;&quot; language=&quot;&quot; display-language=&quot;hidden&quot; code=&quot;&quot;&quot;&lt;&lt;href-filter &quot;filtre&quot; &quot;texte&quot;&gt;&gt;&quot;&quot;&quot;/&gt;" modified="20210810162703144" modifier="Télumire" tags="TW5 $:/tags/Macro [[Display tiddlers tagging]]" title="href-filter">
 <pre>\define href-filter(filter, text=&quot;open all&quot;) &lt;a href=&quot;#:[$filter$]&quot; target=&quot;_blank&quot;&gt;$text$&lt;/a&gt;</pre>
+</div>
+<div created="20201210170859810" creator="nico" modified="20210811015014191" modifier="Télumire" tags="" title="images/color-switch" type="text/vnd.tiddlywiki">
+<pre>&lt;svg width=&quot;20px&quot; height=&quot;20px&quot; viewBox=&quot;0 0 16 16&quot; class=&quot;bi bi-circle-half&quot; fill=&quot;currentColor&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+  &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M8 15V1a7 7 0 1 1 0 14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z&quot;/&gt;
+&lt;/svg
+</pre>
 </div>
 <div created="20210627165147396" creator="Télumire" modified="20210810162703144" modifier="Télumire" tagging="after" tagging-tiddler="tip" title="Index">
 <pre>Test work !
