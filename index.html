@@ -175,6 +175,12 @@ Error message and password prompt
 
 <li>$:/config/KookmaPluginLibrary</li>
 
+<li>$:/config/Manager/Filter</li>
+
+<li>$:/config/Manager/Sort</li>
+
+<li>$:/config/Manager/System</li>
+
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/control-panel</li>
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home</li>
@@ -201,6 +207,12 @@ Error message and password prompt
 
 <li>$:/favicon.ico</li>
 
+<li>$:/GridStoryRiver</li>
+
+<li>$:/GridStoryRiver/RightStory/button</li>
+
+<li>$:/GridStoryRiver/style</li>
+
 <li>$:/images/task-doing</li>
 
 <li>$:/images/task-done</li>
@@ -208,8 +220,6 @@ Error message and password prompt
 <li>$:/images/task-todo</li>
 
 <li>$:/images/task-unset</li>
-
-<li>$:/Import</li>
 
 <li>$:/isEncrypted</li>
 
@@ -691,13 +701,22 @@ height:auto;
 <pre>Built from branch 'tiddlywiki-com' at commit b95f6ca084ecc4b63a352a31da9c376551a58e91 of https://github.com/Jermolene/TiddlyWiki5 at 2021-07-04 10:58:55 UTC
 </pre>
 </div>
-<div created="20210810234449332" creator="Télumire" modified="20210813030336109" modifier="Télumire" title="$:/config/AutoSave">
+<div created="20210810234449332" creator="Télumire" modified="20210813030912075" modifier="Télumire" title="$:/config/AutoSave">
 <pre>no</pre>
 </div>
 <div caption="Kookma Plugin Library" created="20200306121057751" modified="20210810162703139" modifier="Télumire" tags="$:/tags/PluginLibrary" title="$:/config/KookmaPluginLibrary" type="text/vnd.tiddlywiki" url="https://kookma.github.io/TW-PluginLibrary/library/index.html">
 <pre>Kookma plugin library is a set of plugins, themes, and scripts, to extend functionality and add new features to Tiddlywiki. For detail information visit the library at [[GitHub|https://github.com/kookma]]. It is recommended to backup your data before installing any plugin, theme, or script. 
 
 To use in other wikis, drag and drop this link to those wikis: [[Kookma Plugin Library|$:/config/KookmaPluginLibrary]]</pre>
+</div>
+<div created="20210813030557585" creator="Télumire" modified="20210813030716303" modifier="Télumire" title="$:/config/Manager/Filter">
+<pre></pre>
+</div>
+<div created="20210813030607891" creator="Télumire" modified="20210813030640461" modifier="Télumire" title="$:/config/Manager/Sort">
+<pre>author</pre>
+</div>
+<div created="20210813030614852" creator="Télumire" modified="20210813030614852" modifier="Télumire" title="$:/config/Manager/System">
+<pre></pre>
 </div>
 <div created="20210811015708309" creator="Télumire" modified="20210811015708309" modifier="Télumire" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/control-panel">
 <pre>hide</pre>
@@ -10604,6 +10623,54 @@ To use in other wikis, drag and drop this link to those wikis: [[Kookma Plugin L
 
 &lt;/svg&gt;</pre>
 </div>
+<div created="20210730145931545" modified="20210813030810347" modifier="Télumire" tagging="after" title="$:/GridStoryRiver">
+<pre></pre>
+</div>
+<div caption="{{$:/core/images/right-arrow}} {{$:/GridStoryRiver/RightStory/button/caption}}" created="20210728115549996" description="Déplace le tiddler dans la colonne de droite" modified="20210813030810347" modifier="Télumire" tags="$:/tags/Macro $:/tags/ViewToolbar $:/GridStoryRiver $:/tags/EditToolbar" task="done" title="$:/GridStoryRiver/RightStory/button">
+<pre>\whitespace trim
+\define right-story-toggle() &lt;$action-listops $field=&quot;tags&quot; $subfilter=&quot;+[toggle[right-story]]&quot;/&gt;
+&lt;$button actions=&lt;&lt;right-story-toggle&gt;&gt; class=&quot;tc-btn-invisible display&quot; tooltip=&quot;Changer de colonne&quot;&gt;
+&lt;$list filter=&quot;[all[current]tag[right-story]]&quot;&gt;{{$:/core/images/left-arrow}}&lt;/$list&gt;
+&lt;$list filter=&quot;[all[current]!tag[right-story]]&quot;&gt;{{$:/core/images/right-arrow}}&lt;/$list&gt;
+&lt;/$button&gt;</pre>
+</div>
+<div created="20210727201506053" modified="20210813030810347" modifier="Télumire" tags="$:/tags/Stylesheet $:/GridStoryRiver" task="done" title="$:/GridStoryRiver/style" type="text/css">
+<pre>/*prevent backdrop and frontdrop from generating columns*/
+.story-backdrop, .story-frontdrop {
+display:contents;
+}
+
+.tc-story-river{
+
+display:grid;
+place-content: center;
+/* grid-template-columns: min-content minmax(0, 960px) min-content;*/
+grid-template-columns: 1fr minmax(0, 960px) 1fr;
+
+grid-auto-columns: minmax(0, 960px);
+grid-auto-flow: column;
+row-gap: 28px;
+column-gap: 14px;
+}
+
+.tc-tiddler-frame {
+grid-column:2/span 1;
+margin:0;
+}
+
+.tc-tiddler-view-frame {
+max-width:960px;
+}
+
+.tc-tiddler-edit-frame {
+grid-column:1/span 3;
+max-width:100vw;
+}
+
+.tc-tagged-right-story{
+grid-column:-1/span 1;
+}</pre>
+</div>
 <div created="20210706193912669" creator="user" modified="20210810162703139" modifier="Télumire" tags="$:/tags/Image ui/Buttons/tasker" title="$:/images/task-doing" type="text/vnd.tiddlywiki">
 <pre>&lt;svg 
 fill=&quot;currentColor&quot;
@@ -10636,18 +10703,6 @@ viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class
   &lt;path d=&quot;m218.16 397.46h15.1c0.38781 0 0.70002 0.31221 0.70002 0.70002v15.1c0 0.38781-0.31221 0.70002-0.70002 0.70002h-15.1c-0.38782 0-0.70003-0.31221-0.70003-0.70002v-15.1c0-0.38781 0.31221-0.70002 0.70003-0.70002zm-2.0746-2.7496a1.3751 1.3751 0 0 0-1.3749 1.3749v19.249a1.3751 1.3751 0 0 0 1.3749 1.3749h19.249a1.3751 1.3751 0 0 0 1.375-1.3749v-19.249a1.3751 1.3751 0 0 0-1.375-1.3749z&quot;/&gt;
  &lt;/g&gt;
 &lt;/svg&gt;</pre>
-</div>
-<div status="complete" title="$:/Import">
-<pre>The following tiddlers were imported:
-
-# [[$:/SaveToGitHub/Button]]
-# [[$:/SaveToGitHub/Caption]]
-# [[$:/SaveToGitHub/CommitMessage/Modal]]
-# [[$:/SaveToGitHub/Hint]]
-# [[$:/SaveToGitHub/PublishFilter]]
-# [[$:/SaveToGitHub/Settings]]
-# [[$:/SaveToGitHub/Settings/Style]]
-# [[Saving to github button]]</pre>
 </div>
 <div modified="20210810162703139" modifier="Télumire" title="$:/isEncrypted">
 <pre>no</pre>
@@ -12835,7 +12890,7 @@ very-muted-foreground: rgba(240, 196, 117, 0.7)
 &lt;/span&gt;
 &lt;/$button&gt;</pre>
 </div>
-<div created="20210806021049086" modified="20210811025916985" modifier="Mensana" tags="$:/SaveToGitHub" title="$:/SaveToGitHub/Caption">
+<div created="20210806021049086" modified="20210813030810346" modifier="Télumire" tags="$:/SaveToGitHub" title="$:/SaveToGitHub/Caption">
 <pre>save to github</pre>
 </div>
 <div created="20210813010927077" footer="&lt;$button message=&quot;tm-close-tiddler&quot;&gt;Commit&lt;$action-sendmessage $message=&quot;tm-save-wiki&quot; $param=&quot;$:/core/save/all&quot; publishFilter={{$:/SaveToGitHub/PublishFilter}} /&gt; &lt;$action-setfield $tiddler=&quot;$:/GitHub/Username&quot; text=&quot;&quot;/&gt; &lt;$action-setfield $tiddler=&quot;$:/config/AutoSave&quot; text=&quot;yes&quot;/&gt;&lt;/$button&gt;" modified="20210813014424463" subtitle="Commit message" tags="$:/SaveToGitHub" title="$:/SaveToGitHub/CommitMessage/Modal">
@@ -12848,14 +12903,14 @@ width:100%;
 
 &lt;$edit-text class=&quot;commit-message&quot; tiddler=&quot;$:/language/ControlPanel/Saving/GitService/CommitMessage&quot; default=&quot;Saved by TiddlyWiki&quot; tag=&quot;textarea&quot; class=&quot;tc-edit-texteditor&quot;/&gt;</pre>
 </div>
-<div created="20210806021302793" modified="20210811025916985" modifier="Mensana" tags="$:/SaveToGitHub" title="$:/SaveToGitHub/Hint" type="text/plain">
+<div created="20210806021302793" modified="20210813030810346" modifier="Télumire" tags="$:/SaveToGitHub" title="$:/SaveToGitHub/Hint" type="text/plain">
 <pre>save to GitHub</pre>
 </div>
-<div created="20210806130312321" modified="20210811025916985" modifier="Mensana" tags="$:/SaveToGitHub" title="$:/SaveToGitHub/PublishFilter">
+<div created="20210806130312321" modified="20210813030810346" modifier="Télumire" tags="$:/SaveToGitHub" title="$:/SaveToGitHub/PublishFilter">
 <pre>-[tag[private]] -$:/HistoryList -[search:title[$:/state/folded]] -[search:title[$:/GitHub]] -[search:title[$:/SaveToGitHub/private]]
 </pre>
 </div>
-<div ask-commit="false" caption="Github" created="20210805131146320" creator="Mensana" modified="20210813015401136" modifier="Mensana" tags="$:/SaveToGitHub $:/tags/SideBar" title="$:/SaveToGitHub/Settings">
+<div ask-commit="false" caption="Github" created="20210805131146320" modified="20210813030810346" modifier="Télumire" tags="$:/SaveToGitHub $:/tags/SideBar" title="$:/SaveToGitHub/Settings">
 <pre>\define lingo-base() $:/language/ControlPanel/Saving/GitService/
 \define service-name() ~GitHub
 
@@ -12878,7 +12933,7 @@ width:100%;
 |&lt;&lt;lingo Filename&gt;&gt; |&lt;$edit-text tiddler=&quot;$:/GitHub/Filename&quot; default=&quot;&quot; tag=&quot;input&quot;/&gt; |
 |&lt;&lt;lingo ServerURL&gt;&gt; |&lt;$edit-text tiddler=&quot;$:/GitHub/ServerURL&quot; default=&quot;https://api.github.com&quot; tag=&quot;input&quot;/&gt; |</pre>
 </div>
-<div created="20210810223410206" creator="Mensana" modified="20210813004046381" modifier="Mensana" tags="$:/tags/Stylesheet $:/SaveToGitHub" title="$:/SaveToGitHub/Settings/Style">
+<div created="20210810223410206" modified="20210813030810346" modifier="Télumire" tags="$:/tags/Stylesheet $:/SaveToGitHub" title="$:/SaveToGitHub/Settings/Style">
 <pre>&lt;pre&gt;
 .tc-story-river table.GitHub-Table-Settings{
 	padding-top: 0px;
@@ -12954,7 +13009,7 @@ width:100%;
 <div created="20210714131710187" creator="Télumire" modified="20210812013701365" modifier="Télumire" title="$:/state/advancedsearch/currentTab">
 <pre>$:/core/ui/AdvancedSearch/Standard</pre>
 </div>
-<div created="20210803203323946" creator="Télumire" modified="20210810162703140" modifier="Télumire" title="$:/state/commander/log-tiddler">
+<div created="20210803203323946" creator="Télumire" modified="20210813030758949" modifier="Télumire" title="$:/state/commander/log-tiddler">
 <pre>$:/temp/commander/logs/tid-1</pre>
 </div>
 <div created="20210803203459637" creator="Télumire" modified="20210810162703140" modifier="Télumire" title="$:/state/commander/reveal/$:/plugins/kookma/commander/log/ui-607722857">
@@ -12963,10 +13018,10 @@ width:100%;
 <div created="20210810162647596" creator="Télumire" modified="20210810162703147" modifier="Télumire" title="$:/state/commander/reveal/$:/plugins/kookma/commander/search/selection-607722857">
 <pre>open</pre>
 </div>
-<div created="20210803203415548" creator="Télumire" modified="20210810162736794" modifier="Télumire" title="$:/state/commander/snr/select-tiddler">
+<div created="20210803203415548" creator="Télumire" modified="20210813030859631" modifier="Télumire" title="$:/state/commander/snr/select-tiddler">
 <pre></pre>
 </div>
-<div created="20210803203415548" creator="Télumire" modified="20210810162736794" modifier="Télumire" title="$:/state/compInspect/temp/commander/selectState-tiddler">
+<div created="20210803203415548" creator="Télumire" modified="20210813030859631" modifier="Télumire" title="$:/state/compInspect/temp/commander/selectState-tiddler">
 <pre></pre>
 </div>
 <div created="20210805140101959" creator="Télumire" modified="20210810162703140" modifier="Télumire" title="$:/state/Excise/-2007463564/tagnew">
@@ -12981,7 +13036,7 @@ width:100%;
 <div created="20210714123144577" creator="Télumire" modified="20210810162703140" modifier="Télumire" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
-<div created="20210803203320853" creator="Télumire" modified="20210810162703140" modifier="Télumire" title="$:/state/tab--103319216">
+<div created="20210803203320853" creator="Télumire" modified="20210813030741094" modifier="Télumire" title="$:/state/tab--103319216">
 <pre>$:/plugins/kookma/commander/field/uicomp/remove-fields</pre>
 </div>
 <div created="20210714131710187" creator="Télumire" modified="20210812013701365" modifier="Télumire" title="$:/state/tab--1498284803">
