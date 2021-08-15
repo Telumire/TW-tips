@@ -391,8 +391,6 @@ Error message and password prompt
 
 <li>External_Link_Icon</li>
 
-<li>Filter list of result</li>
-
 <li>gallery</li>
 
 <li>gallery-painting</li>
@@ -464,6 +462,8 @@ Error message and password prompt
 <li>Reading-time/wpm</li>
 
 <li>Saving to github button</li>
+
+<li>Search a list of result</li>
 
 <li>sentence with icon</li>
 
@@ -711,7 +711,7 @@ height:auto;
 <pre>Built from branch 'tiddlywiki-com' at commit b95f6ca084ecc4b63a352a31da9c376551a58e91 of https://github.com/Jermolene/TiddlyWiki5 at 2021-07-04 10:58:55 UTC
 </pre>
 </div>
-<div created="20210810234449332" creator="Télumire" modified="20210815170701627" modifier="Télumire" title="$:/config/AutoSave">
+<div created="20210810234449332" creator="Télumire" modified="20210815172332365" modifier="Télumire" title="$:/config/AutoSave">
 <pre>no</pre>
 </div>
 <div caption="Kookma Plugin Library" created="20200306121057751" modified="20210810162703139" modifier="Télumire" tags="$:/tags/PluginLibrary" title="$:/config/KookmaPluginLibrary" type="text/vnd.tiddlywiki" url="https://kookma.github.io/TW-PluginLibrary/library/index.html">
@@ -13079,7 +13079,7 @@ width:100%;
 <div created="20210803203319241" creator="Télumire" modified="20210810162703140" modifier="Télumire" title="$:/state/tab-607722857">
 <pre>$:/plugins/kookma/commander/field/ui</pre>
 </div>
-<div created="20210714123306926" creator="Télumire" modified="20210815170610248" modifier="Télumire" title="$:/state/tab/sidebar--595412856">
+<div created="20210714123306926" creator="Télumire" modified="20210815172330105" modifier="Télumire" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Open</pre>
 </div>
 <div created="20210714125257722" creator="Télumire" modified="20210811015659657" modifier="Télumire" title="$:/state/tabs/controlpanel/toolbars-1345989671">
@@ -13449,16 +13449,6 @@ You can put this one inside of a →{{Edit button for transcluded content||(edit
 &lt;/svg&gt;
 </pre>
 </div>
-<div created="20210815130825614" creator="Télumire" modified="20210815153345809" modifier="Télumire" tags="tip" task="doing" title="Filter list of result">
-<pre>&lt;$edit-text tiddler=&lt;&lt;qualify $:/temp/search&gt;&gt; field=&quot;text&quot; tag=&quot;input&quot; class=&quot;tc-edit-texteditor&quot; default=&quot;&quot;/&gt;
-&lt;$set name=search tiddler=&lt;&lt;qualify $:/temp/search&gt;&gt; field=&quot;text&quot;&gt;
-
-&lt;$list filter=&quot;[tag[tip]]+[search:*&lt;search&gt;]&quot;&gt;
-{{||Template/tagging/itemTemplate}}
-&lt;/$list&gt;
-
-&lt;/$set&gt;</pre>
-</div>
 <div created="20210715014918373" creator="Télumire" description="This tiddler shows a gallery of paintings with a conditional description" modified="20210810162703143" modifier="Télumire" tags="gallery-painting" title="gallery">
 <pre>{{(language-selection)}}
 
@@ -13765,6 +13755,16 @@ Add this to your wiki by drag &amp; dropping &lt;&lt;openTiddlers filter:&quot;[
 It contains the following tiddlers :
 
 &lt;&lt;list-links &quot;[tag[$:/SaveToGitHub]sort[title]]&quot;&gt;&gt;</pre>
+</div>
+<div created="20210815130825614" creator="Télumire" modified="20210815171940613" modifier="Télumire" tags="tip" task="doing" title="Search a list of result">
+<pre>&lt;$edit-text tiddler=&lt;&lt;qualify $:/temp/search&gt;&gt; field=&quot;text&quot; tag=&quot;input&quot; class=&quot;tc-edit-texteditor&quot; default=&quot;&quot;/&gt;
+&lt;$set name=search tiddler=&lt;&lt;qualify $:/temp/search&gt;&gt; field=&quot;text&quot;&gt;
+
+&lt;$list filter=&quot;[tag[tip]]+[search:*&lt;search&gt;]&quot;&gt;
+{{||Template/tagging/itemTemplate}}
+&lt;/$list&gt;
+
+&lt;/$set&gt;</pre>
 </div>
 <div created="20210806125054939" creator="Télumire" modified="20210810162703145" modifier="Télumire" tags="tip" title="sentence with icon">
 <pre>with transclusion only :
@@ -14113,7 +14113,7 @@ a.tc-tiddlylink .tc-title:hover {
 {{||(gallery-painting)}}
 &lt;/$list&gt;</pre>
 </div>
-<div created="20210713194532173" creator="Télumire" description="This tiddler is used by the ~ViewTemplates [[Template/tagging/before]] and [[Template/tagging/after]]" list-before="$:/core/ui/ViewTemplate/body" modified="20210815165226792" modifier="Télumire" tags="[[Display tiddlers tagging]]" title="Template/tagging">
+<div created="20210713194532173" creator="Télumire" description="This tiddler is used by the ~ViewTemplates [[Template/tagging/before]] and [[Template/tagging/after]]" list-before="$:/core/ui/ViewTemplate/body" modified="20210815172304264" modifier="Télumire" tags="[[Display tiddlers tagging]]" title="Template/tagging">
 <pre>\whitespace trim
 
 &lt;$reveal tag=&quot;div&quot; type=&quot;nomatch&quot; stateTitle=&lt;&lt;folded-state&gt;&gt; text=&quot;hide&quot; retain=&quot;yes&quot; animate=&quot;yes&quot;&gt;
@@ -14136,10 +14136,20 @@ a.tc-tiddlylink .tc-title:hover {
 
 &lt;$list filter=&quot;[all[current]has:field[tagging-tiddler]]&quot;&gt;
 {{||Template/tagging/searchable list}}
+&lt;ul&gt;
+&lt;$set name=search tiddler=&lt;&lt;qualify $:/temp/search&gt;&gt; field=&quot;text&quot;&gt;
+&lt;$macrocall $name=&quot;list-tagged-draggable&quot; tag={{!!tagging-tiddler}} itemTemplate=&quot;Template/tagging/itemTemplate&quot; subFilter=&quot;search:*&lt;search&gt;&quot;/&gt;
+&lt;/$set&gt;
+&lt;/ul&gt;
 &lt;/$list&gt;
 
 &lt;$list filter=&quot;[all[current]!has[tagging-tiddler]]&quot;&gt;
 {{||Template/tagging/searchable list}}
+&lt;ul&gt;
+&lt;$set name=search tiddler=&lt;&lt;qualify $:/temp/search&gt;&gt; field=&quot;text&quot;&gt;
+&lt;$macrocall $name=&quot;list-tagged-draggable&quot; tag={{!!title}} itemTemplate=&quot;Template/tagging/itemTemplate&quot; subFilter=&quot;search:*&lt;search&gt;&quot;/&gt;
+&lt;/$set&gt;
+&lt;/ul&gt;
 &lt;/$list&gt;
 &lt;/$reveal&gt;</pre>
 </div>
@@ -14158,7 +14168,7 @@ a.tc-tiddlylink .tc-title:hover {
 <div created="20210715020836713" creator="Télumire" modified="20210810162703146" modifier="Télumire" tags="Template/tagging [[Display tiddlers tagging]]" title="Template/tagging/itemTemplate">
 <pre>&lt;li&gt;&lt;$link to=&lt;&lt;currentTiddler&gt;&gt;&gt;&lt;$view field=&quot;caption&quot;&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$view&gt;&lt;/$link&gt;&lt;$list filter=&quot;[all[current]has[description]]&quot;&gt; - &lt;span style=&quot;font-style:italic;&quot;&gt;{{!!description}}&lt;/span&gt;&lt;/$list&gt;&lt;/li&gt;</pre>
 </div>
-<div created="20210815164933057" creator="Télumire" modified="20210815170502098" modifier="Télumire" tags="[[Display tiddlers tagging]]" title="Template/tagging/searchable list">
+<div created="20210815164933057" creator="Télumire" modified="20210815172202186" modifier="Télumire" tags="[[Display tiddlers tagging]]" title="Template/tagging/searchable list">
 <pre>&lt;style&gt;
 .search-list-container {
 display:flex;
@@ -14178,13 +14188,7 @@ padding:.5em;
 {{$:/core/images/close-button}}
 &lt;/$button&gt;
 &lt;/$reveal&gt;
-&lt;/div&gt;
-
-&lt;ul&gt;
-&lt;$set name=search tiddler=&lt;&lt;qualify $:/temp/search&gt;&gt; field=&quot;text&quot;&gt;
-&lt;$macrocall $name=&quot;list-tagged-draggable&quot; tag={{!!tagging-tiddler}} itemTemplate=&quot;Template/tagging/itemTemplate&quot; subFilter=&quot;search:*&lt;search&gt;&quot;/&gt;
-&lt;/$set&gt;
-&lt;/ul&gt;</pre>
+&lt;/div&gt;</pre>
 </div>
 <div created="20210807151328939" creator="Télumire" modified="20210810162703146" modifier="Télumire" title="test regex">
 <pre>un deux</pre>
