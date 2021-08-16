@@ -213,23 +213,13 @@ Error message and password prompt
 
 <li>$:/GridStoryRiver/style</li>
 
-<li>$:/images/task-doing</li>
-
-<li>$:/images/task-done</li>
-
-<li>$:/images/task-todo</li>
-
-<li>$:/images/task-unset</li>
-
 <li>$:/Import</li>
 
 <li>$:/isEncrypted</li>
 
 <li>$:/language</li>
 
-<li>$:/language/Buttons/tasker/Caption</li>
-
-<li>$:/language/Buttons/tasker/Hint</li>
+<li>$:/language/ControlPanel/Saving/GitService/CommitMessage</li>
 
 <li>$:/mytag</li>
 
@@ -331,6 +321,40 @@ Error message and password prompt
 
 <li>$:/Tasker</li>
 
+<li>$:/Tasker/images/task-doing</li>
+
+<li>$:/Tasker/images/task-done</li>
+
+<li>$:/Tasker/images/task-todo</li>
+
+<li>$:/Tasker/images/task-unset</li>
+
+<li>$:/Tasker/Kanban</li>
+
+<li>$:/Tasker/Kanban/doing</li>
+
+<li>$:/Tasker/Kanban/done</li>
+
+<li>$:/Tasker/Kanban/new-task</li>
+
+<li>$:/Tasker/Kanban/Style</li>
+
+<li>$:/Tasker/Kanban/Tagging</li>
+
+<li>$:/Tasker/Kanban/todo</li>
+
+<li>$:/Tasker/language/Buttons/tasker/Caption</li>
+
+<li>$:/Tasker/language/Buttons/tasker/Hint</li>
+
+<li>$:/Tasker/macro/list-has-field-draggable</li>
+
+<li>$:/Tasker/Style tasker</li>
+
+<li>$:/Tasker/Tasker button at the left of the title</li>
+
+<li>$:/Tasker/ui/Buttons/tasker</li>
+
 <li>$:/theme</li>
 
 <li>$:/themes/tiddlywiki/snowwhite</li>
@@ -421,27 +445,11 @@ Error message and password prompt
 
 <li>itemTemplateSidebarOrder</li>
 
-<li>Kanban</li>
-
-<li>Kanban/doing</li>
-
-<li>Kanban/done</li>
-
-<li>Kanban/new-task</li>
-
-<li>Kanban/Style</li>
-
-<li>Kanban/Tagging</li>
-
-<li>Kanban/todo</li>
-
 <li>lorem</li>
 
 <li>lorem10</li>
 
 <li>lorem100</li>
-
-<li>macro/list-has-field-draggable</li>
 
 <li>macro/quote</li>
 
@@ -503,8 +511,6 @@ Error message and password prompt
 
 <li>Style tags</li>
 
-<li>Style tasker</li>
-
 <li>Style/DisplaySource</li>
 
 <li>Style/hide-until-hover</li>
@@ -520,8 +526,6 @@ Error message and password prompt
 <li>task</li>
 
 <li>Task managing with the macro list-has-field-draggable</li>
-
-<li>Tasker button at the left of the title</li>
 
 <li>Télumire</li>
 
@@ -556,8 +560,6 @@ Error message and password prompt
 <li>Todos</li>
 
 <li>TW as a blog/Custom permalink button</li>
-
-<li>ui/Buttons/tasker</li>
 
 <li>Word counter</li>
 
@@ -663,14 +665,14 @@ class={{!!img-class}}
 &lt;/$list&gt;
 &lt;/ul&gt;</pre>
 </div>
-<div created="20210707171304857" creator="user" modified="20210816113147994" modifier="Télumire" tags="TW5 $:/Tasker Kanban" title="(task-list-doing-tag)">
+<div created="20210707171304857" creator="user" modified="20210816161807661" modifier="Télumire" tags="TW5 $:/Tasker $:/Tasker/Kanban" title="(task-list-doing-tag)">
 <pre>&lt;ul&gt;
 &lt;$list filter=&quot;[tag{!!title}task[doing]!sort[modified]]&quot;&gt;
 {{||(task)}}&lt;br&gt;
 &lt;/$list&gt;
 &lt;/ul&gt;</pre>
 </div>
-<div created="20210707171322540" creator="user" modified="20210816113147995" modifier="Télumire" tags="TW5 $:/Tasker Kanban" title="(task-list-done-tag)">
+<div created="20210707171322540" creator="user" modified="20210816161807661" modifier="Télumire" tags="TW5 $:/Tasker $:/Tasker/Kanban" title="(task-list-done-tag)">
 <pre>&lt;ul&gt;
 &lt;$list filter=&quot;[tag{!!title}task[done]!sort[modified]]&quot;&gt;
 {{||(task)}}&lt;br&gt;
@@ -693,21 +695,21 @@ class={{!!img-class}}
 &lt;/$list&gt;
 &lt;/ul&gt;</pre>
 </div>
-<div created="20210707171140966" creator="user" modified="20210816113147995" modifier="Télumire" tags="TW5 $:/Tasker Kanban" title="(task-list-todo-tag)">
+<div created="20210707171140966" creator="user" modified="20210816161807661" modifier="Télumire" tags="TW5 $:/Tasker $:/Tasker/Kanban" title="(task-list-todo-tag)">
 <pre>&lt;ul&gt;
 &lt;$list filter=&quot;[tag{!!title}task[todo]!sort[modified]]&quot;&gt;
 {{||(task)}}&lt;br&gt;
 &lt;/$list&gt;
 &lt;/ul&gt;</pre>
 </div>
-<div created="20210707133605847" creator="user" modified="20210816113147995" modifier="Télumire" tags="TW5 $:/Tasker Kanban" title="(task-list)">
+<div created="20210707133605847" creator="user" modified="20210816161807661" modifier="Télumire" tags="TW5 $:/Tasker $:/Tasker/Kanban" title="(task-list)">
 <pre>&lt;ul&gt;
 &lt;$list filter=&quot;[task{!!title}!sort[modified]]&quot;&gt;
 {{||(task)}}&lt;br&gt;
 &lt;/$list&gt;
 &lt;/ul&gt;</pre>
 </div>
-<div created="20210707130327890" creator="user" description="This tiddler allows you to display a link to a task and the task indicator to change its status without having to open it. &lt;br&gt; If the `task-description` field is filled in, its contents will be displayed. If a `caption` exists and there is no `task-description`, `caption` is displayed. If not, the tiddler title is displayed." modified="20210816113147995" modifier="Télumire" tags="TW5 $:/Tasker Kanban" title="(task)">
+<div created="20210707130327890" creator="user" description="This tiddler allows you to display a link to a task and the task indicator to change its status without having to open it. &lt;br&gt; If the `task-description` field is filled in, its contents will be displayed. If a `caption` exists and there is no `task-description`, `caption` is displayed. If not, the tiddler title is displayed." modified="20210816161848493" modifier="Télumire" tags="TW5 $:/Tasker $:/Tasker/Kanban" title="(task)">
 <pre>&lt;style&gt;
 .tc-tiddler-controls.inline-task button svg {
 width:1em;
@@ -715,7 +717,7 @@ height:auto;
 }
 &lt;/style&gt;
 
-&lt;span class=&quot;tc-tiddler-controls inline-task&quot; style=&quot;float:none;&quot;&gt;{{!!title||ui/Buttons/tasker}}&lt;/span&gt;&lt;$link to={{!!title}}&gt;&lt;$view field=&quot;task-description&quot;&gt;&lt;$view field=&quot;caption&quot;&gt;{{!!title}}&lt;/$view&gt;&lt;/$view&gt;&lt;/$link&gt;</pre>
+&lt;span class=&quot;tc-tiddler-controls inline-task&quot; style=&quot;float:none;&quot;&gt;{{!!title||$:/Tasker/ui/Buttons/tasker}}&lt;/span&gt;&lt;$link to={{!!title}}&gt;&lt;$view field=&quot;task-description&quot;&gt;&lt;$view field=&quot;caption&quot;&gt;{{!!title}}&lt;/$view&gt;&lt;/$view&gt;&lt;/$link&gt;</pre>
 </div>
 <div created="20210625132006844" creator="user" modified="20210810162703139" modifier="Télumire" tags="$:/tags/SideBar SideBarOrder [[Style count-tc-menu-list-items]]" title="↕">
 <pre>;Modify order by drag&amp;drop :
@@ -727,7 +729,7 @@ height:auto;
 <pre>Built from branch 'tiddlywiki-com' at commit b95f6ca084ecc4b63a352a31da9c376551a58e91 of https://github.com/Jermolene/TiddlyWiki5 at 2021-07-04 10:58:55 UTC
 </pre>
 </div>
-<div created="20210810234449332" creator="Télumire" modified="20210816161058643" modifier="Télumire" title="$:/config/AutoSave">
+<div created="20210810234449332" creator="Télumire" modified="20210816170720782" modifier="Télumire" title="$:/config/AutoSave">
 <pre>no</pre>
 </div>
 <div caption="Kookma Plugin Library" created="20200306121057751" modified="20210810162703139" modifier="Télumire" tags="$:/tags/PluginLibrary" title="$:/config/KookmaPluginLibrary" type="text/vnd.tiddlywiki" url="https://kookma.github.io/TW-PluginLibrary/library/index.html">
@@ -10697,43 +10699,10 @@ max-width:100vw;
 grid-column:-1/span 1;
 }</pre>
 </div>
-<div created="20210706193912669" creator="user" modified="20210816113147995" modifier="Télumire" tags="$:/tags/Image $:/Tasker Kanban" title="$:/images/task-doing" type="text/vnd.tiddlywiki">
-<pre>&lt;svg 
-fill=&quot;currentColor&quot;
-viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;tc-image-button&quot; width=&quot;22pt&quot; height=&quot;22pt&quot;&gt;
- &lt;g transform=&quot;translate(-214.71 -394.71)&quot;&gt;
-  &lt;path d=&quot;m216.09 394.71c-0.75932 8e-5 -1.3748 0.61561-1.3749 1.3749v19.249c8e-5 0.75932 0.61561 1.3748 1.3749 1.3749h19.249c0.75933-7e-5 1.3749-0.6156 1.375-1.3749v-19.249c-8e-5 -0.75933-0.61562-1.3749-1.375-1.3749z&quot; fill-rule=&quot;evenodd&quot; style=&quot;paint-order:fill markers stroke&quot;/&gt;
- &lt;/g&gt;
-&lt;/svg&gt;
-</pre>
-</div>
-<div created="20210706193857181" creator="user" modified="20210816113147996" modifier="Télumire" tags="$:/tags/Image $:/Tasker Kanban" title="$:/images/task-done" type="text/vnd.tiddlywiki">
-<pre>&lt;svg 
-fill=&quot;currentColor&quot;
-viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;tc-image-button&quot; width=&quot;22pt&quot; height=&quot;22pt&quot;&gt;
- &lt;g transform=&quot;translate(-214.71 -394.71)&quot;&gt;
-  &lt;path d=&quot;m232.06 401.08c-0.53697-0.53697-1.4076-0.53697-1.9445 0l-6.3699 6.305-2.4356-2.6735c-0.53697-0.53697-1.4076-0.53697-1.9445 0s-0.53697 1.4076 0 1.9445l3.3098 3.6391c0.52613 0.57866 1.4283 0.60262 1.9844 0.0527l7.4121-7.3354c0.52527-0.52495 0.52527-1.3956-0.0117-1.9325zm-15.846-6.3687h19c0.83103 0 1.5001 0.66903 1.5001 1.5001v19c0 0.83103-0.66903 1.5001-1.5001 1.5001h-19c-0.83103 0-1.5001-0.66903-1.5001-1.5001v-19c0-0.83104 0.66903-1.5001 1.5001-1.5001z&quot; fill-rule=&quot;evenodd&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-miterlimit=&quot;2&quot; stroke-width=&quot;3.0197&quot; style=&quot;paint-order:fill markers stroke&quot;/&gt;
- &lt;/g&gt;
-&lt;/svg&gt;
-</pre>
-</div>
-<div created="20210706220242459" creator="user" modified="20210816113147996" modifier="Télumire" tags="$:/tags/Image $:/Tasker Kanban" title="$:/images/task-todo" type="text/vnd.tiddlywiki">
-<pre>&lt;svg viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;tc-image-button&quot; width=&quot;22pt&quot; height=&quot;22pt&quot;&gt;
- &lt;path d=&quot;m13.75 11a2.75 2.75 0 0 1-2.75 2.75 2.75 2.75 0 0 1-2.75-2.75 2.75 2.75 0 0 1 2.75-2.75 2.75 2.75 0 0 1 2.75 2.75zm-10.3-8.2498h15.1c0.38781 0 0.70002 0.31221 0.70002 0.70002v15.1c0 0.38781-0.31221 0.70002-0.70002 0.70002h-15.1c-0.38782 0-0.70003-0.31221-0.70003-0.70002v-15.1c0-0.38781 0.31221-0.70002 0.70003-0.70002zm-2.0746-2.7496a1.3751 1.3751 0 0 0-1.3749 1.3749v19.249a1.3751 1.3751 0 0 0 1.3749 1.3749h19.249a1.3751 1.3751 0 0 0 1.375-1.3749v-19.249a1.3751 1.3751 0 0 0-1.375-1.3749z&quot;/&gt;
-&lt;/svg&gt;</pre>
-</div>
-<div created="20210706193929869" creator="user" modified="20210816113147996" modifier="Télumire" tags="$:/tags/Image $:/Tasker Kanban" title="$:/images/task-unset" type="text/vnd.tiddlywiki">
-<pre>&lt;svg 
-viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;tc-image-button&quot; width=&quot;22pt&quot; height=&quot;22pt&quot;&gt;
- &lt;g transform=&quot;translate(-214.71 -394.71)&quot;&gt;
-  &lt;path d=&quot;m218.16 397.46h15.1c0.38781 0 0.70002 0.31221 0.70002 0.70002v15.1c0 0.38781-0.31221 0.70002-0.70002 0.70002h-15.1c-0.38782 0-0.70003-0.31221-0.70003-0.70002v-15.1c0-0.38781 0.31221-0.70002 0.70003-0.70002zm-2.0746-2.7496a1.3751 1.3751 0 0 0-1.3749 1.3749v19.249a1.3751 1.3751 0 0 0 1.3749 1.3749h19.249a1.3751 1.3751 0 0 0 1.375-1.3749v-19.249a1.3751 1.3751 0 0 0-1.375-1.3749z&quot;/&gt;
- &lt;/g&gt;
-&lt;/svg&gt;</pre>
-</div>
-<div modified="20210816113221712" modifier="Télumire" status="complete" title="$:/Import">
+<div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[Kanban/Tagging]]</pre>
+# [[$:/Tasker/Kanban/Style]]</pre>
 </div>
 <div modified="20210810162703139" modifier="Télumire" title="$:/isEncrypted">
 <pre>no</pre>
@@ -10741,11 +10710,10 @@ viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class
 <div created="20210713151714139" creator="Télumire" modified="20210810162703139" modifier="Télumire" tags="gallery-painting" title="$:/language">
 <pre>en-GB</pre>
 </div>
-<div created="20210706180301988" creator="user" modified="20210816113147996" modifier="Télumire" tags="$:/Tasker Kanban" title="$:/language/Buttons/tasker/Caption">
-<pre>tasker</pre>
-</div>
-<div created="20210706180357755" creator="user" modified="20210816113147996" modifier="Télumire" tags="$:/Tasker Kanban" title="$:/language/Buttons/tasker/Hint">
-<pre>Click to set task status (todo, doing, done)</pre>
+<div created="20210816170533861" creator="Télumire" modified="20210816170714028" modifier="Télumire" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
+<pre>Updated Kanban - now it support tags !
+
+https://telumire.github.io/TW-tips/index.html#$:/Tasker/Kanban/Tagging</pre>
 </div>
 <div created="20210727154833140" creator="Télumire" modified="20210810162703139" modifier="Télumire" title="$:/mytag">
 <pre>add me</pre>
@@ -13046,7 +13014,7 @@ width:100%;
 <div created="20210810162433224" creator="Télumire" modified="20210810162703140" modifier="Télumire" title="$:/state/addplugins/tab-1342078386">
 <pre>$:/config/KookmaPluginLibrary</pre>
 </div>
-<div created="20210714131710187" creator="Télumire" modified="20210816152020445" modifier="Télumire" title="$:/state/advancedsearch/currentTab">
+<div created="20210714131710187" creator="Télumire" modified="20210816162552349" modifier="Télumire" title="$:/state/advancedsearch/currentTab">
 <pre>$:/core/ui/AdvancedSearch/Standard</pre>
 </div>
 <div created="20210803203323946" creator="Télumire" modified="20210816113147994" modifier="Télumire" title="$:/state/commander/log-tiddler">
@@ -13079,7 +13047,7 @@ width:100%;
 <div created="20210803203320853" creator="Télumire" modified="20210813030741094" modifier="Télumire" title="$:/state/tab--103319216">
 <pre>$:/plugins/kookma/commander/field/uicomp/remove-fields</pre>
 </div>
-<div created="20210714131710187" creator="Télumire" modified="20210816152020445" modifier="Télumire" title="$:/state/tab--1498284803">
+<div created="20210714131710187" creator="Télumire" modified="20210816162552350" modifier="Télumire" title="$:/state/tab--1498284803">
 <pre>$:/core/ui/AdvancedSearch/Standard</pre>
 </div>
 <div created="20210714123207883" creator="Télumire" modified="20210811015655306" modifier="Télumire" title="$:/state/tab--1963855381">
@@ -13100,8 +13068,8 @@ width:100%;
 <div created="20210803203319241" creator="Télumire" modified="20210816112820129" modifier="Télumire" title="$:/state/tab-607722857">
 <pre>$:/plugins/kookma/commander/tag/ui</pre>
 </div>
-<div created="20210714123306926" creator="Télumire" modified="20210816161057630" modifier="Télumire" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Open</pre>
+<div created="20210714123306926" creator="Télumire" modified="20210816170528551" modifier="Télumire" title="$:/state/tab/sidebar--595412856">
+<pre>$:/SaveToGitHub/Settings</pre>
 </div>
 <div created="20210714125257722" creator="Télumire" modified="20210811015659657" modifier="Télumire" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
@@ -13112,7 +13080,7 @@ width:100%;
 <div created="20210627165215089" creator="T" modified="20210810162703141" modifier="Télumire" title="$:/status/UserName">
 <pre>Télumire</pre>
 </div>
-<div list="Index" title="$:/StoryList">
+<div created="20210816170558478" creator="Télumire" list="Index $:/Tasker/Kanban $:/Tasker/Kanban/Tagging" modified="20210816170608298" modifier="Télumire" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210811015722015" creator="Télumire" list="$:/core/ui/Buttons/home $:/core/ui/Buttons/close-all $:/core/ui/Buttons/fold-all $:/core/ui/Buttons/unfold-all $:/core/ui/Buttons/permaview $:/core/ui/Buttons/new-tiddler $:/core/ui/Buttons/new-journal $:/core/ui/Buttons/new-image $:/core/ui/Buttons/import $:/core/ui/Buttons/export-page $:/core/ui/Buttons/control-panel $:/core/ui/Buttons/advanced-search $:/plugins/kookma/commander/buttons/pagecontrol $:/core/ui/Buttons/manager $:/core/ui/Buttons/tag-manager $:/core/ui/Buttons/language $:/core/ui/Buttons/palette $:/core/ui/Buttons/theme $:/core/ui/Buttons/storyview $:/core/ui/Buttons/encryption $:/core/ui/Buttons/timestamp $:/core/ui/Buttons/full-screen $:/core/ui/Buttons/print $:/core/ui/Buttons/refresh $:/core/ui/Buttons/save-wiki $:/SaveToGitHub/Button $:/core/ui/Buttons/more-page-actions Buttons/SwitchPalette" modified="20210811015732714" modifier="Télumire" title="$:/tags/PageControls">
@@ -13127,11 +13095,303 @@ width:100%;
 <div created="20210627165654635" creator="Télumire" list="$:/core/ui/ViewTemplate/title $:/core/ui/ViewTemplate/unfold $:/core/ui/ViewTemplate/subtitle $:/core/ui/ViewTemplate/tags $:/core/ui/ViewTemplate/classic $:/core/ui/ViewTemplate/body" modified="20210810162703141" modifier="Télumire" tags="(tagging)" title="$:/tags/ViewTemplate">
 <pre></pre>
 </div>
-<div created="20210714125324377" creator="Télumire" list="$:/core/ui/Buttons/delete $:/core/ui/Buttons/more-tiddler-actions $:/core/ui/Buttons/info $:/core/ui/Buttons/new-here $:/core/ui/Buttons/new-journal-here $:/core/ui/Buttons/clone $:/core/ui/Buttons/export-tiddler $:/core/ui/Buttons/permalink $:/core/ui/Buttons/permaview $:/core/ui/Buttons/open-window $:/core/ui/Buttons/fold-others $:/core/ui/Buttons/fold $:/core/ui/Buttons/edit $:/core/ui/Buttons/close-others $:/core/ui/Buttons/close ui/Buttons/tasker $:/core/ui/Buttons/fold-bar" modified="20210810162703141" modifier="Télumire" title="$:/tags/ViewToolbar">
+<div created="20210714125324377" creator="Télumire" list="$:/core/ui/Buttons/delete $:/core/ui/Buttons/more-tiddler-actions $:/core/ui/Buttons/info $:/core/ui/Buttons/new-here $:/core/ui/Buttons/new-journal-here $:/core/ui/Buttons/clone $:/core/ui/Buttons/export-tiddler $:/core/ui/Buttons/permalink $:/core/ui/Buttons/permaview $:/core/ui/Buttons/open-window $:/core/ui/Buttons/fold-others $:/core/ui/Buttons/fold $:/core/ui/Buttons/edit $:/core/ui/Buttons/close-others $:/core/ui/Buttons/close $:/Tasker/ui/Buttons/tasker $:/core/ui/Buttons/fold-bar" modified="20210816161848493" modifier="Télumire" title="$:/tags/ViewToolbar">
 <pre></pre>
 </div>
-<div created="20210816112626171" creator="Télumire" modified="20210816161048889" modifier="Télumire" tagging="after" tags="Kanban" title="$:/Tasker">
+<div created="20210816112626171" creator="Télumire" modified="20210816161839441" modifier="Télumire" tagging="after" tags="$:/Tasker/Kanban" title="$:/Tasker">
 <pre></pre>
+</div>
+<div created="20210706193912669" creator="user" modified="20210816162037457" modifier="Télumire" tags="$:/tags/Image $:/Tasker $:/Tasker/Kanban" title="$:/Tasker/images/task-doing" type="text/vnd.tiddlywiki">
+<pre>&lt;svg 
+fill=&quot;currentColor&quot;
+viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;tc-image-button&quot; width=&quot;22pt&quot; height=&quot;22pt&quot;&gt;
+ &lt;g transform=&quot;translate(-214.71 -394.71)&quot;&gt;
+  &lt;path d=&quot;m216.09 394.71c-0.75932 8e-5 -1.3748 0.61561-1.3749 1.3749v19.249c8e-5 0.75932 0.61561 1.3748 1.3749 1.3749h19.249c0.75933-7e-5 1.3749-0.6156 1.375-1.3749v-19.249c-8e-5 -0.75933-0.61562-1.3749-1.375-1.3749z&quot; fill-rule=&quot;evenodd&quot; style=&quot;paint-order:fill markers stroke&quot;/&gt;
+ &lt;/g&gt;
+&lt;/svg&gt;
+</pre>
+</div>
+<div created="20210706193857181" creator="user" modified="20210816162030571" modifier="Télumire" tags="$:/tags/Image $:/Tasker $:/Tasker/Kanban" title="$:/Tasker/images/task-done" type="text/vnd.tiddlywiki">
+<pre>&lt;svg 
+fill=&quot;currentColor&quot;
+viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;tc-image-button&quot; width=&quot;22pt&quot; height=&quot;22pt&quot;&gt;
+ &lt;g transform=&quot;translate(-214.71 -394.71)&quot;&gt;
+  &lt;path d=&quot;m232.06 401.08c-0.53697-0.53697-1.4076-0.53697-1.9445 0l-6.3699 6.305-2.4356-2.6735c-0.53697-0.53697-1.4076-0.53697-1.9445 0s-0.53697 1.4076 0 1.9445l3.3098 3.6391c0.52613 0.57866 1.4283 0.60262 1.9844 0.0527l7.4121-7.3354c0.52527-0.52495 0.52527-1.3956-0.0117-1.9325zm-15.846-6.3687h19c0.83103 0 1.5001 0.66903 1.5001 1.5001v19c0 0.83103-0.66903 1.5001-1.5001 1.5001h-19c-0.83103 0-1.5001-0.66903-1.5001-1.5001v-19c0-0.83104 0.66903-1.5001 1.5001-1.5001z&quot; fill-rule=&quot;evenodd&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-miterlimit=&quot;2&quot; stroke-width=&quot;3.0197&quot; style=&quot;paint-order:fill markers stroke&quot;/&gt;
+ &lt;/g&gt;
+&lt;/svg&gt;
+</pre>
+</div>
+<div created="20210706220242459" creator="user" modified="20210816162024215" modifier="Télumire" tags="$:/tags/Image $:/Tasker $:/Tasker/Kanban" title="$:/Tasker/images/task-todo" type="text/vnd.tiddlywiki">
+<pre>&lt;svg viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;tc-image-button&quot; width=&quot;22pt&quot; height=&quot;22pt&quot;&gt;
+ &lt;path d=&quot;m13.75 11a2.75 2.75 0 0 1-2.75 2.75 2.75 2.75 0 0 1-2.75-2.75 2.75 2.75 0 0 1 2.75-2.75 2.75 2.75 0 0 1 2.75 2.75zm-10.3-8.2498h15.1c0.38781 0 0.70002 0.31221 0.70002 0.70002v15.1c0 0.38781-0.31221 0.70002-0.70002 0.70002h-15.1c-0.38782 0-0.70003-0.31221-0.70003-0.70002v-15.1c0-0.38781 0.31221-0.70002 0.70003-0.70002zm-2.0746-2.7496a1.3751 1.3751 0 0 0-1.3749 1.3749v19.249a1.3751 1.3751 0 0 0 1.3749 1.3749h19.249a1.3751 1.3751 0 0 0 1.375-1.3749v-19.249a1.3751 1.3751 0 0 0-1.375-1.3749z&quot;/&gt;
+&lt;/svg&gt;</pre>
+</div>
+<div created="20210706193929869" creator="user" modified="20210816162017341" modifier="Télumire" tags="$:/tags/Image $:/Tasker $:/Tasker/Kanban" title="$:/Tasker/images/task-unset" type="text/vnd.tiddlywiki">
+<pre>&lt;svg 
+viewBox=&quot;0 0 22 22&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;tc-image-button&quot; width=&quot;22pt&quot; height=&quot;22pt&quot;&gt;
+ &lt;g transform=&quot;translate(-214.71 -394.71)&quot;&gt;
+  &lt;path d=&quot;m218.16 397.46h15.1c0.38781 0 0.70002 0.31221 0.70002 0.70002v15.1c0 0.38781-0.31221 0.70002-0.70002 0.70002h-15.1c-0.38782 0-0.70003-0.31221-0.70003-0.70002v-15.1c0-0.38781 0.31221-0.70002 0.70003-0.70002zm-2.0746-2.7496a1.3751 1.3751 0 0 0-1.3749 1.3749v19.249a1.3751 1.3751 0 0 0 1.3749 1.3749h19.249a1.3751 1.3751 0 0 0 1.375-1.3749v-19.249a1.3751 1.3751 0 0 0-1.375-1.3749z&quot;/&gt;
+ &lt;/g&gt;
+&lt;/svg&gt;</pre>
+</div>
+<div caption="Kanban" created="20201112223028343" creator="user" modified="20210816162626823" modifier="Télumire" tagging="after" tags="$:/tags/SideBar tip $:/Tasker/Kanban" task="done" title="$:/Tasker/Kanban">
+<pre>&lt;div class=&quot;kanban&quot;&gt;
+&lt;p class=&quot;todo&quot;&gt;
+&lt;strong&gt;{{To do||$:/Tasker/Kanban/new-task}}&lt;/strong&gt;&lt;br&gt;
+{{$:/Tasker/Kanban/todo}}
+&lt;/p&gt;
+&lt;p class=&quot;doing&quot;&gt;
+&lt;strong&gt;Doing&lt;/strong&gt;&lt;br&gt;
+{{$:/Tasker/Kanban/doing}}
+&lt;/p&gt;
+&lt;p class=&quot;done&quot;&gt;
+&lt;strong&gt;Done&lt;/strong&gt;&lt;br&gt;
+{{$:/Tasker/Kanban/done}}
+&lt;/p&gt;
+&lt;/div&gt;</pre>
+</div>
+<div created="20210720160419486" creator="Télumire" modified="20210816161854155" modifier="Télumire" tags="$:/Tasker/Kanban [[Draggable list based on fields rather than tags]] right-story" task="doing" title="$:/Tasker/Kanban/doing">
+<pre>&lt;$macrocall $name=&quot;list-has-field-draggable&quot;
+
+field=&quot;task&quot;
+value=&quot;doing&quot;
+itemTemplate=&quot;(task)&quot;
+subFilter=&lt;&lt;subFilter&gt;&gt;
+
+/&gt;</pre>
+</div>
+<div created="20210720160357160" creator="Télumire" modified="20210816161937594" modifier="Télumire" tags="$:/Tasker/Kanban [[Draggable list based on fields rather than tags]]" task="done" title="$:/Tasker/Kanban/done">
+<pre>&lt;$macrocall $name=&quot;list-has-field-draggable&quot;
+
+field=&quot;task&quot;
+value=&quot;done&quot;
+itemTemplate=&quot;(task)&quot;
+subFilter=&lt;&lt;subFilter&gt;&gt;
+
+/&gt;</pre>
+</div>
+<div created="20210720170604065" creator="Télumire" modified="20210816161929865" modifier="Télumire" tags="[[Draggable list based on fields rather than tags]] $:/Tasker/Kanban [[Create a new tiddler with incremental title and navigate to it]]" title="$:/Tasker/Kanban/new-task">
+<pre>&lt;$set name=&quot;tagging&quot; filter=&quot;[&lt;tiddler&gt;get[title]]&quot; &gt;
+&lt;$button class=&quot;tc-btn-invisible&quot;&gt;&lt;strong&gt;{{!!title}}&lt;/strong&gt;
+&lt;$action-sendmessage $message=&quot;tm-new-tiddler&quot; title=&lt;&lt;unusedtitle &quot;New task&quot;&gt;&gt; task=&quot;todo&quot;  tags=&lt;&lt;tagging&gt;&gt; /&gt;
+&lt;/$button&gt;
+&lt;/$set&gt;</pre>
+</div>
+<div created="20201112223230962" creator="Télumire" modified="20210816170347739" modifier="Télumire" tags="$:/tags/Stylesheet [[Draggable list based on fields rather than tags]] $:/Tasker/Kanban" task="todo" title="$:/Tasker/Kanban/Style" type="text/css">
+<pre>.kanban .todo li::before {content: &quot;x&quot;; color: rgb(255, 0, 0);display: inline-block;width: 1em;margin-left: -1em}
+.kanban .doing li::before {content: &quot;o&quot;; color: rgb(232, 170, 12);display: inline-block;width: 1em;margin-left: -1em}
+.kanban .done li::before {content: &quot;✓&quot;; color: rgb(37, 255, 6);display: inline-block;width: 1em;margin-left: -1em}
+
+.todo strong {border-bottom:solid rgb(255, 0, 0);}
+.doing strong {border-bottom:solid rgb(232, 170, 12);}
+.done strong {border-bottom:solid rgb(37, 255, 6);}
+
+.kanban {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.kanban:not(.tc-story-river .kanban){
+    flex-direction:column;
+}
+
+.kanban ul {
+    list-style:none;
+    margin:0;
+    padding: 10px;
+}
+
+.kanban p {
+padding-left:10px;
+flex-grow:1;
+margin:0;
+}
+
+.kanban&gt;p&gt;br {
+margin-bottom: 10px;
+display: inline-block;
+}
+
+.tc-sidebar-lists .kanban .tc-menu-list-item {
+white-space: normal;
+}</pre>
+</div>
+<div caption="Kanban on tag basis" created="20210816104335993" creator="Télumire" description="Transclude ~Kanban to only show the tasks tagged with the current tiddler title. Ex: [[Project:Blog with TW]]" modified="20210816161824412" modifier="Télumire" tags="$:/Tasker/Kanban" task="todo" title="$:/Tasker/Kanban/Tagging">
+<pre>&lt;$set name=&quot;tiddler&quot; value=&lt;&lt;currentTiddler&gt;&gt; &gt;
+&lt;$set name=&quot;subFilter&quot; value=&quot;+[tag&lt;tiddler&gt;]&quot; &gt;
+
+&lt;$transclude tiddler=&quot;$:/Tasker/Kanban&quot;/&gt;
+
+&lt;/$set&gt;
+&lt;/$set&gt;</pre>
+</div>
+<div created="20210720164218548" creator="Télumire" modified="20210816161834717" modifier="Télumire" tags="$:/Tasker/Kanban [[Draggable list based on fields rather than tags]] right-story" title="$:/Tasker/Kanban/todo">
+<pre>&lt;$macrocall $name=&quot;list-has-field-draggable&quot;
+
+field=&quot;task&quot;
+value=&quot;todo&quot;
+itemTemplate=&quot;(task)&quot;
+subFilter=&lt;&lt;subFilter&gt;&gt;
+
+/&gt;</pre>
+</div>
+<div created="20210706180301988" creator="user" modified="20210816162010515" modifier="Télumire" tags="$:/Tasker $:/Tasker/Kanban" title="$:/Tasker/language/Buttons/tasker/Caption">
+<pre>tasker</pre>
+</div>
+<div created="20210706180357755" creator="user" modified="20210816162000050" modifier="Télumire" tags="$:/Tasker $:/Tasker/Kanban" title="$:/Tasker/language/Buttons/tasker/Hint">
+<pre>Click to set task status (todo, doing, done)</pre>
+</div>
+<div created="20210719170732291" creator="Télumire" modified="20210816161919695" modifier="Télumire" source="https://tiddlywiki.com/#%24%3A%2Fcore%2Fmacros%2Flist" tags="$:/tags/Macro [[Draggable list based on fields rather than tags]] $:/Tasker/Kanban" task="doing" title="$:/Tasker/macro/list-has-field-draggable">
+<pre>\define list-has-field-draggable-drop-actions(field,value)
+&lt;!-- Save the current ordering of the tiddlers with this field --&gt; 
+&lt;$set name=&quot;order&quot; filter=&quot;[has:field[$field$]]&quot;&gt;
+&lt;!-- Remove any list-after or list-before fields from the tiddlers with this field --&gt;
+&lt;$list filter=&quot;[has:field[$field$]]&quot;&gt;
+&lt;$action-deletefield $field=&quot;list-before&quot;/&gt;
+&lt;$action-deletefield $field=&quot;list-after&quot;/&gt;
+&lt;/$list&gt;
+&lt;!-- Save the new order to the Field Tiddler --&gt;
+&lt;$action-listops $tiddler=&lt;&lt;__field__&gt;&gt; $field=&quot;list&quot; $filter=&quot;+[enlist&lt;order&gt;] +[insertbefore:currentTiddler&lt;actionTiddler&gt;]&quot;/&gt;
+&lt;!-- Using the following 5 lines makes dragging titles from outside into the dropdown apply the field --&gt;
+
+&lt;$list filter=&quot;[[$value$]compare:string:ne[]]&quot;&gt;
+&lt;$list filter=&quot;[&lt;actionTiddler&gt;!contains:fields&lt;__field__&gt;]&quot;&gt;
+&lt;$fieldmangler tiddler=&lt;&lt;actionTiddler&gt;&gt;&gt;
+&lt;$action-sendmessage $message=&quot;tm-add-field&quot; $param=&lt;&lt;__field__&gt;&gt; /&gt;
+&lt;$action-setfield $tiddler=&lt;&lt;currentTiddler&gt;&gt; $field=&lt;&lt;__field__&gt;&gt; $value=&lt;&lt;__value__&gt;&gt; /&gt;
+&lt;/$fieldmangler&gt;
+&lt;/$list&gt;
+&lt;/$list&gt;
+&lt;/$set&gt;
+\end
+
+\define list-has-field-draggable-filter-value()
+
+[list[$(field)$]has:field[$(field)$]sortby[$(field)$]]=[has:field[$(field)$]]+[unique[]]+[contains:$(field)$[$(value)$]] $(subFilter)$
+
+\end
+
+\define list-has-field-draggable-filter-no-value()
+
+[list[$(field)$]has:field[$(field)$]sortby[$(field)$]]=[has:field[$(field)$]]+[unique[]] $(subFilter)$
+
+\end
+
+\define list-has-field-draggable(field,value,subFilter,emptyMessage,itemTemplate,elementField:&quot;div&quot;,storyview:&quot;&quot;)
+\whitespace trim
+&lt;span class=&quot;tc-tagged-draggable-list&quot;&gt;
+&lt;$vars field=&lt;&lt;__field__&gt;&gt; value=&lt;&lt;__value__&gt;&gt; subFilter=&lt;&lt;__subFilter__&gt;&gt; &gt;
+
+&lt;$list filter=&quot;[[$value$]compare:string:ne[]]&quot; variable=&quot;titleList&quot;&gt;
+    &lt;$list filter=&lt;&lt;list-has-field-draggable-filter-value&gt;&gt; emptyMessage=&lt;&lt;__emptyMessage__&gt;&gt; storyview=&lt;&lt;__storyview__&gt;&gt;&gt;
+        &lt;$elementField$ class=&quot;tc-menu-list-item&quot;&gt;
+        &lt;$droppable actions=&quot;&quot;&quot;&lt;$macrocall $name=&quot;list-has-field-draggable-drop-actions&quot; field=&lt;&lt;__field__&gt;&gt; value=&lt;&lt;__value__&gt;&gt;/&gt;&quot;&quot;&quot; enable=&lt;&lt;tv-enable-drag-and-drop&gt;&gt;&gt;
+        &lt;$elementField$ class=&quot;tc-droppable-placeholder&quot;/&gt;
+        &lt;$elementField$&gt;
+        &lt;$transclude tiddler=&quot;&quot;&quot;$itemTemplate$&quot;&quot;&quot;&gt;
+        &lt;$link to={{!!title}}&gt;
+        &lt;$view field=&quot;title&quot;/&gt;
+        &lt;/$link&gt;
+        &lt;/$transclude&gt;
+        &lt;/$elementField$&gt;
+        &lt;/$droppable&gt;
+        &lt;/$elementField$&gt;
+    &lt;/$list&gt;
+&lt;/$list&gt;
+
+&lt;!-- add -[has[$field$]] to the end of the filter to only get empty field --&gt;
+&lt;$list filter=&quot;[[$value$]compare:string:eq[]]&quot;&gt;
+    &lt;$list filter=&lt;&lt;list-has-field-draggable-filter-no-value&gt;&gt; emptyMessage=&lt;&lt;__emptyMessage__&gt;&gt; storyview=&lt;&lt;__storyview__&gt;&gt;&gt;
+        &lt;$elementField$ class=&quot;tc-menu-list-item&quot;&gt;
+        &lt;$droppable actions=&quot;&quot;&quot;&lt;$macrocall $name=&quot;list-has-field-draggable-drop-actions&quot; field=&lt;&lt;__field__&gt;&gt; value=&lt;&lt;__value__&gt;&gt;/&gt;&quot;&quot;&quot; enable=&lt;&lt;tv-enable-drag-and-drop&gt;&gt;&gt;
+        &lt;$elementField$ class=&quot;tc-droppable-placeholder&quot;/&gt;
+        &lt;$elementField$&gt;
+        &lt;$transclude tiddler=&quot;&quot;&quot;$itemTemplate$&quot;&quot;&quot;&gt;
+        &lt;$link to={{!!title}}&gt;
+        &lt;$view field=&quot;title&quot;/&gt;
+        &lt;/$link&gt;
+        &lt;/$transclude&gt;
+        &lt;/$elementField$&gt;
+        &lt;/$droppable&gt;
+        &lt;/$elementField$&gt;
+    &lt;/$list&gt;
+&lt;/$list&gt;
+
+&lt;$tiddler tiddler=&quot;&quot;&gt;
+&lt;$droppable actions=&quot;&quot;&quot;&lt;$macrocall $name=&quot;list-has-field-draggable-drop-actions&quot; field=&lt;&lt;__field__&gt;&gt; value=&lt;&lt;__value__&gt;&gt;/&gt;&quot;&quot;&quot; enable=&lt;&lt;tv-enable-drag-and-drop&gt;&gt;&gt;
+&lt;$elementField$ class=&quot;tc-droppable-placeholder&quot;/&gt;
+&lt;$elementField$ style=&quot;height:0.5em;&quot;&gt;
+&lt;/$elementField$&gt;
+&lt;/$droppable&gt;
+&lt;/$tiddler&gt;
+&lt;/$vars&gt;
+&lt;/span&gt;
+\end</pre>
+</div>
+<div created="20210706143025570" creator="user" modified="20210816161910988" modifier="Télumire" tags="$:/tags/Stylesheet $:/Tasker $:/Tasker/Kanban" title="$:/Tasker/Style tasker" type="text/css">
+<pre>.tasker[data-task=&quot;todo&quot;] * {
+  --colorRgb: 255, 0, 0;
+  color:  rgb(var(--colorRgb));
+  fill: rgb(var(--colorRgb));
+}
+
+.tasker[data-task=&quot;doing&quot;] * {
+  --colorRgb: 232, 170, 12;
+  color:  rgb(var(--colorRgb));
+  fill: rgb(var(--colorRgb));
+}
+
+.tasker[data-task=&quot;done&quot;] * {
+  --colorRgb: 37, 255, 6;
+  color:  rgb(var(--colorRgb));
+  fill: rgb(var(--colorRgb));
+}
+
+/*prevent text selection from task button*/
+.tasker {
+	user-select: none;
+}
+
+/*hide button*/
+
+.tasker &gt; button {
+	display:contents;
+}</pre>
+</div>
+<div caption="Alternative : display tasker at the left of the title" created="20210707153929980" creator="user" icon="ui/Buttons/tasker" modified="20210816161903595" modifier="Télumire" tags="TW5 $:/tags/Stylesheet $:/Tasker $:/Tasker/Kanban" task="done" title="$:/Tasker/Tasker button at the left of the title" type="text/css" voir="$:/core/ui/ViewTemplate/title">
+<pre>a.tc-tiddlylink:hover {
+text-decoration:unset; /*prevent underline when button is hovered*/
+}
+
+a.tc-tiddlylink .tc-title:hover {
+	text-decoration:underline; /*restore underline when title is hovered*/
+}
+
+.tc-tiddler-title-icon label{
+	display:inline-grid;
+	place-content:center;
+}</pre>
+</div>
+<div caption="{{$:/Tasker/images/task-unset}} {{$:/Tasker/language/Buttons/tasker/Caption}}" created="20210706131422635" creator="user" description="{{$:/language/Buttons/tasker/Hint}}" modified="20210816162037459" modifier="Télumire" tags="$:/tags/Macro $:/tags/ViewToolbar [[Add a button to set a task status to a tiddler]] $:/Tasker $:/Tasker/Kanban" title="$:/Tasker/ui/Buttons/tasker">
+<pre>\define tasker-toggle() &lt;$action-listops $field=&quot;task&quot; $subfilter=&quot;+[toggle[todo],[doing],[done]]&quot;/&gt;
+\define tasker-unset()  &lt;$action-listops $message=&quot;tm-remove-field&quot; $param=&quot;task&quot;/&gt;
+
+&lt;!-- TODO : lorsqu'une tâche est créée, mettre à jour le champ list du tiddler correspondant pour pouvoir ordonner les tâches dans une liste --&gt;
+
+&lt;label class=&quot;tasker&quot; data-task={{!!task}}&gt;
+&lt;$list filter=&quot;[all[current]!task[done]]&quot;&gt;
+		&lt;$button actions=&lt;&lt;tasker-toggle&gt;&gt; class=&quot;tc-btn-invisible&quot; tooltip={{$:/Tasker/language/Buttons/tasker/Hint}} aria-label={{$:/Tasker/language/Buttons/tasker/Caption}} &gt;
+			&lt;$list filter=&quot;[all[current]!has:field[task]]&quot;&gt;{{$:/Tasker/images/task-unset}}&lt;/$list&gt;
+			&lt;$list filter=&quot;[all[current]task[todo]]&quot;&gt;{{$:/Tasker/images/task-todo}}&lt;/$list&gt;
+			&lt;$list filter=&quot;[all[current]task[doing]]&quot;&gt;{{$:/Tasker/images/task-doing}}&lt;/$list&gt;
+		&lt;/$button&gt;
+&lt;/$list&gt;
+&lt;$list filter=&quot;[all[current]task[done]]&quot;&gt;
+   &lt;$fieldmangler&gt;
+      &lt;$button message=&quot;tm-remove-field&quot; param=&quot;task&quot; class=&quot;tc-btn-invisible&quot; tooltip={{$:/Tasker/language/Buttons/tasker/Hint}} aria-label={{$:/Tasker/language/Buttons/tasker/Caption}} &gt;{{$:/Tasker/images/task-done}}&lt;/$button&gt;
+   &lt;/$fieldmangler&gt;
+&lt;/$list&gt;
+&lt;/label&gt;</pre>
 </div>
 <div created="20210713161037137" creator="Télumire" modified="20210810162703141" modifier="Télumire" title="$:/theme">
 <pre>$:/themes/tiddlywiki/snowwhite</pre>
@@ -13428,7 +13688,7 @@ $text$
 
 You can use it to easily import a selection of tiddlers into another wiki : &lt;&lt;openTiddlers &quot;[[tip]tagging[]] [[tip]tagging[]tagging[]!is[system]] [[tip]tagging[]tagging[]tagging[]!is[system]]&quot; &quot;drag and drop me to import all the tips into your wiki&quot;&gt;&gt;</pre>
 </div>
-<div created="20210720005219854" creator="Télumire" list="Kanban Kanban/doing Kanban/done Kanban/new-task Kanban/Style Kanban/todo macro/list-has-field-draggable [[Task managing with the macro list-has-field-draggable]]" modified="20210815172438888" modifier="Télumire" tagging="after" tags="tip" title="Draggable list based on fields rather than tags">
+<div created="20210720005219854" creator="Télumire" list="$:/Tasker/Kanban $:/Tasker/Kanban/doing $:/Tasker/Kanban/done $:/Tasker/Kanban/new-task $:/Tasker/Kanban/Style $:/Tasker/Kanban/todo $:/Tasker/macro/list-has-field-draggable [[Task managing with the macro list-has-field-draggable]]" modified="20210816162744470" modifier="Télumire" tagging="after" tags="tip" title="Draggable list based on fields rather than tags">
 <pre></pre>
 </div>
 <div created="20210713160931301" creator="Télumire" modified="20210810162703143" modifier="Télumire" tagging="after" tags="tip" title="Edit button for transcluded content">
@@ -13520,7 +13780,7 @@ You can put this one inside of a →{{Edit button for transcluded content||(edit
 &lt;/svg
 </pre>
 </div>
-<div caption="Save to github" created="20210627165147396" creator="Télumire" description="todo : add search to filter the list of tips" modified="20210815170658410" modifier="Télumire" tagging="after" tagging-tiddler="tip" title="Index">
+<div caption="Save to github" created="20210627165147396" creator="Télumire" description="todo : add search to filter the list of tips" modified="20210816161447124" modifier="Télumire" tagging-tiddler="tip" title="Index">
 <pre>Welcome to https://telumire.github.io/TW-tips/ !
 
 Here are some useful tips &amp; tricks to add to your wiki.
@@ -13541,99 +13801,6 @@ Here are some useful tips &amp; tricks to add to your wiki.
 &lt;$link to=&lt;&lt;currentTiddler&gt;&gt;&gt; &lt;$transclude field=&quot;caption&quot;&gt; &lt;$view field=&quot;title&quot;/&gt; &lt;/$transclude&gt;&lt;/$link&gt;
 &lt;/span&gt;</pre>
 </div>
-<div created="20201112223028343" creator="user" modified="20210816161019438" modifier="Télumire" tagging="after" tags="[[Draggable list based on fields rather than tags]] $:/tags/SideBar tip" task="done" title="Kanban">
-<pre>&lt;div class=&quot;kanban&quot;&gt;
-&lt;p class=&quot;todo&quot;&gt;
-&lt;strong&gt;{{To do||Kanban/new-task}}&lt;/strong&gt;&lt;br&gt;
-{{Kanban/todo}}
-&lt;/p&gt;
-&lt;p class=&quot;doing&quot;&gt;
-&lt;strong&gt;Doing&lt;/strong&gt;&lt;br&gt;
-{{Kanban/doing}}
-&lt;/p&gt;
-&lt;p class=&quot;done&quot;&gt;
-&lt;strong&gt;Done&lt;/strong&gt;&lt;br&gt;
-{{Kanban/done}}
-&lt;/p&gt;
-&lt;/div&gt;</pre>
-</div>
-<div created="20210720160419486" creator="Télumire" modified="20210816151435209" modifier="Télumire" tags="Kanban [[Draggable list based on fields rather than tags]] right-story" task="doing" title="Kanban/doing">
-<pre>&lt;$macrocall $name=&quot;list-has-field-draggable&quot;
-
-field=&quot;task&quot;
-value=&quot;doing&quot;
-itemTemplate=&quot;(task)&quot;
-subFilter=&lt;&lt;subFilter&gt;&gt;
-
-/&gt;</pre>
-</div>
-<div created="20210720160357160" creator="Télumire" modified="20210816151433908" modifier="Télumire" tags="Kanban [[Draggable list based on fields rather than tags]]" task="done" title="Kanban/done">
-<pre>&lt;$macrocall $name=&quot;list-has-field-draggable&quot;
-
-field=&quot;task&quot;
-value=&quot;done&quot;
-itemTemplate=&quot;(task)&quot;
-subFilter=&lt;&lt;subFilter&gt;&gt;
-
-/&gt;</pre>
-</div>
-<div created="20210720170604065" creator="Télumire" modified="20210816160825618" modifier="Télumire" tags="[[Draggable list based on fields rather than tags]] Kanban [[Create a new tiddler with incremental title and navigate to it]]" title="Kanban/new-task">
-<pre>&lt;$set name=&quot;tagging&quot; filter=&quot;[&lt;tiddler&gt;get[title]]&quot; &gt;
-&lt;$button class=&quot;tc-btn-invisible&quot;&gt;&lt;strong&gt;{{!!title}}&lt;/strong&gt;
-&lt;$action-sendmessage $message=&quot;tm-new-tiddler&quot; title=&lt;&lt;unusedtitle &quot;New task&quot;&gt;&gt; task=&quot;todo&quot;  tags=&lt;&lt;tagging&gt;&gt; /&gt;
-&lt;/$button&gt;
-&lt;/$set&gt;</pre>
-</div>
-<div created="20201112223230962" creator="Télumire" modified="20210810162703144" modifier="Télumire" tags="$:/tags/Stylesheet [[Draggable list based on fields rather than tags]]" title="Kanban/Style" type="text/css">
-<pre>.kanban .todo li::before {content: &quot;x&quot;; color: rgb(255, 0, 0);display: inline-block;width: 1em;margin-left: -1em}
-.kanban .doing li::before {content: &quot;o&quot;; color: rgb(232, 170, 12);display: inline-block;width: 1em;margin-left: -1em}
-.kanban .done li::before {content: &quot;✓&quot;; color: rgb(37, 255, 6);display: inline-block;width: 1em;margin-left: -1em}
-
-.todo strong {border-bottom:solid rgb(255, 0, 0);}
-.doing strong {border-bottom:solid rgb(232, 170, 12);}
-.done strong {border-bottom:solid rgb(37, 255, 6);}
-
-.kanban {
-    display:flex;
-    flex-wrap: wrap;
-}
-
-.kanban ul {
-    list-style:none;
-    margin:0;
-    padding: 10px;
-}
-
-.kanban p {
-padding-left:10px;
-flex-grow:1;
-margin:0;
-}
-
-.kanban&gt;p&gt;br {
-margin-bottom: 10px;
-display: inline-block;
-}</pre>
-</div>
-<div caption="KanbanTag" created="20210816104335993" creator="Télumire" description="Transclude ~KanbanTag to only show the task tagged with the current tiddler title. Ex: [[Project:Blog with TW]]" modified="20210816160844699" modifier="Télumire" tags="Kanban" task="todo" title="Kanban/Tagging">
-<pre>&lt;$set name=&quot;tiddler&quot; value=&lt;&lt;currentTiddler&gt;&gt; &gt;
-&lt;$set name=&quot;subFilter&quot; value=&quot;+[tag&lt;tiddler&gt;]&quot; &gt;
-
-&lt;$transclude tiddler=&quot;Kanban&quot;/&gt;
-
-&lt;/$set&gt;
-&lt;/$set&gt;</pre>
-</div>
-<div created="20210720164218548" creator="Télumire" modified="20210816160545528" modifier="Télumire" tags="Kanban [[Draggable list based on fields rather than tags]] right-story" title="Kanban/todo">
-<pre>&lt;$macrocall $name=&quot;list-has-field-draggable&quot;
-
-field=&quot;task&quot;
-value=&quot;todo&quot;
-itemTemplate=&quot;(task)&quot;
-subFilter=&lt;&lt;subFilter&gt;&gt;
-
-/&gt;</pre>
-</div>
 <div created="20210803202942082" creator="Télumire" modified="20210810162703144" modifier="Télumire" tags="[[lorem ipsum]]" title="lorem">
 <pre>lorem</pre>
 </div>
@@ -13642,93 +13809,6 @@ subFilter=&lt;&lt;subFilter&gt;&gt;
 </div>
 <div created="20210803203108796" creator="Télumire" modified="20210810162703144" modifier="Télumire" tags="[[lorem ipsum]]" title="lorem100">
 <pre>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, tempore, exercitationem accusamus dolorum veritatis ullam dolorem aspernatur praesentium odio suscipit unde delectus cumque expedita minus culpa. Libero enim aliquam obcaecati quasi? Esse amet aut dolor, fugit molestiae deleniti minus facere dolore et libero, possimus commodi, est quam labore quia numquam reprehenderit doloremque illo laborum exercitationem tempora harum. Ullam ad ex commodi, autem omnis necessitatibus ducimus quo adipisci officia obcaecati libero consectetur nihil eius nesciunt. Necessitatibus sequi facere quo aspernatur, ducimus optio dicta laboriosam eius a blanditiis quis ab, dolorem voluptatum quae. Odit molestias eveniet, corporis aut illo recusandae accusantium exercitationem.</pre>
-</div>
-<div created="20210719170732291" creator="Télumire" modified="20210816133449639" modifier="Télumire" source="https://tiddlywiki.com/#%24%3A%2Fcore%2Fmacros%2Flist" tags="$:/tags/Macro [[Draggable list based on fields rather than tags]] Kanban" task="doing" title="macro/list-has-field-draggable">
-<pre>\define list-has-field-draggable-drop-actions(field,value)
-&lt;!-- Save the current ordering of the tiddlers with this field --&gt; 
-&lt;$set name=&quot;order&quot; filter=&quot;[has:field[$field$]]&quot;&gt;
-&lt;!-- Remove any list-after or list-before fields from the tiddlers with this field --&gt;
-&lt;$list filter=&quot;[has:field[$field$]]&quot;&gt;
-&lt;$action-deletefield $field=&quot;list-before&quot;/&gt;
-&lt;$action-deletefield $field=&quot;list-after&quot;/&gt;
-&lt;/$list&gt;
-&lt;!-- Save the new order to the Field Tiddler --&gt;
-&lt;$action-listops $tiddler=&lt;&lt;__field__&gt;&gt; $field=&quot;list&quot; $filter=&quot;+[enlist&lt;order&gt;] +[insertbefore:currentTiddler&lt;actionTiddler&gt;]&quot;/&gt;
-&lt;!-- Using the following 5 lines makes dragging titles from outside into the dropdown apply the field --&gt;
-
-&lt;$list filter=&quot;[[$value$]compare:string:ne[]]&quot;&gt;
-&lt;$list filter=&quot;[&lt;actionTiddler&gt;!contains:fields&lt;__field__&gt;]&quot;&gt;
-&lt;$fieldmangler tiddler=&lt;&lt;actionTiddler&gt;&gt;&gt;
-&lt;$action-sendmessage $message=&quot;tm-add-field&quot; $param=&lt;&lt;__field__&gt;&gt; /&gt;
-&lt;$action-setfield $tiddler=&lt;&lt;currentTiddler&gt;&gt; $field=&lt;&lt;__field__&gt;&gt; $value=&lt;&lt;__value__&gt;&gt; /&gt;
-&lt;/$fieldmangler&gt;
-&lt;/$list&gt;
-&lt;/$list&gt;
-&lt;/$set&gt;
-\end
-
-\define list-has-field-draggable-filter-value()
-
-[list[$(field)$]has:field[$(field)$]sortby[$(field)$]]=[has:field[$(field)$]]+[unique[]]+[contains:$(field)$[$(value)$]] $(subFilter)$
-
-\end
-
-\define list-has-field-draggable-filter-no-value()
-
-[list[$(field)$]has:field[$(field)$]sortby[$(field)$]]=[has:field[$(field)$]]+[unique[]] $(subFilter)$
-
-\end
-
-\define list-has-field-draggable(field,value,subFilter,emptyMessage,itemTemplate,elementField:&quot;div&quot;,storyview:&quot;&quot;)
-\whitespace trim
-&lt;span class=&quot;tc-tagged-draggable-list&quot;&gt;
-&lt;$vars field=&lt;&lt;__field__&gt;&gt; value=&lt;&lt;__value__&gt;&gt; subFilter=&lt;&lt;__subFilter__&gt;&gt; &gt;
-
-&lt;$list filter=&quot;[[$value$]compare:string:ne[]]&quot; variable=&quot;titleList&quot;&gt;
-    &lt;$list filter=&lt;&lt;list-has-field-draggable-filter-value&gt;&gt; emptyMessage=&lt;&lt;__emptyMessage__&gt;&gt; storyview=&lt;&lt;__storyview__&gt;&gt;&gt;
-        &lt;$elementField$ class=&quot;tc-menu-list-item&quot;&gt;
-        &lt;$droppable actions=&quot;&quot;&quot;&lt;$macrocall $name=&quot;list-has-field-draggable-drop-actions&quot; field=&lt;&lt;__field__&gt;&gt; value=&lt;&lt;__value__&gt;&gt;/&gt;&quot;&quot;&quot; enable=&lt;&lt;tv-enable-drag-and-drop&gt;&gt;&gt;
-        &lt;$elementField$ class=&quot;tc-droppable-placeholder&quot;/&gt;
-        &lt;$elementField$&gt;
-        &lt;$transclude tiddler=&quot;&quot;&quot;$itemTemplate$&quot;&quot;&quot;&gt;
-        &lt;$link to={{!!title}}&gt;
-        &lt;$view field=&quot;title&quot;/&gt;
-        &lt;/$link&gt;
-        &lt;/$transclude&gt;
-        &lt;/$elementField$&gt;
-        &lt;/$droppable&gt;
-        &lt;/$elementField$&gt;
-    &lt;/$list&gt;
-&lt;/$list&gt;
-
-&lt;!-- add -[has[$field$]] to the end of the filter to only get empty field --&gt;
-&lt;$list filter=&quot;[[$value$]compare:string:eq[]]&quot;&gt;
-    &lt;$list filter=&lt;&lt;list-has-field-draggable-filter-no-value&gt;&gt; emptyMessage=&lt;&lt;__emptyMessage__&gt;&gt; storyview=&lt;&lt;__storyview__&gt;&gt;&gt;
-        &lt;$elementField$ class=&quot;tc-menu-list-item&quot;&gt;
-        &lt;$droppable actions=&quot;&quot;&quot;&lt;$macrocall $name=&quot;list-has-field-draggable-drop-actions&quot; field=&lt;&lt;__field__&gt;&gt; value=&lt;&lt;__value__&gt;&gt;/&gt;&quot;&quot;&quot; enable=&lt;&lt;tv-enable-drag-and-drop&gt;&gt;&gt;
-        &lt;$elementField$ class=&quot;tc-droppable-placeholder&quot;/&gt;
-        &lt;$elementField$&gt;
-        &lt;$transclude tiddler=&quot;&quot;&quot;$itemTemplate$&quot;&quot;&quot;&gt;
-        &lt;$link to={{!!title}}&gt;
-        &lt;$view field=&quot;title&quot;/&gt;
-        &lt;/$link&gt;
-        &lt;/$transclude&gt;
-        &lt;/$elementField$&gt;
-        &lt;/$droppable&gt;
-        &lt;/$elementField$&gt;
-    &lt;/$list&gt;
-&lt;/$list&gt;
-
-&lt;$tiddler tiddler=&quot;&quot;&gt;
-&lt;$droppable actions=&quot;&quot;&quot;&lt;$macrocall $name=&quot;list-has-field-draggable-drop-actions&quot; field=&lt;&lt;__field__&gt;&gt; value=&lt;&lt;__value__&gt;&gt;/&gt;&quot;&quot;&quot; enable=&lt;&lt;tv-enable-drag-and-drop&gt;&gt;&gt;
-&lt;$elementField$ class=&quot;tc-droppable-placeholder&quot;/&gt;
-&lt;$elementField$ style=&quot;height:0.5em;&quot;&gt;
-&lt;/$elementField$&gt;
-&lt;/$droppable&gt;
-&lt;/$tiddler&gt;
-&lt;/$vars&gt;
-&lt;/span&gt;
-\end</pre>
 </div>
 <div created="20210715003633924" creator="Télumire" modified="20210810162703145" modifier="Télumire" tags="[[Conditionnal gallery]]" title="macro/quote">
 <pre></pre>
@@ -13786,8 +13866,8 @@ $text$
 <div created="20210715011627831" creator="Télumire" en-gb="&quot;Self-Portrait, Yawning&quot; by Joseph Ducreux" fr-fr="&quot;Autoportrait, bâillant&quot; par Joseph Ducreux" img-alt="Yawning" img-class="" img-height="" img-source="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Joseph_Ducreux_%28French%29_-_Self-Portrait%2C_Yawning_-_Google_Art_Project.jpg/461px-Joseph_Ducreux_%28French%29_-_Self-Portrait%2C_Yawning_-_Google_Art_Project.jpg" img-tooltip="" img-width="" modified="20210810162703145" modifier="Télumire" tags="gallery-painting" template="painting" title="painting#2">
 <pre></pre>
 </div>
-<div created="20210816105308951" creator="Télumire" modified="20210816155017914" modifier="Télumire" tags="" title="Project:Blog with TW">
-<pre>{{||Kanban/Tagging}}</pre>
+<div created="20210816105308951" creator="Télumire" modified="20210816161824414" modifier="Télumire" tags="" title="Project:Blog with TW">
+<pre>{{||$:/Tasker/Kanban/Tagging}}</pre>
 </div>
 <div created="20210803191345611" modified="20210810162703145" modifier="Télumire" tags="$:/tags/Stylesheet (reading-time) [[Display an estimated reading time on each tiddler]]" title="Reading-time/style">
 <pre>&lt;pre&gt;
@@ -13819,7 +13899,7 @@ margin-left:1ch;
 margin-right:1ch;
 }</pre>
 </div>
-<div created="20210802170615024" creator="Télumire" description="Custom subtitle template" modified="20210816115050518" modifier="Télumire" tags="$:/tags/ViewTemplate [[Display an estimated reading time on each tiddler]]" task="done" title="Reading-time/subtitle/template">
+<div created="20210802170615024" creator="Télumire" description="Custom subtitle template" list-before="$:/core/ui/ViewTemplate/body" modified="20210816161643137" modifier="Télumire" tags="$:/tags/ViewTemplate [[Display an estimated reading time on each tiddler]]" task="done" title="Reading-time/subtitle/template">
 <pre>\whitespace trim
 &lt;$reveal type=&quot;nomatch&quot; stateTitle=&lt;&lt;folded-state&gt;&gt; text=&quot;hide&quot; tag=&quot;div&quot; retain=&quot;yes&quot; animate=&quot;yes&quot; class=&quot;tc-subtitle custom&quot;&gt;
 &lt;span class=&quot;item&quot;&gt;&lt;$view field=&quot;modified&quot; format=&quot;date&quot; template=&quot;DD MMM YYYY&quot;/&gt;&lt;/span&gt;
@@ -13993,36 +14073,6 @@ button.tc-tag-label, span.tc-tag-label{
 padding:5px!important;
 }</pre>
 </div>
-<div created="20210706143025570" creator="user" modified="20210816113147996" modifier="Télumire" tags="$:/tags/Stylesheet $:/Tasker Kanban" title="Style tasker" type="text/css">
-<pre>.tasker[data-task=&quot;todo&quot;] * {
-  --colorRgb: 255, 0, 0;
-  color:  rgb(var(--colorRgb));
-  fill: rgb(var(--colorRgb));
-}
-
-.tasker[data-task=&quot;doing&quot;] * {
-  --colorRgb: 232, 170, 12;
-  color:  rgb(var(--colorRgb));
-  fill: rgb(var(--colorRgb));
-}
-
-.tasker[data-task=&quot;done&quot;] * {
-  --colorRgb: 37, 255, 6;
-  color:  rgb(var(--colorRgb));
-  fill: rgb(var(--colorRgb));
-}
-
-/*prevent text selection from task button*/
-.tasker {
-	user-select: none;
-}
-
-/*hide button*/
-
-.tasker &gt; button {
-	display:contents;
-}</pre>
-</div>
 <div created="20210709115039116" creator="user" modified="20210810162703146" modifier="Télumire" tags="$:/tags/Stylesheet [[Display the field source]]" title="Style/DisplaySource" type="text/css">
 <pre>.view-source .solo~*{
 	display:inline-flex;
@@ -14112,7 +14162,7 @@ margin: 1em;
  &lt;path d=&quot;m10.574 8.9086 0.0053 0.011688c-2.2205 0.99826-4.9464 1.5581-6.9659 1.3356-2.7471-0.30296-4.1911-2.0582-3.3956-4.8889 0.71478-2.5442 2.7173-4.5185 4.951-5.1632 2.4475-0.70653 4.5259 0.45101 4.5259 3.0308h-1.9761c0-1.1135-0.70539-1.5063-2.0018-1.1321-1.5836 0.45719-3.069 1.9211-3.5966 3.799-0.43886 1.5625 0.095564 2.2122 1.7096 2.3902 1.6331 0.1799 4.0176-0.30984 5.9394-1.1736l0.0062 0.01375 0.0083-0.0039c0.40334-0.17371 1.436 1.5008 0.80759 1.7738a0.64168 0.64168 0 0 1-0.01719 0.00688z&quot;/&gt;
 &lt;/svg&gt;</pre>
 </div>
-<div created="20210720003527736" creator="Télumire" list="(effect) (reading-time) $:/GridStoryRiver/RightStory/button $:/GridStoryRiver/style [[Collapse/expand section within a tiddler]] [[Get a random tiddler]] [[How to use TiddlyWiki as a static website generator in 3 steps]] Kanban Kanban/doing Kanban/done macro/list-has-field-draggable [[Open for edit tiddler to bypass crash]] Reading-time/subtitle/style Reading-time/subtitle/template [[Search a list of result]] [[Style link TO a specific tiddler in a specific color/Style]] [[Tasker button at the left of the title]] [[This is a task]] [[TW as a blog/Custom permalink button]] Kanban/Tagging [[New Tiddler 7]]" modified="20210816152117432" modifier="Télumire" title="task">
+<div created="20210720003527736" creator="Télumire" list="(effect) (reading-time) $:/GridStoryRiver/RightStory/button $:/GridStoryRiver/style [[Collapse/expand section within a tiddler]] [[Get a random tiddler]] [[How to use TiddlyWiki as a static website generator in 3 steps]] $:/Tasker/Kanban $:/Tasker/Kanban/doing $:/Tasker/Kanban/done $:/Tasker/macro/list-has-field-draggable [[Open for edit tiddler to bypass crash]] Reading-time/subtitle/style Reading-time/subtitle/template [[Search a list of result]] [[Style link TO a specific tiddler in a specific color/Style]] [[$:/Tasker/Tasker button at the left of the title]] [[This is a task]] [[TW as a blog/Custom permalink button]] $:/Tasker/Kanban/Tagging [[New Tiddler 7]]" modified="20210816161937597" modifier="Télumire" title="task">
 <pre></pre>
 </div>
 <div created="20210719172430608" creator="Télumire" modified="20210810162703146" modifier="Télumire" tags="[[Draggable list based on fields rather than tags]]" title="Task managing with the macro list-has-field-draggable">
@@ -14162,20 +14212,6 @@ margin: 1em;
 ;task without value :
 
 &lt;&lt;list-has-field-draggable field:&quot;task&quot; filter:&quot;-[has[task]]&quot;&gt;&gt;</pre>
-</div>
-<div caption="Alternative : display tasker at the left of the title" created="20210707153929980" creator="user" icon="ui/Buttons/tasker" modified="20210816113147996" modifier="Télumire" tags="TW5 $:/tags/Stylesheet $:/Tasker Kanban" task="done" title="Tasker button at the left of the title" type="text/css" voir="$:/core/ui/ViewTemplate/title">
-<pre>a.tc-tiddlylink:hover {
-text-decoration:unset; /*prevent underline when button is hovered*/
-}
-
-a.tc-tiddlylink .tc-title:hover {
-	text-decoration:underline; /*restore underline when title is hovered*/
-}
-
-.tc-tiddler-title-icon label{
-	display:inline-grid;
-	place-content:center;
-}</pre>
 </div>
 <div created="20210714035609328" creator="Télumire" modified="20210810162703146" modifier="Télumire" tags="author" title="Télumire">
 <pre>&lt;&lt;list-links &quot;[creator&lt;currentTiddler&gt;sort[title]]&quot;&gt;&gt;
@@ -14338,32 +14374,11 @@ padding:.5em;
 <div created="20210627170006507" creator="Télumire" list="[[Draggable list based on fields rather than tags]] [[Conditional display based on language setting]] [[Add a button to set a task status to a tiddler]] [[Collapse/expand section within a tiddler]] [[Display a description on any tiddler]] [[Display the field source]] [[Display tiddlers tagging]] [[Drag and drop list of tiddlers]] [[Edit button for transcluded content]]" modified="20210810162703147" modifier="Télumire" tagging="after" title="tip">
 <pre></pre>
 </div>
-<div created="20210714041352986" creator="Télumire" modified="20210810162703147" modifier="Télumire" title="Todos">
-<pre>{{Kanban/todo||(task-list)}}</pre>
+<div created="20210714041352986" creator="Télumire" modified="20210816161834719" modifier="Télumire" title="Todos">
+<pre>{{$:/Tasker/Kanban/todo||(task-list)}}</pre>
 </div>
 <div created="20210807211545611" creator="Télumire" description="A button to get the url of the tiddler for the web version - the title of the tab must reflect the title of the tiddler (bookmarking)" modified="20210816120119562" modifier="Télumire" task="todo" title="TW as a blog/Custom permalink button">
 <pre></pre>
-</div>
-<div caption="{{$:/images/task-unset}} {{$:/language/Buttons/tasker/Caption}}" created="20210706131422635" creator="user" description="{{$:/language/Buttons/tasker/Hint}}" modified="20210816113147996" modifier="Télumire" tags="$:/tags/Macro $:/tags/ViewToolbar [[Add a button to set a task status to a tiddler]] $:/Tasker Kanban" title="ui/Buttons/tasker">
-<pre>\define tasker-toggle() &lt;$action-listops $field=&quot;task&quot; $subfilter=&quot;+[toggle[todo],[doing],[done]]&quot;/&gt;
-\define tasker-unset()  &lt;$action-listops $message=&quot;tm-remove-field&quot; $param=&quot;task&quot;/&gt;
-
-&lt;!-- TODO : lorsqu'une tâche est créée, mettre à jour le champ list du tiddler correspondant pour pouvoir ordonner les tâches dans une liste --&gt;
-
-&lt;label class=&quot;tasker&quot; data-task={{!!task}}&gt;
-&lt;$list filter=&quot;[all[current]!task[done]]&quot;&gt;
-		&lt;$button actions=&lt;&lt;tasker-toggle&gt;&gt; class=&quot;tc-btn-invisible&quot; tooltip={{$:/language/Buttons/tasker/Hint}} aria-label={{$:/language/Buttons/tasker/Caption}} &gt;
-			&lt;$list filter=&quot;[all[current]!has:field[task]]&quot;&gt;{{$:/images/task-unset}}&lt;/$list&gt;
-			&lt;$list filter=&quot;[all[current]task[todo]]&quot;&gt;{{$:/images/task-todo}}&lt;/$list&gt;
-			&lt;$list filter=&quot;[all[current]task[doing]]&quot;&gt;{{$:/images/task-doing}}&lt;/$list&gt;
-		&lt;/$button&gt;
-&lt;/$list&gt;
-&lt;$list filter=&quot;[all[current]task[done]]&quot;&gt;
-   &lt;$fieldmangler&gt;
-      &lt;$button message=&quot;tm-remove-field&quot; param=&quot;task&quot; class=&quot;tc-btn-invisible&quot; tooltip={{$:/language/Buttons/tasker/Hint}} aria-label={{$:/language/Buttons/tasker/Caption}} &gt;{{$:/images/task-done}}&lt;/$button&gt;
-   &lt;/$fieldmangler&gt;
-&lt;/$list&gt;
-&lt;/label&gt;</pre>
 </div>
 <div created="20210802225754242" creator="Télumire" modified="20210810162703147" modifier="Télumire" tags="tip" title="Word counter">
 <pre>&lt;$set name=&quot;nbWords&quot; filter=&quot;[[count me in !]get[text]splitregexp[(\b)]!is[blank]count[]divide[2]round[]]&quot;&gt;
