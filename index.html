@@ -211,6 +211,8 @@ Error message and password prompt
 
 <li>$:/core/images/tip</li>
 
+<li>$:/core/ui/PageTemplate</li>
+
 <li>$:/DefaultTiddlers</li>
 
 <li>$:/favicon.ico</li>
@@ -228,6 +230,8 @@ Error message and password prompt
 <li>$:/language</li>
 
 <li>$:/language/ControlPanel/Saving/GitService/CommitMessage</li>
+
+<li>$:/layout</li>
 
 <li>$:/mytag</li>
 
@@ -381,6 +385,8 @@ Error message and password prompt
 
 <li>Add a favicon to your wiki</li>
 
+<li>Adding custom elements to the PageTemplate</li>
+
 <li>Bulk tagging</li>
 
 <li>Button to create a new tiddler with an unused title without template</li>
@@ -443,6 +449,8 @@ Error message and password prompt
 
 <li>Find out how to automate RSS feed</li>
 
+<li>Footer</li>
+
 <li>gallery</li>
 
 <li>gallery-painting</li>
@@ -450,6 +458,8 @@ Error message and password prompt
 <li>Get a random tiddler</li>
 
 <li>Good naming conventions</li>
+
+<li>how to use Github Actions to build and publish a TiddlyWiki</li>
 
 <li>How to use TiddlyWiki as a static website generator in 3 steps</li>
 
@@ -529,6 +539,8 @@ Error message and password prompt
 
 <li>Style external link icon</li>
 
+<li>Style footer</li>
+
 <li>Style gallery</li>
 
 <li>Style link TO a specific tiddler in a specific color</li>
@@ -548,6 +560,8 @@ Error message and password prompt
 <li>Style/hide-until-hover</li>
 
 <li>Style/transclude-edit</li>
+
+<li>Substitute words in a text with links based on a list</li>
 
 <li>System image gallery</li>
 
@@ -584,6 +598,8 @@ Error message and password prompt
 <li>this tiddler is in the list but does not have a field task</li>
 
 <li>Tiddler</li>
+
+<li>TiddlyWiki</li>
 
 <li>tip</li>
 
@@ -761,7 +777,7 @@ height:auto;
 <pre>Built from branch 'tiddlywiki-com' at commit b95f6ca084ecc4b63a352a31da9c376551a58e91 of https://github.com/Jermolene/TiddlyWiki5 at 2021-07-04 10:58:55 UTC
 </pre>
 </div>
-<div created="20210810234449332" creator="Télumire" modified="20210822012643956" modifier="Télumire" title="$:/config/AutoSave">
+<div created="20210810234449332" creator="Télumire" modified="20210825212857627" modifier="Télumire" title="$:/config/AutoSave">
 <pre>no</pre>
 </div>
 <div caption="Kookma Plugin Library" created="20200306121057751" modified="20210810162703139" modifier="Télumire" tags="$:/tags/PluginLibrary" title="$:/config/KookmaPluginLibrary" type="text/vnd.tiddlywiki" url="https://kookma.github.io/TW-PluginLibrary/library/index.html">
@@ -10684,6 +10700,14 @@ To use in other wikis, drag and drop this link to those wikis: [[Kookma Plugin L
 <div created="20210811020423391" creator="Télumire" modified="20210811020612519" modifier="Télumire" tags="$:/tags/Image" title="$:/core/images/tip">
 <pre>&lt;svg width=&quot;22pt&quot; height=&quot;22pt&quot; class=&quot;tc-image-tip tc-image-button&quot; viewBox=&quot;0 0 128 128&quot;&gt;&lt;path fill-rule=&quot;oddeven&quot; d=&quot;M64 128.242c35.346 0 64-28.654 64-64 0-35.346-28.654-64-64-64-35.346 0-64 28.654-64 64 0 35.346 28.654 64 64 64zm11.936-36.789c-.624 4.129-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349C54.33 94.05 58.824 95.82 64 95.82c5.175 0 9.67-1.769 11.936-4.366zm0 4.492c-.624 4.13-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349 2.266 2.597 6.76 4.366 11.936 4.366 5.175 0 9.67-1.769 11.936-4.366zm0 4.456c-.624 4.129-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349 2.266 2.597 6.76 4.366 11.936 4.366 5.175 0 9.67-1.769 11.936-4.366zm0 4.492c-.624 4.13-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349 2.266 2.597 6.76 4.366 11.936 4.366 5.175 0 9.67-1.769 11.936-4.366zM64.3 24.242c11.618 0 23.699 7.82 23.699 24.2S75.92 71.754 75.92 83.576c0 5.873-5.868 9.26-11.92 9.26s-12.027-3.006-12.027-9.26C51.973 71.147 40 65.47 40 48.442s12.683-24.2 24.301-24.2z&quot;/&gt;&lt;/svg&gt;</pre>
 </div>
+<div created="20210825212121209" creator="Télumire" description="{{$:/language/PageTemplate/Description}} .. and a footer" modified="20210825212629240" modifier="Télumire" name="{{$:/language/PageTemplate/Name}}" tags="[[Adding custom elements to the PageTemplate]]" title="$:/core/ui/PageTemplate">
+<pre>&lt;$transclude tiddler=&quot;$:/core&quot; subtiddler=&quot;$:/core/ui/PageTemplate&quot;/&gt;
+&lt;footer&gt;
+&lt;$list filter=&quot;[all[shadows+tiddlers]tag[$:/tags/Footer]!has[draft.of]]&quot; variable=&quot;listItem&quot;&gt;
+&lt;$transclude tiddler=&lt;&lt;listItem&gt;&gt;/&gt;
+&lt;/$list&gt;
+&lt;/footer&gt;</pre>
+</div>
 <div created="20210627165159036" creator="Télumire" modified="20210816175921237" modifier="Télumire" title="$:/DefaultTiddlers">
 <pre>Index</pre>
 </div>
@@ -10746,7 +10770,7 @@ grid-column:-1/span 1;
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[This is a definition]]</pre>
+# [[Footer]]</pre>
 </div>
 <div modified="20210810162703139" modifier="Télumire" title="$:/isEncrypted">
 <pre>no</pre>
@@ -10756,6 +10780,9 @@ grid-column:-1/span 1;
 </div>
 <div created="20210816170533861" creator="Télumire" modified="20210816170743870" modifier="Télumire" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
 <pre>Saved by TW</pre>
+</div>
+<div created="20210825201734395" creator="Télumire" modified="20210825201734395" modifier="Télumire" title="$:/layout">
+<pre>$:/core/ui/PageTemplateFooter</pre>
 </div>
 <div created="20210727154833140" creator="Télumire" modified="20210810162703139" modifier="Télumire" title="$:/mytag">
 <pre>add me</pre>
@@ -13056,8 +13083,8 @@ width:100%;
 <div created="20210810162433224" creator="Télumire" modified="20210810162703140" modifier="Télumire" title="$:/state/addplugins/tab-1342078386">
 <pre>$:/config/KookmaPluginLibrary</pre>
 </div>
-<div created="20210714131710187" creator="Télumire" modified="20210821103317997" modifier="Télumire" title="$:/state/advancedsearch/currentTab">
-<pre>$:/core/ui/AdvancedSearch/Standard</pre>
+<div created="20210714131710187" creator="Télumire" modified="20210825202454378" modifier="Télumire" title="$:/state/advancedsearch/currentTab">
+<pre>$:/core/ui/AdvancedSearch/Shadows</pre>
 </div>
 <div created="20210803203323946" creator="Télumire" modified="20210816113147994" modifier="Télumire" title="$:/state/commander/log-tiddler">
 <pre>$:/temp/commander/logs/tid-1</pre>
@@ -13080,17 +13107,17 @@ width:100%;
 <div created="20210807103955659" creator="Télumire" modified="20210810162703140" modifier="Télumire" title="$:/state/plugin-info-575017246-$:/plugins/danielo515/2click2edit--543222777">
 <pre>contents</pre>
 </div>
-<div created="20210720145300038" creator="Télumire" modified="20210821152803543" modifier="Télumire" title="$:/state/showeditpreview">
+<div created="20210720145300038" creator="Télumire" modified="20210823095934553" modifier="Télumire" title="$:/state/showeditpreview">
 <pre>no</pre>
 </div>
-<div created="20210714123144577" creator="Télumire" modified="20210822003422361" modifier="Télumire" title="$:/state/sidebar">
+<div created="20210714123144577" creator="Télumire" modified="20210825212725094" modifier="Télumire" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20210803203320853" creator="Télumire" modified="20210813030741094" modifier="Télumire" title="$:/state/tab--103319216">
 <pre>$:/plugins/kookma/commander/field/uicomp/remove-fields</pre>
 </div>
-<div created="20210714131710187" creator="Télumire" modified="20210821103317998" modifier="Télumire" title="$:/state/tab--1498284803">
-<pre>$:/core/ui/AdvancedSearch/Standard</pre>
+<div created="20210714131710187" creator="Télumire" modified="20210825202454379" modifier="Télumire" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/Shadows</pre>
 </div>
 <div created="20210714123207883" creator="Télumire" modified="20210811015655306" modifier="Télumire" title="$:/state/tab--1963855381">
 <pre>$:/core/ui/ControlPanel/Toolbars</pre>
@@ -13110,7 +13137,7 @@ width:100%;
 <div created="20210803203319241" creator="Télumire" modified="20210816112820129" modifier="Télumire" title="$:/state/tab-607722857">
 <pre>$:/plugins/kookma/commander/tag/ui</pre>
 </div>
-<div created="20210714123306926" creator="Télumire" modified="20210822012641831" modifier="Télumire" title="$:/state/tab/sidebar--595412856">
+<div created="20210714123306926" creator="Télumire" modified="20210825212853408" modifier="Télumire" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Open</pre>
 </div>
 <div created="20210714125257722" creator="Télumire" modified="20210811015659657" modifier="Télumire" title="$:/state/tabs/controlpanel/toolbars-1345989671">
@@ -13122,7 +13149,7 @@ width:100%;
 <div created="20210627165215089" creator="T" modified="20210810162703141" modifier="Télumire" title="$:/status/UserName">
 <pre>Télumire</pre>
 </div>
-<div list="Index" title="$:/StoryList">
+<div created="20210825212103410" creator="Télumire" list="[[Adding custom elements to the PageTemplate]]" modified="20210825212644672" modifier="Télumire" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210811015722015" creator="Télumire" list="$:/core/ui/Buttons/home $:/core/ui/Buttons/close-all $:/core/ui/Buttons/fold-all $:/core/ui/Buttons/unfold-all $:/core/ui/Buttons/permaview $:/core/ui/Buttons/new-tiddler $:/core/ui/Buttons/new-journal $:/core/ui/Buttons/new-image $:/core/ui/Buttons/import $:/core/ui/Buttons/export-page $:/core/ui/Buttons/control-panel $:/core/ui/Buttons/advanced-search $:/plugins/kookma/commander/buttons/pagecontrol $:/core/ui/Buttons/manager $:/core/ui/Buttons/tag-manager $:/core/ui/Buttons/language $:/core/ui/Buttons/palette $:/core/ui/Buttons/theme $:/core/ui/Buttons/storyview $:/core/ui/Buttons/encryption $:/core/ui/Buttons/timestamp $:/core/ui/Buttons/full-screen $:/core/ui/Buttons/print $:/core/ui/Buttons/refresh $:/core/ui/Buttons/save-wiki $:/SaveToGitHub/Button $:/core/ui/Buttons/more-page-actions Buttons/SwitchPalette" modified="20210811015732714" modifier="Télumire" title="$:/tags/PageControls">
@@ -13581,6 +13608,27 @@ Another way to get the date : with the view widget.
 <div created="20210721130543421" creator="Télumire" modified="20210810162703141" modifier="Télumire" tagging="after" tags="tip" title="Add a favicon to your wiki">
 <pre></pre>
 </div>
+<div created="20210825203420433" creator="Télumire" modified="20210825212642808" modifier="Télumire" tagging="after" tags="tip" title="Adding custom elements to the PageTemplate">
+<pre>&lt;&lt;&lt;
+There is a neat trick you can use in situations where you need to add something to the beginning or end of a core template and don’t want to worry about overriding a core shadow tiddler and having issues upgrading to newer versions of TiddlyWiki in the future.
+
+For example if you want to add a footer without creating a new layout, you could just modify $:/core/ui/PageTemplate to:
+
+
+```html
+&lt;$transclude tiddler=&quot;$:/core&quot; subtiddler=&quot;$:/core/ui/PageTemplate&quot;/&gt;
+&lt;footer&gt;
+&lt;$list filter=&quot;[all[shadows+tiddlers]tag[$:/tags/Footer]!has[draft.of]]&quot; variable=&quot;listItem&quot;&gt;
+&lt;$transclude tiddler=&lt;&lt;listItem&gt;&gt;/&gt;
+&lt;/$list&gt;
+&lt;/footer&gt;
+```
+
+
+You transclude the original shadow tiddler instead of including its original text, thereby ensuring that any core updates to that shadow tiddler will get picked up.
+&lt;&lt;&lt;[[saqimtiaz|https://talk.tiddlywiki.org/t/adding-a-page-footer-to-a-tiddlywiki/368/10]]
+</pre>
+</div>
 <div created="20210727154734763" creator="Télumire" modified="20210810162703141" modifier="Télumire" tags="tip" title="Bulk tagging">
 <pre>\define myTagSetter()
 &lt;$list filter=&quot;[tag[target]!prefix[$:/]]&quot;&gt;
@@ -13823,6 +13871,9 @@ You can put this one inside of a →{{Edit button for transcluded content||(edit
 * https://techlifeweb.com/tiddlywiki/tw5tribalknowledge/static/RSS%2520and%2520Atom%2520Feeds%2520for%2520your%2520TiddlyWiki.html
 * https://rusingh.com/2020/04/11/make-your-rss-feed-discoverable/</pre>
 </div>
+<div created="20210825200526503" creator="Télumire" modified="20210825212629239" modifier="Télumire" tags="$:/tags/Footer [[Adding custom elements to the PageTemplate]]" title="Footer">
+<pre>This is the footer</pre>
+</div>
 <div created="20210715014918373" creator="Télumire" description="This tiddler shows a gallery of paintings with a conditional description" modified="20210810162703143" modifier="Télumire" tags="gallery-painting" title="gallery">
 <pre>{{(language-selection)}}
 
@@ -13854,6 +13905,15 @@ You can put this one inside of a →{{Edit button for transcluded content||(edit
 </div>
 <div created="20210727233653770" creator="Télumire" modified="20210810162703144" modifier="Télumire" tags="tip" title="Good naming conventions">
 <pre>https://tiddlywiki.com/#Naming%20of%20System%20Tiddlers</pre>
+</div>
+<div created="20210825171810261" creator="Télumire" modified="20210825171852691" modifier="Télumire" tags="[[Project:TW as a blog]] tip" title="how to use Github Actions to build and publish a TiddlyWiki">
+<pre>https://github.com/saqimtiaz/TW5-github-actions-example
+
+
+&lt;&lt;&lt;
+Example of how to use Github Actions to build and publish a TiddlyWiki
+&lt;&lt;&lt;
+</pre>
 </div>
 <div created="20210815001843430" creator="Télumire" modified="20210815001903884" modifier="Télumire" tags="tip" task="todo" title="How to use TiddlyWiki as a static website generator in 3 steps">
 <pre>https://nesslabs.com/tiddlywiki-static-website-generator</pre>
@@ -14028,8 +14088,10 @@ It contains the following tiddlers :
 
 &lt;&lt;list-links &quot;[tag[$:/SaveToGitHub]sort[title]]&quot;&gt;&gt;</pre>
 </div>
-<div created="20210815130825614" creator="Télumire" description="warning : can be laggy with a huge list of tiddlers since this search in all the fields, tweak the filter accordingly" modified="20210822011034833" modifier="Télumire" tags="tip" task="doing" title="Search a list of result">
-<pre>&lt;style&gt;
+<div created="20210815130825614" creator="Télumire" description="warning : can be laggy with a huge list of tiddlers since this search in all the fields, tweak the filter accordingly" modified="20210823100401090" modifier="Télumire" tags="tip" task="doing" title="Search a list of result">
+<pre>See also : https://tiddlywiki.com/#Demonstration%3A%20keyboard-driven-input%20Macro
+
+&lt;style&gt;
 .search-list-container {
 display:flex;
 align-items: center;
@@ -14095,6 +14157,27 @@ a.tc-tiddlylink-external[href*=&quot;angular.io&quot;]:before {background-image:
 a.tc-tiddlylink-external[href*=&quot;wikipedia&quot;]:before {background-image: url(&lt;&lt;datauri &quot;Icon/Wikipedia.png&quot;&gt;&gt;);}
 
 &lt;/pre&gt;</pre>
+</div>
+<div created="20210825173339728" creator="Télumire" modified="20210825212629239" modifier="Télumire" tags="$:/tags/Stylesheet [[Adding custom elements to the PageTemplate]]" title="Style footer">
+<pre>.tc-sidebar-scrollable{
+bottom:50px;
+}
+
+.tc-page-container-wrapper&gt;div{
+height:100vh;
+display: flex;
+flex-direction: column;
+padding:0;
+}
+
+footer {
+flex: 1 1 auto;
+display:flex;
+justify-content:center;
+align-items: end;
+z-index:-1;
+min-height:50px;
+}</pre>
 </div>
 <div created="20210710231208229" creator="user" description="alternatives layout : https://medium.com/@andybarefoot/a-masonry-style-layout-using-css-grid-8c663d355ebb" modified="20210810162703146" modifier="Télumire" tags="$:/tags/Stylesheet gallery-painting" title="Style gallery" type="text/css">
 <pre>.link-painting:not(.gallery .link-painting) {
@@ -14240,6 +14323,30 @@ span.transclude-edit:hover .transclude-edit-button{
 	display:initial;
 	opacity:1;
 }</pre>
+</div>
+<div created="20210822110620289" creator="Télumire" modified="20210822145731568" modifier="Télumire" tags="" task="doing" title="Substitute words in a text with links based on a list">
+<pre>\define link(title,prefix)
+
+&lt;$list filter=&quot;[[$prefix$]!is[variable]]&quot;&gt;[[$title$|$prefix$$title$]]&lt;/$list&gt;
+&lt;$list filter=&quot;[[$prefix$]is[variable]]&quot;&gt;[[$title$]]&lt;/$list&gt;
+
+\end
+
+
+&lt;$set name=&quot;search&quot; value=&quot;Lorem&quot;&gt;
+
+&lt;&lt;link $(search)$ def:&gt;&gt;
+
+&lt;$set name=&quot;text&quot; filter=&quot;[[lorem10]get[text]]&quot;&gt;
+&lt;$set name=&quot;output&quot; filter=&quot; [enlist&lt;text&gt;search-replace&lt;search&gt;,[sscsscs]]&quot;&gt;
+
+&lt;$text text={{{ [enlist&lt;output&gt;] }}} /&gt;
+
+&lt;/$set&gt;&lt;/$set&gt;&lt;/$set&gt;
+
+&lt;/$set&gt;
+
+</pre>
 </div>
 <div created="20140809113603449" creator="user" modified="20210810162703146" modifier="Télumire" tags="tip" title="System image gallery" type="text/vnd.tiddlywiki">
 <pre>Grid of all system images (ie, tiddlers tagged [[$:/tags/Image]]).
@@ -14476,6 +14583,9 @@ padding:.5em;
 </div>
 <div created="20210627171653571" creator="Télumire" modified="20210810162703147" modifier="Télumire" title="Tiddler">
 <pre>Here's a normal tiddler.</pre>
+</div>
+<div created="20210825212656390" creator="Télumire" modified="20210825212704135" modifier="Télumire" tags="link" title="TiddlyWiki">
+<pre>https://tiddlywiki.com/</pre>
 </div>
 <div created="20210627170006507" creator="Télumire" list="$:/Tasker/Kanban $:/SaveToGitHub [[Draggable list based on fields rather than tags]] [[Conditional display based on language setting]] [[Add a button to set a task status to a tiddler]] [[Collapse/expand section within a tiddler]] [[Display a description on any tiddler]] [[Display the field source]] [[Display tiddlers tagging]] [[Drag and drop list of tiddlers]] [[Edit button for transcluded content]] $:/GridStoryRiver [[Add a favicon to your wiki]] [[Bulk tagging]] [[Button to create a new tiddler with an unused title without template]] [[Display an estimated reading time on each tiddler]] [[Good naming conventions]] [[How to use TiddlyWiki as a static website generator in 3 steps]] [[Open for edit tiddler to bypass crash]] [[Search a list of result]] [[sentence with icon]] [[Style link TO a specific tiddler in a specific color]] [[Button to switch palette (night mode)]] [[System image gallery]] [[Word counter]] [[Example of the sameday operator]]" modified="20210821101046574" modifier="Télumire" tagging="after" title="tip">
 <pre></pre>
