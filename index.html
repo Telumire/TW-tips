@@ -525,8 +525,6 @@ Error message and password prompt
 
 <li>New Tiddler 6</li>
 
-<li>New Tiddler 7</li>
-
 <li>Open for edit tiddler to bypass crash</li>
 
 <li>openTiddlers</li>
@@ -550,6 +548,8 @@ Error message and password prompt
 <li>Reading-time/subtitle/template</li>
 
 <li>Reading-time/wpm</li>
+
+<li>Salvaging tiddlers from a wiki</li>
 
 <li>Saving to github button</li>
 
@@ -829,7 +829,7 @@ height:auto;
 <pre>Built from branch 'tiddlywiki-com' at commit b95f6ca084ecc4b63a352a31da9c376551a58e91 of https://github.com/Jermolene/TiddlyWiki5 at 2021-07-04 10:58:55 UTC
 </pre>
 </div>
-<div created="20210810234449332" creator="Télumire" modified="20210906122542540" modifier="Télumire" title="$:/config/AutoSave">
+<div created="20210810234449332" creator="Télumire" modified="20210906122643899" modifier="Télumire" title="$:/config/AutoSave">
 <pre>no</pre>
 </div>
 <div caption="Kookma Plugin Library" created="20200306121057751" modified="20210810162703139" modifier="Télumire" tags="$:/tags/PluginLibrary" title="$:/config/KookmaPluginLibrary" type="text/vnd.tiddlywiki" url="https://kookma.github.io/TW-PluginLibrary/library/index.html">
@@ -13187,7 +13187,7 @@ width:100%;
 <div created="20210803203319241" creator="Télumire" modified="20210816112820129" modifier="Télumire" title="$:/state/tab-607722857">
 <pre>$:/plugins/kookma/commander/tag/ui</pre>
 </div>
-<div created="20210714123306926" creator="Télumire" modified="20210906122441541" modifier="Télumire" title="$:/state/tab/sidebar--595412856">
+<div created="20210714123306926" creator="Télumire" modified="20210906122642628" modifier="Télumire" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div created="20210714125257722" creator="Télumire" modified="20210811015659657" modifier="Télumire" title="$:/state/tabs/controlpanel/toolbars-1345989671">
@@ -13199,7 +13199,7 @@ width:100%;
 <div created="20210627165215089" creator="T" modified="20210810162703141" modifier="Télumire" title="$:/status/UserName">
 <pre>Télumire</pre>
 </div>
-<div list="" title="$:/StoryList">
+<div created="20210906122549617" creator="Télumire" list="" modified="20210906122549617" modifier="Télumire" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210827155614645" creator="Télumire" list="Footer [[Back to top]]" modified="20210827155614645" modifier="Télumire" title="$:/tags/Footer">
@@ -14160,20 +14160,6 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, tempore, exerci
 <div created="20210815172514194" creator="Télumire" modified="20210815172521668" modifier="Télumire" tags="[[New Tiddler 4]]" title="New Tiddler 6">
 <pre>patate</pre>
 </div>
-<div created="20210902194457548" creator="Télumire" modified="20210902194731200" modifier="Télumire" tags="" task="todo" title="New Tiddler 7">
-<pre> https://tiddlywiki.com/#SafeMode
-
-Pasting $tw.wiki.allTitles().forEach(function(t){console.log($tw.wiki.getTiddlerAsJson(t))}); into the console tab of firefox should print out all the tiddlers in your wiki as json objects.  You'd need to copy that out, find the tiddlers you care about, save them individually as files, and then you should be able to import them back into your old saved copy.
-[19:38]
-Actually....
-[19:39]
-Wait, calling save shouldn't be too hard from the console, let me do some skimming
-[19:40]
-Try this.  $tw.saverHandler.saveWiki()
-
-mklauber — 30/08/2021
-</pre>
-</div>
 <div created="20210815010138337" creator="Télumire" modified="20210815010345895" modifier="Télumire" source="https://kookma.github.io/TW-Scripts/#A%20Direct%20Open%20for%20Edit%20on%20Wiki%20Crash" tags="tip" task="todo" title="Open for edit tiddler to bypass crash">
 <pre>Select a tiddler to edit:&lt;br&gt;
 &lt;$select tiddler=&quot;$:/temp/openforedit&quot;&gt;
@@ -14253,6 +14239,20 @@ margin-right:1ch;
 </div>
 <div created="20210803153449372" description="Reading speed used for the calculation (word per minutes)" modified="20210810162703145" modifier="Télumire" source="[[https://iovs.arvojournals.org/article.aspx?articleid=2166061 (Table 2)]]" tags="[[Display an estimated reading time on each tiddler]]" title="Reading-time/wpm">
 <pre>228</pre>
+</div>
+<div created="20210902194457548" creator="Télumire" modified="20210906122629431" modifier="Télumire" tags="tip" task="todo" title="Salvaging tiddlers from a wiki">
+<pre> https://tiddlywiki.com/#SafeMode
+
+Pasting $tw.wiki.allTitles().forEach(function(t){console.log($tw.wiki.getTiddlerAsJson(t))}); into the console tab of firefox should print out all the tiddlers in your wiki as json objects.  You'd need to copy that out, find the tiddlers you care about, save them individually as files, and then you should be able to import them back into your old saved copy.
+[19:38]
+Actually....
+[19:39]
+Wait, calling save shouldn't be too hard from the console, let me do some skimming
+[19:40]
+Try this.  $tw.saverHandler.saveWiki()
+
+mklauber — 30/08/2021
+</pre>
 </div>
 <div created="20210813013840489" modified="20210813013926543" tags="$:/SaveToGitHub" title="Saving to github button">
 <pre>This button {{$:/SaveToGitHub/Button}} disables the autosave, set the ~GitHub username, trigger a filtered save to ~GitHub, then unset the ~GitHub username and finally re-enable the autosave. A better way to do it would be to be able to manually choose the saver used, but it is not possible at the moment without custom ~JavaScript code (see [[bimlas' demo|https://bimlas.gitlab.io/demo/tw5/preferred-saver.html]]). 
