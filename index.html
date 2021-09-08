@@ -617,6 +617,8 @@ Error message and password prompt
 
 <li>Substitute words in a text with links based on a list</li>
 
+<li>SVG inline css</li>
+
 <li>System image gallery</li>
 
 <li>Tag_Icon</li>
@@ -863,7 +865,7 @@ height:auto;
 <pre>Built from branch 'tiddlywiki-com' at commit b95f6ca084ecc4b63a352a31da9c376551a58e91 of https://github.com/Jermolene/TiddlyWiki5 at 2021-07-04 10:58:55 UTC
 </pre>
 </div>
-<div created="20210810234449332" modified="20210906234533338" title="$:/config/AutoSave">
+<div created="20210810234449332" modified="20210908212950748" title="$:/config/AutoSave">
 <pre>no</pre>
 </div>
 <div caption="Kookma Plugin Library" created="20200306121057751" modified="20210906234456977" tags="$:/tags/PluginLibrary" title="$:/config/KookmaPluginLibrary" type="text/vnd.tiddlywiki" url="https://kookma.github.io/TW-PluginLibrary/library/index.html">
@@ -10859,8 +10861,8 @@ grid-column:-1/span 1;
 <div created="20210713151714139" modified="20210906234456979" tags="gallery-painting" title="$:/language">
 <pre>en-GB</pre>
 </div>
-<div created="20210816170533861" modified="20210906234456979" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
-<pre>Saved by TW</pre>
+<div created="20210816170533861" modified="20210908212946823" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
+<pre>New tip : inline svg with core images</pre>
 </div>
 <div created="20210825201734395" modified="20210906234456980" title="$:/layout">
 <pre>$:/core/ui/PageTemplateFooter</pre>
@@ -13164,8 +13166,8 @@ width:100%;
 <div created="20210810162433224" modified="20210906234456981" title="$:/state/addplugins/tab-1342078386">
 <pre>$:/config/KookmaPluginLibrary</pre>
 </div>
-<div created="20210714131710187" modified="20210906234456981" title="$:/state/advancedsearch/currentTab">
-<pre>$:/core/ui/AdvancedSearch/Filter</pre>
+<div created="20210714131710187" modified="20210907010536082" title="$:/state/advancedsearch/currentTab">
+<pre>$:/core/ui/AdvancedSearch/System</pre>
 </div>
 <div created="20210803203323946" modified="20210906234456981" title="$:/state/commander/log-tiddler">
 <pre>$:/temp/commander/logs/tid-2</pre>
@@ -13203,8 +13205,8 @@ width:100%;
 <div created="20210803203320853" modified="20210906234456983" title="$:/state/tab--103319216">
 <pre>$:/plugins/kookma/commander/field/uicomp/remove-fields</pre>
 </div>
-<div created="20210714131710187" modified="20210906234456983" title="$:/state/tab--1498284803">
-<pre>$:/core/ui/AdvancedSearch/Filter</pre>
+<div created="20210714131710187" modified="20210907010536082" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/System</pre>
 </div>
 <div created="20210906234102768" modified="20210906234102768" title="$:/state/tab--1705968773">
 <pre>$:/plugins/kookma/commander/field/uicomp/remove-fields</pre>
@@ -13233,8 +13235,8 @@ width:100%;
 <div created="20210803203319241" modified="20210906234456983" title="$:/state/tab-607722857">
 <pre>$:/plugins/kookma/commander/tag/ui</pre>
 </div>
-<div created="20210714123306926" modified="20210906234456983" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Recent</pre>
+<div created="20210714123306926" modified="20210908212926234" title="$:/state/tab/sidebar--595412856">
+<pre>$:/SaveToGitHub/Settings</pre>
 </div>
 <div created="20210714125257722" modified="20210906234456984" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
@@ -13275,7 +13277,7 @@ width:100%;
 <div created="20210627165215089" modified="20210906234456985" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div list="Index" title="$:/StoryList">
+<div created="20210908211113230" list="[[System image gallery]] $:/core/images/tip [[SVG inline css]]" modified="20210908212758517" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210827155614645" list="Footer [[Back to top]]" modified="20210906234456985" title="$:/tags/Footer">
@@ -13287,7 +13289,7 @@ width:100%;
 <div created="20210714122834007" modified="20210906234456985" tagging="after" title="$:/tags/Stylesheet">
 <pre></pre>
 </div>
-<div created="20210811020117077" modified="20210906234456985" tagging="after" tags="[[Button to switch palette (night mode)]]" title="$:/tags/SwitchPalette">
+<div created="20210811020117077" modified="20210907010555570" tagging="after" tags="[[Button to switch palette (night mode)]]" title="$:/tags/SwitchPalette">
 <pre></pre>
 </div>
 <div created="20210627165654635" list="$:/core/ui/ViewTemplate/title $:/core/ui/ViewTemplate/unfold $:/core/ui/ViewTemplate/subtitle $:/core/ui/ViewTemplate/tags $:/core/ui/ViewTemplate/classic $:/core/ui/ViewTemplate/body" modified="20210906234456985" tags="(tagging)" title="$:/tags/ViewTemplate">
@@ -14264,11 +14266,13 @@ $text$
 <div created="20210816105308951" modified="20210906234456989" tags="project" task="todo" title="Project:TW as a blog">
 <pre></pre>
 </div>
-<div created="20210819163402809" modified="20210906234456989" tags="project" task="todo" title="Project:TW as a manual">
-<pre>Inspiration :
+<div created="20210819163402809" modified="20210908155407959" tags="project" task="todo" title="Project:TW as a manual">
+<pre>Inspirations :
 
 * https://docs.blender.org/manual/en/2.81/addons/rigging/rigify.html
-* https://docs.animation-nodes.com/</pre>
+* https://docs.animation-nodes.com/
+* https://262.ecma-international.org/10.0/#sec-switch-statement
+* https://javascript.info</pre>
 </div>
 <div created="20210819164156052" modified="20210906234456989" tags="[[Project:TW as a blog]]" task="todo" title="Read on lazy loading">
 <pre></pre>
@@ -14607,6 +14611,33 @@ span.transclude-edit:hover .transclude-edit-button{
 &lt;/$set&gt;
 
 </pre>
+</div>
+<div created="20210908210845579" modified="20210908212918776" tags="tip" title="SVG inline css">
+<pre>&lt;$vars 
+
+icon-svg={{$:/core/images/tip}} 
+icon-svg-color=&quot;red&quot; 
+icon-svg-size=&quot;1.8ch&quot; &gt;
+
+&lt;style&gt;
+.icon-svg{ color:&lt;&lt;icon-svg-color&gt;&gt;; }
+
+.icon-svg:before{
+    margin-right:.5ch;
+    height:&lt;&lt;icon-svg-size&gt;&gt;;
+    width:&lt;&lt;icon-svg-size&gt;&gt;;
+    content: &quot;&quot;;
+    display: inline-block;
+	background: center / contain no-repeat;
+}
+
+.icon-svg:before{
+background-image:url(&lt;$text text={{{ [['data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;]addsuffix&lt;icon-svg-color&gt;addsuffix[&quot; width=&quot;22pt&quot; height=&quot;22pt&quot;&gt;]addsuffix&lt;icon-svg&gt;addsuffix[&lt;/svg&gt;']]}}} /&gt;);
+}
+
+&lt;/style&gt;
+
+&lt;span class=&quot;icon-svg&quot;&gt;lock&lt;/span&gt;</pre>
 </div>
 <div created="20140809113603449" modified="20210906234456991" tags="tip" title="System image gallery" type="text/vnd.tiddlywiki">
 <pre>Grid of all system images (ie, tiddlers tagged [[$:/tags/Image]]).
