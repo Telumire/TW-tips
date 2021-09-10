@@ -207,11 +207,15 @@ Error message and password prompt
 
 <li>$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/fold-bar</li>
 
+<li>$:/config/WikiParserRules/Block/codeblock</li>
+
 <li>$:/config/WikiParserRules/Inline/wikilink</li>
 
 <li>$:/core</li>
 
 <li>$:/core/images/tip</li>
+
+<li>$:/core/ui/EditTemplate/body</li>
 
 <li>$:/core/ui/PageTemplate</li>
 
@@ -310,6 +314,8 @@ Error message and password prompt
 <li>$:/state/tab--1963855381</li>
 
 <li>$:/state/tab--2112689675</li>
+
+<li>$:/state/tab--959111941</li>
 
 <li>$:/state/tab--98615525</li>
 
@@ -449,6 +455,8 @@ Error message and password prompt
 
 <li>Custom drop down menu</li>
 
+<li>Custom field to hide the preview pannel for specific tiddlers</li>
+
 <li>Custom new-here button</li>
 
 <li>data</li>
@@ -495,6 +503,8 @@ Error message and password prompt
 
 <li>External_Link_Icon</li>
 
+<li>filter/inline-svg</li>
+
 <li>Find design ideas</li>
 
 <li>Find out how to automate RSS feed</li>
@@ -516,6 +526,8 @@ Error message and password prompt
 <li>Hidden fields used by the core</li>
 
 <li>Hide body with a template</li>
+
+<li>How to know if we are in the sidebar</li>
 
 <li>how to use Github Actions to build and publish a TiddlyWiki</li>
 
@@ -565,6 +577,8 @@ Error message and password prompt
 
 <li>New Tiddler 7</li>
 
+<li>New Tiddler 8</li>
+
 <li>Open for edit tiddler to bypass crash</li>
 
 <li>openTiddlers</li>
@@ -594,6 +608,8 @@ Error message and password prompt
 <li>Saving to github button</li>
 
 <li>Search a list of result</li>
+
+<li>Search the available variables</li>
 
 <li>sentence with icon</li>
 
@@ -694,6 +710,8 @@ Error message and password prompt
 <li>Using a filter with the toc-selective-expandable macro:ex</li>
 
 <li>Using a filter with the toc-selective-expandable macro:ex 1</li>
+
+<li>Using css variables</li>
 
 <li>Word counter</li>
 
@@ -883,7 +901,7 @@ height:auto;
 <pre>Built from branch 'tiddlywiki-com' at commit b95f6ca084ecc4b63a352a31da9c376551a58e91 of https://github.com/Jermolene/TiddlyWiki5 at 2021-07-04 10:58:55 UTC
 </pre>
 </div>
-<div created="20210810234449332" modified="20210909212321247" title="$:/config/AutoSave">
+<div created="20210810234449332" modified="20210910153734833" title="$:/config/AutoSave">
 <pre>no</pre>
 </div>
 <div caption="Kookma Plugin Library" created="20200306121057751" modified="20210906234456977" tags="$:/tags/PluginLibrary" title="$:/config/KookmaPluginLibrary" type="text/vnd.tiddlywiki" url="https://kookma.github.io/TW-PluginLibrary/library/index.html">
@@ -924,7 +942,7 @@ To use in other wikis, drag and drop this link to those wikis: [[Kookma Plugin L
 <div created="20210821102938999" modified="20210906234456978" title="$:/config/PageControlButtons/Visibility/Draft of 'Buttons/SwitchPalette' by Télumire">
 <pre>show</pre>
 </div>
-<div created="20210627165739186" modified="20210906234456978" title="$:/config/RelinkOnRename">
+<div created="20210627165739186" modified="20210910141045653" title="$:/config/RelinkOnRename">
 <pre>yes</pre>
 </div>
 <div created="20210714125309556" modified="20210906234456978" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/close-others">
@@ -935,6 +953,9 @@ To use in other wikis, drag and drop this link to those wikis: [[Kookma Plugin L
 </div>
 <div created="20210713194300082" modified="20210906234456978" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/fold-bar">
 <pre>show</pre>
+</div>
+<div created="20210910134731765" modified="20210910134732552" title="$:/config/WikiParserRules/Block/codeblock">
+<pre>enable</pre>
 </div>
 <div created="20210721155446656" modified="20210906234456978" title="$:/config/WikiParserRules/Inline/wikilink">
 <pre>enable</pre>
@@ -10806,6 +10827,51 @@ To use in other wikis, drag and drop this link to those wikis: [[Kookma Plugin L
 <div created="20210811020423391" modified="20210906234456979" tags="$:/tags/Image" title="$:/core/images/tip">
 <pre>&lt;svg width=&quot;22pt&quot; height=&quot;22pt&quot; class=&quot;tc-image-tip tc-image-button&quot; viewBox=&quot;0 0 128 128&quot;&gt;&lt;path fill-rule=&quot;oddeven&quot; d=&quot;M64 128.242c35.346 0 64-28.654 64-64 0-35.346-28.654-64-64-64-35.346 0-64 28.654-64 64 0 35.346 28.654 64 64 64zm11.936-36.789c-.624 4.129-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349C54.33 94.05 58.824 95.82 64 95.82c5.175 0 9.67-1.769 11.936-4.366zm0 4.492c-.624 4.13-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349 2.266 2.597 6.76 4.366 11.936 4.366 5.175 0 9.67-1.769 11.936-4.366zm0 4.456c-.624 4.129-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349 2.266 2.597 6.76 4.366 11.936 4.366 5.175 0 9.67-1.769 11.936-4.366zm0 4.492c-.624 4.13-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349 2.266 2.597 6.76 4.366 11.936 4.366 5.175 0 9.67-1.769 11.936-4.366zM64.3 24.242c11.618 0 23.699 7.82 23.699 24.2S75.92 71.754 75.92 83.576c0 5.873-5.868 9.26-11.92 9.26s-12.027-3.006-12.027-9.26C51.973 71.147 40 65.47 40 48.442s12.683-24.2 24.301-24.2z&quot;/&gt;&lt;/svg&gt;</pre>
 </div>
+<div created="20210910123934410" hide-preview="yes" modified="20210910132032444" tags="$:/tags/EditTemplate" title="$:/core/ui/EditTemplate/body">
+<pre>\define lingo-base() $:/language/EditTemplate/Body/
+\define config-visibility-title()
+$:/config/EditorToolbarButtons/Visibility/$(currentTiddler)$
+\end
+&lt;$list filter=&quot;[all[current]has[_canonical_uri]]&quot;&gt;
+
+&lt;div class=&quot;tc-message-box&quot;&gt;
+
+&lt;&lt;lingo External/Hint&gt;&gt;
+
+&lt;a href={{!!_canonical_uri}}&gt;&lt;$text text={{!!_canonical_uri}}/&gt;&lt;/a&gt;
+
+&lt;$edit-text field=&quot;_canonical_uri&quot; class=&quot;tc-edit-fields&quot; tabindex={{$:/config/EditTabIndex}} cancelPopups=&quot;yes&quot;&gt;&lt;/$edit-text&gt;
+
+&lt;/div&gt;
+
+&lt;/$list&gt;
+
+&lt;$list filter=&quot;[all[current]!has[_canonical_uri]]&quot;&gt;
+
+&lt;$reveal default={{{[all[current]contains:hide-preview[yes]then[no]else{$:/state/showeditpreview}]}}} type=&quot;match&quot; text=&quot;yes&quot;&gt;
+
+&lt;div class=&quot;tc-tiddler-preview&quot;&gt;
+
+&lt;$transclude tiddler=&quot;$:/core/ui/EditTemplate/body/editor&quot; mode=&quot;inline&quot;/&gt;
+&lt;div class=&quot;tc-tiddler-preview-preview&quot;&gt;
+&lt;$transclude tiddler={{$:/state/editpreviewtype}} mode=&quot;inline&quot;&gt;
+&lt;$transclude tiddler=&quot;$:/core/ui/EditTemplate/body/preview/output&quot; mode=&quot;inline&quot;/&gt;
+&lt;/$transclude&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/$reveal&gt;
+
+&lt;$reveal default={{{[all[current]contains:hide-preview[yes]then[no]else{$:/state/showeditpreview}]}}} type=&quot;nomatch&quot; text=&quot;yes&quot;&gt;
+
+&lt;$transclude tiddler=&quot;$:/core/ui/EditTemplate/body/editor&quot; mode=&quot;inline&quot;/&gt;
+
+&lt;/$reveal&gt;
+
+&lt;/$list&gt;
+</pre>
+</div>
 <div created="20210825212121209" description="{{$:/language/PageTemplate/Description}} .. and a footer" modified="20210906234456979" name="{{$:/language/PageTemplate/Name}}" tags="[[Adding custom elements to the PageTemplate]]" title="$:/core/ui/PageTemplate">
 <pre>&lt;$transclude tiddler=&quot;$:/core&quot; subtiddler=&quot;$:/core/ui/PageTemplate&quot;/&gt;
 &lt;footer&gt;
@@ -13189,7 +13255,7 @@ width:100%;
 <div created="20210810162433224" modified="20210906234456981" title="$:/state/addplugins/tab-1342078386">
 <pre>$:/config/KookmaPluginLibrary</pre>
 </div>
-<div created="20210714131710187" modified="20210909211326881" title="$:/state/advancedsearch/currentTab">
+<div created="20210714131710187" modified="20210910140815439" title="$:/state/advancedsearch/currentTab">
 <pre>$:/core/ui/AdvancedSearch/Standard</pre>
 </div>
 <div created="20210803203323946" modified="20210906234456981" title="$:/state/commander/log-tiddler">
@@ -13219,16 +13285,16 @@ width:100%;
 <div created="20210807103955659" modified="20210906234456983" title="$:/state/plugin-info-575017246-$:/plugins/danielo515/2click2edit--543222777">
 <pre>contents</pre>
 </div>
-<div created="20210720145300038" modified="20210909212052870" title="$:/state/showeditpreview">
-<pre>no</pre>
+<div created="20210720145300038" modified="20210910152058110" title="$:/state/showeditpreview">
+<pre>yes</pre>
 </div>
-<div created="20210714123144577" modified="20210909145859473" title="$:/state/sidebar">
+<div created="20210714123144577" modified="20210909221957647" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20210803203320853" modified="20210906234456983" title="$:/state/tab--103319216">
 <pre>$:/plugins/kookma/commander/field/uicomp/remove-fields</pre>
 </div>
-<div created="20210714131710187" modified="20210909211326882" title="$:/state/tab--1498284803">
+<div created="20210714131710187" modified="20210910140815440" title="$:/state/tab--1498284803">
 <pre>$:/core/ui/AdvancedSearch/Standard</pre>
 </div>
 <div created="20210906234102768" modified="20210906234102768" title="$:/state/tab--1705968773">
@@ -13237,8 +13303,11 @@ width:100%;
 <div created="20210714123207883" modified="20210909201551323" title="$:/state/tab--1963855381">
 <pre>$:/core/ui/ControlPanel/StoryView</pre>
 </div>
-<div created="20210714131721087" modified="20210906234456983" title="$:/state/tab--2112689675">
-<pre>$:/core/ui/ControlPanel/Basics</pre>
+<div created="20210714131721087" modified="20210910120305398" title="$:/state/tab--2112689675">
+<pre>$:/core/ui/ControlPanel/Advanced</pre>
+</div>
+<div created="20210910120307751" modified="20210910120338801" title="$:/state/tab--959111941">
+<pre>$:/core/ui/ControlPanel/Parsing</pre>
 </div>
 <div created="20210906234343592" modified="20210906234343592" title="$:/state/tab--98615525">
 <pre>$:/plugins/kookma/commander/tag/uicomp/add-remove-tags</pre>
@@ -13252,8 +13321,8 @@ width:100%;
 <div created="20210909201506125" modified="20210909201513338" title="$:/state/tab-1535582057">
 <pre>$:/plugins/flibbles/relink/ui/TiddlerInfo/References</pre>
 </div>
-<div created="20210714123159097" modified="20210909201600098" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/KeyboardShortcuts</pre>
+<div created="20210714123159097" modified="20210910120303599" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
 <div created="20210716151227668" modified="20210906234456983" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
@@ -13261,8 +13330,8 @@ width:100%;
 <div created="20210803203319241" modified="20210906234456983" title="$:/state/tab-607722857">
 <pre>$:/plugins/kookma/commander/tag/ui</pre>
 </div>
-<div created="20210714123306926" modified="20210909212232273" title="$:/state/tab/sidebar--595412856">
-<pre>$:/SaveToGitHub/Settings</pre>
+<div created="20210714123306926" modified="20210910153207273" title="$:/state/tab/sidebar--595412856">
+<pre>template/characters</pre>
 </div>
 <div created="20210714125257722" modified="20210906234456984" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
@@ -13303,7 +13372,7 @@ width:100%;
 <div created="20210627165215089" modified="20210906234456985" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210909195600786" list="[[Display tiddlers tagging]] characters template/characters [[Link with prefix]] [[New Tiddler 7]] [[SVG inline css]]" modified="20210909211351837" title="$:/StoryList">
+<div created="20210910130726289" list="template/characters characters" modified="20210910153123251" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210827155614645" list="Footer [[Back to top]]" modified="20210906234456985" title="$:/tags/Footer">
@@ -13893,8 +13962,9 @@ This button add a tag to all (be careful !) tiddler tagged with target</pre>
     &lt;/$button&gt;
   &lt;/$vars&gt;</pre>
 </div>
-<div created="20201020042141062" creator="Anthony Muscio" hide-body="yes" hide-tagging="yes" modified="20210909212316029" modifier="Anthony Muscio" tagging-tiddler="characters cheat sheet" tags="[[characters cheat sheet]] $:/tags/SideBar" title="characters" type="application/x-tiddler-dictionary">
-<pre> ~:tilde
+<div created="20201020042141062" creator="Anthony Muscio" hide-body="yes" hide-tagging="yes" modified="20210910153229594" modifier="Anthony Muscio" tagging-tiddler="characters cheat sheet" tags="[[characters cheat sheet]]" title="characters" type="application/x-tiddler-dictionary">
+<pre>`:backquote
+~:tilde
 ❶:one 1
 ❷:two 2
 ❸:three 3
@@ -13999,6 +14069,16 @@ in inline mode like the original for your buttons. &lt;br/&gt;
 
 &lt;/div&gt;
 &lt;/$reveal&gt;</pre>
+</div>
+<div created="20210910121302171" hide-preview="yes" modified="20210910132046292" tags="tip [[core mod]]" title="Custom field to hide the preview pannel for specific tiddlers">
+<pre>If you set the hide-preview field to yes, the preview pannel will be hidden no matter what. 
+
+This is done by modifiying the $:/core/ui/EditTemplate/body with the following reveal widgets :
+
+* `&lt;$reveal default={{{[all[current]contains:hide-preview[yes]then[no]else{$:/state/showeditpreview}]}}} type=&quot;match&quot; text=&quot;yes&quot;&gt;` : if the tiddler contains the field hide-preview set to yes, discard the usual behavior with the show preview pane button.
+* `&lt;$reveal default={{{[all[current]contains:hide-preview[yes]then[no]else{$:/state/showeditpreview}]}}} type=&quot;nomatch&quot; text=&quot;yes&quot;&gt;` : .. and show the edit pannel without preview, regardless of [[$:/state/showeditpreview]].
+
+This can be usefull to avoid infinite loop/crash when editing tiddlers.</pre>
 </div>
 <div created="20210714131544380" modified="20210906234456986" title="Custom new-here button">
 <pre></pre>
@@ -14124,6 +14204,9 @@ You can put this one inside of a →{{Edit button for transcluded content||(edit
 &lt;/svg&gt;
 </pre>
 </div>
+<div created="20210910111303143" modified="20210910130403260" tags="" title="filter/inline-svg" type="image/svg+xml">
+<pre>[['data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;]] [&lt;icon-svg-color&gt;] [[&quot; width=&quot;22pt&quot; height=&quot;22pt&quot;&gt;]] [&lt;icon-svg&gt;][[&lt;/svg&gt;']] +[join[]]</pre>
+</div>
 <div created="20210819164111618" modified="20210906234456987" tags="[[Project:TW as a blog]]" task="todo" title="Find design ideas">
 <pre></pre>
 </div>
@@ -14215,6 +14298,18 @@ You can put this one inside of a →{{Edit button for transcluded content||(edit
 <div created="20210909195607809" modified="20210909195640611" tags="" task="todo" title="Hide body with a template">
 <pre>set the field hide-body to yes when the tiddler get rendered</pre>
 </div>
+<div created="20210910132311379" modified="20210910145658141" tags="tip" title="How to know if we are in the sidebar">
+<pre>Are we in the sidebar ?
+
+Using the variable..
+
+* `&lt;&lt;__class__&gt;&gt;` : {{{[&lt;__class__&gt;match[tc-sidebar-tabs-main]then[yes]else[no]]}}}
+* `&lt;&lt;__default__&gt;&gt;`: {{{[&lt;__default__&gt;match[$:/core/ui/SideBar/Open]then[yes]else[no]]}}}
+*`&lt;&lt;__state__&gt;&gt;`: {{{[&lt;__state__&gt;match[$:/state/tab/sidebar]then[yes]else[no]]}}}
+*`&lt;&lt;currentTab&gt;&gt;`: {{{[&lt;currentTab&gt;is[blank]then[no]else[yes]]}}}
+
+All the above will give yes if added to the sidebar</pre>
+</div>
 <div created="20210825171810261" modified="20210906234456989" tags="[[Project:TW as a blog]] tip" title="how to use Github Actions to build and publish a TiddlyWiki">
 <pre>https://github.com/saqimtiaz/TW5-github-actions-example
 
@@ -14257,8 +14352,8 @@ Here are some useful tips &amp; tricks to add to your wiki.
 &lt;$link to=&lt;&lt;currentTiddler&gt;&gt;&gt; &lt;$transclude field=&quot;caption&quot;&gt; &lt;$view field=&quot;title&quot;/&gt; &lt;/$transclude&gt;&lt;/$link&gt;
 &lt;/span&gt;</pre>
 </div>
-<div caption="Link with a prefix." condition="[&lt;targetTiddler&gt;!has[type]] [&lt;targetTiddler&gt;type[text/vnd.tiddlywiki]]" created="20210822001019829" description="Link with a prefix. If the field prefix is set, the prefix is used, otherwise default to the current tiddler name." icon="$:/core/images/linkify" modified="20210909201408714" shortcuts="alt-shift-g" tags="$:/tags/EditorToolbar tip" title="Link with prefix" type="text/vnd.tiddlywiki">
-<pre>&lt;$vars storeTitle=&lt;&lt;qualify &quot;$:/temp/storeTitle&quot;&gt;&gt; prefix={{{ [&lt;targetTiddler&gt;get[prefix]else&lt;targetTiddler&gt;] }}}&gt;
+<div caption="Link with a prefix." condition="[&lt;targetTiddler&gt;!has[type]] [&lt;targetTiddler&gt;type[text/vnd.tiddlywiki]]" created="20210822001019829" description="Link with a prefix. If the field prefix is set, the prefix is used, otherwise default to the current tiddler name." icon="$:/core/images/linkify" modified="20210909225802671" prefix="s" shortcuts="alt-shift-g" tags="$:/tags/EditorToolbar tip" task="doing" title="Link with prefix" title-suffix="/" type="text/vnd.tiddlywiki">
+<pre>&lt;$vars storeTitle=&lt;&lt;qualify &quot;$:/temp/storeTitle&quot;&gt;&gt; prefix={{{ [all[current]has[prefix]get[prefix]else&lt;targetTiddler&gt;get[prefix]else&lt;targetTiddler&gt;get[draft.title]addsuffix{!!suffix}] }}}&gt;
 &lt;$action-deletetiddler $filter=&quot;[&lt;storeTitle&gt;]&quot; /&gt;
 &lt;$action-sendmessage $message=&quot;tm-edit-text-operation&quot; $param=&quot;save-selection&quot; tiddler=&lt;&lt;storeTitle&gt;&gt; field=&quot;text&quot; /&gt;
 &lt;$action-sendmessage $message=&quot;tm-edit-text-operation&quot; $param=&quot;make-link&quot; text={{{ [&lt;storeTitle&gt;get[text]addprefix&lt;prefix&gt;] }}} /&gt;
@@ -14317,10 +14412,59 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, tempore, exerci
 <div created="20210815172514194" modified="20210906234456989" tags="[[New Tiddler 4]]" title="New Tiddler 6">
 <pre>patate</pre>
 </div>
-<div created="20210909200426039" modified="20210909201453106" prefix="" tags="" title="New Tiddler 7">
-<pre>[[wdwd|Draft of 'New Tiddler 7'wdwd]]
+<div created="20210909213011540" modified="20210910111158900" prefix="" prefix-title="" tags="" title="New Tiddler 7">
+<pre>&lt;$vars targetTiddler={{{ [all[current]] }}} &gt;
 
-</pre>
+&lt;$list filter=&quot;[[Link with prefix]]&quot;&gt;
+
+&lt;$vars 
+
+title-prefix={{{ [&lt;targetTiddler&gt;get[draft.title]addsuffix{!!title-suffix}] }}} 
+default-prefix={{{ [&lt;currentTiddler&gt;get[prefix]] }}}
+custom-prefix={{{ [&lt;targetTiddler&gt;get[prefix]] }}}
+
+&gt;
+
+* &lt;&lt;title-prefix&gt;&gt;
+* &lt;&lt;default-prefix&gt;&gt;
+* &lt;&lt;custom-prefix&gt;&gt;
+
+---
+
+{{{ 
+
+[&lt;targetTiddler&gt;has[prefix]then&lt;custom-prefix&gt;]
+
+[&lt;targetTiddler&gt;!has[prefix]then&lt;default-prefix&gt;]
+
+[&lt;targetTiddler&gt;!has[prefix]&lt;currentTiddler&gt;!has[prefix]then&lt;title-prefix&gt;]
+
+}}}
+
+---
+test if prefix is blank
+
+{{{ [&lt;currentTiddler&gt;has[prefix]else[3]] }}}
+
+&lt;/$vars&gt;
+
+&lt;/$list&gt;
+&lt;/$vars&gt;</pre>
+</div>
+<div created="20210910111843797" modified="20210910111930314" tags="" title="New Tiddler 8">
+<pre>&lt;$vars 
+
+icon-svg-color=red 
+icon-svg={{$:/core/images/tip}}
+
+&gt;
+
+&lt;&lt;icon-svg-color&gt;&gt;
+&lt;&lt;icon-svg&gt;&gt;
+
+ {{||filter/inline-svg}}
+
+&lt;/$vars&gt;</pre>
 </div>
 <div created="20210815010138337" modified="20210906234456989" source="https://kookma.github.io/TW-Scripts/#A%20Direct%20Open%20for%20Edit%20on%20Wiki%20Crash" tags="tip" task="todo" title="Open for edit tiddler to bypass crash">
 <pre>Select a tiddler to edit:&lt;br&gt;
@@ -14464,6 +14608,51 @@ padding:.5em;
 &lt;/$set&gt;
 
 </pre>
+</div>
+<div created="20210910140636052" modified="20210910144545155" tags="$:/tags/SideBar" title="Search the available variables">
+<pre>&lt;style&gt;
+.search-list-container {
+display:flex;
+align-items: center;
+}
+
+.search-list-container button {
+padding:.5em;
+}
+&lt;/style&gt;
+
+&lt;div class=&quot;search-list-container&quot;&gt;
+&lt;$edit-text tiddler=&lt;&lt;qualify $:/temp/search&gt;&gt; field=&quot;text&quot; tag=&quot;input&quot; default=&quot;&quot; placeholder=&quot;type to search the list..&quot; class=&quot;tc-edit-texteditor&quot;/&gt;
+&lt;$reveal state=&lt;&lt;qualify $:/temp/search&gt;&gt; type=&quot;nomatch&quot; text=&quot;&quot;&gt;
+&lt;$button class=&quot;tc-btn-invisible&quot;&gt;
+&lt;$action-setfield $tiddler=&lt;&lt;qualify $:/temp/search&gt;&gt; text=&quot;&quot;/&gt;
+{{$:/core/images/close-button}}
+&lt;/$button&gt;
+&lt;/$reveal&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;search-list-container&quot;&gt;
+&lt;$edit-text tiddler=&lt;&lt;qualify $:/temp/filter&gt;&gt; field=&quot;text&quot; tag=&quot;input&quot; default=&quot;[search:[]]&quot; placeholder=&quot;write an additional filter here&quot; class=&quot;tc-edit-texteditor&quot;/&gt;
+&lt;$reveal state=&lt;&lt;qualify $:/temp/filter&gt;&gt; type=&quot;nomatch&quot; text=&quot;&quot;&gt;
+&lt;$button class=&quot;tc-btn-invisible&quot;&gt;
+&lt;$action-setfield $tiddler=&lt;&lt;qualify $:/temp/filter&gt;&gt; text=&quot;[search:[]]&quot;/&gt;
+{{$:/core/images/close-button}}
+&lt;/$button&gt;
+&lt;/$reveal&gt;
+&lt;/div&gt;
+
+&lt;$set name=search tiddler=&lt;&lt;qualify $:/temp/search&gt;&gt; field=&quot;text&quot;&gt;
+&lt;$set name=filter tiddler=&lt;&lt;qualify $:/temp/filter&gt;&gt; field=&quot;text&quot;&gt;
+&lt;$set name=filter value={{{ [&lt;filter&gt;match[]then[+]else&lt;filter&gt;] }}}&gt;
+
+&lt;hr&gt;
+
+&lt;$list filter=&quot;[variables[]filter&lt;filter&gt;]+[search:*&lt;search&gt;]&quot; variable=&quot;varname&quot;&gt;
+&lt;strong&gt;&lt;code&gt;&lt;$text text=&lt;&lt;varname&gt;&gt;/&gt;&lt;/code&gt;&lt;/strong&gt;:&lt;br/&gt;
+&lt;$codeblock code={{{ [&lt;varname&gt;getvariable[]] }}}/&gt;
+&lt;/$list&gt;
+
+&lt;/$set&gt;</pre>
 </div>
 <div created="20210806125054939" modified="20210906234456990" tags="tip" title="sentence with icon">
 <pre>with transclusion only :
@@ -14724,7 +14913,7 @@ span.transclude-edit:hover .transclude-edit-button{
 
 </pre>
 </div>
-<div created="20210908210845579" modified="20210909200051690" tags="tip" title="SVG inline css">
+<div created="20210908210845579" modified="20210910120516622" tags="tip" title="SVG inline css">
 <pre>\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline html commentblock
 
 &lt;!-- 
@@ -14762,7 +14951,7 @@ background-image:url(&lt;$text text={{{[['data:image/svg+xml;utf8,&lt;svg xmlns=
 
 &lt;span class=&quot;icon-svg&quot;&gt;lock&lt;/span&gt;
 
-voir doc mozilla pour leur icon
+see mozilla doc for inspiration of the external link icon
 
 </pre>
 </div>
@@ -14858,7 +15047,7 @@ Credit : {{!!author}}
 &lt;/$reveal&gt;
 &lt;/$list&gt;</pre>
 </div>
-<div created="20210909203627642" description="inspired from https://anthonymuscio.github.io/#%24%3A%2Fconfig%2Fcharacters" list-before="$:/core/ui/ViewTemplate/body" modified="20210909211048741" tags="$:/tags/ViewTemplate [[characters cheat sheet]]" title="template/characters">
+<div caption="{{template/characters!!display-tiddler}}" created="20210909203627642" description="inspired from https://anthonymuscio.github.io/#%24%3A%2Fconfig%2Fcharacters" display-tiddler="characters" list-before="$:/core/ui/ViewTemplate/body" modified="20210910153732934" tags="$:/tags/ViewTemplate [[characters cheat sheet]] $:/tags/SideBar" title="template/characters">
 <pre>&lt;$reveal tag=&quot;div&quot; type=&quot;match&quot; default={{!!title}} text=&quot;characters&quot; retain=&quot;yes&quot; animate=&quot;yes&quot;&gt;
 &lt;$reveal tag=&quot;div&quot; type=&quot;nomatch&quot; stateTitle=&lt;&lt;folded-state&gt;&gt; text=&quot;hide&quot; retain=&quot;yes&quot; animate=&quot;yes&quot;&gt;
 
@@ -14867,6 +15056,57 @@ Credit : {{!!author}}
 &lt;/$list&gt;
 
 &lt;/$reveal&gt;
+&lt;/$reveal&gt;
+
+&lt;$reveal tag=&quot;div&quot; type=&quot;match&quot; default={{{[&lt;currentTab&gt;is[blank]then[no]else[yes]]}}} text=&quot;yes&quot;&gt;
+
+&lt;style&gt;
+.search-list-container {
+display:flex;
+align-items: center;
+}
+
+.search-list-container button {
+padding:.5em;
+}
+&lt;/style&gt;
+
+&lt;div class=&quot;search-list-container&quot;&gt;
+&lt;$edit-text tiddler=&lt;&lt;qualify $:/temp/search&gt;&gt; field=&quot;text&quot; tag=&quot;input&quot; default=&quot;&quot; placeholder=&quot;type to search the list..&quot; class=&quot;tc-edit-texteditor&quot;/&gt;
+&lt;$reveal state=&lt;&lt;qualify $:/temp/search&gt;&gt; type=&quot;nomatch&quot; text=&quot;&quot;&gt;
+&lt;$button class=&quot;tc-btn-invisible&quot;&gt;
+&lt;$action-setfield $tiddler=&lt;&lt;qualify $:/temp/search&gt;&gt; text=&quot;&quot;/&gt;
+{{$:/core/images/close-button}}
+&lt;/$button&gt;
+&lt;/$reveal&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;search-list-container&quot;&gt;
+&lt;$edit-text tiddler=&lt;&lt;qualify $:/temp/filter&gt;&gt; field=&quot;text&quot; tag=&quot;input&quot; default=&quot;[search:[]]&quot; placeholder=&quot;write an additional filter here&quot; class=&quot;tc-edit-texteditor&quot;/&gt;
+&lt;$reveal state=&lt;&lt;qualify $:/temp/filter&gt;&gt; type=&quot;nomatch&quot; text=&quot;&quot;&gt;
+&lt;$button class=&quot;tc-btn-invisible&quot;&gt;
+&lt;$action-setfield $tiddler=&lt;&lt;qualify $:/temp/filter&gt;&gt; text=&quot;[search:[]]&quot;/&gt;
+{{$:/core/images/close-button}}
+&lt;/$button&gt;
+&lt;/$reveal&gt;
+&lt;/div&gt;
+
+&lt;$set name=search tiddler=&lt;&lt;qualify $:/temp/search&gt;&gt; field=&quot;text&quot;&gt;
+&lt;$set name=filter tiddler=&lt;&lt;qualify $:/temp/filter&gt;&gt; field=&quot;text&quot;&gt;
+&lt;$set name=filter value={{{ [&lt;filter&gt;match[]then[+]else&lt;filter&gt;] }}}&gt;
+
+&lt;hr&gt;
+
+&lt;$list filter=&quot;[{template/characters!!display-tiddler}indexes[]sort[]]&quot; variable=index&gt;
+&lt;$list filter=&quot;[{template/characters!!display-tiddler}getindex&lt;index&gt;filter&lt;filter&gt;]+[search:*&lt;search&gt;]&quot; variable=character&gt;
+&lt;$button message=&quot;tm-copy-to-clipboard&quot; param=&lt;&lt;index&gt;&gt; class=&quot;tc-btn-invisible&quot;&gt;&lt;span style=&quot;font-size: 200%&quot; title={{{[{template/characters!!display-tiddler}getindex&lt;index&gt;!is[blank]]}}}&gt;&lt;$text text=&lt;&lt;index&gt;&gt;/&gt;&lt;/span&gt;&lt;/$button&gt;
+&lt;/$list&gt;
+&lt;/$list&gt;
+
+&lt;/$set&gt;
+&lt;/$set&gt;
+&lt;/$set&gt;
+
 &lt;/$reveal&gt;</pre>
 </div>
 <div created="20210630152942552" description="This template show the content of the tiddler field `description`" list-before="$:/core/ui/ViewTemplate/body" modified="20210906234456991" tags="$:/tags/ViewTemplate [[Display a description on any tiddler]]" title="Template/Description">
@@ -15091,6 +15331,20 @@ sort=&quot;sort[title]&quot;
 </div>
 <div created="20210906142833757" modified="20210906234456993" tags="POV-Jack" title="Using a filter with the toc-selective-expandable macro:ex 1">
 <pre></pre>
+</div>
+<div created="20210910133538991" modified="20210910135032756" tags="tip" task="doing" title="Using css variables" type="">
+<pre>Using css variables can be tricky because the wikitext parsing replace `--` by --.
+There are several ways to get around that :
+
+Using monospaced character formatting : 
+
+```
+``--var-test:test;`` (multiple lines) or  `--var-test:test;` (one line)
+```
+
+Using monospaced block formatting.
+
+Using [[pragma rules|https://tiddlywiki.com/#Pragma]] to disable wikitext parsing, see [[$:/core/ui/ControlPanel/Parsing]].</pre>
 </div>
 <div created="20210802225754242" modified="20210906234456993" tags="tip" title="Word counter">
 <pre>&lt;$set name=&quot;nbWords&quot; filter=&quot;[[count me in !]get[text]splitregexp[(\b)]!is[blank]count[]divide[2]round[]]&quot;&gt;
