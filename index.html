@@ -903,7 +903,7 @@ height:auto;
 <pre>Built from branch 'tiddlywiki-com' at commit b95f6ca084ecc4b63a352a31da9c376551a58e91 of https://github.com/Jermolene/TiddlyWiki5 at 2021-07-04 10:58:55 UTC
 </pre>
 </div>
-<div created="20210810234449332" modified="20210910161525382" title="$:/config/AutoSave">
+<div created="20210810234449332" modified="20210910182642999" title="$:/config/AutoSave">
 <pre>no</pre>
 </div>
 <div caption="Kookma Plugin Library" created="20200306121057751" modified="20210906234456977" tags="$:/tags/PluginLibrary" title="$:/config/KookmaPluginLibrary" type="text/vnd.tiddlywiki" url="https://kookma.github.io/TW-PluginLibrary/library/index.html">
@@ -13332,7 +13332,7 @@ width:100%;
 <div created="20210803203319241" modified="20210906234456983" title="$:/state/tab-607722857">
 <pre>$:/plugins/kookma/commander/tag/ui</pre>
 </div>
-<div created="20210714123306926" modified="20210910161524223" title="$:/state/tab/sidebar--595412856">
+<div created="20210714123306926" modified="20210910182639151" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Open</pre>
 </div>
 <div created="20210714125257722" modified="20210906234456984" title="$:/state/tabs/controlpanel/toolbars-1345989671">
@@ -13374,7 +13374,7 @@ width:100%;
 <div created="20210627165215089" modified="20210906234456985" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210910130726289" list="characters [[System image gallery]] template/characters/search-list" modified="20210910161427018" title="$:/StoryList">
+<div list="Index" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210827155614645" list="Footer [[Back to top]]" modified="20210906234456985" title="$:/tags/Footer">
@@ -13964,7 +13964,7 @@ This button add a tag to all (be careful !) tiddler tagged with target</pre>
     &lt;/$button&gt;
   &lt;/$vars&gt;</pre>
 </div>
-<div created="20201020042141062" creator="Anthony Muscio" hide-body="yes" hide-preview="yes" modified="20210910161517059" modifier="Anthony Muscio" tags="characters" title="characters" type="application/x-tiddler-dictionary">
+<div created="20201020042141062" creator="Anthony Muscio" description="todo : add emojis https://gist.github.com/endolith/157796, add support for multiline ascii art" hide-body="yes" hide-preview="yes" modified="20210910182635928" modifier="Anthony Muscio" tags="characters" task="todo" title="characters" type="application/x-tiddler-dictionary">
 <pre>`:backquote
 ~:tilde
 ❶:one 1
@@ -15060,7 +15060,7 @@ Credit : {{!!author}}
 {{template/characters/search-list}}
 &lt;/$reveal&gt;</pre>
 </div>
-<div created="20210910153838348" modified="20210910161423215" tags="template/characters" title="template/characters/search-list">
+<div created="20210910153838348" description="todo : open link in edit mode" modified="20210910182637151" tags="template/characters" task="todo" title="template/characters/search-list">
 <pre>&lt;style&gt;
 .search-list-container {
 display:flex;
@@ -15106,8 +15106,6 @@ $subfilter=&quot;+[toggle[yes],[no]]&quot;/&gt;
 &lt;$set name=filter tiddler=&lt;&lt;qualify $:/temp/filter&gt;&gt; field=&quot;text&quot;&gt;
 &lt;$set name=filter value={{{ [&lt;filter&gt;match[]then[+]else&lt;filter&gt;] }}}&gt;
 
-&lt;hr&gt;
-
 &lt;$list filter=&quot;[{template/characters!!display-tiddler}indexes[]sort[]]&quot; variable=index&gt;
 &lt;$list filter=&quot;[{template/characters!!display-tiddler}getindex&lt;index&gt;filter&lt;filter&gt;]+[search:*&lt;search&gt;]&quot; variable=character&gt;
 &lt;$button message=&quot;tm-copy-to-clipboard&quot; param=&lt;&lt;index&gt;&gt; class=&quot;tc-btn-invisible&quot;&gt;&lt;span style=&quot;font-size: 200%&quot; title={{{[{template/characters!!display-tiddler}getindex&lt;index&gt;!is[blank]]}}}&gt;&lt;$text text=&lt;&lt;index&gt;&gt;/&gt;&lt;/span&gt;&lt;/$button&gt;
@@ -15118,7 +15116,11 @@ $subfilter=&quot;+[toggle[yes],[no]]&quot;/&gt;
 &lt;/$set&gt;
 &lt;/$set&gt;
 
-&lt;$link to={{template/characters!!display-tiddler}}&gt;edit&lt;/$link&gt;</pre>
+&lt;$action-sendmessage 
+&lt;$link to={{template/characters!!display-tiddler}}&gt;
+&lt;$action-sendmessage $message=&quot;tm-edit-tiddler&quot; $param={{template/characters!!display-tiddler}}/&gt;
+edit
+&lt;/$link&gt;</pre>
 </div>
 <div created="20210630152942552" description="This template show the content of the tiddler field `description`" list-before="$:/core/ui/ViewTemplate/body" modified="20210906234456991" tags="$:/tags/ViewTemplate [[Display a description on any tiddler]]" title="Template/Description">
 <pre>\whitespace trim
