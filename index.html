@@ -201,6 +201,8 @@ Error message and password prompt
 
 <li>$:/config/RelinkOnRename</li>
 
+<li>$:/config/TimestampDisable</li>
+
 <li>$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/close-others</li>
 
 <li>$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/delete</li>
@@ -228,8 +230,6 @@ Error message and password prompt
 <li>$:/GridStoryRiver/RightStory/button</li>
 
 <li>$:/GridStoryRiver/style</li>
-
-<li>$:/Import</li>
 
 <li>$:/isEncrypted</li>
 
@@ -355,6 +355,8 @@ Error message and password prompt
 
 <li>$:/state/toc/POV-Jack-Using a filter with the toc-selective-expandable macro:ex--2125151462</li>
 
+<li>$:/state/toc/POV-John-Random chapter 1-509285676</li>
+
 <li>$:/status/RequireReloadDueToPluginChange</li>
 
 <li>$:/status/UserName</li>
@@ -364,6 +366,8 @@ Error message and password prompt
 <li>$:/tags/Footer</li>
 
 <li>$:/tags/PageControls</li>
+
+<li>$:/tags/SideBar</li>
 
 <li>$:/tags/Stylesheet</li>
 
@@ -539,6 +543,8 @@ Error message and password prompt
 
 <li>images/color-switch</li>
 
+<li>Increment a field with a button</li>
+
 <li>Index</li>
 
 <li>item-A</li>
@@ -549,7 +555,11 @@ Error message and password prompt
 
 <li>itemTemplateSidebarOrder</li>
 
+<li>John</li>
+
 <li>Link with prefix</li>
+
+<li>Log time with a button</li>
 
 <li>lorem</li>
 
@@ -566,6 +576,8 @@ Error message and password prompt
 <li>New Tiddler</li>
 
 <li>New Tiddler 1</li>
+
+<li>New Tiddler 10</li>
 
 <li>New Tiddler 2</li>
 
@@ -595,6 +607,10 @@ Error message and password prompt
 
 <li>Project:TW as a manual</li>
 
+<li>Random chapter</li>
+
+<li>Random chapter 1</li>
+
 <li>Read on lazy loading</li>
 
 <li>Read on TW alternative layout</li>
@@ -614,6 +630,16 @@ Error message and password prompt
 <li>Search a list of result</li>
 
 <li>Search the available variables</li>
+
+<li>search-list/item/img</li>
+
+<li>search-list/item/img/style</li>
+
+<li>search-list/item/li</li>
+
+<li>search-list/style</li>
+
+<li>search-list/template</li>
 
 <li>sentence with icon</li>
 
@@ -653,7 +679,7 @@ Error message and password prompt
 
 <li>SVG inline css</li>
 
-<li>System image gallery</li>
+<li>system image</li>
 
 <li>Tag_Icon</li>
 
@@ -706,6 +732,8 @@ Error message and password prompt
 <li>tip</li>
 
 <li>Todos</li>
+
+<li>Tracking with tiddlywiki</li>
 
 <li>TW as a blog/Custom permalink button</li>
 
@@ -907,7 +935,7 @@ height:auto;
 <pre>Built from branch 'tiddlywiki-com' at commit b95f6ca084ecc4b63a352a31da9c376551a58e91 of https://github.com/Jermolene/TiddlyWiki5 at 2021-07-04 10:58:55 UTC
 </pre>
 </div>
-<div created="20210810234449332" modified="20210911015956630" title="$:/config/AutoSave">
+<div created="20210810234449332" modified="20210912005736350" title="$:/config/AutoSave">
 <pre>no</pre>
 </div>
 <div caption="Kookma Plugin Library" created="20200306121057751" modified="20210906234456977" tags="$:/tags/PluginLibrary" title="$:/config/KookmaPluginLibrary" type="text/vnd.tiddlywiki" url="https://kookma.github.io/TW-PluginLibrary/library/index.html">
@@ -950,6 +978,9 @@ To use in other wikis, drag and drop this link to those wikis: [[Kookma Plugin L
 </div>
 <div created="20210627165739186" modified="20210910141045653" title="$:/config/RelinkOnRename">
 <pre>yes</pre>
+</div>
+<div created="20210911205659671" modified="20210911205659671" title="$:/config/TimestampDisable">
+<pre>no</pre>
 </div>
 <div created="20210714125309556" modified="20210906234456978" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/close-others">
 <pre>show</pre>
@@ -10945,11 +10976,6 @@ max-width:100vw;
 grid-column:-1/span 1;
 }</pre>
 </div>
-<div modified="20210911014353293" status="complete" title="$:/Import">
-<pre>The following tiddlers were imported:
-
-# [[characters]]</pre>
-</div>
 <div modified="20210906234456979" title="$:/isEncrypted">
 <pre>no</pre>
 </div>
@@ -10959,8 +10985,8 @@ grid-column:-1/span 1;
 <div created="20210816170533861" modified="20210909212308130" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
 <pre>Fixed Template/tagging --&gt; hide-tagging now properly hide tagging</pre>
 </div>
-<div created="20210825201734395" modified="20210906234456980" title="$:/layout">
-<pre>$:/core/ui/PageTemplateFooter</pre>
+<div created="20210825201734395" modified="20210911210427677" title="$:/layout">
+<pre>$:/core/ui/PageTemplate</pre>
 </div>
 <div created="20210727154833140" modified="20210906234456980" title="$:/mytag">
 <pre>add me</pre>
@@ -13261,7 +13287,7 @@ width:100%;
 <div created="20210810162433224" modified="20210906234456981" title="$:/state/addplugins/tab-1342078386">
 <pre>$:/config/KookmaPluginLibrary</pre>
 </div>
-<div created="20210714131710187" modified="20210911015011699" title="$:/state/advancedsearch/currentTab">
+<div created="20210714131710187" modified="20210911231603979" title="$:/state/advancedsearch/currentTab">
 <pre>$:/core/ui/AdvancedSearch/Shadows</pre>
 </div>
 <div created="20210803203323946" modified="20210906234456981" title="$:/state/commander/log-tiddler">
@@ -13291,23 +13317,23 @@ width:100%;
 <div created="20210807103955659" modified="20210906234456983" title="$:/state/plugin-info-575017246-$:/plugins/danielo515/2click2edit--543222777">
 <pre>contents</pre>
 </div>
-<div created="20210720145300038" modified="20210911015352462" title="$:/state/showeditpreview">
-<pre>no</pre>
+<div created="20210720145300038" modified="20210912004951910" title="$:/state/showeditpreview">
+<pre>yes</pre>
 </div>
-<div created="20210714123144577" modified="20210909221957647" title="$:/state/sidebar">
+<div created="20210714123144577" modified="20210911233825508" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20210803203320853" modified="20210906234456983" title="$:/state/tab--103319216">
 <pre>$:/plugins/kookma/commander/field/uicomp/remove-fields</pre>
 </div>
-<div created="20210714131710187" modified="20210911015011699" title="$:/state/tab--1498284803">
+<div created="20210714131710187" modified="20210911231603979" title="$:/state/tab--1498284803">
 <pre>$:/core/ui/AdvancedSearch/Shadows</pre>
 </div>
 <div created="20210906234102768" modified="20210906234102768" title="$:/state/tab--1705968773">
 <pre>$:/plugins/kookma/commander/field/uicomp/remove-fields</pre>
 </div>
-<div created="20210714123207883" modified="20210909201551323" title="$:/state/tab--1963855381">
-<pre>$:/core/ui/ControlPanel/StoryView</pre>
+<div created="20210714123207883" modified="20210911210417518" title="$:/state/tab--1963855381">
+<pre>$:/snippets/LayoutSwitcher</pre>
 </div>
 <div created="20210714131721087" modified="20210910120305398" title="$:/state/tab--2112689675">
 <pre>$:/core/ui/ControlPanel/Advanced</pre>
@@ -13327,8 +13353,8 @@ width:100%;
 <div created="20210909201506125" modified="20210909201513338" title="$:/state/tab-1535582057">
 <pre>$:/plugins/flibbles/relink/ui/TiddlerInfo/References</pre>
 </div>
-<div created="20210714123159097" modified="20210910120303599" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Info</pre>
+<div created="20210714123159097" modified="20210911210412129" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Appearance</pre>
 </div>
 <div created="20210716151227668" modified="20210906234456983" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
@@ -13336,8 +13362,8 @@ width:100%;
 <div created="20210803203319241" modified="20210906234456983" title="$:/state/tab-607722857">
 <pre>$:/plugins/kookma/commander/tag/ui</pre>
 </div>
-<div created="20210714123306926" modified="20210911015938832" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Open</pre>
+<div created="20210714123306926" modified="20210912005615677" title="$:/state/tab/sidebar--595412856">
+<pre>system image</pre>
 </div>
 <div created="20210714125257722" modified="20210906234456984" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
@@ -13372,6 +13398,9 @@ width:100%;
 <div created="20210906145054688" modified="20210906234456985" title="$:/state/toc/POV-Jack-Using a filter with the toc-selective-expandable macro:ex--2125151462">
 <pre>open</pre>
 </div>
+<div created="20210912004846871" modified="20210912004846871" title="$:/state/toc/POV-John-Random chapter 1-509285676">
+<pre>open</pre>
+</div>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
@@ -13385,6 +13414,9 @@ width:100%;
 <pre></pre>
 </div>
 <div created="20210811015722015" list="$:/core/ui/Buttons/home $:/core/ui/Buttons/close-all $:/core/ui/Buttons/fold-all $:/core/ui/Buttons/unfold-all $:/core/ui/Buttons/permaview $:/core/ui/Buttons/new-tiddler $:/core/ui/Buttons/new-journal $:/core/ui/Buttons/new-image $:/core/ui/Buttons/import $:/core/ui/Buttons/export-page $:/core/ui/Buttons/control-panel $:/core/ui/Buttons/advanced-search $:/plugins/kookma/commander/buttons/pagecontrol $:/core/ui/Buttons/manager $:/core/ui/Buttons/tag-manager $:/core/ui/Buttons/language $:/core/ui/Buttons/palette $:/core/ui/Buttons/theme $:/core/ui/Buttons/storyview $:/core/ui/Buttons/encryption $:/core/ui/Buttons/timestamp $:/core/ui/Buttons/full-screen $:/core/ui/Buttons/print $:/core/ui/Buttons/refresh $:/core/ui/Buttons/save-wiki $:/SaveToGitHub/Button $:/core/ui/Buttons/more-page-actions Buttons/SwitchPalette" modified="20210906234456985" title="$:/tags/PageControls">
+<pre></pre>
+</div>
+<div created="20210911233948260" list="↕ $:/core/ui/SideBar/Open $:/core/ui/SideBar/Recent $:/core/ui/SideBar/Tools $:/core/ui/SideBar/More $:/SaveToGitHub/Settings $:/Tasker/Kanban template/characters [[system image]]" modified="20210911233948260" title="$:/tags/SideBar">
 <pre></pre>
 </div>
 <div created="20210714122834007" modified="20210906234456985" tagging="after" title="$:/tags/Stylesheet">
@@ -15435,6 +15467,13 @@ Example of how to use Github Actions to build and publish a TiddlyWiki
 &lt;/svg
 </pre>
 </div>
+<div count="14" created="20210911211820616" modified="20210911212143419" title="Increment a field with a button">
+<pre>&lt;$button set=&quot;!!count&quot; setTo={{{ [{!!count}add[1]] }}} &gt;
+{{$:/core/images/timestamp-on}}
+&lt;/$button&gt;
+
+count: {{!!count}}</pre>
+</div>
 <div caption="Save to github" created="20210627165147396" description="todo : add search to filter the list of tips" modified="20210906234456989" tagging-tiddler="tip" title="Index">
 <pre>Welcome to https://telumire.github.io/TW-tips/ !
 
@@ -15456,12 +15495,33 @@ Here are some useful tips &amp; tricks to add to your wiki.
 &lt;$link to=&lt;&lt;currentTiddler&gt;&gt;&gt; &lt;$transclude field=&quot;caption&quot;&gt; &lt;$view field=&quot;title&quot;/&gt; &lt;/$transclude&gt;&lt;/$link&gt;
 &lt;/span&gt;</pre>
 </div>
+<div created="20210912004743741" modified="20210912005608176" tags="" title="John">
+<pre>&lt;div class=&quot;tc-pov&quot;&gt;
+
+&lt;$macrocall $name=&quot;toc-selective-expandable&quot; 
+
+tag={{{ [[POV-]][{!!title}]+[join[]] }}}
+
+sort=&quot;sort[title]&quot;
+
+/&gt;
+
+&lt;/div&gt;</pre>
+</div>
 <div caption="Link with a prefix." condition="[&lt;targetTiddler&gt;!has[type]] [&lt;targetTiddler&gt;type[text/vnd.tiddlywiki]]" created="20210822001019829" description="Link with a prefix. If the field prefix is set, the prefix is used, otherwise default to the current tiddler name." icon="$:/core/images/linkify" modified="20210909225802671" prefix="s" shortcuts="alt-shift-g" tags="$:/tags/EditorToolbar tip" task="doing" title="Link with prefix" title-suffix="/" type="text/vnd.tiddlywiki">
 <pre>&lt;$vars storeTitle=&lt;&lt;qualify &quot;$:/temp/storeTitle&quot;&gt;&gt; prefix={{{ [all[current]has[prefix]get[prefix]else&lt;targetTiddler&gt;get[prefix]else&lt;targetTiddler&gt;get[draft.title]addsuffix{!!suffix}] }}}&gt;
 &lt;$action-deletetiddler $filter=&quot;[&lt;storeTitle&gt;]&quot; /&gt;
 &lt;$action-sendmessage $message=&quot;tm-edit-text-operation&quot; $param=&quot;save-selection&quot; tiddler=&lt;&lt;storeTitle&gt;&gt; field=&quot;text&quot; /&gt;
 &lt;$action-sendmessage $message=&quot;tm-edit-text-operation&quot; $param=&quot;make-link&quot; text={{{ [&lt;storeTitle&gt;get[text]addprefix&lt;prefix&gt;] }}} /&gt;
 &lt;/$vars&gt;</pre>
+</div>
+<div created="20210911205052901" modified="20210911211818270" tags="" timestamp="23:16:04" title="Log time with a button">
+<pre>&lt;$button set=&quot;!!timestamp&quot; setTo=&lt;&lt;now &quot;hh:0mm:0ss&quot;&gt;&gt; &gt;
+{{$:/core/images/timestamp-on}}
+&lt;/$button&gt;
+
+timestamp : {{!!timestamp}}
+</pre>
 </div>
 <div created="20210803202942082" modified="20210906234456989" tags="[[lorem ipsum]]" title="lorem">
 <pre>lorem</pre>
@@ -15498,6 +15558,9 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, tempore, exerci
 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, tempore, exercitationem accusamus dolorum veritatis ullam dolorem aspernatur praesentium odio suscipit unde delectus cumque expedita minus culpa. Libero enim aliquam obcaecati quasi? Esse amet aut dolor, fugit molestiae deleniti minus facere dolore et libero, possimus commodi, est quam labore quia numquam reprehenderit doloremque illo laborum exercitationem tempora harum. Ullam ad ex commodi, autem omnis necessitatibus ducimus quo adipisci officia obcaecati libero consectetur nihil eius nesciunt. Necessitatibus sequi facere quo aspernatur, ducimus optio dicta laboriosam eius a blanditiis quis ab, dolorem voluptatum quae. Odit molestias eveniet, corporis aut illo recusandae accusantium exercitationem.</pre>
 </div>
 <div created="20210713203041177" modified="20210906234456989" tags="Test" title="New Tiddler 1">
+<pre></pre>
+</div>
+<div created="20210912004843388" modified="20210912004845096" tags="[[Random chapter 1]]" title="New Tiddler 10">
 <pre></pre>
 </div>
 <div created="20210713203045397" modified="20210906234456989" tags="Test" title="New Tiddler 2">
@@ -15611,6 +15674,12 @@ $text$
 * https://docs.animation-nodes.com/
 * https://262.ecma-international.org/10.0/#sec-switch-statement
 * https://javascript.info</pre>
+</div>
+<div created="20210912004804846" modified="20210912004821231" tags="POV-John" title="Random chapter">
+<pre></pre>
+</div>
+<div created="20210912004827569" modified="20210912005201790" tags="POV-John" title="Random chapter 1">
+<pre>{{!!source}}</pre>
 </div>
 <div created="20210819164156052" modified="20210906234456989" tags="[[Project:TW as a blog]]" task="todo" title="Read on lazy loading">
 <pre></pre>
@@ -15762,6 +15831,89 @@ padding:.5em;
 &lt;$codeblock code={{{ [&lt;varname&gt;getvariable[]] }}}/&gt;
 &lt;/$list&gt;
 
+&lt;/$set&gt;</pre>
+</div>
+<div created="20210911222821934" hide-body="yes" modified="20210911232444879" tags="[[system image]] wip" title="search-list/item/img">
+<pre>&lt;$button message=&quot;tm-copy-to-clipboard&quot; param=&lt;&lt;item&gt;&gt; class=&quot;tc-btn-invisible search-list-img&quot; tooltip=&lt;&lt;item&gt;&gt;&gt;
+&lt;$transclude tiddler=&lt;&lt;item&gt;&gt;/&gt;
+&lt;/$button&gt;</pre>
+</div>
+<div created="20210911225120089" modified="20210911233421529" tags="[[system image]] $:/tags/Stylesheet" title="search-list/item/img/style" type="text/css">
+<pre>.search-list-img :is(svg , img) {
+font-size: 2em;
+margin:5px;
+}
+
+.search-list-img img {
+object-fit: contain;
+width: 2em;
+height: auto;
+}</pre>
+</div>
+<div created="20210911023521573" modified="20210911232444879" tags="[[system image]] wip" title="search-list/item/li">
+<pre>&lt;li&gt;&lt;&lt;item&gt;&gt;&lt;/li&gt;
+</pre>
+</div>
+<div created="20210911022400630" modified="20210911233847949" tags="$:/tags/Stylesheet [[system image]]" title="search-list/style" type="text/css">
+<pre>.search-list-container {
+display:flex;
+align-items: center;
+}
+
+.search-list-container button {
+padding:.5em;
+}
+
+.tc-edit-texteditor {
+   width:100%;
+	padding: 3px 3px 3px 3px;
+	border: 1px solid rgb(63, 63, 63);
+	line-height: 1.3em;
+	-webkit-appearance: none;
+}</pre>
+</div>
+<div created="20210911022445519" modified="20210911233148436" tags="[[system image]] wip right-story" task="todo" title="search-list/template">
+<pre>&lt;div class=&quot;search-list-container&quot;&gt;
+&lt;$edit-text tiddler=&lt;&lt;qualify $:/temp/search&gt;&gt; field=&quot;text&quot; tag=&quot;input&quot; default=&quot;&quot; placeholder=&quot;type to search the list..&quot; class=&quot;tc-edit-texteditor&quot;/&gt;
+&lt;$reveal state=&lt;&lt;qualify $:/temp/search&gt;&gt; type=&quot;nomatch&quot; text=&quot;&quot;&gt;
+&lt;$button class=&quot;tc-btn-invisible&quot; tooltip=&quot;cancel search&quot;&gt; 
+&lt;$action-setfield $tiddler=&lt;&lt;qualify $:/temp/search&gt;&gt; text=&quot;&quot;/&gt;
+{{$:/core/images/close-button}}
+&lt;/$button&gt;
+&lt;/$reveal&gt;
+&lt;$button class=&quot;tc-btn-invisible&quot; tooltip=&quot;advanced search&quot;&gt; 
+&lt;$action-listops 
+$tiddler=&lt;&lt;qualify $:/temp/advanced-search/show&gt;&gt; 
+$field=&quot;text&quot; 
+$subfilter=&quot;+[toggle[yes],[no]]&quot;/&gt;
+{{$:/core/images/advanced-search-button}}
+&lt;/$button&gt;
+&lt;/div&gt;
+
+&lt;$reveal default={{{ [[$:/temp/advanced-search/show]addsuffix&lt;qualify&gt;get[text]] }}} type=&quot;match&quot; text=&quot;yes&quot;&gt;
+&lt;h3&gt;Advanced search&lt;/h3&gt;
+&lt;div class=&quot;search-list-container&quot;&gt;
+&lt;$edit-text tiddler=&lt;&lt;qualify $:/temp/filter&gt;&gt; field=&quot;text&quot; tag=&quot;input&quot; default=&quot;[search:[]]&quot; placeholder=&quot;write an additional filter here&quot; class=&quot;tc-edit-texteditor&quot;/&gt;
+&lt;$reveal state=&lt;&lt;qualify $:/temp/filter&gt;&gt; type=&quot;nomatch&quot; text=&quot;&quot;&gt;
+&lt;$button class=&quot;tc-btn-invisible&quot;&gt;
+&lt;$action-setfield $tiddler=&lt;&lt;qualify $:/temp/filter&gt;&gt; text=&quot;[search:[]]&quot;/&gt;
+{{$:/core/images/close-button}}
+&lt;/$button&gt;
+&lt;/$reveal&gt;
+&lt;/div&gt;
+&lt;/$reveal&gt;
+
+
+&lt;$set name=search tiddler=&lt;&lt;qualify $:/temp/search&gt;&gt; field=&quot;text&quot;&gt;
+&lt;$set name=filter tiddler=&lt;&lt;qualify $:/temp/filter&gt;&gt; field=&quot;text&quot;&gt;
+&lt;$set name=filter value={{{ [&lt;filter&gt;match[]then[+]else&lt;filter&gt;] }}}&gt;
+
+
+&lt;$list filter=&quot;[enlist&lt;search-list&gt;filter&lt;filter&gt;]+[search:*&lt;search&gt;]&quot; variable=&quot;item&quot; template=&lt;&lt;item-template&gt;&gt; /&gt;
+
+
+&lt;/$set&gt;
+&lt;/$set&gt;
 &lt;/$set&gt;</pre>
 </div>
 <div created="20210806125054939" modified="20210906234456990" tags="tip" title="sentence with icon">
@@ -16065,26 +16217,16 @@ see mozilla doc for inspiration of the external link icon
 
 </pre>
 </div>
-<div created="20140809113603449" modified="20210906234456991" tags="tip" title="System image gallery" type="text/vnd.tiddlywiki">
-<pre>Grid of all system images (ie, tiddlers tagged [[$:/tags/Image]]).
+<div created="20210911212256922" modified="20210911233135451" tags="tip search-list $:/tags/SideBar" title="system image">
+<pre>List of all system images (ie, tiddlers tagged {{$:/tags/Image||$:/core/ui/TagTemplate}}). Click on an icon to copy its title !
 
-&lt;style&gt;
-.my-gallery svg {
-width: 6em;
-height: 6em;
-margin: 1em;
-}
-&lt;/style&gt;
-&lt;div class=&quot;my-gallery&quot;&gt;
-&lt;$list filter=&quot;[all[tiddlers+shadows]tag[$:/tags/Image]]&quot;&gt;
-&lt;span title=&lt;&lt;currentTiddler&gt;&gt;&gt;
-&lt;$link to=&lt;&lt;currentTiddler&gt;&gt;&gt;
-&lt;$transclude/&gt;
-&lt;/$link&gt;
-&lt;/span&gt;
-&lt;/$list&gt;
-&lt;/div&gt;
-</pre>
+&lt;$set name=search-list filter=&quot;[all[tiddlers+shadows]tag[$:/tags/Image]]&quot; &gt;
+&lt;$set name=item-template value=&quot;search-list/item/img&quot;&gt;
+
+{{search-list/template}}
+
+&lt;/$set&gt;
+&lt;/$set&gt;</pre>
 </div>
 <div created="20210526223756479" modified="20210906234456991" tags="icon SVG [[Style tags]]" title="Tag_Icon" type="image/svg+xml">
 <pre>&lt;svg version=&quot;1.1&quot; viewBox=&quot;0 0 28.945 29.051&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; height=&quot;1em&quot; fill=&quot;#ffc966&quot;&gt;
@@ -16157,7 +16299,7 @@ Credit : {{!!author}}
 &lt;/$reveal&gt;
 &lt;/$list&gt;</pre>
 </div>
-<div caption="{{template/characters!!display-tiddler}}" created="20210909203627642" description="inspired from https://anthonymuscio.github.io/#%24%3A%2Fconfig%2Fcharacters" display-tiddler="characters" list-before="$:/core/ui/ViewTemplate/body" modified="20210911014353293" tags="$:/tags/ViewTemplate characters $:/tags/SideBar" title="template/characters">
+<div caption="{{template/characters!!display-tiddler}}" created="20210909203627642" description="inspired from https://anthonymuscio.github.io/#%24%3A%2Fconfig%2Fcharacters" display-tiddler="characters" modified="20210911233948259" tags="$:/tags/ViewTemplate characters $:/tags/SideBar" title="template/characters">
 <pre>&lt;$reveal tag=&quot;div&quot; type=&quot;match&quot; default={{!!title}} text=&quot;characters&quot; retain=&quot;yes&quot; animate=&quot;yes&quot;&gt;
 &lt;$reveal tag=&quot;div&quot; type=&quot;nomatch&quot; stateTitle=&lt;&lt;folded-state&gt;&gt; text=&quot;hide&quot; retain=&quot;yes&quot; animate=&quot;yes&quot;&gt;
 {{template/characters/search-list}}
@@ -16168,7 +16310,7 @@ Credit : {{!!author}}
 {{template/characters/search-list}}
 &lt;/$reveal&gt;</pre>
 </div>
-<div created="20210910153838348" description="todo : open link in edit mode" modified="20210911015606467" tags="template/characters characters" task="todo" title="template/characters/search-list">
+<div created="20210910153838348" description="todo : open link in edit mode" modified="20210911223139047" tags="template/characters characters" task="todo" title="template/characters/search-list">
 <pre>&lt;style&gt;
 .search-list-container {
 display:flex;
@@ -16421,11 +16563,15 @@ https://tiddlywiki.com/</pre>
 <div created="20210825212656390" modified="20210906234456993" tags="link" title="TiddlyWiki">
 <pre>https://tiddlywiki.com/</pre>
 </div>
-<div created="20210627170006507" list="$:/Tasker/Kanban $:/SaveToGitHub [[Draggable list based on fields rather than tags]] [[Conditional display based on language setting]] [[Add a button to set a task status to a tiddler]] [[Collapse/expand section within a tiddler]] [[Display a description on any tiddler]] [[Display the field source]] [[Display tiddlers tagging]] [[Drag and drop list of tiddlers]] [[Edit button for transcluded content]] $:/GridStoryRiver [[Add a favicon to your wiki]] [[Bulk tagging]] [[Button to create a new tiddler with an unused title without template]] [[Display an estimated reading time on each tiddler]] [[Good naming conventions]] [[How to use TiddlyWiki as a static website generator in 3 steps]] [[Open for edit tiddler to bypass crash]] [[Search a list of result]] [[sentence with icon]] [[Style link TO a specific tiddler in a specific color]] [[Button to switch palette (night mode)]] [[System image gallery]] [[Word counter]] [[Example of the sameday operator]]" modified="20210906234456993" tagging="after" title="tip">
+<div created="20210627170006507" list="$:/Tasker/Kanban $:/SaveToGitHub [[Draggable list based on fields rather than tags]] [[Conditional display based on language setting]] [[Add a button to set a task status to a tiddler]] [[Collapse/expand section within a tiddler]] [[Display a description on any tiddler]] [[Display the field source]] [[Display tiddlers tagging]] [[Drag and drop list of tiddlers]] [[Edit button for transcluded content]] $:/GridStoryRiver [[Add a favicon to your wiki]] [[Bulk tagging]] [[Button to create a new tiddler with an unused title without template]] [[Display an estimated reading time on each tiddler]] [[Good naming conventions]] [[How to use TiddlyWiki as a static website generator in 3 steps]] [[Open for edit tiddler to bypass crash]] [[Search a list of result]] [[sentence with icon]] [[Style link TO a specific tiddler in a specific color]] [[Button to switch palette (night mode)]] [[system image]] [[Word counter]] [[Example of the sameday operator]]" modified="20210911232444879" tagging="after" title="tip">
 <pre></pre>
 </div>
 <div created="20210714041352986" modified="20210906234456993" title="Todos">
 <pre>{{$:/Tasker/Kanban/todo||(task-list)}}</pre>
+</div>
+<div created="20210911211710389" modified="20210911211803005" tags="tip" title="Tracking with tiddlywiki">
+<pre>* [[Log time with a button]]
+* [[Increment a field]]</pre>
 </div>
 <div created="20210807211545611" description="A button to get the url of the tiddler for the web version - the title of the tab must reflect the title of the tiddler (bookmarking)" modified="20210906234456993" task="todo" title="TW as a blog/Custom permalink button">
 <pre></pre>
