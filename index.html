@@ -681,6 +681,12 @@ Error message and password prompt
 
 <li>painting#2</li>
 
+<li>procedural icon/colors</li>
+
+<li>procedural icon/template</li>
+
+<li>procedural svg with semi-random colors</li>
+
 <li>Project:TW as a blog</li>
 
 <li>Project:TW as a manual</li>
@@ -816,6 +822,8 @@ Error message and password prompt
 <li>TiddlerWithLinks</li>
 
 <li>TiddlyWiki</li>
+
+<li>Time and TW</li>
 
 <li>tip</li>
 
@@ -1091,7 +1099,7 @@ height:auto;
 <pre>Built from branch 'tiddlywiki-com' at commit b95f6ca084ecc4b63a352a31da9c376551a58e91 of https://github.com/Jermolene/TiddlyWiki5 at 2021-07-04 10:58:55 UTC
 </pre>
 </div>
-<div created="20210810234449332" modified="20210916063630885" title="$:/config/AutoSave">
+<div created="20210810234449332" modified="20210916075725871" title="$:/config/AutoSave">
 <pre>no</pre>
 </div>
 <div caption="Kookma Plugin Library" created="20200306121057751" modified="20210906234456977" tags="$:/tags/PluginLibrary" title="$:/config/KookmaPluginLibrary" type="text/vnd.tiddlywiki" url="https://kookma.github.io/TW-PluginLibrary/library/index.html">
@@ -13998,7 +14006,7 @@ width:100%;
 <div created="20210720145300038" modified="20210916055748858" title="$:/state/showeditpreview">
 <pre>no</pre>
 </div>
-<div created="20210714123144577" modified="20210916041511924" title="$:/state/sidebar">
+<div created="20210714123144577" modified="20210916065524268" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20210803203320853" modified="20210906234456983" title="$:/state/tab--103319216">
@@ -14085,7 +14093,7 @@ width:100%;
 <div created="20210627165215089" modified="20210906234456985" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div list="Index" title="$:/StoryList">
+<div created="20210916075055940" list="[[procedural svg with semi-random colors]]" modified="20210916075430167" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210827155614645" list="Footer [[Back to top]]" modified="20210906234456985" title="$:/tags/Footer">
@@ -16637,6 +16645,53 @@ $text$
 <div created="20210715011627831" en-gb="&quot;Self-Portrait, Yawning&quot; by Joseph Ducreux" fr-fr="&quot;Autoportrait, bâillant&quot; par Joseph Ducreux" img-alt="Yawning" img-class="" img-height="" img-source="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Joseph_Ducreux_%28French%29_-_Self-Portrait%2C_Yawning_-_Google_Art_Project.jpg/461px-Joseph_Ducreux_%28French%29_-_Self-Portrait%2C_Yawning_-_Google_Art_Project.jpg" img-tooltip="" img-width="" modified="20210906234456989" tags="gallery-painting" template="painting" title="painting#2">
 <pre></pre>
 </div>
+<div created="20210916075343194" modified="20210916075709785" tags="[[procedural svg]]" title="procedural icon/colors" type="application/x-tiddler-dictionary">
+<pre>orange: rgb(255, 113, 57)
+purple: rgb(161, 114, 255)
+green: rgb(42, 195, 162)
+red: rgb(255, 79, 95)
+blue: rgb(0, 144, 237)
+yellow: rgb(255, 164, 55)</pre>
+</div>
+<div created="20210916075230186" modified="20210916075701919" tags="[[procedural svg]]" title="procedural icon/template">
+<pre>&lt;$set name=ff-palette value={{{[[procedural icon/colors]]}}}&gt;
+&lt;$vars 
+x={{{ [&lt;qualify&gt;splitregexp[-]join[]] }}}
+y={{{ [&lt;ff-palette&gt;indexes[]count[]] }}}&gt;
+&lt;$set name=&quot;nth-color&quot; filter={{{ [&lt;x&gt;remainder&lt;y&gt;add[1]] }}}&gt;
+&lt;$set name=&quot;ff-color-name&quot; value={{{[&lt;ff-palette&gt;indexes[]nth&lt;nth-color&gt;]}}}&gt;
+&lt;$set name=&quot;ff-color&quot; value={{{[&lt;ff-palette&gt;getindex&lt;ff-color-name&gt;]}}}&gt;
+&lt;$set name=&quot;ff-style&quot; value={{{[&lt;ff-color&gt;addprefix[background:]addsuffix[;]]}}}&gt;
+&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 16 16&quot; class=&quot;letter-icon&quot;&gt;
+&lt;style&gt;
+svg.letter-icon text{
+
+fill:#FFF;
+text-transform: uppercase;
+font-family:Segoe UI Black;
+font-size:22px;
+font-weight: 800;
+transform: rotate(-10deg) translate(-10%, 19%);
+
+}
+&lt;/style&gt;
+  &lt;g&gt;
+    &lt;rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;100%&quot; height=&quot;100%&quot;  rx=&quot;10%&quot; ry=&quot;10%&quot; fill=&lt;&lt;ff-color&gt;&gt; /&gt;
+    &lt;text x=&quot;50%&quot; y=&quot;50%&quot; dominant-baseline=&quot;central&quot; text-anchor=&quot;middle&quot;&gt;
+&lt;$text text={{{ [{!!title}splitregexp[]first[]] }}}/&gt;
+&lt;/text&gt;
+  &lt;/g&gt;
+&lt;/svg&gt;
+&lt;/$set&gt;
+&lt;/$set&gt;
+&lt;/$set&gt;
+&lt;/$set&gt;
+&lt;/$vars&gt;
+&lt;/$set&gt;</pre>
+</div>
+<div created="20210916075532529" modified="20210916075653831" tagging-tiddler="procedural svg" tags="[[procedural svg]]" title="procedural svg with semi-random colors">
+<pre>{{A||procedural icon/template}}</pre>
+</div>
 <div created="20210816105308951" modified="20210906234456989" tags="project" task="todo" title="Project:TW as a blog">
 <pre></pre>
 </div>
@@ -17543,6 +17598,10 @@ https://tiddlywiki.com/</pre>
 </div>
 <div created="20210825212656390" modified="20210906234456993" tags="link" title="TiddlyWiki">
 <pre>https://tiddlywiki.com/</pre>
+</div>
+<div created="20210916065526927" modified="20210916065607019" tags="" title="Time and TW">
+<pre>* https://kixam.github.io/TW5-datePicker/
+* https://tiddlytools.com/timer.html</pre>
 </div>
 <div created="20210627170006507" list="[[shortcut to open the control panel (alt-c)]] $:/Tasker/Kanban $:/SaveToGitHub [[Draggable list based on fields rather than tags]] [[Conditional display based on language setting]] [[Add a button to set a task status to a tiddler]] [[Collapse/expand section within a tiddler]] [[Display a description on any tiddler]] [[Display the field source]] [[Display tiddlers tagging]] [[Drag and drop list of tiddlers]] [[Edit button for transcluded content]] $:/GridStoryRiver [[Add a favicon to your wiki]] [[Bulk tagging]] [[Button to create a new tiddler with an unused title without template]] [[Display an estimated reading time on each tiddler]] [[Good naming conventions]] [[How to use TiddlyWiki as a static website generator in 3 steps]] [[Open for edit tiddler to bypass crash]] [[Search a list of result]] [[sentence with icon]] [[Style link TO a specific tiddler in a specific color]] [[Button to switch palette (night mode)]] [[Word counter]] [[Example of the sameday operator]] [[Adding custom elements to the PageTemplate]] [[Calculation with filter]] [[Custom drop down menu]] [[Custom field to hide the preview pannel for specific tiddlers]] [[Hidden fields used by the core]] [[Hide sidebar on startup with startup actions]] [[How to know if we are in the sidebar]] [[how to use Github Actions to build and publish a TiddlyWiki]] [[Link with prefix]] macro/modulo [[Salvaging tiddlers from a wiki]] [[Search the available variables]] [[Story river snapshot]] [[SVG inline css]] [[Tracking with tiddlywiki]] [[Use qualify to give a color to a tiddler]] [[Using a filter with the toc-selective-expandable macro]] [[Using css variables]] [[Word Occurrence Highlighter]]" modified="20210915141406156" tagging="after" tags="TableOfContents" title="tip">
 <pre></pre>
