@@ -1099,7 +1099,7 @@ height:auto;
 <pre>Built from branch 'tiddlywiki-com' at commit b95f6ca084ecc4b63a352a31da9c376551a58e91 of https://github.com/Jermolene/TiddlyWiki5 at 2021-07-04 10:58:55 UTC
 </pre>
 </div>
-<div created="20210810234449332" modified="20210916080610603" title="$:/config/AutoSave">
+<div created="20210810234449332" modified="20210916084323818" title="$:/config/AutoSave">
 <pre>no</pre>
 </div>
 <div caption="Kookma Plugin Library" created="20200306121057751" modified="20210906234456977" tags="$:/tags/PluginLibrary" title="$:/config/KookmaPluginLibrary" type="text/vnd.tiddlywiki" url="https://kookma.github.io/TW-PluginLibrary/library/index.html">
@@ -14006,7 +14006,7 @@ width:100%;
 <div created="20210720145300038" modified="20210916055748858" title="$:/state/showeditpreview">
 <pre>no</pre>
 </div>
-<div created="20210714123144577" modified="20210916075924863" title="$:/state/sidebar">
+<div created="20210714123144577" modified="20210916084322142" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20210803203320853" modified="20210906234456983" title="$:/state/tab--103319216">
@@ -14093,7 +14093,7 @@ width:100%;
 <div created="20210627165215089" modified="20210906234456985" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210916075927250" list="[[procedural svg with semi-random colors]] Index" modified="20210916080123543" title="$:/StoryList">
+<div list="Index" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210827155614645" list="Footer [[Back to top]]" modified="20210906234456985" title="$:/tags/Footer">
@@ -16689,8 +16689,14 @@ transform: rotate(-10deg) translate(-10%, 19%);
 &lt;/$vars&gt;
 &lt;/$set&gt;</pre>
 </div>
-<div created="20210916075532529" modified="20210916080606688" tagging-tiddler="procedural svg" tags="[[procedural svg]]" title="procedural svg with semi-random colors">
-<pre>&lt;$tiddler tiddler=&lt;&lt;qualify $:/temp/search&gt;&gt; &gt; 
+<div created="20210916075532529" modified="20210916081024694" tagging-tiddler="procedural svg" tags="[[procedural svg]]" title="procedural svg with semi-random colors">
+<pre>&lt;style&gt;
+.procedural-svg svg{
+width:5em;
+}
+&lt;/style&gt;
+
+&lt;$tiddler tiddler=&lt;&lt;qualify $:/temp/search&gt;&gt; &gt; 
 
 &lt;$edit-text tag=&quot;input&quot; default=&quot;&quot; placeholder=&quot;type some text here..&quot;/&gt;
 &lt;$reveal type=&quot;nomatch&quot; default={{!!text}} text=&quot;&quot;&gt;
@@ -16701,11 +16707,11 @@ transform: rotate(-10deg) translate(-10%, 19%);
 
 &lt;/$tiddler&gt;
 
-&lt;style&gt;
-.procedural-svg svg{
-width:5em;
-}
-&lt;/style&gt;</pre>
+You can use this to create a custom icon/link from the first letter of a tiddler name :
+
+&lt;$link to=&quot;tip&quot;&gt;
+&lt;span class=&quot;procedural-svg&quot;&gt;{{tips||procedural icon/template}}&lt;/span&gt;
+&lt;/$link&gt;</pre>
 </div>
 <div created="20210816105308951" modified="20210906234456989" tags="project" task="todo" title="Project:TW as a blog">
 <pre></pre>
@@ -17614,9 +17620,10 @@ https://tiddlywiki.com/</pre>
 <div created="20210825212656390" modified="20210906234456993" tags="link" title="TiddlyWiki">
 <pre>https://tiddlywiki.com/</pre>
 </div>
-<div created="20210916065526927" modified="20210916065607019" tags="" title="Time and TW">
+<div created="20210916065526927" modified="20210916083802234" tags="" title="Time and TW">
 <pre>* https://kixam.github.io/TW5-datePicker/
-* https://tiddlytools.com/timer.html</pre>
+* https://tiddlytools.com/timer.html
+* https://dynalist.io/d/zUP-nIWu2FFoXH-oM7L7d9DM#q=time</pre>
 </div>
 <div created="20210627170006507" list="[[shortcut to open the control panel (alt-c)]] $:/Tasker/Kanban $:/SaveToGitHub [[Draggable list based on fields rather than tags]] [[Conditional display based on language setting]] [[Add a button to set a task status to a tiddler]] [[Collapse/expand section within a tiddler]] [[Display a description on any tiddler]] [[Display the field source]] [[Display tiddlers tagging]] [[Drag and drop list of tiddlers]] [[Edit button for transcluded content]] $:/GridStoryRiver [[Add a favicon to your wiki]] [[Bulk tagging]] [[Button to create a new tiddler with an unused title without template]] [[Display an estimated reading time on each tiddler]] [[Good naming conventions]] [[How to use TiddlyWiki as a static website generator in 3 steps]] [[Open for edit tiddler to bypass crash]] [[Search a list of result]] [[sentence with icon]] [[Style link TO a specific tiddler in a specific color]] [[Button to switch palette (night mode)]] [[Word counter]] [[Example of the sameday operator]] [[Adding custom elements to the PageTemplate]] [[Calculation with filter]] [[Custom drop down menu]] [[Custom field to hide the preview pannel for specific tiddlers]] [[Hidden fields used by the core]] [[Hide sidebar on startup with startup actions]] [[How to know if we are in the sidebar]] [[how to use Github Actions to build and publish a TiddlyWiki]] [[Link with prefix]] macro/modulo [[Salvaging tiddlers from a wiki]] [[Search the available variables]] [[Story river snapshot]] [[SVG inline css]] [[Tracking with tiddlywiki]] [[Use qualify to give a color to a tiddler]] [[Using a filter with the toc-selective-expandable macro]] [[Using css variables]] [[Word Occurrence Highlighter]]" modified="20210915141406156" tagging="after" tags="TableOfContents" title="tip">
 <pre></pre>
