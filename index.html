@@ -1099,7 +1099,7 @@ height:auto;
 <pre>Built from branch 'tiddlywiki-com' at commit b95f6ca084ecc4b63a352a31da9c376551a58e91 of https://github.com/Jermolene/TiddlyWiki5 at 2021-07-04 10:58:55 UTC
 </pre>
 </div>
-<div created="20210810234449332" modified="20210916075725871" title="$:/config/AutoSave">
+<div created="20210810234449332" modified="20210916080610603" title="$:/config/AutoSave">
 <pre>no</pre>
 </div>
 <div caption="Kookma Plugin Library" created="20200306121057751" modified="20210906234456977" tags="$:/tags/PluginLibrary" title="$:/config/KookmaPluginLibrary" type="text/vnd.tiddlywiki" url="https://kookma.github.io/TW-PluginLibrary/library/index.html">
@@ -14006,7 +14006,7 @@ width:100%;
 <div created="20210720145300038" modified="20210916055748858" title="$:/state/showeditpreview">
 <pre>no</pre>
 </div>
-<div created="20210714123144577" modified="20210916065524268" title="$:/state/sidebar">
+<div created="20210714123144577" modified="20210916075924863" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20210803203320853" modified="20210906234456983" title="$:/state/tab--103319216">
@@ -14093,7 +14093,7 @@ width:100%;
 <div created="20210627165215089" modified="20210906234456985" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210916075055940" list="[[procedural svg with semi-random colors]]" modified="20210916075430167" title="$:/StoryList">
+<div created="20210916075927250" list="[[procedural svg with semi-random colors]] Index" modified="20210916080123543" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210827155614645" list="Footer [[Back to top]]" modified="20210906234456985" title="$:/tags/Footer">
@@ -16689,8 +16689,23 @@ transform: rotate(-10deg) translate(-10%, 19%);
 &lt;/$vars&gt;
 &lt;/$set&gt;</pre>
 </div>
-<div created="20210916075532529" modified="20210916075653831" tagging-tiddler="procedural svg" tags="[[procedural svg]]" title="procedural svg with semi-random colors">
-<pre>{{A||procedural icon/template}}</pre>
+<div created="20210916075532529" modified="20210916080606688" tagging-tiddler="procedural svg" tags="[[procedural svg]]" title="procedural svg with semi-random colors">
+<pre>&lt;$tiddler tiddler=&lt;&lt;qualify $:/temp/search&gt;&gt; &gt; 
+
+&lt;$edit-text tag=&quot;input&quot; default=&quot;&quot; placeholder=&quot;type some text here..&quot;/&gt;
+&lt;$reveal type=&quot;nomatch&quot; default={{!!text}} text=&quot;&quot;&gt;
+&lt;$button class=&quot;tc-btn-invisible&quot; set=&quot;!!text&quot; setTo=&quot;&quot;&gt;{{$:/core/images/close-button}}&lt;/$button&gt;
+&lt;/$reveal&gt;
+
+&lt;span class=&quot;procedural-svg&quot;&gt;&lt;$tiddler tiddler={{!!text}} &gt;{{||procedural icon/template}}&lt;/$tiddler&gt;&lt;/span&gt;
+
+&lt;/$tiddler&gt;
+
+&lt;style&gt;
+.procedural-svg svg{
+width:5em;
+}
+&lt;/style&gt;</pre>
 </div>
 <div created="20210816105308951" modified="20210906234456989" tags="project" task="todo" title="Project:TW as a blog">
 <pre></pre>
