@@ -447,6 +447,8 @@ Error message and password prompt
 
 <li>$:/Tasker/ui/Buttons/tasker</li>
 
+<li>$:/telumire/modules/filter/moremath.js</li>
+
 <li>$:/theme</li>
 
 <li>$:/themes/tiddlywiki/snowwhite</li>
@@ -504,6 +506,8 @@ Error message and password prompt
 <li>data</li>
 
 <li>Design the manual template on penpot</li>
+
+<li>Disable camelCase linking locally with the tv-wikilinks variable</li>
 
 <li>Display a description on any tiddler</li>
 
@@ -737,6 +741,10 @@ Error message and password prompt
 
 <li>something</li>
 
+<li>Spider graph</li>
+
+<li>Spider graph/value/1</li>
+
 <li>Story river snapshot</li>
 
 <li>structured data</li>
@@ -778,6 +786,8 @@ Error message and password prompt
 <li>task</li>
 
 <li>Task managing with the macro list-has-field-draggable</li>
+
+<li>tasker button at the right of the title</li>
 
 <li>Télumire</li>
 
@@ -1099,7 +1109,7 @@ height:auto;
 <pre>Built from branch 'tiddlywiki-com' at commit b95f6ca084ecc4b63a352a31da9c376551a58e91 of https://github.com/Jermolene/TiddlyWiki5 at 2021-07-04 10:58:55 UTC
 </pre>
 </div>
-<div created="20210810234449332" modified="20210916084323818" title="$:/config/AutoSave">
+<div created="20210810234449332" modified="20210919004903068" title="$:/config/AutoSave">
 <pre>no</pre>
 </div>
 <div caption="Kookma Plugin Library" created="20200306121057751" modified="20210906234456977" tags="$:/tags/PluginLibrary" title="$:/config/KookmaPluginLibrary" type="text/vnd.tiddlywiki" url="https://kookma.github.io/TW-PluginLibrary/library/index.html">
@@ -13970,8 +13980,8 @@ width:100%;
 <div created="20210810162433224" modified="20210913105002839" title="$:/state/addplugins/tab-1342078386">
 <pre>$:/config/OfficialPluginLibrary</pre>
 </div>
-<div created="20210714131710187" modified="20210915193611571" title="$:/state/advancedsearch/currentTab">
-<pre>$:/core/ui/AdvancedSearch/Shadows</pre>
+<div created="20210714131710187" modified="20210916134002424" title="$:/state/advancedsearch/currentTab">
+<pre>$:/core/ui/AdvancedSearch/Filter</pre>
 </div>
 <div created="20210803203323946" modified="20210906234456981" title="$:/state/commander/log-tiddler">
 <pre>$:/temp/commander/logs/tid-2</pre>
@@ -14003,17 +14013,17 @@ width:100%;
 <div created="20210807103955659" modified="20210906234456983" title="$:/state/plugin-info-575017246-$:/plugins/danielo515/2click2edit--543222777">
 <pre>contents</pre>
 </div>
-<div created="20210720145300038" modified="20210916055748858" title="$:/state/showeditpreview">
+<div created="20210720145300038" modified="20210919004210282" title="$:/state/showeditpreview">
 <pre>no</pre>
 </div>
-<div created="20210714123144577" modified="20210916084322142" title="$:/state/sidebar">
+<div created="20210714123144577" modified="20210919004855520" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20210803203320853" modified="20210906234456983" title="$:/state/tab--103319216">
 <pre>$:/plugins/kookma/commander/field/uicomp/remove-fields</pre>
 </div>
-<div created="20210714131710187" modified="20210915193611571" title="$:/state/tab--1498284803">
-<pre>$:/core/ui/AdvancedSearch/Shadows</pre>
+<div created="20210714131710187" modified="20210916134002424" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/Filter</pre>
 </div>
 <div created="20210906234102768" modified="20210906234102768" title="$:/state/tab--1705968773">
 <pre>$:/plugins/kookma/commander/field/uicomp/remove-fields</pre>
@@ -14048,8 +14058,8 @@ width:100%;
 <div created="20210803203319241" modified="20210906234456983" title="$:/state/tab-607722857">
 <pre>$:/plugins/kookma/commander/tag/ui</pre>
 </div>
-<div created="20210714123306926" modified="20210916055720936" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Recent</pre>
+<div created="20210714123306926" modified="20210919004900030" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Open</pre>
 </div>
 <div created="20210714125257722" modified="20210906234456984" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
@@ -14093,7 +14103,7 @@ width:100%;
 <div created="20210627165215089" modified="20210906234456985" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div list="Index" title="$:/StoryList">
+<div created="20210919003802678" list="[[tasker button at the right of the title]]" modified="20210919004117823" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210827155614645" list="Footer [[Back to top]]" modified="20210906234456985" title="$:/tags/Footer">
@@ -14386,7 +14396,7 @@ subFilter=&lt;&lt;subFilter&gt;&gt;
 	display:contents;
 }</pre>
 </div>
-<div caption="Alternative : display tasker at the left of the title" created="20210707153929980" icon="ui/Buttons/tasker" modified="20210906234456985" tags="TW5 $:/tags/Stylesheet $:/Tasker $:/Tasker/Kanban" task="done" title="$:/Tasker/Tasker button at the left of the title" type="text/css" voir="$:/core/ui/ViewTemplate/title">
+<div caption="Alternative : display tasker at the left of the title" created="20210707153929980" icon="$:/Tasker/ui/Buttons/tasker" modified="20210919004125180" tags="TW5 $:/tags/Stylesheet $:/Tasker $:/Tasker/Kanban" task="done" title="$:/Tasker/Tasker button at the left of the title" type="text/css" voir="$:/core/ui/ViewTemplate/title">
 <pre>a.tc-tiddlylink:hover {
 text-decoration:unset; /*prevent underline when button is hovered*/
 }
@@ -14420,6 +14430,63 @@ a.tc-tiddlylink .tc-title:hover {
    &lt;/$fieldmangler&gt;
 &lt;/$list&gt;
 &lt;/label&gt;</pre>
+</div>
+<div created="20210916131058159" modified="20210916140815400" module-type="filteroperator" tags="trigonometry" title="$:/telumire/modules/filter/moremath.js" type="application/javascript">
+<pre>/*\
+title: $:/telumire/modules/macros/moremath.js
+type: application/javascript
+module-type: filteroperator
+
+Add missing filter operators for math. 
+See $:/core/modules/filters/math.js
+
+\*/
+(function(){
+
+/*jslint node: true, browser: true */
+/*global $tw: false */
+&quot;use strict&quot;;
+
+exports.cos= makeNumericBinaryOperator(
+	function(a) {return Math.cos(a)}
+);
+
+exports.sin= makeNumericBinaryOperator(
+	function(a) {return Math.sin(a)}
+);
+
+exports.tan= makeNumericBinaryOperator(
+	function(a) {return Math.tan(a)}
+);
+
+exports.acos= makeNumericBinaryOperator(
+	function(a) {return Math.acos(a)}
+);
+
+exports.asin= makeNumericBinaryOperator(
+	function(a) {return Math.asin(a)}
+);
+
+exports.atan= makeNumericBinaryOperator(
+	function(a) {return Math.atan(a)}
+);
+
+exports.atan2= makeNumericBinaryOperator(
+	function(a) {return Math.atan2(a)}
+);
+
+function makeNumericBinaryOperator(fnCalc) {
+	return function(source,operator,options) {
+		var result = [],
+			numOperand = $tw.utils.parseNumber(operator.operand);
+		source(function(tiddler,title) {
+			result.push($tw.utils.stringifyNumber(fnCalc($tw.utils.parseNumber(title),numOperand)));
+		});
+		return result;
+	};
+};
+
+})();</pre>
 </div>
 <div created="20210713161037137" modified="20210906234456985" title="$:/theme">
 <pre>$:/themes/tiddlywiki/snowwhite</pre>
@@ -15961,6 +16028,15 @@ A: 8</pre>
 <div created="20210819164231685" modified="20210906234456986" tags="[[Project:TW as a manual]]" task="todo" title="Design the manual template on penpot">
 <pre></pre>
 </div>
+<div created="20210917232907298" modified="20210917233023831" source="https://talk.tiddlywiki.org/t/the-using-of-camelcases-and-what-the-tilde-is-doing/287/14" tags="tip" title="Disable camelCase linking locally with the tv-wikilinks variable">
+<pre>\define tv-wikilinks() no
+
+CaMmel
+
+~CaMmel
+
+[[CaMmel]]</pre>
+</div>
 <div created="20210713190742365" modified="20210906234456987" tagging="after" tags="tip" title="Display a description on any tiddler">
 <pre>This is useful when we want to display a text without putting it into the tiddler body (macro, template ..)</pre>
 </div>
@@ -16653,7 +16729,7 @@ red: rgb(255, 79, 95)
 blue: rgb(0, 144, 237)
 yellow: rgb(255, 164, 55)</pre>
 </div>
-<div created="20210916075230186" modified="20210916075701919" tags="[[procedural svg]]" title="procedural icon/template">
+<div created="20210916075230186" modified="20210916085824077" tags="[[procedural svg]]" title="procedural icon/template">
 <pre>&lt;$set name=ff-palette value={{{[[procedural icon/colors]]}}}&gt;
 &lt;$vars 
 x={{{ [&lt;qualify&gt;splitregexp[-]join[]] }}}
@@ -16973,6 +17049,46 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6267703/</pre>
 </div>
 <div created="20210720155725916" list="[[code count regex]]" modified="20210906234456990" title="something">
 <pre></pre>
+</div>
+<div created="20210916140823986" modified="20210916203509904" tags="" task="todo" title="Spider graph">
+<pre>&lt;$tiddler tiddler=&quot;Spider graph/value/1&quot;&gt;
+&lt;ul&gt;
+&lt;$list filter=&quot;[{!!title}indexes[]]&quot; variable=&quot;index&quot;&gt;
+
+&lt;$set name=&quot;i&quot; value={{{ [{!!title}indexes[]allbefore&lt;index&gt;count[]add[1]] }}}&gt;
+
+&lt;$set name=&quot;nb&quot; value={{{ [{!!title}indexes[]count[]] }}}&gt;
+&lt;$set name=&quot;rad&quot; value={{{ [[360]divide&lt;i&gt;multiply[3.1415926535]divide[180]] }}}&gt;
+&lt;$set name=r value=&quot;1&quot;&gt;
+&lt;$set name=&quot;pointX&quot; value={{{[&lt;rad&gt;cos[]multiply&lt;r&gt;fixed[2]]}}} &gt;
+&lt;$set name=&quot;pointY&quot; value={{{[&lt;rad&gt;sin[]multiply&lt;r&gt;fixed[2]]}}} &gt; 
+
+
+&lt;li&gt;AXIS #&lt;&lt;i&gt;&gt; : &lt;&lt;index&gt;&gt; xA =&lt;&lt;pointX&gt;&gt; , yA = &lt;&lt;pointY&gt;&gt; 
+&lt;/li&gt;
+&lt;li&gt;Point : {{{ [getindex&lt;index&gt;] }}} xP= , yP =  
+&lt;/li&gt;
+
+&lt;/$set&gt;
+&lt;/$set&gt;
+&lt;/$set&gt;
+&lt;/$set&gt;
+&lt;/$set&gt;
+&lt;/$set&gt;
+
+&lt;/$list&gt;
+&lt;/ul&gt;
+&lt;/$tiddler&gt;</pre>
+</div>
+<div created="20210916163350037" modified="20210916203508983" tags="" task="todo" title="Spider graph/value/1" type="application/json">
+<pre>{
+    &quot;DEFENSE&quot;: &quot;100%&quot;,
+    &quot;POWER&quot;: &quot;100%&quot;,
+    &quot;PASSING&quot;: &quot;80%&quot;,
+    &quot;OFFENSE&quot;: &quot;30%&quot;,
+    &quot;SHOOTING&quot;: &quot;10%&quot;,
+    &quot;RELIABILITY&quot;: &quot;50%&quot;
+}</pre>
 </div>
 <div created="20210909151707095" modified="20210909152253091" source="https://groups.google.com/g/tiddlywiki/c/IWJJpx6L6O4/m/8WqVIHcKBwAJ" tags="tip" title="Story river snapshot">
 <pre>\define saveSnapshot()
@@ -17338,6 +17454,29 @@ see mozilla doc for inspiration of the external link icon
 ;task without value :
 
 &lt;&lt;list-has-field-draggable field:&quot;task&quot; filter:&quot;-[has[task]]&quot;&gt;&gt;</pre>
+</div>
+<div caption="Alternative : display tasker at the left of the title" created="20210919004138855" icon="$:/Tasker/ui/Buttons/tasker" modified="20210919004850153" tags="TW5 $:/tags/Stylesheet $:/Tasker $:/Tasker/Kanban" task="done" title="tasker button at the right of the title" type="text/css" voir="$:/core/ui/ViewTemplate/title">
+<pre>a.tc-tiddlylink:hover {
+text-decoration:unset; /*prevent underline when button is hovered*/
+}
+
+a.tc-tiddlylink .tc-title:hover {
+	text-decoration:underline; /*restore underline when title is hovered*/
+}
+
+.tc-tiddler-title-icon{
+	display:inline-flex;
+justify-content: start;
+align-items: center;
+padding:5px;
+}
+
+.tc-tiddler-view-frame  .tc-titlebar&gt;:not(.tc-tiddler-controls){
+display: flex;
+flex-direction: row-reverse;
+justify-content: start;
+align-items: center;
+}</pre>
 </div>
 <div created="20210714035609328" modified="20210906234456991" tags="author" title="Télumire">
 <pre>&lt;&lt;list-links &quot;[creator&lt;currentTiddler&gt;sort[title]]&quot;&gt;&gt;
