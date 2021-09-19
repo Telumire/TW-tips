@@ -1111,7 +1111,7 @@ height:auto;
 <pre>Built from branch 'tiddlywiki-com' at commit b95f6ca084ecc4b63a352a31da9c376551a58e91 of https://github.com/Jermolene/TiddlyWiki5 at 2021-07-04 10:58:55 UTC
 </pre>
 </div>
-<div created="20210810234449332" modified="20210919170915730" title="$:/config/AutoSave">
+<div created="20210810234449332" modified="20210919170956229" title="$:/config/AutoSave">
 <pre>no</pre>
 </div>
 <div caption="Kookma Plugin Library" created="20200306121057751" modified="20210906234456977" tags="$:/tags/PluginLibrary" title="$:/config/KookmaPluginLibrary" type="text/vnd.tiddlywiki" url="https://kookma.github.io/TW-PluginLibrary/library/index.html">
@@ -17774,24 +17774,24 @@ https://tiddlywiki.com/</pre>
 <pre>* [[Log time with a button]]
 * [[Increment a field]]</pre>
 </div>
-<div created="20210908171908194" description="&lt;span class=&quot;icon-svg github&quot;&gt; blue github icon !&lt;/span&gt;" modified="20210919170907438" tags="$:/tags/Stylesheet" title="Trick to use system svg with css and allow to change the color" type="" url="`--`url:url(&lt;$text text={{{[['data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;]][&lt;fill&gt;][[&quot; width=&quot;22pt&quot; height=&quot;22pt&quot;&gt;]][&lt;svg&gt;][[&lt;/svg&gt;']]+[join[]]}}} /&gt;);">
+<div created="20210908171908194" description="&lt;span class=&quot;icon-svg github&quot;&gt; blue github icon !&lt;/span&gt;" modified="20210919170947005" tags="$:/tags/Stylesheet tip" title="Trick to use system svg with css and allow to change the color" type="" url="`--`url:url(&lt;$text text={{{[['data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;]][&lt;fill&gt;][[&quot; width=&quot;22pt&quot; height=&quot;22pt&quot;&gt;]][&lt;svg&gt;][[&lt;/svg&gt;']]+[join[]]}}} /&gt;);">
 <pre>\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline html
 &lt;pre&gt;
 
 .icon-svg:before{
     content: &quot; &quot;;
-		display: inline-block;
+    display: inline-block;
     height:22pt;
     width:22pt;
-		background: center / contain no-repeat var(--url);
+    background: center / contain no-repeat var(--url);
 }
 
 .icon-svg {
-&lt;$vars svg={{$:/core/images/blank}} fill=red&gt; {{!!url}}
+    &lt;$vars svg={{$:/core/images/blank}} fill=red&gt; {{!!url}}
 }
 
 .icon-svg.github {
-&lt;$vars svg={{$:/core/images/github}} fill=blue&gt; {{!!url}}
+    &lt;$vars svg={{$:/core/images/github}} fill=blue&gt; {{!!url}}
 }</pre>
 </div>
 <div created="20210807211545611" description="A button to get the url of the tiddler for the web version - the title of the tab must reflect the title of the tiddler (bookmarking)" modified="20210906234456993" task="todo" title="TW as a blog/Custom permalink button">
