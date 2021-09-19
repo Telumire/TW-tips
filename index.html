@@ -497,6 +497,8 @@ Error message and password prompt
 
 <li>count me in !</li>
 
+<li>CSS for using any svg system image inline</li>
+
 <li>Custom drop down menu</li>
 
 <li>Custom field to hide the preview pannel for specific tiddlers</li>
@@ -1111,7 +1113,7 @@ height:auto;
 <pre>Built from branch 'tiddlywiki-com' at commit b95f6ca084ecc4b63a352a31da9c376551a58e91 of https://github.com/Jermolene/TiddlyWiki5 at 2021-07-04 10:58:55 UTC
 </pre>
 </div>
-<div created="20210810234449332" modified="20210919170956229" title="$:/config/AutoSave">
+<div created="20210810234449332" modified="20210919174921676" title="$:/config/AutoSave">
 <pre>no</pre>
 </div>
 <div caption="Kookma Plugin Library" created="20200306121057751" modified="20210906234456977" tags="$:/tags/PluginLibrary" title="$:/config/KookmaPluginLibrary" type="text/vnd.tiddlywiki" url="https://kookma.github.io/TW-PluginLibrary/library/index.html">
@@ -14016,7 +14018,7 @@ width:100%;
 <div created="20210720145300038" modified="20210919004210282" title="$:/state/showeditpreview">
 <pre>no</pre>
 </div>
-<div created="20210714123144577" modified="20210919170849111" title="$:/state/sidebar">
+<div created="20210714123144577" modified="20210919174537628" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20210803203320853" modified="20210906234456983" title="$:/state/tab--103319216">
@@ -14058,8 +14060,8 @@ width:100%;
 <div created="20210803203319241" modified="20210906234456983" title="$:/state/tab-607722857">
 <pre>$:/plugins/kookma/commander/tag/ui</pre>
 </div>
-<div created="20210714123306926" modified="20210919170850843" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Recent</pre>
+<div created="20210714123306926" modified="20210919174410777" title="$:/state/tab/sidebar--595412856">
+<pre>system image</pre>
 </div>
 <div created="20210714125257722" modified="20210906234456984" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
@@ -14103,7 +14105,7 @@ width:100%;
 <div created="20210627165215089" modified="20210906234456985" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210919170851664" list="[[Trick to use system svg with css and allow to change the color]]" modified="20210919170851664" title="$:/StoryList">
+<div list="Index" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210827155614645" list="Footer [[Back to top]]" modified="20210906234456985" title="$:/tags/Footer">
@@ -15990,6 +15992,13 @@ Can also use filter on attribute specifying the tiddler name in widgets like tra
 <div created="20210802230025436" modified="20210906234456986" title="count me in !">
 <pre>one two three four five</pre>
 </div>
+<div created="20210919174538814" modified="20210919174917537" tags="$:/tags/Stylesheet [[Trick to use system svg with css and allow to change the color]]" title="CSS for using any svg system image inline" url="`--`url:url(&lt;$text text={{{[['data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;]][&lt;fill&gt;][[&quot; width=&quot;22pt&quot; height=&quot;22pt&quot;&gt;]][&lt;svg&gt;][[&lt;/svg&gt;']]+[join[]]}}} /&gt;);">
+<pre>\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline html
+&lt;pre&gt;
+&lt;$list filter=&quot;[all[shadows]tag[$:/tags/Image]]&quot; variable=img&gt;
+&lt;$vars svg={{{[&lt;img&gt;get[text]]}}}&gt;.icon-svg.{{{[&lt;img&gt;removeprefix[$:/core/images/]]}}} { {{!!url}} } &lt;/$vars&gt;
+&lt;/$list&gt;</pre>
+</div>
 <div created="20210827172456422" description="code by u/Defiant_Information" modified="20210906234456986" source="https://www.reddit.com/r/TiddlyWiki5/comments/pc907o/multiple_newhere_buttons/hakan6h/" tags="tip" title="Custom drop down menu">
 <pre>&lt;$button popup=&lt;&lt;qualify &quot;$:/state/popup/custommore&quot;&gt;&gt; tooltip=&quot;More Buttons&quot; class=&lt;&lt;tv-config-toolbar-class&gt;&gt; selectedClass=&quot;tc-selected&quot;&gt;
 {{$:/core/images/down-arrow}}
@@ -17774,7 +17783,7 @@ https://tiddlywiki.com/</pre>
 <pre>* [[Log time with a button]]
 * [[Increment a field]]</pre>
 </div>
-<div created="20210908171908194" description="&lt;span class=&quot;icon-svg github&quot;&gt; blue github icon !&lt;/span&gt;" modified="20210919170947005" tags="$:/tags/Stylesheet tip" title="Trick to use system svg with css and allow to change the color" type="" url="`--`url:url(&lt;$text text={{{[['data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;]][&lt;fill&gt;][[&quot; width=&quot;22pt&quot; height=&quot;22pt&quot;&gt;]][&lt;svg&gt;][[&lt;/svg&gt;']]+[join[]]}}} /&gt;);">
+<div created="20210908171908194" description="&lt;span class=&quot;icon-svg github blue&quot;&gt; blue github icon !&lt;/span&gt;  &lt;br&gt; see also [[CSS for using any svg system image inline]]" modified="20210919174844127" tags="$:/tags/Stylesheet tip" title="Trick to use system svg with css and allow to change the color" type="" url="`--`url:url(&lt;$text text={{{[['data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;]][&lt;fill&gt;][[&quot; width=&quot;22pt&quot; height=&quot;22pt&quot;&gt;]][&lt;svg&gt;][[&lt;/svg&gt;']]+[join[]]}}} /&gt;);">
 <pre>\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline html
 &lt;pre&gt;
 
@@ -17786,12 +17795,8 @@ https://tiddlywiki.com/</pre>
     background: center / contain no-repeat var(--url);
 }
 
-.icon-svg {
-    &lt;$vars svg={{$:/core/images/blank}} fill=red&gt; {{!!url}}
-}
-
-.icon-svg.github {
-    &lt;$vars svg={{$:/core/images/github}} fill=blue&gt; {{!!url}}
+.icon-svg.github.blue{
+    &lt;$vars svg={{$:/core/images/github}} fill=&quot;blue&quot;&gt; {{!!url}}&lt;/$vars&gt;
 }</pre>
 </div>
 <div created="20210807211545611" description="A button to get the url of the tiddler for the web version - the title of the tab must reflect the title of the tiddler (bookmarking)" modified="20210906234456993" task="todo" title="TW as a blog/Custom permalink button">
