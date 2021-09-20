@@ -151,6 +151,8 @@ Error message and password prompt
 
 <li>(language-selection)</li>
 
+<li>(path-spider)</li>
+
 <li>(qualify color)</li>
 
 <li>(reading-time)</li>
@@ -158,6 +160,8 @@ Error message and password prompt
 <li>(search-data)</li>
 
 <li>(search-list)</li>
+
+<li>(svg-spider)</li>
 
 <li>(tagging)</li>
 
@@ -252,8 +256,6 @@ Error message and password prompt
 <li>$:/GridStoryRiver/RightStory/button</li>
 
 <li>$:/GridStoryRiver/style</li>
-
-<li>$:/Import</li>
 
 <li>$:/isEncrypted</li>
 
@@ -489,6 +491,8 @@ Error message and password prompt
 
 <li>Collapse/expand section within a tiddler</li>
 
+<li>Combine two list in one filter</li>
+
 <li>Conditional display based on language setting</li>
 
 <li>Conditional variable attribution</li>
@@ -637,6 +641,8 @@ Error message and password prompt
 
 <li>John</li>
 
+<li>Jojo</li>
+
 <li>Link with prefix</li>
 
 <li>Log time with a button</li>
@@ -715,6 +721,8 @@ Error message and password prompt
 
 <li>Reading-time/wpm</li>
 
+<li>Reduce SVG</li>
+
 <li>Salvaging tiddlers from a wiki</li>
 
 <li>Saving to github button</li>
@@ -744,6 +752,8 @@ Error message and password prompt
 <li>something</li>
 
 <li>Spider graph</li>
+
+<li>Spider graph path</li>
 
 <li>Spider graph/value/1</li>
 
@@ -881,7 +891,7 @@ Error message and password prompt
 <!--~~ Ordinary tiddlers ~~-->
 
 <div id="storeArea" style="display:none;">
-<div created="20210702134909188" description="Transclure avec ce tiddler pour afficher un bouton d'édition : `{{NomduTiddler||(edit-inline)}}` en mode inline" modified="20210906234456976" tags="TW5 [[Edit button for transcluded content]]" title="(edit-inline)">
+<div created="20210702134909188" description="E.g : `{{Nameofyourtiddler||(edit-inline)}}`" modified="20210919182055166" tags="TW5 [[Edit button for transcluded content]]" title="(edit-inline)">
 <pre>&lt;span class=&quot;transclude-edit&quot;&gt;&lt;$transclude tiddler={{!!title}} mode=&quot;inline&quot;/&gt;&lt;span class=&quot;hide-until-hover transclude-edit-button&quot;&gt; {{||$:/core/ui/Buttons/edit}} &lt;/span&gt;&lt;/span&gt;</pre>
 </div>
 <div created="20210612222422816" modified="20210906234456976" tags="[[TW Tones]] TW5 [[Edit button for transcluded content]]" title="(edit)">
@@ -917,6 +927,11 @@ class={{!!img-class}}
  &lt;option value=&quot;fr-FR&quot;&gt;fr-FR&lt;/option&gt;
  &lt;option value=&quot;en-GB&quot;&gt;en-GB&lt;/option&gt;
 &lt;/$select&gt;</pre>
+</div>
+<div axis="defense offense passing power reliability shooting" created="20210920153729635" defense="100" modified="20210920204220564" offense="100" passing="100" path="{{{[[&lt;svg viewBox=&quot;-100 -100 200 200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path  d=&quot;M ]][&lt;cord&gt;][[ Z&quot;/&gt;&lt;/svg&gt;]]+[join[]]}}}" power="100" reliability="100" shooting="100" tags="" task="todo" title="(path-spider)">
+<pre>&lt;$set name=&quot;character&quot; value={{!!title}}&gt;&lt;$set name=&quot;axis&quot; value={{!!axis}}&gt;&lt;$set name=&quot;values&quot; filter=&quot;[&lt;character&gt;fields:include{!!axis}] :reduce[&lt;character&gt;get&lt;currentTiddler&gt;addsuffix[ ]addsuffix&lt;accumulator&gt;] +[enlist-input:raw[]]&quot;&gt;&lt;$set name=&quot;X&quot; filter=&quot;[&lt;values&gt;enlist-input:raw[]] :reduce[&lt;index&gt;multiply[360]divide&lt;length&gt;multiply[3.1415926535]divide[180]cos[]multiply&lt;currentTiddler&gt;fixed[2]addsuffix[ ]addsuffix&lt;accumulator&gt;]+[enlist-input:raw[]]&quot;&gt;&lt;$set name=&quot;Y&quot; filter=&quot;[&lt;values&gt;enlist-input:raw[]] :reduce[&lt;index&gt;multiply[360]divide&lt;length&gt;multiply[3.1415926535]divide[180]sin[]multiply&lt;currentTiddler&gt;fixed[2]addsuffix[ ]addsuffix&lt;accumulator&gt;]+[enlist-input:raw[]]&quot;&gt;&lt;$set name=&quot;cord&quot; filter=&quot;[&lt;X&gt;enlist-input:raw[]]:reduce[&lt;index&gt;add[1]addprefix[ ]addprefix&lt;currentTiddler&gt;addprefix[ ]addprefix&lt;accumulator&gt;]+[enlist-input:raw[]]:reduce[&lt;index&gt;remainder[2]match[1]then&lt;Y&gt;enlist-input:raw[]nth&lt;currentTiddler&gt;else&lt;currentTiddler&gt;addprefix[ ]addprefix&lt;accumulator&gt;]+[enlist-input:raw[]]&quot;&gt;
+`--`url:url(&lt;$text text={{{[['data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;]][&lt;fill&gt;][[&quot; width=&quot;22pt&quot; height=&quot;22pt&quot;&gt;]][[&lt;svg viewBox=&quot;-100 -100 200 200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path  d=&quot;M ]][&lt;cord&gt;][[ Z&quot;/&gt;&lt;/svg&gt;]][[&lt;/svg&gt;']]+[join[]]}}} /&gt;);
+&lt;/$set&gt;&lt;/$set&gt;&lt;/$set&gt;&lt;/$set&gt;&lt;/$set&gt;&lt;/$set&gt;</pre>
 </div>
 <div created="20210826132225102" modified="20210906234456977" tags="[[Use qualify to give a color to a tiddler]]" title="(qualify color)">
 <pre>&lt;$vars 
@@ -1040,6 +1055,16 @@ padding:.5em;
 }
 &lt;/style&gt;</pre>
 </div>
+<div axis="defense offense passing power reliability shooting" created="20210920210159782" defense="100" modified="20210920214113817" offense="100" passing="100" power="100" reliability="100" shooting="100" tags="(svg-spider)" title="(svg-spider)">
+<pre>&lt;$set name=&quot;character&quot; value={{!!title}}&gt;&lt;$set name=&quot;axis&quot; value={{!!axis}}&gt;&lt;$set name=&quot;values&quot; filter=&quot;[&lt;character&gt;fields:include{!!axis}] :reduce[&lt;character&gt;get&lt;currentTiddler&gt;addsuffix[ ]addsuffix&lt;accumulator&gt;] +[enlist-input:raw[]]&quot;&gt;&lt;$set name=&quot;X&quot; filter=&quot;[&lt;values&gt;enlist-input:raw[]] :reduce[&lt;index&gt;multiply[360]divide&lt;length&gt;multiply[3.1415926535]divide[180]cos[]multiply&lt;currentTiddler&gt;fixed[2]addsuffix[ ]addsuffix&lt;accumulator&gt;]+[enlist-input:raw[]]&quot;&gt;&lt;$set name=&quot;Y&quot; filter=&quot;[&lt;values&gt;enlist-input:raw[]] :reduce[&lt;index&gt;multiply[360]divide&lt;length&gt;multiply[3.1415926535]divide[180]sin[]multiply&lt;currentTiddler&gt;fixed[2]addsuffix[ ]addsuffix&lt;accumulator&gt;]+[enlist-input:raw[]]&quot;&gt;&lt;$set name=&quot;cord&quot; filter=&quot;[&lt;X&gt;enlist-input:raw[]]:reduce[&lt;index&gt;add[1]addprefix[ ]addprefix&lt;currentTiddler&gt;addprefix[ ]addprefix&lt;accumulator&gt;]+[enlist-input:raw[]]:reduce[&lt;index&gt;remainder[2]match[1]then&lt;Y&gt;enlist-input:raw[]nth&lt;currentTiddler&gt;else&lt;currentTiddler&gt;addprefix[ ]addprefix&lt;accumulator&gt;]+[enlist-input:raw[]]&quot;&gt;
+
+
+&lt;$wikify name=&quot;text&quot; text={{{[[&lt;svg viewBox=&quot;-105 -105 210 210&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path  fill=none vector-effect=&quot;non-scaling-stroke&quot; shape-rendering=&quot;auto&quot; stroke=&quot;]][{$:/palette}getindex[foreground]][[&quot; d=&quot;M ]][&lt;cord&gt;][[ Z&quot;/&gt;&lt;/svg&gt;]]+[join[]]}}} output=&quot;html&quot;&gt;
+&lt;&lt;text&gt;&gt;
+&lt;/$wikify&gt;
+
+&lt;/$set&gt;&lt;/$set&gt;&lt;/$set&gt;&lt;/$set&gt;&lt;/$set&gt;&lt;/$set&gt;</pre>
+</div>
 <div caption="Snippet/Display tiddlers tagged with title" created="20210627170052616" description="This tiddler is used by the  ~ViewTemplates to display a list of all tiddler tagged with the current title. If there is a caption, the content is displayed as the text of the link, otherwise the title of the tiddler is displayed. If there is a description, the description is displayed at the right of the link. Use it like so : `{{tiddlerTitle||(tagging)}}`" modified="20210906234456977" tags="[[Display tiddlers tagging]] $:/tags/TextEditor/Snippet" title="(tagging)">
 <pre>&lt;ul&gt;
 &lt;$list filter=&quot;[all[current]tagging[]sort[title]]&quot;&gt;
@@ -1113,7 +1138,7 @@ height:auto;
 <pre>Built from branch 'tiddlywiki-com' at commit b95f6ca084ecc4b63a352a31da9c376551a58e91 of https://github.com/Jermolene/TiddlyWiki5 at 2021-07-04 10:58:55 UTC
 </pre>
 </div>
-<div created="20210810234449332" modified="20210919174921676" title="$:/config/AutoSave">
+<div created="20210810234449332" modified="20210920214222543" title="$:/config/AutoSave">
 <pre>no</pre>
 </div>
 <div caption="Kookma Plugin Library" created="20200306121057751" modified="20210906234456977" tags="$:/tags/PluginLibrary" title="$:/config/KookmaPluginLibrary" type="text/vnd.tiddlywiki" url="https://kookma.github.io/TW-PluginLibrary/library/index.html">
@@ -11254,11 +11279,6 @@ max-width:100vw;
 grid-column:-1/span 1;
 }</pre>
 </div>
-<div modified="20210919163019671" status="complete" title="$:/Import">
-<pre>The following tiddlers were imported:
-
-# [[Trick to use system svg with css and allow to change the color]]</pre>
-</div>
 <div modified="20210906234456979" title="$:/isEncrypted">
 <pre>no</pre>
 </div>
@@ -13982,7 +14002,7 @@ width:100%;
 <div created="20210810162433224" modified="20210913105002839" title="$:/state/addplugins/tab-1342078386">
 <pre>$:/config/OfficialPluginLibrary</pre>
 </div>
-<div created="20210714131710187" modified="20210916134002424" title="$:/state/advancedsearch/currentTab">
+<div created="20210714131710187" modified="20210919204013973" title="$:/state/advancedsearch/currentTab">
 <pre>$:/core/ui/AdvancedSearch/Filter</pre>
 </div>
 <div created="20210803203323946" modified="20210906234456981" title="$:/state/commander/log-tiddler">
@@ -14015,16 +14035,16 @@ width:100%;
 <div created="20210807103955659" modified="20210906234456983" title="$:/state/plugin-info-575017246-$:/plugins/danielo515/2click2edit--543222777">
 <pre>contents</pre>
 </div>
-<div created="20210720145300038" modified="20210919004210282" title="$:/state/showeditpreview">
+<div created="20210720145300038" modified="20210920210839129" title="$:/state/showeditpreview">
 <pre>no</pre>
 </div>
-<div created="20210714123144577" modified="20210919174537628" title="$:/state/sidebar">
+<div created="20210714123144577" modified="20210920212318343" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20210803203320853" modified="20210906234456983" title="$:/state/tab--103319216">
 <pre>$:/plugins/kookma/commander/field/uicomp/remove-fields</pre>
 </div>
-<div created="20210714131710187" modified="20210916134002424" title="$:/state/tab--1498284803">
+<div created="20210714131710187" modified="20210919204013974" title="$:/state/tab--1498284803">
 <pre>$:/core/ui/AdvancedSearch/Filter</pre>
 </div>
 <div created="20210906234102768" modified="20210906234102768" title="$:/state/tab--1705968773">
@@ -14060,8 +14080,8 @@ width:100%;
 <div created="20210803203319241" modified="20210906234456983" title="$:/state/tab-607722857">
 <pre>$:/plugins/kookma/commander/tag/ui</pre>
 </div>
-<div created="20210714123306926" modified="20210919174410777" title="$:/state/tab/sidebar--595412856">
-<pre>system image</pre>
+<div created="20210714123306926" modified="20210920203825819" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div created="20210714125257722" modified="20210906234456984" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
@@ -14105,7 +14125,7 @@ width:100%;
 <div created="20210627165215089" modified="20210906234456985" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div list="Index" title="$:/StoryList">
+<div list="Jojo (svg-spider)" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210827155614645" list="Footer [[Back to top]]" modified="20210906234456985" title="$:/tags/Footer">
@@ -15952,6 +15972,24 @@ $text$
 &lt;/$reveal&gt;
 \end</pre>
 </div>
+<div created="20210920172117468" list1="a b c d" list2="1 2 3 4" modified="20210920195556630" tags="tip" title="Combine two list in one filter">
+<pre>* list1 = {{!!list1}}
+* list2 = {{!!list2}}
+
+list1+2 =
+
+{{{
+
+[[Combine two list in one filter]get[list1]enlist-input:raw[]] 
+
+:reduce[&lt;index&gt;add[1]addprefix[ ]addprefix&lt;currentTiddler&gt;addprefix[ ]addprefix&lt;accumulator&gt;]
+
++[enlist-input:raw[]]
+
+:reduce[&lt;index&gt;remainder[2]match[1]then[Combine two list]get[list2]enlist-input:raw[]nth&lt;currentTiddler&gt;else&lt;currentTiddler&gt;addprefix[ ]addprefix&lt;accumulator&gt;]
+
+}}}</pre>
+</div>
 <div created="20210713151608436" modified="20210906234456986" source="https://groups.google.com/g/tiddlywiki/c/aEJrcD8gWlE/m/_ck4wfltBwAJ" tagging="after" tags="[[conditional language]] tip" title="Conditional display based on language setting">
 <pre></pre>
 </div>
@@ -16525,7 +16563,7 @@ Example of how to use Github Actions to build and publish a TiddlyWiki
 &lt;/svg
 </pre>
 </div>
-<div caption="Save to github" created="20210627165147396" description="todo : add search to filter the list of tips" modified="20210915141355757" tagging-tiddler="tip" title="Index">
+<div caption="Save to github" created="20210627165147396" modified="20210919182329261" tagging-tiddler="tip" title="Index">
 <pre>Welcome to https://telumire.github.io/TW-tips/ !
 
 Here are some useful tips &amp; tricks to add to your wiki.
@@ -16558,6 +16596,22 @@ sort=&quot;sort[title]&quot;
 /&gt;
 
 &lt;/div&gt;</pre>
+</div>
+<div axis="defense offense passing power reliability shooting" created="20210920195846685" defense="0" modified="20210920213911441" offense="70" passing="100" power="70" reliability="100" shooting="70" tags="(svg-spider)" title="Jojo">
+<pre>&lt;style&gt;
+.spider {
+position:relative;
+display:block;
+width:100px;
+height:100px;
+}
+.spider svg {
+position: absolute;
+stroke=&quot;red&quot;
+}
+&lt;/style&gt;
+
+&lt;span class=&quot;spider&quot;&gt;&lt;$transclude tiddler=&quot;(svg-spider)&quot;/&gt; {{(svg-spider)}}&lt;span&gt;</pre>
 </div>
 <div caption="Link with a prefix." condition="[&lt;targetTiddler&gt;!has[type]] [&lt;targetTiddler&gt;type[text/vnd.tiddlywiki]]" created="20210822001019829" description="Link with a prefix. If the field prefix is set, the prefix is used, otherwise default to the current tiddler name." icon="$:/core/images/linkify" modified="20210915194744385" prefix="" shortcuts="alt-shift-g" tags="$:/tags/EditorToolbar tip" task="doing" title="Link with prefix" title-suffix="/" type="text/vnd.tiddlywiki">
 <pre>&lt;$vars storeTitle=&lt;&lt;qualify &quot;$:/temp/storeTitle&quot;&gt;&gt; prefix={{{ [all[current]has[prefix]get[prefix]else&lt;targetTiddler&gt;get[prefix]else&lt;targetTiddler&gt;get[draft.title]addsuffix{!!suffix}] }}}&gt;
@@ -16864,6 +16918,32 @@ margin-right:1ch;
 <div created="20210803153449372" description="Reading speed used for the calculation (word per minutes)" modified="20210906234456990" source="[[https://iovs.arvojournals.org/article.aspx?articleid=2166061 (Table 2)]]" tags="[[Display an estimated reading time on each tiddler]]" title="Reading-time/wpm">
 <pre>228</pre>
 </div>
+<div axis="defense offense passing power reliability shooting" created="20210920124032979" defense="100" modified="20210920153529729" offense="100" passing="100" power="100" reliability="100" shooting="100" tags="" title="Reduce SVG">
+<pre>&lt;$set name=&quot;character&quot; value={{!!title}}&gt;
+&lt;$set name=&quot;axis&quot; value={{!!axis}}&gt;
+
+x =
+{{{ 
+
+[&lt;character&gt;fields:include{!!axis}] 
+
+:reduce[&lt;character&gt;get&lt;currentTiddler&gt;addsuffix[ ]addsuffix&lt;accumulator&gt;] 
+
++[enlist-input:raw[]] 
+
+:reduce[&lt;index&gt;multiply[360]divide&lt;length&gt;multiply[3.1415926535]divide[180]cos[]multiply&lt;currentTiddler&gt;fixed[2]addsuffix[ , ]addsuffix&lt;accumulator&gt;]
+
++[split[,]] 
+
+:reduce[&lt;character&gt;fields:include&lt;axis&gt;nth&lt;index&gt;addprefix&lt;currentTiddler&gt;addsuffix&lt;accumulator&gt;]
+
+
+}}}
+
+{{{ [&lt;character&gt;fields:include{!!axis}nth[2]]  }}}
+
+</pre>
+</div>
 <div created="20210902194457548" modified="20210906234456990" tags="tip" task="todo" title="Salvaging tiddlers from a wiki">
 <pre> https://tiddlywiki.com/#SafeMode
 
@@ -17059,8 +17139,12 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6267703/</pre>
 <div created="20210720155725916" list="[[code count regex]]" modified="20210906234456990" title="something">
 <pre></pre>
 </div>
-<div created="20210916140823986" modified="20210916203509904" tags="" task="todo" title="Spider graph">
-<pre>&lt;$tiddler tiddler=&quot;Spider graph/value/1&quot;&gt;
+<div created="20210916140823986" description="require $:/telumire/modules/filter/moremath.js to be able to use sin[] and cos[] ! Or use approximations of sinus and cosinus : https://datagenetics.com/blog/july12019/index.html, https://gist.github.com/stereokai/7666bfe93929b14c2dced148c79e0e97" modified="20210919213945716" tags="" task="todo" title="Spider graph">
+<pre>[[Spider graph/value/1]]
+
+{{Spider graph/value/1}}
+
+&lt;$tiddler tiddler=&quot;Spider graph/value/1&quot;&gt;
 &lt;ul&gt;
 &lt;$list filter=&quot;[{!!title}indexes[]]&quot; variable=&quot;index&quot;&gt;
 
@@ -17089,14 +17173,35 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6267703/</pre>
 &lt;/ul&gt;
 &lt;/$tiddler&gt;</pre>
 </div>
-<div created="20210916163350037" modified="20210916203508983" tags="" task="todo" title="Spider graph/value/1" type="application/json">
+<div created="20210920095116174" modified="20210920123946604" tags="" title="Spider graph path">
+<pre>&lt;$tiddler tiddler=&quot;Spider graph/value/1&quot;&gt;
+&lt;$vars spacing={{{[&lt;currentTiddler&gt;indexes[]count[]power[-1]multiply[360]]}}} r=100 toRad={{{ [[3.1415926535]divide[180]] }}} &gt;
+&lt;$list filter=&quot;[[Spider graph/value/1]indexes[]]&quot; variable=&quot;index&quot;&gt;
+&lt;$set name=&quot;radius&quot; value={{{ [getindex&lt;index&gt;] }}}&gt;
+&lt;$set name=&quot;counter&quot; value={{{ [&lt;currentTiddler&gt;indexes[]allbefore&lt;index&gt;count[]] }}}&gt;
+&lt;$set name=&quot;radiant&quot; value={{{ [&lt;counter&gt;multiply&lt;spacing&gt;multiply&lt;toRad&gt;] }}}&gt;
+&lt;$set name=&quot;x&quot; value={{{ [&lt;radiant&gt;cos[]multiply&lt;radius&gt;fixed[2]] }}}&gt;
+&lt;$set name=&quot;y&quot; value={{{ [&lt;radiant&gt;sin[]multiply&lt;radius&gt;fixed[2]] }}}&gt;
+
+ {{{ [&lt;currentTiddler&gt;indexes[]before&lt;index&gt;then[]else[M]][&lt;x&gt;][[ ]][&lt;y&gt;][&lt;currentTiddler&gt;indexes[]after&lt;index&gt;then[]else[Z]]}}}
+
+&lt;/$set&gt;
+&lt;/$set&gt;
+&lt;/$set&gt;
+&lt;/$set&gt;
+&lt;/$set&gt;
+&lt;/$list&gt;
+&lt;/$vars&gt;
+&lt;/$tiddler&gt;</pre>
+</div>
+<div created="20210916163350037" modified="20210920131440971" tags="right-story" task="todo" title="Spider graph/value/1" type="application/json">
 <pre>{
-    &quot;DEFENSE&quot;: &quot;100%&quot;,
-    &quot;POWER&quot;: &quot;100%&quot;,
-    &quot;PASSING&quot;: &quot;80%&quot;,
-    &quot;OFFENSE&quot;: &quot;30%&quot;,
-    &quot;SHOOTING&quot;: &quot;10%&quot;,
-    &quot;RELIABILITY&quot;: &quot;50%&quot;
+    &quot;DEFENSE&quot;: &quot;100&quot;,
+    &quot;POWER&quot;: &quot;100&quot;,
+    &quot;PASSING&quot;: &quot;100&quot;,
+    &quot;OFFENSE&quot;: &quot;100&quot;,
+    &quot;SHOOTING&quot;: &quot;100&quot;,
+    &quot;RELIABILITY&quot;: &quot;100&quot;
 }</pre>
 </div>
 <div created="20210909151707095" modified="20210909152253091" source="https://groups.google.com/g/tiddlywiki/c/IWJJpx6L6O4/m/8WqVIHcKBwAJ" tags="tip" title="Story river snapshot">
