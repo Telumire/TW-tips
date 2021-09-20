@@ -1055,11 +1055,11 @@ padding:.5em;
 }
 &lt;/style&gt;</pre>
 </div>
-<div axis="defense offense passing power reliability shooting" created="20210920210159782" defense="100" description="Max = 100, Minimum = 0" modified="20210920214413933" offense="100" passing="100" power="100" reliability="100" shooting="100" tags="(svg-spider)" title="(svg-spider)">
+<div axis="defense offense passing power reliability shooting" created="20210920210159782" defense="100" description="Max = 100, Minimum = 0. Todo : add axes" modified="20210920221418947" offense="100" passing="100" power="100" reliability="100" shooting="100" tags="(svg-spider)" task="todo" title="(svg-spider)">
 <pre>&lt;$set name=&quot;character&quot; value={{!!title}}&gt;&lt;$set name=&quot;axis&quot; value={{!!axis}}&gt;&lt;$set name=&quot;values&quot; filter=&quot;[&lt;character&gt;fields:include{!!axis}] :reduce[&lt;character&gt;get&lt;currentTiddler&gt;addsuffix[ ]addsuffix&lt;accumulator&gt;] +[enlist-input:raw[]]&quot;&gt;&lt;$set name=&quot;X&quot; filter=&quot;[&lt;values&gt;enlist-input:raw[]] :reduce[&lt;index&gt;multiply[360]divide&lt;length&gt;multiply[3.1415926535]divide[180]cos[]multiply&lt;currentTiddler&gt;fixed[2]addsuffix[ ]addsuffix&lt;accumulator&gt;]+[enlist-input:raw[]]&quot;&gt;&lt;$set name=&quot;Y&quot; filter=&quot;[&lt;values&gt;enlist-input:raw[]] :reduce[&lt;index&gt;multiply[360]divide&lt;length&gt;multiply[3.1415926535]divide[180]sin[]multiply&lt;currentTiddler&gt;fixed[2]addsuffix[ ]addsuffix&lt;accumulator&gt;]+[enlist-input:raw[]]&quot;&gt;&lt;$set name=&quot;cord&quot; filter=&quot;[&lt;X&gt;enlist-input:raw[]]:reduce[&lt;index&gt;add[1]addprefix[ ]addprefix&lt;currentTiddler&gt;addprefix[ ]addprefix&lt;accumulator&gt;]+[enlist-input:raw[]]:reduce[&lt;index&gt;remainder[2]match[1]then&lt;Y&gt;enlist-input:raw[]nth&lt;currentTiddler&gt;else&lt;currentTiddler&gt;addprefix[ ]addprefix&lt;accumulator&gt;]+[enlist-input:raw[]]&quot;&gt;
 
 
-&lt;$wikify name=&quot;text&quot; text={{{[[&lt;svg viewBox=&quot;-105 -105 210 210&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path  fill=none vector-effect=&quot;non-scaling-stroke&quot; shape-rendering=&quot;auto&quot; stroke=&quot;]][{$:/palette}getindex[foreground]][[&quot; d=&quot;M ]][&lt;cord&gt;][[ Z&quot;/&gt;&lt;/svg&gt;]]+[join[]]}}} output=&quot;html&quot;&gt;
+&lt;$wikify name=&quot;text&quot; text={{{[[&lt;svg viewBox=&quot;-105 -105 210 210&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path  fill=none vector-effect=&quot;non-scaling-stroke&quot; shape-rendering=&quot;auto&quot; stroke-width=&quot;2px&quot; stroke=&quot;]][{$:/palette}getindex[foreground]][[&quot; d=&quot;M ]][&lt;cord&gt;][[ Z&quot;/&gt;&lt;/svg&gt;]]+[join[]]}}} output=&quot;html&quot;&gt;
 &lt;&lt;text&gt;&gt;
 &lt;/$wikify&gt;
 
@@ -1138,7 +1138,7 @@ height:auto;
 <pre>Built from branch 'tiddlywiki-com' at commit b95f6ca084ecc4b63a352a31da9c376551a58e91 of https://github.com/Jermolene/TiddlyWiki5 at 2021-07-04 10:58:55 UTC
 </pre>
 </div>
-<div created="20210810234449332" modified="20210920214427892" title="$:/config/AutoSave">
+<div created="20210810234449332" modified="20210920221422320" title="$:/config/AutoSave">
 <pre>no</pre>
 </div>
 <div caption="Kookma Plugin Library" created="20200306121057751" modified="20210906234456977" tags="$:/tags/PluginLibrary" title="$:/config/KookmaPluginLibrary" type="text/vnd.tiddlywiki" url="https://kookma.github.io/TW-PluginLibrary/library/index.html">
@@ -14038,7 +14038,7 @@ width:100%;
 <div created="20210720145300038" modified="20210920210839129" title="$:/state/showeditpreview">
 <pre>no</pre>
 </div>
-<div created="20210714123144577" modified="20210920214400285" title="$:/state/sidebar">
+<div created="20210714123144577" modified="20210920215856497" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20210803203320853" modified="20210906234456983" title="$:/state/tab--103319216">
@@ -14125,7 +14125,7 @@ width:100%;
 <div created="20210627165215089" modified="20210906234456985" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210920214402548" list="(svg-spider) Index" modified="20210920214402548" title="$:/StoryList">
+<div created="20210920215901144" list="(svg-spider) Jojo" modified="20210920221358539" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210827155614645" list="Footer [[Back to top]]" modified="20210906234456985" title="$:/tags/Footer">
@@ -16597,13 +16597,13 @@ sort=&quot;sort[title]&quot;
 
 &lt;/div&gt;</pre>
 </div>
-<div axis="defense offense passing power reliability shooting" created="20210920195846685" defense="0" modified="20210920213911441" offense="70" passing="100" power="70" reliability="100" shooting="70" tags="(svg-spider)" title="Jojo">
+<div axis="defense offense passing power reliability shooting" created="20210920195846685" defense="90" modified="20210920220845918" offense="70" passing="100" power="70" reliability="100" shooting="70" tags="(svg-spider)" title="Jojo">
 <pre>&lt;style&gt;
 .spider {
 position:relative;
 display:block;
-width:100px;
-height:100px;
+width:500px;
+height:500px;
 }
 .spider svg {
 position: absolute;
@@ -16611,7 +16611,12 @@ stroke=&quot;red&quot;
 }
 &lt;/style&gt;
 
-&lt;span class=&quot;spider&quot;&gt;&lt;$transclude tiddler=&quot;(svg-spider)&quot;/&gt; {{(svg-spider)}}&lt;span&gt;</pre>
+&lt;span class=&quot;spider&quot;&gt;
+&lt;$transclude tiddler=&quot;(svg-spider)&quot;/&gt; 
+&lt;span style=&quot;opacity:.5;&quot;&gt;
+{{(svg-spider)}}
+&lt;span&gt;
+&lt;span&gt;</pre>
 </div>
 <div caption="Link with a prefix." condition="[&lt;targetTiddler&gt;!has[type]] [&lt;targetTiddler&gt;type[text/vnd.tiddlywiki]]" created="20210822001019829" description="Link with a prefix. If the field prefix is set, the prefix is used, otherwise default to the current tiddler name." icon="$:/core/images/linkify" modified="20210915194744385" prefix="" shortcuts="alt-shift-g" tags="$:/tags/EditorToolbar tip" task="doing" title="Link with prefix" title-suffix="/" type="text/vnd.tiddlywiki">
 <pre>&lt;$vars storeTitle=&lt;&lt;qualify &quot;$:/temp/storeTitle&quot;&gt;&gt; prefix={{{ [all[current]has[prefix]get[prefix]else&lt;targetTiddler&gt;get[prefix]else&lt;targetTiddler&gt;get[draft.title]addsuffix{!!suffix}] }}}&gt;
