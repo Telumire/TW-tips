@@ -1055,7 +1055,7 @@ padding:.5em;
 }
 &lt;/style&gt;</pre>
 </div>
-<div axis="defense offense passing power reliability shooting" created="20210920210159782" defense="100" modified="20210920214113817" offense="100" passing="100" power="100" reliability="100" shooting="100" tags="(svg-spider)" title="(svg-spider)">
+<div axis="defense offense passing power reliability shooting" created="20210920210159782" defense="100" description="Max = 100, Minimum = 0" modified="20210920214413933" offense="100" passing="100" power="100" reliability="100" shooting="100" tags="(svg-spider)" title="(svg-spider)">
 <pre>&lt;$set name=&quot;character&quot; value={{!!title}}&gt;&lt;$set name=&quot;axis&quot; value={{!!axis}}&gt;&lt;$set name=&quot;values&quot; filter=&quot;[&lt;character&gt;fields:include{!!axis}] :reduce[&lt;character&gt;get&lt;currentTiddler&gt;addsuffix[ ]addsuffix&lt;accumulator&gt;] +[enlist-input:raw[]]&quot;&gt;&lt;$set name=&quot;X&quot; filter=&quot;[&lt;values&gt;enlist-input:raw[]] :reduce[&lt;index&gt;multiply[360]divide&lt;length&gt;multiply[3.1415926535]divide[180]cos[]multiply&lt;currentTiddler&gt;fixed[2]addsuffix[ ]addsuffix&lt;accumulator&gt;]+[enlist-input:raw[]]&quot;&gt;&lt;$set name=&quot;Y&quot; filter=&quot;[&lt;values&gt;enlist-input:raw[]] :reduce[&lt;index&gt;multiply[360]divide&lt;length&gt;multiply[3.1415926535]divide[180]sin[]multiply&lt;currentTiddler&gt;fixed[2]addsuffix[ ]addsuffix&lt;accumulator&gt;]+[enlist-input:raw[]]&quot;&gt;&lt;$set name=&quot;cord&quot; filter=&quot;[&lt;X&gt;enlist-input:raw[]]:reduce[&lt;index&gt;add[1]addprefix[ ]addprefix&lt;currentTiddler&gt;addprefix[ ]addprefix&lt;accumulator&gt;]+[enlist-input:raw[]]:reduce[&lt;index&gt;remainder[2]match[1]then&lt;Y&gt;enlist-input:raw[]nth&lt;currentTiddler&gt;else&lt;currentTiddler&gt;addprefix[ ]addprefix&lt;accumulator&gt;]+[enlist-input:raw[]]&quot;&gt;
 
 
@@ -1138,7 +1138,7 @@ height:auto;
 <pre>Built from branch 'tiddlywiki-com' at commit b95f6ca084ecc4b63a352a31da9c376551a58e91 of https://github.com/Jermolene/TiddlyWiki5 at 2021-07-04 10:58:55 UTC
 </pre>
 </div>
-<div created="20210810234449332" modified="20210920214222543" title="$:/config/AutoSave">
+<div created="20210810234449332" modified="20210920214427892" title="$:/config/AutoSave">
 <pre>no</pre>
 </div>
 <div caption="Kookma Plugin Library" created="20200306121057751" modified="20210906234456977" tags="$:/tags/PluginLibrary" title="$:/config/KookmaPluginLibrary" type="text/vnd.tiddlywiki" url="https://kookma.github.io/TW-PluginLibrary/library/index.html">
@@ -14038,7 +14038,7 @@ width:100%;
 <div created="20210720145300038" modified="20210920210839129" title="$:/state/showeditpreview">
 <pre>no</pre>
 </div>
-<div created="20210714123144577" modified="20210920212318343" title="$:/state/sidebar">
+<div created="20210714123144577" modified="20210920214400285" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20210803203320853" modified="20210906234456983" title="$:/state/tab--103319216">
@@ -14125,7 +14125,7 @@ width:100%;
 <div created="20210627165215089" modified="20210906234456985" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div list="Jojo (svg-spider)" title="$:/StoryList">
+<div created="20210920214402548" list="(svg-spider) Index" modified="20210920214402548" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210827155614645" list="Footer [[Back to top]]" modified="20210906234456985" title="$:/tags/Footer">
