@@ -613,8 +613,6 @@ Error message and password prompt
 
 <li>Hide sidebar on startup with startup actions</li>
 
-<li>Hide table border</li>
-
 <li>Horizontal drag and drop list</li>
 
 <li>How to get the title of the tiddler within a transclusion</li>
@@ -752,6 +750,8 @@ Error message and password prompt
 <li>Sleep calculator</li>
 
 <li>something</li>
+
+<li>Spider chart css</li>
 
 <li>Spider graph</li>
 
@@ -893,57 +893,8 @@ Error message and password prompt
 <!--~~ Ordinary tiddlers ~~-->
 
 <div id="storeArea" style="display:none;">
-<div created="20210920235039940" modified="20210920235106257" tags="(svg-spider)" title="(character-spider-chart)">
-<pre>&lt;style&gt;
-.spider {
-position:relative;
-display:block;
-width:500px;
-height:500px;
-}
-.spider svg {
-position: absolute;
-stroke=&quot;red&quot;
-}
-
-.scale1 svg{
-transform: scale(0.9);
-}
-
-.scale2 svg{
-transform: scale(0.8);
-}
-
-.scale3 svg{
-transform: scale(0.7);
-}
-
-.scale4 svg{
-transform: scale(0.6);
-}
-
-.scale5 svg{
-transform: scale(0.5);
-}
-
-.scale6 svg{
-transform: scale(0.4);
-}
-
-.scale7 svg{
-transform: scale(0.3);
-}
-
-.scale8 svg{
-transform: scale(0.2);
-}
-
-.scale9 svg{
-transform: scale(0.1);
-}
-&lt;/style&gt;
-
-&lt;span class=&quot;spider&quot;&gt;
+<div created="20210920235039940" modified="20210921120041575" tags="(svg-spider)" title="(character-spider-chart)">
+<pre>&lt;span class=&quot;spider&quot;&gt;
 &lt;$transclude tiddler=&quot;(svg-spider)&quot;/&gt; 
 &lt;span style=&quot;opacity:.5;&quot;&gt;
 {{(svg-spider)}}
@@ -1208,7 +1159,7 @@ height:auto;
 <pre>Built from branch 'tiddlywiki-com' at commit b95f6ca084ecc4b63a352a31da9c376551a58e91 of https://github.com/Jermolene/TiddlyWiki5 at 2021-07-04 10:58:55 UTC
 </pre>
 </div>
-<div created="20210810234449332" modified="20210921003645825" title="$:/config/AutoSave">
+<div created="20210810234449332" modified="20210921120635440" title="$:/config/AutoSave">
 <pre>no</pre>
 </div>
 <div caption="Kookma Plugin Library" created="20200306121057751" modified="20210906234456977" tags="$:/tags/PluginLibrary" title="$:/config/KookmaPluginLibrary" type="text/vnd.tiddlywiki" url="https://kookma.github.io/TW-PluginLibrary/library/index.html">
@@ -14108,7 +14059,7 @@ width:100%;
 <div created="20210720145300038" modified="20210920210839129" title="$:/state/showeditpreview">
 <pre>no</pre>
 </div>
-<div created="20210714123144577" modified="20210921003503753" title="$:/state/sidebar">
+<div created="20210714123144577" modified="20210921120632662" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20210803203320853" modified="20210906234456983" title="$:/state/tab--103319216">
@@ -14195,7 +14146,7 @@ width:100%;
 <div created="20210627165215089" modified="20210906234456985" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div list="[[Hide table border]] Jojo" title="$:/StoryList">
+<div created="20210921120604099" list="Jojo" modified="20210921120604099" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210827155614645" list="Footer [[Back to top]]" modified="20210906234456985" title="$:/tags/Footer">
@@ -16529,15 +16480,6 @@ You can put this one inside of a →{{Edit button for transcluded content||(edit
 <div caption="Hide sidebar on startup with startup actions" created="20210912211723812" modified="20210912221103586" source="https://tiddlywiki.com/#StartupActions" tags="$:/tags/StartupAction tip [[More tweaks]]" title="Hide sidebar on startup with startup actions" value="no">
 <pre>&lt;$action-setfield $tiddler=&quot;$:/state/sidebar&quot; $value={{Hide sidebar on startup with startup actions!!value}}/&gt;</pre>
 </div>
-<div created="20210921003513533" modified="20210921003616812" tags="$:/tags/Stylesheet (svg-spider)" title="Hide table border">
-<pre>table.graph {
-    border:none;
-}
-
-table.graph td{
-    border:none;
-}</pre>
-</div>
 <div created="20210913185613295" list="drag5 drag9 drag10 drag4 drag7 drag3 drag6 drag2 drag8 drag1" modified="20210913192456937" tags="" title="Horizontal drag and drop list">
 <pre>itemtemplate = [[dragItemTemplate]]
 class=drag-horizontal
@@ -17179,6 +17121,44 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6267703/</pre>
 </div>
 <div created="20210720155725916" list="[[code count regex]]" modified="20210906234456990" title="something">
 <pre></pre>
+</div>
+<div created="20210921003513533" modified="20210921120605561" tags="$:/tags/Stylesheet (svg-spider) right-story" title="Spider chart css" type="text/css">
+<pre>table.graph {display:flex;flex-wrap:wrap;border:none;justify-content:center;}
+
+table.graph td {
+max-width:100%;
+border:none;
+flex-direction: column;
+display: flex;
+justify-content: center;}
+
+table.graph tbody,table.graph tr,table.graph td .spider p {display:contents;}
+
+table.graph td .spider {
+ max-width:100%;
+}
+
+
+.spider {
+position:relative;
+display:block;
+width:500px;
+height:500px;
+}
+.spider svg {
+position: absolute;
+stroke=&quot;red&quot;
+}
+
+.scale1 svg{transform: scale(0.9);}
+.scale2 svg{transform: scale(0.8);}
+.scale3 svg{transform: scale(0.7);}
+.scale4 svg{transform: scale(0.6);}
+.scale5 svg{transform: scale(0.5);}
+.scale6 svg{transform: scale(0.4);}
+.scale7 svg{transform: scale(0.3);}
+.scale8 svg{transform: scale(0.2);}
+.scale9 svg{transform: scale(0.1);}</pre>
 </div>
 <div created="20210916140823986" description="require $:/telumire/modules/filter/moremath.js to be able to use sin[] and cos[] ! Or use approximations of sinus and cosinus : https://datagenetics.com/blog/july12019/index.html, https://gist.github.com/stereokai/7666bfe93929b14c2dced148c79e0e97" modified="20210919213945716" tags="" task="todo" title="Spider graph">
 <pre>[[Spider graph/value/1]]
