@@ -141,6 +141,8 @@ Error message and password prompt
 
 <p>This <a class="tc-tiddlylink-external" href="https://tiddlywiki.com" rel="noopener noreferrer" target="_blank">TiddlyWiki</a> contains the following tiddlers:</p><p><ul>
 
+<li>(character-spider-chart)</li>
+
 <li>(edit-inline)</li>
 
 <li>(edit)</li>
@@ -611,6 +613,8 @@ Error message and password prompt
 
 <li>Hide sidebar on startup with startup actions</li>
 
+<li>Hide table border</li>
+
 <li>Horizontal drag and drop list</li>
 
 <li>How to get the title of the tiddler within a transclusion</li>
@@ -720,8 +724,6 @@ Error message and password prompt
 <li>Reading-time/subtitle/template</li>
 
 <li>Reading-time/wpm</li>
-
-<li>Reduce SVG</li>
 
 <li>Salvaging tiddlers from a wiki</li>
 
@@ -891,6 +893,74 @@ Error message and password prompt
 <!--~~ Ordinary tiddlers ~~-->
 
 <div id="storeArea" style="display:none;">
+<div created="20210920235039940" modified="20210920235106257" tags="(svg-spider)" title="(character-spider-chart)">
+<pre>&lt;style&gt;
+.spider {
+position:relative;
+display:block;
+width:500px;
+height:500px;
+}
+.spider svg {
+position: absolute;
+stroke=&quot;red&quot;
+}
+
+.scale1 svg{
+transform: scale(0.9);
+}
+
+.scale2 svg{
+transform: scale(0.8);
+}
+
+.scale3 svg{
+transform: scale(0.7);
+}
+
+.scale4 svg{
+transform: scale(0.6);
+}
+
+.scale5 svg{
+transform: scale(0.5);
+}
+
+.scale6 svg{
+transform: scale(0.4);
+}
+
+.scale7 svg{
+transform: scale(0.3);
+}
+
+.scale8 svg{
+transform: scale(0.2);
+}
+
+.scale9 svg{
+transform: scale(0.1);
+}
+&lt;/style&gt;
+
+&lt;span class=&quot;spider&quot;&gt;
+&lt;$transclude tiddler=&quot;(svg-spider)&quot;/&gt; 
+&lt;span style=&quot;opacity:.5;&quot;&gt;
+{{(svg-spider)}}
+
+&lt;span class=&quot;scale1&quot;&gt;{{(svg-spider)}}&lt;/span&gt;
+&lt;span class=&quot;scale2&quot;&gt;{{(svg-spider)}}&lt;/span&gt;
+&lt;span class=&quot;scale3&quot;&gt;{{(svg-spider)}}&lt;/span&gt;
+&lt;span class=&quot;scale4&quot;&gt;{{(svg-spider)}}&lt;/span&gt;
+&lt;span class=&quot;scale5&quot;&gt;{{(svg-spider)}}&lt;/span&gt;
+&lt;span class=&quot;scale6&quot;&gt;{{(svg-spider)}}&lt;/span&gt;
+&lt;span class=&quot;scale7&quot;&gt;{{(svg-spider)}}&lt;/span&gt;
+&lt;span class=&quot;scale8&quot;&gt;{{(svg-spider)}}&lt;/span&gt;
+&lt;span class=&quot;scale9&quot;&gt;{{(svg-spider)}}&lt;/span&gt;
+
+&lt;span&gt;
+&lt;span&gt;</pre>
+</div>
 <div created="20210702134909188" description="E.g : `{{Nameofyourtiddler||(edit-inline)}}`" modified="20210919182055166" tags="TW5 [[Edit button for transcluded content]]" title="(edit-inline)">
 <pre>&lt;span class=&quot;transclude-edit&quot;&gt;&lt;$transclude tiddler={{!!title}} mode=&quot;inline&quot;/&gt;&lt;span class=&quot;hide-until-hover transclude-edit-button&quot;&gt; {{||$:/core/ui/Buttons/edit}} &lt;/span&gt;&lt;/span&gt;</pre>
 </div>
@@ -1138,7 +1208,7 @@ height:auto;
 <pre>Built from branch 'tiddlywiki-com' at commit b95f6ca084ecc4b63a352a31da9c376551a58e91 of https://github.com/Jermolene/TiddlyWiki5 at 2021-07-04 10:58:55 UTC
 </pre>
 </div>
-<div created="20210810234449332" modified="20210920225518645" title="$:/config/AutoSave">
+<div created="20210810234449332" modified="20210921003645825" title="$:/config/AutoSave">
 <pre>no</pre>
 </div>
 <div caption="Kookma Plugin Library" created="20200306121057751" modified="20210906234456977" tags="$:/tags/PluginLibrary" title="$:/config/KookmaPluginLibrary" type="text/vnd.tiddlywiki" url="https://kookma.github.io/TW-PluginLibrary/library/index.html">
@@ -14038,7 +14108,7 @@ width:100%;
 <div created="20210720145300038" modified="20210920210839129" title="$:/state/showeditpreview">
 <pre>no</pre>
 </div>
-<div created="20210714123144577" modified="20210920225317608" title="$:/state/sidebar">
+<div created="20210714123144577" modified="20210921003503753" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20210803203320853" modified="20210906234456983" title="$:/state/tab--103319216">
@@ -14050,8 +14120,8 @@ width:100%;
 <div created="20210906234102768" modified="20210906234102768" title="$:/state/tab--1705968773">
 <pre>$:/plugins/kookma/commander/field/uicomp/remove-fields</pre>
 </div>
-<div created="20210714123207883" modified="20210913185727757" title="$:/state/tab--1963855381">
-<pre>$:/core/ui/ControlPanel/Toolbars</pre>
+<div created="20210714123207883" modified="20210920232702349" title="$:/state/tab--1963855381">
+<pre>$:/core/ui/ControlPanel/Palette</pre>
 </div>
 <div created="20210714131721087" modified="20210910120305398" title="$:/state/tab--2112689675">
 <pre>$:/core/ui/ControlPanel/Advanced</pre>
@@ -14071,8 +14141,8 @@ width:100%;
 <div created="20210909201506125" modified="20210909201513338" title="$:/state/tab-1535582057">
 <pre>$:/plugins/flibbles/relink/ui/TiddlerInfo/References</pre>
 </div>
-<div created="20210714123159097" modified="20210915193548837" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/KeyboardShortcuts</pre>
+<div created="20210714123159097" modified="20210920232700166" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Appearance</pre>
 </div>
 <div created="20210716151227668" modified="20210906234456983" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
@@ -14080,7 +14150,7 @@ width:100%;
 <div created="20210803203319241" modified="20210906234456983" title="$:/state/tab-607722857">
 <pre>$:/plugins/kookma/commander/tag/ui</pre>
 </div>
-<div created="20210714123306926" modified="20210920225128118" title="$:/state/tab/sidebar--595412856">
+<div created="20210714123306926" modified="20210920232021888" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div created="20210714125257722" modified="20210906234456984" title="$:/state/tabs/controlpanel/toolbars-1345989671">
@@ -14125,7 +14195,7 @@ width:100%;
 <div created="20210627165215089" modified="20210906234456985" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20210920225319047" list="Jojo" modified="20210920225335010" title="$:/StoryList">
+<div list="[[Hide table border]] Jojo" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210827155614645" list="Footer [[Back to top]]" modified="20210906234456985" title="$:/tags/Footer">
@@ -15972,7 +16042,7 @@ $text$
 &lt;/$reveal&gt;
 \end</pre>
 </div>
-<div created="20210920172117468" list1="a b c d" list2="1 2 3 4" modified="20210920195556630" tags="tip" title="Combine two list in one filter">
+<div created="20210920172117468" list1="a b c d" list2="1 2 3 4" modified="20210921000828309" tags="tip" title="Combine two list in one filter">
 <pre>* list1 = {{!!list1}}
 * list2 = {{!!list2}}
 
@@ -16459,6 +16529,15 @@ You can put this one inside of a →{{Edit button for transcluded content||(edit
 <div caption="Hide sidebar on startup with startup actions" created="20210912211723812" modified="20210912221103586" source="https://tiddlywiki.com/#StartupActions" tags="$:/tags/StartupAction tip [[More tweaks]]" title="Hide sidebar on startup with startup actions" value="no">
 <pre>&lt;$action-setfield $tiddler=&quot;$:/state/sidebar&quot; $value={{Hide sidebar on startup with startup actions!!value}}/&gt;</pre>
 </div>
+<div created="20210921003513533" modified="20210921003616812" tags="$:/tags/Stylesheet (svg-spider)" title="Hide table border">
+<pre>table.graph {
+    border:none;
+}
+
+table.graph td{
+    border:none;
+}</pre>
+</div>
 <div created="20210913185613295" list="drag5 drag9 drag10 drag4 drag7 drag3 drag6 drag2 drag8 drag1" modified="20210913192456937" tags="" title="Horizontal drag and drop list">
 <pre>itemtemplate = [[dragItemTemplate]]
 class=drag-horizontal
@@ -16597,73 +16676,9 @@ sort=&quot;sort[title]&quot;
 
 &lt;/div&gt;</pre>
 </div>
-<div axis="defense offense passing power reliability shooting" created="20210920195846685" defense="90" description="Note : this is a proof of concept ! Require $:/telumire/modules/filter/moremath.js to add support for cosinus and sinus" modified="20210920225425449" offense="70" passing="100" power="70" reliability="100" shooting="70" tags="(svg-spider)" title="Jojo">
-<pre>&lt;style&gt;
-.spider {
-position:relative;
-display:block;
-width:500px;
-height:500px;
-}
-.spider svg {
-position: absolute;
-stroke=&quot;red&quot;
-}
-
-.scale1 svg{
-transform: scale(0.9);
-}
-
-.scale2 svg{
-transform: scale(0.8);
-}
-
-.scale3 svg{
-transform: scale(0.7);
-}
-
-.scale4 svg{
-transform: scale(0.6);
-}
-
-.scale5 svg{
-transform: scale(0.5);
-}
-
-.scale6 svg{
-transform: scale(0.4);
-}
-
-.scale7 svg{
-transform: scale(0.3);
-}
-
-.scale8 svg{
-transform: scale(0.2);
-}
-
-.scale9 svg{
-transform: scale(0.1);
-}
-&lt;/style&gt;
-
-&lt;span class=&quot;spider&quot;&gt;
-&lt;$transclude tiddler=&quot;(svg-spider)&quot;/&gt; 
-&lt;span style=&quot;opacity:.5;&quot;&gt;
-{{(svg-spider)}}
-
-&lt;span class=&quot;scale1&quot;&gt;{{(svg-spider)}}&lt;/span&gt;
-&lt;span class=&quot;scale2&quot;&gt;{{(svg-spider)}}&lt;/span&gt;
-&lt;span class=&quot;scale3&quot;&gt;{{(svg-spider)}}&lt;/span&gt;
-&lt;span class=&quot;scale4&quot;&gt;{{(svg-spider)}}&lt;/span&gt;
-&lt;span class=&quot;scale5&quot;&gt;{{(svg-spider)}}&lt;/span&gt;
-&lt;span class=&quot;scale6&quot;&gt;{{(svg-spider)}}&lt;/span&gt;
-&lt;span class=&quot;scale7&quot;&gt;{{(svg-spider)}}&lt;/span&gt;
-&lt;span class=&quot;scale8&quot;&gt;{{(svg-spider)}}&lt;/span&gt;
-&lt;span class=&quot;scale9&quot;&gt;{{(svg-spider)}}&lt;/span&gt;
-
-&lt;span&gt;
-&lt;span&gt;</pre>
+<div axis="defense offense passing power reliability shooting" created="20210920195846685" defense="90" description="Note : this is a proof of concept ! Require $:/telumire/modules/filter/moremath.js to add support for cosinus and sinus" modified="20210921003536198" offense="70" passing="100" power="70" reliability="100" shooting="70" tags="(svg-spider)" title="Jojo" values=" &lt;$set name=&quot;character&quot; value={{!!title}}&gt; &lt;$set name=&quot;values&quot; filter=&quot;[&lt;character&gt;fields:include{!!axis}] :reduce[&lt;character&gt;get&lt;currentTiddler&gt;addsuffix[ ]addsuffix&lt;accumulator&gt;] +[enlist-input:raw[]]&quot;&gt; &lt;$set name=&quot;names&quot; filter=&quot;[&lt;character&gt;fields:include{!!axis}sortby{!!axis}]&quot;&gt;   &lt;$set name=&quot;stats&quot; value={{{[&lt;names&gt;enlist-input:raw[]]:reduce[&lt;index&gt;add[1]addprefix[ ]addprefix&lt;currentTiddler&gt;addprefix[ ]addprefix&lt;accumulator&gt;]+[enlist-input:raw[]]:reduce[&lt;index&gt;remainder[2]match[1]then&lt;values&gt;enlist-input:raw[]nth&lt;currentTiddler&gt;addprefix[: ]addsuffix[&lt;br&gt; ]else&lt;currentTiddler&gt;addprefix[ ]addprefix&lt;accumulator&gt;]}}}&gt;&lt;&lt;stats&gt;&gt;">
+<pre>|graph|k
+|{{||(character-spider-chart)}}|{{!!values}}|</pre>
 </div>
 <div caption="Link with a prefix." condition="[&lt;targetTiddler&gt;!has[type]] [&lt;targetTiddler&gt;type[text/vnd.tiddlywiki]]" created="20210822001019829" description="Link with a prefix. If the field prefix is set, the prefix is used, otherwise default to the current tiddler name." icon="$:/core/images/linkify" modified="20210915194744385" prefix="" shortcuts="alt-shift-g" tags="$:/tags/EditorToolbar tip" task="doing" title="Link with prefix" title-suffix="/" type="text/vnd.tiddlywiki">
 <pre>&lt;$vars storeTitle=&lt;&lt;qualify &quot;$:/temp/storeTitle&quot;&gt;&gt; prefix={{{ [all[current]has[prefix]get[prefix]else&lt;targetTiddler&gt;get[prefix]else&lt;targetTiddler&gt;get[draft.title]addsuffix{!!suffix}] }}}&gt;
@@ -16970,32 +16985,6 @@ margin-right:1ch;
 <div created="20210803153449372" description="Reading speed used for the calculation (word per minutes)" modified="20210906234456990" source="[[https://iovs.arvojournals.org/article.aspx?articleid=2166061 (Table 2)]]" tags="[[Display an estimated reading time on each tiddler]]" title="Reading-time/wpm">
 <pre>228</pre>
 </div>
-<div axis="defense offense passing power reliability shooting" created="20210920124032979" defense="100" modified="20210920153529729" offense="100" passing="100" power="100" reliability="100" shooting="100" tags="" title="Reduce SVG">
-<pre>&lt;$set name=&quot;character&quot; value={{!!title}}&gt;
-&lt;$set name=&quot;axis&quot; value={{!!axis}}&gt;
-
-x =
-{{{ 
-
-[&lt;character&gt;fields:include{!!axis}] 
-
-:reduce[&lt;character&gt;get&lt;currentTiddler&gt;addsuffix[ ]addsuffix&lt;accumulator&gt;] 
-
-+[enlist-input:raw[]] 
-
-:reduce[&lt;index&gt;multiply[360]divide&lt;length&gt;multiply[3.1415926535]divide[180]cos[]multiply&lt;currentTiddler&gt;fixed[2]addsuffix[ , ]addsuffix&lt;accumulator&gt;]
-
-+[split[,]] 
-
-:reduce[&lt;character&gt;fields:include&lt;axis&gt;nth&lt;index&gt;addprefix&lt;currentTiddler&gt;addsuffix&lt;accumulator&gt;]
-
-
-}}}
-
-{{{ [&lt;character&gt;fields:include{!!axis}nth[2]]  }}}
-
-</pre>
-</div>
 <div created="20210902194457548" modified="20210906234456990" tags="tip" task="todo" title="Salvaging tiddlers from a wiki">
 <pre> https://tiddlywiki.com/#SafeMode
 
@@ -17246,7 +17235,7 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6267703/</pre>
 &lt;/$vars&gt;
 &lt;/$tiddler&gt;</pre>
 </div>
-<div created="20210916163350037" modified="20210920131440971" tags="right-story" task="todo" title="Spider graph/value/1" type="application/json">
+<div created="20210916163350037" modified="20210920235209584" tags="right-story" task="todo" title="Spider graph/value/1" type="application/json">
 <pre>{
     &quot;DEFENSE&quot;: &quot;100&quot;,
     &quot;POWER&quot;: &quot;100&quot;,
@@ -17297,10 +17286,10 @@ counter-increment: item;
 content: counter(item) &quot;: &quot;; 
 }</pre>
 </div>
-<div created="20210613102831878" modified="20210906234456990" tags="$:/tags/Stylesheet [[Link styling]]" title="Style external link icon">
+<div created="20210613102831878" modified="20210920232133935" tags="$:/tags/Stylesheet [[Link styling]]" title="Style external link icon">
 <pre>&lt;pre&gt;
 
-/*Default icon for external links*/
+/*Default icon for external links
 .tc-tiddler-body a.tc-tiddlylink-external:before, a[target=_blank]:before{
   content:&quot;&quot;;
   height:1.3ch;
@@ -17309,6 +17298,8 @@ content: counter(item) &quot;: &quot;;
   display:inline-block;
   background: center / contain no-repeat url(&lt;&lt;datauri &quot;External_Link_Icon&quot;&gt;&gt;);
 }
+*/
+
 
 /*Icon for specific domains*/
 a.tc-tiddlylink-external[href*=&quot;angular.io&quot;]:before {background-image: url(&lt;&lt;datauri &quot;Icon/Angular.ico&quot;&gt;&gt;);}
@@ -17940,7 +17931,7 @@ https://tiddlywiki.com/</pre>
 <pre>* [[Log time with a button]]
 * [[Increment a field]]</pre>
 </div>
-<div created="20210908171908194" description="&lt;span class=&quot;icon-svg github blue&quot;&gt; blue github icon !&lt;/span&gt;  &lt;br&gt; see also [[CSS for using any svg system image inline]]" modified="20210919174844127" tags="$:/tags/Stylesheet tip" title="Trick to use system svg with css and allow to change the color" type="" url="`--`url:url(&lt;$text text={{{[['data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;]][&lt;fill&gt;][[&quot; width=&quot;22pt&quot; height=&quot;22pt&quot;&gt;]][&lt;svg&gt;][[&lt;/svg&gt;']]+[join[]]}}} /&gt;);">
+<div created="20210908171908194" description="&lt;span class=&quot;icon-svg github blue&quot;&gt; blue github icon !&lt;/span&gt;  &lt;br&gt; see also [[CSS for using any svg system image inline]]" modified="20210920233803842" tags="$:/tags/Stylesheet tip" title="Trick to use system svg with css and allow to change the color" type="" url="`--`url:url(&lt;$text text={{{[['data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;]][&lt;fill&gt;][[&quot; width=&quot;22pt&quot; height=&quot;22pt&quot;&gt;]][&lt;svg&gt;][[&lt;/svg&gt;']]+[join[]]}}} /&gt;);">
 <pre>\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline html
 &lt;pre&gt;
 
@@ -17954,7 +17945,21 @@ https://tiddlywiki.com/</pre>
 
 .icon-svg.github.blue{
     &lt;$vars svg={{$:/core/images/github}} fill=&quot;blue&quot;&gt; {{!!url}}&lt;/$vars&gt;
-}</pre>
+}
+
+.tc-tiddler-body a.tc-tiddlylink-external:after, a[target=_blank]:after{
+    content: &quot; &quot;;
+    margin-left:.5ch;
+    display: inline-block;
+    height:1em;
+    width:1em;
+   &lt;$vars svg={{$:/core/images/open-window}} fill={{{ [{$:/palette}getindex[external-link-foreground]] }}} &gt; {{!!url}}&lt;/$vars&gt;
+    background: center / contain no-repeat var(--url);
+}
+
+.tc-tiddler-body a.tc-tiddlylink-external:visited:after { &lt;$vars svg={{$:/core/images/open-window}} fill={{{ [{$:/palette}getindex[external-link-foreground-visited]] }}} &gt; {{!!url}}&lt;/$vars&gt;}
+
+.tc-tiddler-body a.tc-tiddlylink-external:hover:after { &lt;$vars svg={{$:/core/images/open-window}} fill={{{ [{$:/palette}getindex[foreground]] }}} &gt; {{!!url}}&lt;/$vars&gt;}</pre>
 </div>
 <div created="20210807211545611" description="A button to get the url of the tiddler for the web version - the title of the tab must reflect the title of the tiddler (bookmarking)" modified="20210906234456993" task="todo" title="TW as a blog/Custom permalink button">
 <pre></pre>
